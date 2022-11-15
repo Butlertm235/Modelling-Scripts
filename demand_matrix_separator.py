@@ -41,7 +41,7 @@ while user_output_format != '1' and user_output_format != '2':
 #Finds out if the user would like to name their user classes manually
 name_user_classes = nan
 while name_user_classes != 'y' and name_user_classes != 'n':
-    name_user_classes = input('Would you like to name the user classes or leave them as default (UC1, UC2 etc.)?\nAnswer y or n\n')
+    name_user_classes = input('Would you like to name the user classes?\nIf your answer is no they will be left as default (UC1, UC2 etc.).\nAnswer y or n\n')
     if name_user_classes != 'y' and name_user_classes != 'n':
         print('\nInput not recognised please try again. Only type "y" or "n" in your response\n')
 
