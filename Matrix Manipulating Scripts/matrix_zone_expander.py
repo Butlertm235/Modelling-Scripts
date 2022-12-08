@@ -12,8 +12,16 @@ import os
 #INPUTS
 TIME_PERIODS = ["AM_peak_hr", "Inter_peak", "PM_peak_hr"]
 USER_CLASSES = ["1_HBW", "2_HBEmp", "3_HBO", "4_NHBW", "5_NHBO", "6_LGV", "7_HGV"]
+
 PROGRAM_DIRECTORY = os.getcwd()
 FILE_DIRECTORY = f"{PROGRAM_DIRECTORY}\Finalising Outputs\Initial Outputs"
+
+FILE_PREFIX = "initial_output"
+FILE_SUFFIX = "Vehicle Trips_values"
+
+#Input how far through the original list of zones the new zones are added
+POSITION_OF_NEW_ZONES = 160
+
 INITIAL_NUMBER_OF_ZONES = 169
 NEW_MODEL_ZONES = [6030, 6140, 6141, 6148, 6200, 6201, 6202, 6203, 6204, 6205, 6206, 6207, 6208, 6210, 6211, 6500, 6501, 6502, 6503, 6504, 6505, 6506]
 
@@ -43,17 +51,18 @@ for time_period in TIME_PERIODS:
         matrix = pd.DataFrame()
         #Accounts for quirk in matrix processing output names
         if user_class != "7_HGV":
-            matrix = pd.read_csv(f"{FILE_DIRECTORY}\initial_output_{time_period}_{user_class}_Highway_Vehicle Trips_values.csv", header=None)
+            matrix = pd.read_csv(f"{FILE_DIRECTORY}\{FILE_PREFIX}_{time_period}_{user_class}_Highway_{FILE_SUFFIX}.csv", header=None)
         else:
-            matrix = pd.read_csv(f"{FILE_DIRECTORY}\initial_output_{time_period}_{user_class}_HGV_Vehicle Trips_values.csv", header=None) 
+            matrix = pd.read_csv(f"{FILE_DIRECTORY}\{FILE_PREFIX}_{time_period}_{user_class}_HGV_{FILE_SUFFIX}.csv", header=None) 
 
-        #Add the new rows to the current matrix
-        for z in range(len(new_rows)):
-            matrix = matrix.append(new_rows[z], ignore_index=True)
+        #Add the new rows to the current matrix one at a time
+        for i in range(len(new_rows)):
+            matrix = matrix.append(new_rows[i], ignore_index=True)
 
         #Insert new columns to ensure the matrix remains square (arbitarily high value of 1000000 is selected for the column names as to not clash with any existing names)
-        for z in range(len(NEW_MODEL_ZONES)):
-            matrix.insert((160+z), (1000000+z), 0)
+        #
+        for i in range(len(NEW_MODEL_ZONES)):
+            matrix.insert((POSITION_OF_NEW_ZONES+i), (1000000+i), 0)
 
         #Ensure all zones names are of the same data type for sorting
         matrix[0] = matrix[0].astype(int)
