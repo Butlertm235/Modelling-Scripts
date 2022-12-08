@@ -1,5 +1,6 @@
 """
-A program that expands a matrix given a new set of model zones that have to be included.
+A program that expands a matrix given a new set of model zones that have to be included. Note: Only works for new model zones that occur consecutively in the final product.
+Program could be improved to allow new zones to be added throughout the old zones
 
 Author: Thomas Butler
 
@@ -49,7 +50,7 @@ for time_period in TIME_PERIODS:
     #Reads in the data 1 matrix at a time, each of which refer to a different time period and user class
     for user_class in USER_CLASSES:
         matrix = pd.DataFrame()
-        #Accounts for quirk in matrix processing output names
+        #Accounts for quirk in matrix processing output names (Highly specific to using one mobile network script feel free to change or comment out the if statement if not useful)
         if user_class != "7_HGV":
             matrix = pd.read_csv(f"{FILE_DIRECTORY}\{FILE_PREFIX}_{time_period}_{user_class}_Highway_{FILE_SUFFIX}.csv", header=None)
         else:
@@ -60,7 +61,6 @@ for time_period in TIME_PERIODS:
             matrix = matrix.append(new_rows[i], ignore_index=True)
 
         #Insert new columns to ensure the matrix remains square (arbitarily high value of 1000000 is selected for the column names as to not clash with any existing names)
-        #
         for i in range(len(NEW_MODEL_ZONES)):
             matrix.insert((POSITION_OF_NEW_ZONES+i), (1000000+i), 0)
 
