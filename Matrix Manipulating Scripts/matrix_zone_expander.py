@@ -26,6 +26,10 @@ POSITION_OF_NEW_ZONES = 160
 INITIAL_NUMBER_OF_ZONES = 169
 NEW_MODEL_ZONES = [6030, 6140, 6141, 6148, 6200, 6201, 6202, 6203, 6204, 6205, 6206, 6207, 6208, 6210, 6211, 6500, 6501, 6502, 6503, 6504, 6505, 6506]
 
+########################################################################################################################################################
+
+#Procedure
+
 #A dictionary that stores all of the new rows to be added 
 #(used a dictionary as it can be easily appended onto the end of a dataframe, may need updating if append is removed from pandas)
 new_rows = dict()
