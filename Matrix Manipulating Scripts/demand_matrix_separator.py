@@ -1,5 +1,10 @@
-#A programme to separate out appended demand matrix into their respective user classes and give the user choice of output format
+"""
+A programme to separate out appended demand matrix into their respective user classes and give the user choice of output format
 
+Author: Thomas Butler, Hayden McCarthy
+
+Contributors:
+"""
 from cmath import nan
 import numpy as np
 import pandas as pd
@@ -11,8 +16,11 @@ zone_list = set()
 cwd = os.getcwd()
 current_user_class = 1
 
-def zone_finder(row, used_zones):
-    #Finds how many zones there are by iterating through the matrix adding zones till it finds repeats
+def zone_finder(row, used_zones: set()):
+    """
+    Finds how many zones there are by iterating through the matrix adding zones till it finds repeats
+    """
+
     global number_of_zones
 
     if row.iloc[0] in used_zones:

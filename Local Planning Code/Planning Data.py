@@ -1,8 +1,19 @@
+"""
+INSERT DESCRIPTION HERE
+
+Author: Cesca Brint
+
+Contributors:
+"""
+
+
 import numpy as np
 import pandas as pd
 
 def housing_data(district_name):
-
+    """
+    INSERT FUNCTION DESCRIPTION
+    """
     try:
         R7 = pd.read_excel(f'{district_name}_Template.xlsx', sheet_name='Housing New')
         R6 = pd.read_excel(f'{district_name}_Template.xlsx', sheet_name='Housing Old')
@@ -61,7 +72,9 @@ def housing_data(district_name):
     R7.to_csv(f'{district_name}_housing_data.csv', index=False)
 
 def employment_data(district_name):
-
+    """
+    INSERT FUNCTION DESCRIPTION
+    """
     try:
         R7 = pd.read_excel(f'{district_name}_Template.xlsx', sheet_name='Employment New')
         R6 = pd.read_excel(f'{district_name}_Template.xlsx', sheet_name='Employment Old')

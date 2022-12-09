@@ -1,8 +1,18 @@
+"""
+INSERT DESCRIPTION HERE
+
+Author: Cesca Brint
+
+Contributors:
+"""
+
 import numpy as np
 import pandas as pd
 
 def housing_summary_data(district_name):
-
+    """
+    INSERT FUNCTION DESCRIPTION
+    """
     try:
         R7 = pd.read_csv(f'{district_name}_housing_data.csv')
     except:
@@ -27,7 +37,9 @@ def housing_summary_data(district_name):
     R7_summary_sum.to_csv(f'{district_name}_housing_summary_data.csv', index=False)
 
 def employment_summary_data(district_name):
-
+    """
+    INSERT FUNCTION DESCRIPTION
+    """
     try:
         R7 = pd.read_csv(f'{district_name}_employment_data.csv')
     except:
