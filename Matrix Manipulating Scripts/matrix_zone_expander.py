@@ -54,11 +54,7 @@ for time_period in TIME_PERIODS:
     #Reads in the data 1 matrix at a time, each of which refer to a different time period and user class
     for user_class in USER_CLASSES:
         matrix = pd.DataFrame()
-        #Accounts for quirk in matrix processing output names (Highly specific to using one mobile network script feel free to change or comment out the if statement if not useful)
-        if user_class != "7_HGV":
-            matrix = pd.read_csv(f"{FILE_DIRECTORY}\{FILE_PREFIX}_{time_period}_{user_class}_Highway_{FILE_SUFFIX}.csv", header=None)
-        else:
-            matrix = pd.read_csv(f"{FILE_DIRECTORY}\{FILE_PREFIX}_{time_period}_{user_class}_HGV_{FILE_SUFFIX}.csv", header=None) 
+        matrix = pd.read_csv(f"{FILE_DIRECTORY}\{FILE_PREFIX}_{time_period}_{user_class}_Highway_{FILE_SUFFIX}.csv", header=None)
 
         #Add the new rows to the current matrix one at a time
         for i in range(len(new_rows)):
