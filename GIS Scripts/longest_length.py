@@ -10,8 +10,6 @@ Contributors:
 import geopandas as gpd
 from shapely.geometry import LineString, mapping
 from itertools import combinations
-import matplotlib.pyplot as plt
-from shapely.wkt import loads
 import re
 import os
 
