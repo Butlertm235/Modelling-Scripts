@@ -36,8 +36,8 @@ def tabular_flows(df2, key, hour):
     return df2
 
 
-def create_db(db_dir,db_name):
-    """Reads Suffolk ATC flow spreadsheets and combines them into a single dataframe
+def create_db_ca_month_volume(db_dir,db_name):
+    """Reads CA Traffic month volume spreadsheets spreadsheets and combines them into a single dataframe
     that is ready for processing.
     
     This function is intended to be used only with Suffolk ATC files provided in
