@@ -1,0 +1,154 @@
+
+
+           Atkins Ltd / RIS University of Leeds / FVVB Ltd - SATURN 11.4.07H 27/08/2018
+                     32-BIT FTN 95 VERSION  -  LEVEL N4
+
+           PROGRAM      MX  Matrix Database  11.04.05  07.03.17
+           RUNNING EXE: C:\Program Files (x86)\Atkins\SATURN\XEXES 11.4.07H MC N4\$MX.exe
+           DATE OF EXE: 27/ 8/18
+
+           MAXIMUM NUMBER OF SIMULATION NODES =     23000
+                             ASSIGNMENT NODES =     95000
+                             ASSIGNMENT LINKS =    200000
+                             ZONES            =      4000
+
+           DATE  4/11/22           TIME 11:10: 7
+
+               THE MASTER FILE SAT10KEY.DAT READ FROM:
+
+               C:\Program Files (x86)\Atkins\SATURN\XEXES 11.4.07H MC N4\SAT10KEY.DAT
+
+           USER: WSP MANAGEMENT SERVICES LTD (SATURN TRAFFIC MODEL)
+
+           BASIC DATA EITHER SET AS DEFAULT OR AS READ FROM SAT10KEY.DAT:
+
+ (DEFAULT) HPREF  =
+  (SET)    CPREF  = C:\Program Files (x86)\Atkins\SATURN\DAT\
+ (DEFAULT) KPREF  =
+ (DEFAULT) LEFTDR =     T
+ (DEFAULT) GO4IT  =     F
+ (DEFAULT) ADDAL  =     T
+ (DEFAULT) LPERP  =    60
+ (DEFAULT) LPERT  =    34
+ (DEFAULT) DRIVE  = C:
+  (SET)    KPEXT  = TXT
+
+
+     COMMAND LINE PARAMETERS:
+
+     "\\uk.wspgroup.com\central data\Projects\70100xxx\70100518 - West Winch Housing Access Road -  PMO\03 WIP\TP Transport Planning\01 Analysis & Calcs\01 SATURN\01 TEMPRO v8\01 Models\01_2018_Base\221026_KLTM_WW_Rev28\2018\Base\PM\KLTS_PM_Rev20_post_WWto6208.
+
+
+     STANDARD SATWIN FOLDERS AS READ FROM:
+
+     C:\SATWIN\SATWIN32.DEF
+
+ Working Folder:      C:\00_PROJECTS\A61S\
+ Control File Folder: C:\SATWIN\DAT\
+ Programs Folder:     C:\SATWIN\XEXES\
+
+ AN OUTPUT LOG FILE IS CREATED ON FILE:
+MX.LOG
+
+
+               OPEN THE GRAPHICAL CONTROL FILE GRAF.DAT
+
+
+ GRAPHICS DEVICES ARE INITIALISED VIA FILE: C:\Program Files (x86)\Atkins\SATURN\DAT\GRAF.DAT
+ PATH: C:\Program Files (x86)\Atkins\SATURN\DAT\GRAF.DAT
+
+
+ CLOSE CHANNEL 12 FILE C:\Program Files (x86)\Atkins\SATURN\DAT\GRAF.DAT
+
+
+ P2OPDV: NEW GRAPHICAL DEVICE SET: SCREEN
+
+ 2 LINES OF DATA EXTRACTED FROM GRAF.DAT (OR EQUIVALENT):
+  250  360 1.35 0.62    5 F  1   16  SCREEN
+     0.0   639.0     0.0   479.0 F       0.70  1 2 3 4 5 6 7 8 910111213141516
+
+ CURRENT VALUES OF PARAMETERS:
+
+ XUMIN, XUMAX, YUMIN, YUMAX =        0.0     639.0       0.0     479.0
+ HEIGHT =     250.00 WIDTH =     360.00
+ CORRECTION FACTOR =      1.35
+ ROTATIONAL SHIFT  =      0.70
+
+ OPEN THE PREFERENCES/CONTROL FILE:
+
+ CONTROL FILE
+C:\Program Files (x86)\Atkins\SATURN\DAT\MX0.DAT
+ OPENED OK
+ FULL PATH NAME:
+C:\Program Files (x86)\Atkins\SATURN\DAT\MX0.DAT
+
+
+ READING NAMELIST DATA FROM CHANNEL 45 - C:\Program Files (x86)\Atkins\SATURN\DAT\MX0.DAT
+ IDENTIFIER: PARAM
+
+
+     NAMELIST DATA INPUT ENDS
+
+             44 RECORDS READ IN TOTO
+              0 WITH SYNTAX ERRORS
+             43 VARIABLE NAMES IDENTIFIED
+              0 WITH UNIDENTIFIED NAMES OR MISMATCHED DATA
+              0 REPEATED INPUT NAMES
+
+
+
+ CLOSE CHANNEL 45 FILE C:\Program Files (x86)\Atkins\SATURN\DAT\MX0.DAT
+
+
+
+     YOU HAVE REQUESTED  1 INPUT MATRICES:
+
+ ***** - SATURN NON-FATAL ERROR NUMBER 149 - *****
+         MISLEADING FILENAME ON CHANNEL  1
+
+ PROGRAM CONTINUES
+
+      FILE \\uk.wspgroup.com\central data\Projects\70100xxx\70100518 - West Winch Housing Access Road -  PMO\03 WIP\TP Transport Planning\01 Analysis & Calcs\01 SATURN\01 TEMPRO v8\01 Models\01_2018_Base\221026_KLTM_WW_Rev28\2018\Base\PM\KLTS_PM_Rev20_post_WWto6208.U
+      CONTAINS A FULL STOP WHICH IS GETTING CONFUSED WITH THE IDENTIFCATION OF AN EXTENSION
+      WHICH WILL BE ADDED AUTOMATICALLY AS A SUFFIX.
+
+
+ THE ORIGINAL FILENAME:
+\\uk.wspgroup.com\central data\Projects\70100xxx\70100518 - West Winch Housing Access Road -  PMO\03 WIP\TP Transport Planning\01 Analysis & Calcs\01 SATURN\01 TEMPRO v8\01 Models\01_2018_Base\221026_KLTM_WW_Rev28\2018\Base\PM\KLTS_PM_Rev20_post_WWto6208.U
+ HAS NO EXTENSION AND SO IS AMENDED TO:
+\\uk.wspgroup.com\central data\Projects\70100xxx\70100518 - West Winch Housing Access Road -  PMO\03 WIP\TP Transport Planning\01 Analysis & Calcs\01 SATURN\01 TEMPRO v8\01 Models\01_2018_Base\221026_KLTM_WW_Rev28\2018\Base\PM\KLTS_PM_Rev20_post_WWto6208.U
+
+
+     FILE \\uk.wspgroup.com\central data\Projects\70100xxx\70100518 - West Winch Housing Access Road -  PMO\03 WIP\TP Transport Planning\01 Analysis & Calcs\01 SATURN\01 TEMPRO v8\01 Models\01_2018_Base\221026_KLTM_WW_Rev28\2018\Base\PM\KLTS_PM_Rev20_post_WWto6208.U
+     (APPARENTLY) ALREADY IN USE BY THIS PROGRAM; PICK AGAIN
+
+ ... BUT A FATAL ERROR IN MX WHICH (NORMALLY) REQUIRES AT LEAST
+     ONE INPUT .UFM MATRIX FILE.
+
+
+ LISTING OF THE .LOG FILE:
+ MX.LOG
+
+
+
+
+                    **************************************
+
+                      NORMAL COMPLETION OF PROGRAM MX
+
+                     THERE HAVE BEEN    1 NON-FATAL ERRORS
+
+                     FILES CURRENTLY IN USE:
+                     CHANNEL   FILE NAME
+
+                        6     \\uk.wspgroup.com\central data\Projects\70100xxx\70100518 - West Winch Housing Access Road -  PMO\03 WIP\TP Transport Planning\01 Analysis & Calcs\01 SATURN\01 TEMPRO v8\01 Models\01_2018_Base\221026_KLTM_WW_Rev28\2018\Base\PM\KLTS_PM_Rev20_post_WWto6208.U
+                       25     MX.LOG
+
+                        CPU TIME =      19.73 SECONDS
+
+                            COMPLETION CODE -  0
+
+                    **************************************
+
+
+ CLOSE CHANNEL 25 FILE MX.LOG

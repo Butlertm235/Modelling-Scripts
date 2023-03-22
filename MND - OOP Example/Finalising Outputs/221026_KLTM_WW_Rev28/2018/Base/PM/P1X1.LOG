@@ -1,0 +1,30 @@
+ Menu bar:  &Nav-Box                          6018                          6001
+      1020       679         0 54500.9 33549.8 (Mouse pixels/status/X,Y)    6363
+      1096       764         1 58205.0 28552.6 (Mouse pixels/status/X,Y)    6361
+ Menu bar:  &Nav-Box                          6018                          6001
+       648       316         0 55597.1 32053.1 (Mouse pixels/status/X,Y)    6363
+       924       491         1 56680.9 31224.2 (Mouse pixels/status/X,Y)    6361
+      1786       169   68    0  Display menu   (Pixels/key/status/Line)     6001
+      1749        98   67    0  Choice of      (Pixels/key/status/Line)     6029
+      1748        82   78    0  2 Networks -   (Pixels/key/status/Line)     6380
+          11 - Change 2-1 to 1-2 above
+           2 -   2 - network 2 only
+      1753       277   48    0  0-Full set     (Pixels/key/status/Line)     6380
+           1 - None of the below!
+      1768        73   78    0  2 Networks -   (Pixels/key/status/Line)     6380
+           3 -   3 - Differences (1-2)
+      1780       277   48    0  0-Full set     (Pixels/key/status/Line)     6380
+           5 - Capacity Index
+      1766       131   68    0  Display of     (Pixels/key/status/Line)
+      1769       129   77    0  Display Mode   (Pixels/key/status/Line)     6014
+           3 - Bandwidths
+ Menu bar:  &Nav-Box                          6018                          6014
+       994       382         0 56238.0 31747.1 (Mouse pixels/status/X,Y)    6363
+      1415       795         1 56509.4 31425.9 (Mouse pixels/status/X,Y)    6361
+ Menu bar:  &Nav-Out                          6016                          6014
+ Menu bar:  &Nav-Out                          6016                          6014
+ Menu bar:  &Nav-Out                          6016                          6014
+ Menu bar:  &Nav-Out                          6016                          6014
+ Menu bar:  &Nav-Out                          6016                          6014
+ Menu bar:  &Exit                             1700
+Yes OK to quit the program?

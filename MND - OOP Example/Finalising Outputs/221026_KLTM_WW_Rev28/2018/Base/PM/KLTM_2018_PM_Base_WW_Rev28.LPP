@@ -1,0 +1,312 @@
+
+
+           Atkins Ltd / RIS University of Leeds / FVVB Ltd - SATURN 11.4.07H 27/08/2018
+                     32-BIT FTN 95 VERSION  -  LEVEL N4
+
+           PROGRAM      P1X 11.4.07 NETWORK PLOTTING 02.10.17
+           RUNNING EXE: C:\Program Files (x86)\Atkins\SATURN\XEXES 11.4.07H MC N4\$P1X.exe
+           DATE OF EXE: 27/ 8/18
+
+           MAXIMUM NUMBER OF SIMULATION NODES =     23000
+                             ASSIGNMENT NODES =     95000
+                             ASSIGNMENT LINKS =    200000
+                             ZONES            =      4000
+
+           DATE 27/10/22           TIME 11:22: 7
+
+               THE MASTER FILE SAT10KEY.DAT READ FROM:
+
+               C:\Program Files (x86)\Atkins\SATURN\DAT\SAT10KEY.DAT
+
+           USER: WSP MANAGEMENT SERVICES LTD (SATURN TRAFFIC MODEL)
+
+           BASIC DATA EITHER SET AS DEFAULT OR AS READ FROM SAT10KEY.DAT:
+
+ (DEFAULT) HPREF  =
+  (SET)    CPREF  = C:\Program Files (x86)\Atkins\SATURN\DAT\
+ (DEFAULT) KPREF  =
+ (DEFAULT) LEFTDR =     T
+ (DEFAULT) GO4IT  =     F
+ (DEFAULT) ADDAL  =     T
+ (DEFAULT) LPERP  =    60
+ (DEFAULT) LPERT  =    34
+ (DEFAULT) DRIVE  = C:
+  (SET)    KPEXT  = TXT
+
+
+     COMMAND LINE PARAMETERS:  "KLTM_2018_PM_Base_WW_Rev28.UFS"
+
+ AN OUTPUT LOG FILE IS CREATED ON FILE:
+P1X4.LOG
+
+ OPEN THE PREFERENCES/CONTROL FILE:
+
+ CONTROL FILE
+C:\Program Files (x86)\Atkins\SATURN\DAT\P1X0.DAT
+ OPENED OK
+ FULL PATH NAME:
+C:\Program Files (x86)\Atkins\SATURN\DAT\P1X0.DAT
+
+
+ READING NAMELIST DATA FROM CHANNEL 45 - C:\Program Files (x86)\Atkins\SATURN\DAT\P1X0.DAT
+ IDENTIFIER: PARAM
+ * - P1X PREFERENCES FILE (11.5.05H)
+ *         1 - Numbers 2 - Boxes 3 - Bandwidth 4/5/6 - Variable
+ * Default Pen definitions:
+ *  1     BLUE           2     GREEN
+ *  3     TURQUOISE      4     RED
+ *  5     PURPLE         6     ORANGE
+ *  7     GREY           8     BROWN
+ *  9     BT BLUE       10     BT GREEN
+ * 11     MINT          12     ORANGE
+ * 13     PINK          14     YELLOW
+ * 15     WHITE         16     BLANK
+ * Pens used in Scatter plots etc.:
+ *
+ *   Real Variables:
+ *
+
+     UNIDENTIFIED NAMELIST VARIABLE NAME DAFAIL
+ *
+ *   Logical variables
+ *
+
+     UNIDENTIFIED NAMELIST VARIABLE NAME ONETWO
+
+     UNIDENTIFIED NAMELIST VARIABLE NAME PEN123
+ *                  (Provided SPIDER = T in the network being looked at)
+
+     UNIDENTIFIED NAMELIST VARIABLE NAME MINI_M
+
+     UNIDENTIFIED NAMELIST VARIABLE NAME NODAOK
+
+     UNIDENTIFIED NAMELIST VARIABLE NAME AUTDIF
+
+     UNIDENTIFIED NAMELIST VARIABLE NAME MTONLY
+ *
+ * - SATLOOK SIMULATION SUMMARY STATISTICS LOGICAL PARAMETERS
+ *
+ *
+ *   Highlight Pens for Field 2 ERL Values
+ *
+ *
+ *   Character variables
+ *
+
+
+     NAMELIST DATA INPUT ENDS
+
+            246 RECORDS READ IN TOTO
+              0 WITH SYNTAX ERRORS
+            244 VARIABLE NAMES IDENTIFIED
+              7 WITH UNIDENTIFIED NAMES OR MISMATCHED DATA
+              0 REPEATED INPUT NAMES
+
+
+
+ CLOSE CHANNEL 45 FILE C:\Program Files (x86)\Atkins\SATURN\DAT\P1X0.DAT
+
+
+          OPEN THE MASTER NETWORK FILE ON CHANNEL 1:
+
+
+ HEADER DATA FROM THE UNFORMATTED FILE READ FROM CHANNEL  1
+
+      RUN NAME        KLTM_2018_PM_Base_WW_Rev28
+      CREATED BY PROGRAM SATALL
+      DATE AND TIME OF CREATION 26/10/22  11:17:47
+      FILE NAME: KLTM_2018_PM_Base_WW_Rev28.UFS
+      PATHNAME:  Y:\70100xxx\70100518 - West Winch Housing Access Road -  PMO\03 WIP\TP Transport Planning\01 Analysis & Calcs\01 SATURN\01 TEMPRO v8\01 Models\01_2018_Base\221026_KLTM_WW_Rev28\2018\Base\pm\KLTM_2018_PM_Base_WW_Rev28.UFS
+      SATURN VERSION  11.4. 7
+
+ OPEN A .UFC FILE ON CHANNEL 31 FOR THE NETWORK ON CHANNEL  1
+
+
+ OPENED UFC FILENAME: KLTM_2018_PM_Base_WW_Rev28.UFC
+        PATHNAME: Y:\70100xxx\70100518 - West Winch Housing Access Road -  PMO\03 WIP\TP Transport Planning\01 Analysis & Calcs\01 SATURN\01 TEMPRO v8\01 Models\01_2018_Base\221026_KLTM_WW_Rev28\2018\Base\pm\KLTM_2018_PM_Base_WW_Rev28.UFC
+
+
+ HEADER DATA FROM THE UNFORMATTED FILE READ FROM CHANNEL 31
+
+      RUN NAME        KLTM_2018_PM_Base_WW_Rev28
+      CREATED BY PROGRAM SATALL
+      DATE AND TIME OF CREATION 26/10/22  11:17:47
+      FILE NAME: KLTM_2018_PM_Base_WW_Rev28.UFC
+      PATHNAME:  Y:\70100xxx\70100518 - West Winch Housing Access Road -  PMO\03 WIP\TP Transport Planning\01 Analysis & Calcs\01 SATURN\01 TEMPRO v8\01 Models\01_2018_Base\221026_KLTM_WW_Rev28\2018\Base\pm\KLTM_2018_PM_Base_WW_Rev28.UFC
+      SATURN VERSION  11.4. 7
+
+ THE .UFC FILE WAS CREATED BY THE NETWORK WITH:
+ FILENAME KLTM_2018_PM_Base_WW_Rev28.UFS
+ PATHNAME Y:\70100xxx\70100518 - West Winch Housing Access Road -  PMO\03 WIP\TP Transport Planning\01 Analysis & Calcs\01 SATURN\01 TEMPRO v8\01 Models\01_2018_Base\221026_KLTM_WW_Rev28\2018\Base\pm\KLTM_2018_PM_Base_WW_Rev28.UFS
+      AND WITH THE TRIP MATRIX:
+ FILENAME KLTS_PM_Rev20_post_WWto6208.UFM
+ PATHNAME Y:\70100xxx\70100518 - West Winch Housing Access Road -  PMO\03 WIP\TP Transport Planning\01 Analysis & Calcs\01 SATURN\01 TEMPRO v8\01 Models\01_2018_Base\221026_KLTM_WW_Rev28\2018\Base\pm\KLTS_PM_Rev20_post_WWto6208.UFM
+
+
+ OPEN THE NETWORK .DAT FILE ON CHANNEL 38 - FILE:
+  KLTM_2018_PM_Base_WW_Rev28.DAT
+
+
+ READING NAMELIST DATA FROM CHANNEL 38 - KLTM_2018_PM_Base_WW_Rev28.DAT
+ IDENTIFIER: PARAM
+ *2018, 2024, 2026, 2036, 2039
+ *
+ *AM,IP,PM
+ *Base, DM,Op_1, Op_2, Op_3, Op_4, Op_5, Op_6,Op_7,Op_8,Op_9, Ref, HK, WW_P, WW
+ *
+ ******************************************************************************
+ *
+ *    LOGICAL PARAMETERS
+ *
+ *
+ *    INTEGER PARAMETERS
+ *
+ *
+ *    REAL PARAMETERS
+ *
+ *
+ *    CHARACTER PARAMETERS
+ *
+
+     INCORRECT SYNTAX IN NAMELIST RECORD:
+  XYFORM =  2I5
+ ******************************************************************************
+
+
+     NAMELIST DATA INPUT ENDS
+
+             61 RECORDS READ IN TOTO
+              1 WITH SYNTAX ERRORS
+            205 VARIABLE NAMES IDENTIFIED
+            169 WITH UNIDENTIFIED NAMES OR MISMATCHED DATA
+              0 REPEATED INPUT NAMES
+
+
+
+ ENTRY POINTS IN THE INTERNAL DIRECT ACCESS .DAT FILE HAVE BEEN
+ IDENTIFIED FOR   558 SIMULATION NODES OUT OF   560
+ RECORDS READ WHICH SHOULD HAVE BEEN NODE RECORDS =   558
+ THOSE RECORDS REJECTED =     0
+ NUMBER OF TIMES SEARCHING FOR THE NEXT NODE RECORD =     0
+
+
+ CLOSE CHANNEL 38 FILE KLTM_2018_PM_Base_WW_Rev28.DAT
+
+ SET THE FIRST MATRIX TO BE THE TRIP MATRIX FILE:
+KLTS_PM_Rev20_post_WWto6208.UFM
+ DEFINED ON THE NETWORK FILE
+
+
+ HEADER DATA FROM THE UNFORMATTED FILE READ FROM CHANNEL 10
+
+      RUN NAME
+      CREATED BY PROGRAM MX
+      DATE AND TIME OF CREATION 12/ 9/19  13:32:11
+      FILE NAME: KLTS_PM_Rev20_post_WWto6208.UFM
+      PATHNAME:  Y:\70100xxx\70100518 - West Winch Housing Access Road -  PMO\03 WIP\TP Transport Planning\01 Analysis & Calcs\01 SATURN\01 TEMPRO v8\01 Models\01_2018_Base\221026_KLTM_WW_Rev28\2018\Base\pm\KLTS_PM_Rev20_post_WWto6208.UFM
+      SATURN VERSION  11.4. 7
+
+
+      MATRIX TITLE - TITLE UNSET
+      MATRIX SIZE -   1900 ROWS    190 COLUMNS
+      TYPE OF ELEMENTS - REALS
+      ELEMENT DIMENSIONS -
+      ELEMENT UNITS -
+      NUMBER OF LEVELS -    10
+      NUMBER OF BLOCKS -     1
+      BASE NUMBER OF ROWS -      190
+      BASE NUMBER OF COLUMNS -   190
+
+      FILENAME: KLTS_PM_Rev20_post_WWto6208.UFM
+
+ THE TRIP MATRIX FILE FOR ANALYSIS ETC. IS ASSUMED TO BE:
+KLTS_PM_Rev20_post_WWto6208.UFM
+
+
+               OPEN THE GRAPHICAL CONTROL FILE GRAF.DAT
+
+
+ GRAPHICS DEVICES ARE INITIALISED VIA FILE: C:\Program Files (x86)\Atkins\SATURN\DAT\GRAF.DAT
+ PATH: C:\Program Files (x86)\Atkins\SATURN\DAT\GRAF.DAT
+
+
+ CLOSE CHANNEL 12 FILE C:\Program Files (x86)\Atkins\SATURN\DAT\GRAF.DAT
+
+
+ P2OPDV: NEW GRAPHICAL DEVICE SET: SCREEN
+
+ 2 LINES OF DATA EXTRACTED FROM GRAF.DAT (OR EQUIVALENT):
+  250  360 1.35 0.62    5 F  1   16  SCREEN
+     0.0   639.0     0.0   479.0 F       0.70  1 2 3 4 5 6 7 8 910111213141516
+
+ CURRENT VALUES OF PARAMETERS:
+
+ XUMIN, XUMAX, YUMIN, YUMAX =        0.0    1909.0       0.0    1099.0
+ HEIGHT =     250.00 WIDTH =     360.00
+ CORRECTION FACTOR =      1.35
+ ROTATIONAL SHIFT  =      0.70
+
+
+ **** - WARNING - **** NODES     6141     2000 ARE
+      CONNECTED BY A LINK OF ZERO LENGTH AT POSITION   56577.0   32246.0
+      IS THIS CORRECT?
+
+
+ CLOSE CHANNEL 37 FILE KLTM_2018_PM_Base_WW_Rev28.TMP
+
+ DELETED FILE: KLTM_2018_PM_Base_WW_Rev28.TMP
+
+
+ LISTING OF THE .LOG FILE:
+ P1X4.LOG
+
+ Menu bar:  &Nav-Box                          6018                          6001
+       996       661         0 53331.2 34608.1 (Mouse pixels/status/X,Y)    6363
+      1123       767         1 59520.9 28376.2 (Mouse pixels/status/X,Y)    6361
+ Menu bar:  &Nav-Box                          6018                          6001
+       775       429         0 56078.0 32108.9 (Mouse pixels/status/X,Y)    6363
+       888       569         1 56636.5 31274.2 (Mouse pixels/status/X,Y)    6361
+ Menu bar:  &Nav-Box                          6018                          6001
+       663       514         0 56240.8 31702.3 (Mouse pixels/status/X,Y)    6363
+      1052       821         1 56496.0 31459.4 (Mouse pixels/status/X,Y)    6361
+      1758       180         0 56543.5 31660.8 (Mouse pixels/status/X,Y)    6001
+      1750       164   68    0  Display menu   (Pixels/key/status/Line)     6001
+      1738        98   67    0  Choice of      (Pixels/key/status/Line)     6029
+      1747       165   48    0  0-Full set     (Pixels/key/status/Line)     6380
+          19 - Actual flow (pcu/hr)
+ Menu bar:  &Exit                             1700
+Yes OK to quit the program?
+
+
+                    **************************************
+
+                      NORMAL COMPLETION OF PROGRAM P1X
+
+                     THERE HAVE BEEN    0 NON-FATAL ERRORS
+
+                     FILES CURRENTLY IN USE:
+                     CHANNEL   FILE NAME
+
+                        1     KLTM_2018_PM_Base_WW_Rev28.UFS
+                        6     KLTM_2018_PM_Base_WW_Rev28.LPP
+                       10     KLTS_PM_Rev20_post_WWto6208.UFM
+                       25     P1X4.LOG
+                       31     KLTM_2018_PM_Base_WW_Rev28.UFC
+
+                        CPU TIME =   277 MINS   28.55 SECONDS
+
+                            COMPLETION CODE -  0
+
+                    **************************************
+
+
+ CLOSE CHANNEL  1 FILE KLTM_2018_PM_Base_WW_Rev28.UFS
+
+
+ CLOSE CHANNEL 10 FILE KLTS_PM_Rev20_post_WWto6208.UFM
+
+
+ CLOSE CHANNEL 25 FILE P1X4.LOG
+
+
+ CLOSE CHANNEL 31 FILE KLTM_2018_PM_Base_WW_Rev28.UFC

@@ -1,0 +1,90 @@
+      1721        86   70    0  Files menu     (Pixels/key/status/Line)     6001
+      1722        61   73    0  Inputs         (Pixels/key/status/Line)     6105
+      1718       194   65    0  Add a 2nd      (Pixels/key/status/Line)     6105
+
+ Menu bar:  &Nav-Box                          6018                          6105
+      1018       674         0 54403.4 33843.8 (Mouse pixels/status/X,Y)    6363
+      1124       749         1 59569.6 29434.4 (Mouse pixels/status/X,Y)    6361
+ Menu bar:  &Nav-Box                          6018                          6105
+       556       420         0 56000.9 32088.5 (Mouse pixels/status/X,Y)    6363
+       761       638         1 56711.1 31177.4 (Mouse pixels/status/X,Y)    6361
+      1766       610   81    0  Q - Return     (Pixels/key/status/Line)     6105
+      1787       421   81    0  Q - Return     (Pixels/key/status/Line)     6105
+      1744       165   68    0  Display menu   (Pixels/key/status/Line)     6001
+      1727        96   67    0  Choice of      (Pixels/key/status/Line)     6029
+      1744       162   48    0  0-Full set     (Pixels/key/status/Line)     6380
+           5 - Capacity Index
+ Menu bar:  &Nav-Box                          6018
+       639       374         0 56211.8 31765.5 (Mouse pixels/status/X,Y)    6363
+      1145       847         1 56574.0 31357.0 (Mouse pixels/status/X,Y)    6361
+      1790       461   81    0  Q - Return     (Pixels/key/status/Line)
+      1757       602   81    0  Q - Return     (Pixels/key/status/Line)     6380
+      1767       689   81    0  Q - Return     (Pixels/key/status/Line)     6029
+      1742        81   70    0  Files menu     (Pixels/key/status/Line)     6001
+      1741        64   73    0  Inputs         (Pixels/key/status/Line)     6105
+      1747       193   65    0  Add a 2nd      (Pixels/key/status/Line)     6105
+Y:\70100xxx\70100518 - West Winch Housing Access Road -  PMO\03 WIP\TP Transport Planning\01 Analysis & Calcs\01 SATURN\01 TEMPRO v8\01 Models\02 2039 DM\221026_KLTM_WW_Rev28\2039\WW_P\AM\KLTM_2039_AM_WW_P_WW_Rev28.UFS
+      1796       714         0 56699.3 31488.8 (Mouse pixels/status/X,Y)    6105
+      1794       433   81    0  Q - Return     (Pixels/key/status/Line)     6105
+      1747       164   68    0  Display menu   (Pixels/key/status/Line)     6001
+      1744        99   67    0  Choice of      (Pixels/key/status/Line)     6029
+      1736        78   78    0  2 Networks -   (Pixels/key/status/Line)     6380
+          11 - Change 2-1 to 1-2 above
+           3 -   3 - Differences (1-2)
+      1730       279   48    0  0-Full set     (Pixels/key/status/Line)     6380
+          19 - Actual flow (pcu/hr)
+      1725       122   68    0  Display of     (Pixels/key/status/Line)
+      1725       122   77    0  Display Mode   (Pixels/key/status/Line)     6014
+           3 - Bandwidths
+ Menu bar:  &Nav-Out                          6016                          6014
+ Menu bar:  &Nav-Out                          6016                          6014
+ Menu bar:  &Nav-Out                          6016                          6014
+ Menu bar:  &Nav-Out                          6016                          6014
+      1757       737   81    0  Q - Return     (Pixels/key/status/Line)     6014
+      1763       475   81    0  Q - Return     (Pixels/key/status/Line)
+      1766        84   78    0  2 Networks -   (Pixels/key/status/Line)     6380
+          11 - Change 1-2 to 2-1 above
+           3 -   3 - Differences (2-1)
+      1756       274   48    0  0-Full set     (Pixels/key/status/Line)     6380
+          19 - Actual flow (pcu/hr)
+ Menu bar:  &Nav-Box                          6018
+       554       284         0 56169.2 31790.5 (Mouse pixels/status/X,Y)    6363
+       998       665         1 56516.4 31431.2 (Mouse pixels/status/X,Y)    6361
+ Menu bar:  &Nav-Out                          6016
+ Menu bar:  &Nav-Out                          6016
+ Menu bar:  &Nav-Out                          6016
+ Menu bar:  &Nav-Out                          6016
+ Menu bar:  &Nav-Out                          6016
+ Menu bar:  &Nav-Out                          6016
+ Menu bar:  &Nav-Out                          6016
+      1754       476   81    0  Q - Return     (Pixels/key/status/Line)
+      1784       719   81    0  Q - Return     (Pixels/key/status/Line)     6380
+      1736        96   67    0  Choice of      (Pixels/key/status/Line)     6029
+      1731        81   78    0  2 Networks -   (Pixels/key/status/Line)     6380
+           3 -   3 - Differences (2-1)
+      1729       278   48    0  0-Full set     (Pixels/key/status/Line)     6380
+           5 - Capacity Index
+ Menu bar:  &Nav-In                           6015
+ Menu bar:  &Nav-In                           6015
+ Menu bar:  &Nav-In                           6015
+ Menu bar:  &Nav-In                           6015
+ Menu bar:  &Nav-Out                          6016
+ Menu bar:  &Nav-Out                          6016
+ Menu bar:  &Nav-Out                          6016
+ Menu bar:  &Nav-Out                          6016
+      1773       457   81    0  Q - Return     (Pixels/key/status/Line)
+      1772       278   48    0  0-Full set     (Pixels/key/status/Line)     6380
+          19 - Actual flow (pcu/hr)
+ Menu bar:  &Nav-Box                          6018
+       574       377         0 55984.0 31855.3 (Mouse pixels/status/X,Y)    6363
+      1061       732         1 56639.7 31278.7 (Mouse pixels/status/X,Y)    6361
+      1795       471   81    0  Q - Return     (Pixels/key/status/Line)
+      1746        84   78    0  2 Networks -   (Pixels/key/status/Line)     6380
+           1 -   1 - network 1 only
+      1789       272   48    0  0-Full set     (Pixels/key/status/Line)     6380
+           5 - Capacity Index
+ Menu bar:  &Nav-Out                          6016
+ Menu bar:  &Nav-Out                          6016
+ Menu bar:  &Nav-Out                          6016
+ Menu bar:  &Exit                             1700
+Yes OK to quit the program?

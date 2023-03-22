@@ -1,0 +1,30 @@
+ Menu bar:  &Nav-Box                          6018                          6001
+      1001       663         0 53574.9 34490.5 (Mouse pixels/status/X,Y)    6363
+      1105       772         1 58643.6 28082.2 (Mouse pixels/status/X,Y)    6361
+ Menu bar:  &Nav-Box                          6018                          6001
+       788       346         0 55845.0 32388.9 (Mouse pixels/status/X,Y)    6363
+       965       531         1 56736.2 31265.2 (Mouse pixels/status/X,Y)    6361
+      1745       176   68    0  Display menu   (Pixels/key/status/Line)     6001
+      1744       110   67    0  Choice of      (Pixels/key/status/Line)     6029
+      1747        68         0 57084.8 32305.1 (Mouse pixels/status/X,Y)    6380
+      1714        76   78    0  2 Networks -   (Pixels/key/status/Line)     6380
+          11 - Change 2-1 to 1-2 above
+           3 -   3 - Differences (1-2)
+      1750       278   48    0  0-Full set     (Pixels/key/status/Line)     6380
+          19 - Actual flow (pcu/hr)
+      1763       133   68    0  Display of     (Pixels/key/status/Line)
+      1755       125   77    0  Display Mode   (Pixels/key/status/Line)     6014
+           3 - Bandwidths
+      1776       742   81    0  Q - Return     (Pixels/key/status/Line)     6014
+      1772       479   81    0  Q - Return     (Pixels/key/status/Line)
+      1756        79   78    0  2 Networks -   (Pixels/key/status/Line)     6380
+          11 - Change 1-2 to 2-1 above
+           3 -   3 - Differences (2-1)
+      1730       281   48    0  0-Full set     (Pixels/key/status/Line)     6380
+          19 - Actual flow (pcu/hr)
+ Menu bar:  &Nav-Out                          6016
+ Menu bar:  &Nav-Out                          6016
+ Menu bar:  &Nav-Out                          6016
+ Menu bar:  &Nav-Out                          6016
+ Menu bar:  &Exit                             1700
+Yes OK to quit the program?

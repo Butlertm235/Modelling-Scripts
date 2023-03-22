@@ -1,0 +1,168 @@
+
+
+           Atkins Ltd / RIS University of Leeds / FVVB Ltd - SATURN 11.4.07H 27/08/2018
+                     32-BIT FTN 95 VERSION  -  LEVEL N4
+
+           PROGRAM      MX  Matrix Database  11.04.05  07.03.17
+           RUNNING EXE: C:\Program Files (x86)\Atkins\SATURN\XEXES 11.4.07H MC N4\$MX.exe
+           DATE OF EXE: 27/ 8/18
+
+           MAXIMUM NUMBER OF SIMULATION NODES =     23000
+                             ASSIGNMENT NODES =     95000
+                             ASSIGNMENT LINKS =    200000
+                             ZONES            =      4000
+
+           DATE 17/ 1/23           TIME 16:38:29
+
+               THE MASTER FILE SAT10KEY.DAT READ FROM:
+
+               C:\Program Files (x86)\Atkins\SATURN\DAT\SAT10KEY.DAT
+
+           USER: WSP MANAGEMENT SERVICES LTD (SATURN TRAFFIC MODEL)
+
+           BASIC DATA EITHER SET AS DEFAULT OR AS READ FROM SAT10KEY.DAT:
+
+ (DEFAULT) HPREF  =
+ (DEFAULT) CPREF  =
+ (DEFAULT) KPREF  =
+ (DEFAULT) LEFTDR =     T
+ (DEFAULT) GO4IT  =     F
+ (DEFAULT) ADDAL  =     T
+ (DEFAULT) LPERP  =    60
+ (DEFAULT) LPERT  =    34
+ (DEFAULT) DRIVE  = C:
+ (DEFAULT) KPEXT  = KP
+
+
+     COMMAND LINE PARAMETERS:  I
+
+ AN OUTPUT LOG FILE IS CREATED ON FILE:
+MX2.LOG
+
+
+               OPEN THE GRAPHICAL CONTROL FILE GRAF.DAT
+
+     INPUT FILE GRAF.DAT
+     NOT FOUND
+
+     INPUT FILE C:\Program Files (x86)\Atkins\SATURN\XEXES 11.4.07H MC N4\GRAF.DAT
+     NOT FOUND
+
+
+ GRAPHICS DEVICES ARE INITIALISED VIA FILE: C:\Program Files (x86)\Atkins\SATURN\DAT\GRAF.DAT
+ PATH: C:\Program Files (x86)\Atkins\SATURN\DAT\GRAF.DAT
+
+
+ CLOSE CHANNEL 12 FILE C:\Program Files (x86)\Atkins\SATURN\DAT\GRAF.DAT
+
+
+ P2OPDV: NEW GRAPHICAL DEVICE SET: SCREEN
+
+ 2 LINES OF DATA EXTRACTED FROM GRAF.DAT (OR EQUIVALENT):
+  250  360 1.35 0.62    5 F  1   16  SCREEN
+     0.0   639.0     0.0   479.0 F       0.70  1 2 3 4 5 6 7 8 910111213141516
+
+ CURRENT VALUES OF PARAMETERS:
+
+ XUMIN, XUMAX, YUMIN, YUMAX =        0.0     639.0       0.0     479.0
+ HEIGHT =     250.00 WIDTH =     360.00
+ CORRECTION FACTOR =      1.35
+ ROTATIONAL SHIFT  =      0.70
+
+ OPEN THE PREFERENCES/CONTROL FILE:
+
+     TRY: C:\Program Files (x86)\Atkins\SATURN\XEXES 11.4.07H MC N4\MX0.DAT
+
+     INPUT FILE C:\Program Files (x86)\Atkins\SATURN\XEXES 11.4.07H MC N4\MX0.DAT
+     NOT FOUND
+
+     TRY: \SATWIN\DAT\MX0.DAT
+
+     INPUT FILE \SATWIN\DAT\MX0.DAT
+     NOT FOUND
+
+
+ **** - NON-FATAL ERROR - **** CONTROL FILE MX0.DAT
+        CANNOT BE FOUND AND/OR OPENED
+
+
+ NUMBER OF (TOTAL) ROWS SET EQUAL TO THE NUMBER OF
+ RECORDS ON THE INPUT FILE:  1330
+
+          READ ALL ELEMENTS IN CSV (Comma Separated) FORMAT AS FOLLOWS:
+          - ONE RECORD PER MATRIX ROW
+     NUMBER OF ROWS PER LEVEL =   190
+     NUMBER OF COLUMNS        =   190
+     NUMBER OF LEVELS         =     7
+      (I.E., TOTAL NUMBER OF ROWS = 1330)
+     AN INITIAL ROW NUMBER IS NOT INCLUDED
+     AN INITIAL ZONE NAME IS INCLUDED
+
+
+ READING A COMMA SEPARATED VARIABLE MATRIX DATA FILE:
+ C:\Users\UKTMB001\Documents\Python Scripts\MND\Test\Expanded\synth_car_IP_peak_hr_Trips.csv
+
+
+ CLOSE CHANNEL  5 FILE C:\Users\UKTMB001\Documents\Python Scripts\MND\Test\Expanded\synth_car_IP_peak_hr_Trips.csv
+
+
+ OUTPUT THE INTERNAL MATRIX DATA TO AN EXTERNAL .UFM FILE
+ C:\Users\UKTMB001\Documents\Python Scripts\MND\Test\Expanded\synth_car_IP_peak_hr_Trips.UFM
+
+
+ HEADER RECORD DATA FOR THE MATRIX WRITTEN TO CHANNEL 10
+
+      MATRIX TITLE - TITLE UNSET
+      MATRIX SIZE -   1330 ROWS    190 COLUMNS
+      TYPE OF ELEMENTS - REALS
+      ELEMENT DIMENSIONS -
+      ELEMENT UNITS -
+      NUMBER OF LEVELS -     7
+      NUMBER OF BLOCKS -     1
+      BASE NUMBER OF ROWS -   190
+      BASE NUMBER OF COLUMNS -   190
+
+      FILENAME: C:\Users\UKTMB001\Documents\Python Scripts\MND\Test\Expanded\synth_car_IP_peak_hr_Trips.UFM
+
+
+ CLOSE CHANNEL 10 FILE C:\Users\UKTMB001\Documents\Python Scripts\MND\Test\Expanded\synth_car_IP_peak_hr_Trips.UFM
+
+
+ LISTING OF THE .LOG FILE:
+ MX2.LOG
+
+           1                                                                2004
+C:\Users\UKTMB001\Documents\Python Scripts\MND\Test\Expanded\synth_car_IP_peak_h
+y
+           1                                                                2030
+           3                                                                2045
+           7                                                                2052
+           5                                                                2045
+           0                                                                2045
+          14                                                                2000
+           1                                                                2600
+TITLE UNSET                                                                 9260
+           1                                                                2640
+           0                                                                2000
+
+
+                    **************************************
+
+                      NORMAL COMPLETION OF PROGRAM MX
+
+                     THERE HAVE BEEN    1 NON-FATAL ERRORS
+
+                     FILES CURRENTLY IN USE:
+                     CHANNEL   FILE NAME
+
+                        6     MX.LPX
+                       25     MX2.LOG
+
+                        CPU TIME =      24.69 SECONDS
+
+                            COMPLETION CODE -  0
+
+                    **************************************
+
+
+ CLOSE CHANNEL 25 FILE MX2.LOG

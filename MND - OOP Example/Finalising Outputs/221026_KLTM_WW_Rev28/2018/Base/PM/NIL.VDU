@@ -1,0 +1,329 @@
+
+ Program P1X 11.4.07 NETWORK PLOTTING 02.10.17
+ in use by:
+
+  WSP MANAGEMENT SERVICES LTD (SATURN TRAFFIC MODEL)
+
+ under licence from:
+       Atkins Limited - copyright 2018
+       www.saturnsoftware.co.uk
+
+
+ CLOSE CHANNEL 45 FILE C:\Program Files (x86)\Atkins\SATURN\DAT\P1X0.DAT
+
+
+ HEADER DATA FROM THE UNFORMATTED FILE READ FROM CHANNEL  1
+
+      RUN NAME        KLTM_2018_PM_Base_WW_Rev28
+      CREATED BY PROGRAM SATALL
+      DATE AND TIME OF CREATION 26/10/22  11:17:47
+      FILE NAME: KLTM_2018_PM_Base_WW_Rev28.UFS
+      PATHNAME:  Y:\70100xxx\70100518 - West Winch Housing Access Road -  PMO\03 WIP\TP Transport Planning\01 Analysis & Calcs\01 SATURN\01 TEMPRO v8\01 Models\01_2018_Base\221026_KLTM_WW_Rev28\2018\Base\PM\KLTM_2018_PM_Base_WW_Rev28.UFS
+      SATURN VERSION  11.4. 7
+
+
+ CLOSE CHANNEL 38 FILE KLTM_2018_PM_Base_WW_Rev28.DAT
+
+ SET THE FIRST MATRIX TO BE THE TRIP MATRIX FILE:
+KLTS_PM_Rev20_post_WWto6208.UFM
+ DEFINED ON THE NETWORK FILE
+
+
+ HEADER DATA FROM THE UNFORMATTED FILE READ FROM CHANNEL 10
+
+      RUN NAME
+      CREATED BY PROGRAM MX
+      DATE AND TIME OF CREATION 12/ 9/19  13:32:11
+      FILE NAME: KLTS_PM_Rev20_post_WWto6208.UFM
+      PATHNAME:  Y:\70100xxx\70100518 - West Winch Housing Access Road -  PMO\03 WIP\TP Transport Planning\01 Analysis & Calcs\01 SATURN\01 TEMPRO v8\01 Models\01_2018_Base\221026_KLTM_WW_Rev28\2018\Base\PM\KLTS_PM_Rev20_post_WWto6208.UFM
+      SATURN VERSION  11.4. 7
+
+
+      MATRIX TITLE - TITLE UNSET
+      MATRIX SIZE -   1900 ROWS    190 COLUMNS
+      TYPE OF ELEMENTS - REALS
+      ELEMENT DIMENSIONS -
+      ELEMENT UNITS -
+      NUMBER OF LEVELS -    10
+      NUMBER OF BLOCKS -     1
+      BASE NUMBER OF ROWS -      190
+      BASE NUMBER OF COLUMNS -   190
+
+      FILENAME: KLTS_PM_Rev20_post_WWto6208.UFM
+
+
+ CLOSE CHANNEL 12 FILE C:\Program Files (x86)\Atkins\SATURN\DAT\GRAF.DAT
+
+ ?
+
+ KEY FILE CHARACTER INPUT WAS:
+       1247       297   66    0  SATDB Opts     (Pixels/key/status/Line)
+
+
+         P1X-SATDB MAIN MENU:
+
+        0 - RETURN
+        2 - (SATDB) SELECT MENU
+        4 - ADD LINK-BASED DATA
+        5 - READ NODE BASED DATA FROM THE UF FILE(S)
+        6 - MISCELLANEOUS DATA INPUT
+        7 - ASSIGNMENT/TREE-BUILDING OPTIONS
+
+       17 - SATURN GENERAL PARAMETERS MENU
+       18 - NODE DATA BASE OPTIONS
+       19 - JUMP DIRECTLY TO SATLOOK OPTIONS
+
+ ?
+
+ KEY FILE INTEGER VALUED INPUT WAS:     6
+
+
+     MISCELLANY MENU OPTIONS TO CREATE NEW DATA COLUMNS:
+
+       0 - RETURN
+       2 - (BUS) ROUTES                                                       X
+       3 - RESTRICTED TURNS AND/OR LINKS                                      X
+       5 - READ DATA FROM AN INPUT ASCII (E.g. .txt) DATA FILE                X
+       6 - X,Y CO-ORDINATES PER A-NODE AND B-NODE                             X
+       7 - READ COSTS FROM THE .UFC FILE                                      X
+       8 - PACKED TURN DATA                                                  >>
+       9 - PACKED LINK DATA                                                  >>
+      10 - TOLL MATRIX DATA (FOR A SINGLE ORIGIN)                            >>
+      11 - BUS FLOWS (INCLUDING BUS LANES)                                   >>
+      12 - COBA NETWORK LINK NUMBERS                                         >>
+
+      14 - UNDER OPTIONS 1 TO 5, 12 AND 13                                    L
+           AUTOMATICALLY SELECT POSITIVE VALUES ONLY;
+           UNDER 8/9 SELECT TURNS/LINKS ONLY.
+      16 - USER CLASS  1 UNDER OPTIONS 3 AND 7                                ?
+
+ ?
+
+ KEY FILE INTEGER VALUED INPUT WAS:     5
+
+
+               INPUT AN ASCII (E.g., .txt) DATA FILE:
+
+
+
+
+               INPUT ASCII FILE OPTIONS:
+
+      -1 - RETURN - DO NOT READ                                               X
+       0 - CONTINUE; READ THE DATA FILE: KLTM_2018_PM_Base_WW_Rev28_SatDB.dat
+
+           DATA RECORDS, PART A - LINK IDENTIFICATION:
+
+       1 - EACH DATA RECORD IS IDENTIFIED BY NODE NUMBERS                     L
+       2 - SATURN-BASED FIXED COLUMN FORMAT NODE INPUTS ...                   L
+           (Alternatively: CSV Inputs)
+       3 - ... BASED ON BLOCKS OF 5 COLUMNS (AS PER SATNET INPUTS)            L
+       4 - DUTCH = F                                                          L
+       5 - NODE NUMBERS ARE NAMES, NOT SEQUENTIAL                             L
+
+           DATA RECORDS, PART B - DATA DEFINITION:
+
+       6 - NUMBER OF INPUT DATA FIELDS:    1                                  ?
+
+                     GENERAL OPTIONS:
+
+       7 - LINKS NOT INPUT ARE SET MISSING VALUES                             L
+       9 - LIST THE FIRST 10 LINES OF THE INPUT FILE                          X
+      10 - DO NOT ADD AN EXTRA COLUMN WITH LINE NUMBERS (FOR SORTING)         X
+      11 - WILD CARD LINK ENTRIES ARE RECOGNISED                              L
+      12 - USE A C TO IDENTIFY ZONES                                          L
+
+ ?
+
+ KEY FILE INTEGER VALUED INPUT WAS:     6
+
+ ?
+
+ KEY FILE INTEGER VALUED INPUT WAS:    13
+
+
+               INPUT ASCII FILE OPTIONS:
+
+      -1 - RETURN - DO NOT READ                                               X
+       0 - CONTINUE; READ THE DATA FILE: KLTM_2018_PM_Base_WW_Rev28_SatDB.dat
+
+           DATA RECORDS, PART A - LINK IDENTIFICATION:
+
+       1 - EACH DATA RECORD IS IDENTIFIED BY NODE NUMBERS                     L
+       2 - SATURN-BASED FIXED COLUMN FORMAT NODE INPUTS ...                   L
+           (Alternatively: CSV Inputs)
+       3 - ... BASED ON BLOCKS OF 5 COLUMNS (AS PER SATNET INPUTS)            L
+       4 - DUTCH = F                                                          L
+       5 - NODE NUMBERS ARE NAMES, NOT SEQUENTIAL                             L
+
+           DATA RECORDS, PART B - DATA DEFINITION:
+
+       6 - NUMBER OF INPUT DATA FIELDS:   13                                  ?
+
+                     GENERAL OPTIONS:
+
+       7 - LINKS NOT INPUT ARE SET MISSING VALUES                             L
+       9 - LIST THE FIRST 10 LINES OF THE INPUT FILE                          X
+      10 - DO NOT ADD AN EXTRA COLUMN WITH LINE NUMBERS (FOR SORTING)         X
+      11 - WILD CARD LINK ENTRIES ARE RECOGNISED                              L
+      12 - USE A C TO IDENTIFY ZONES                                          L
+
+ ?
+
+ KEY FILE INTEGER VALUED INPUT WAS:     0
+
+ FOR DATA COLUMN  1 INPUT:
+     (1) A HEADER RECORD:
+
+ ?
+
+ KEY FILE CHARACTER INPUT WAS: CalValFlag
+
+ FOR DATA COLUMN  2 INPUT:
+     (1) A HEADER RECORD:
+
+ ?
+
+ KEY FILE CHARACTER INPUT WAS: AllObs
+
+ FOR DATA COLUMN  3 INPUT:
+     (1) A HEADER RECORD:
+
+ ?
+
+ KEY FILE CHARACTER INPUT WAS: AllMod
+
+ FOR DATA COLUMN  4 INPUT:
+     (1) A HEADER RECORD:
+
+ ?
+
+ KEY FILE CHARACTER INPUT WAS: AllGEH
+
+ FOR DATA COLUMN  5 INPUT:
+     (1) A HEADER RECORD:
+
+ ?
+
+ KEY FILE CHARACTER INPUT WAS: CarObs
+
+ FOR DATA COLUMN  6 INPUT:
+     (1) A HEADER RECORD:
+
+ ?
+
+ KEY FILE CHARACTER INPUT WAS: CarMod
+
+ FOR DATA COLUMN  7 INPUT:
+     (1) A HEADER RECORD:
+
+ ?
+
+ KEY FILE CHARACTER INPUT WAS: CarGEH
+
+ FOR DATA COLUMN  8 INPUT:
+     (1) A HEADER RECORD:
+
+ ?
+
+ KEY FILE CHARACTER INPUT WAS: LGVObs
+
+ FOR DATA COLUMN  9 INPUT:
+     (1) A HEADER RECORD:
+
+ ?
+
+ KEY FILE CHARACTER INPUT WAS: LGVMod
+
+ FOR DATA COLUMN 10 INPUT:
+     (1) A HEADER RECORD:
+
+ ?
+
+ KEY FILE CHARACTER INPUT WAS: LGVGEH
+
+ FOR DATA COLUMN 11 INPUT:
+     (1) A HEADER RECORD:
+
+ ?
+
+ KEY FILE CHARACTER INPUT WAS: HGVObs
+
+ FOR DATA COLUMN 12 INPUT:
+     (1) A HEADER RECORD:
+
+ ?
+
+ KEY FILE CHARACTER INPUT WAS: HGVMod
+
+ FOR DATA COLUMN 13 INPUT:
+     (1) A HEADER RECORD:
+
+ ?
+
+ KEY FILE CHARACTER INPUT WAS: HGVGEH
+
+ LINK DATA FROM AN EXTERNAL ASCII FILE ADDED FROM DB COLUMN  1 TO  13
+
+ NUMBER OF DATA RECORDS READ     =    264
+ NUMBER OF CORRECT DATA ENTRIES  =    264
+ NUMBER OF NON-FATAL READ ERRORS =      0
+ NUMBER OF LINKS NOT IDENTIFIED  =      0
+
+ SUMMATION OF INPUT DATA BY FIELD:
+    310.00 144610.00 145745.00    729.40 126528.00 127400.00    684.10  15173.00  15308.00    336.20   2914.00   3036.00    234.10
+
+
+ CLOSE CHANNEL  5 FILE KLTM_2018_PM_Base_WW_Rev28_SatDB.dat
+
+
+     MISCELLANY MENU OPTIONS TO CREATE NEW DATA COLUMNS:
+
+       0 - RETURN
+       2 - (BUS) ROUTES                                                       X
+       3 - RESTRICTED TURNS AND/OR LINKS                                      X
+       5 - READ DATA FROM AN INPUT ASCII (E.g. .txt) DATA FILE                X
+       6 - X,Y CO-ORDINATES PER A-NODE AND B-NODE                             X
+       7 - READ COSTS FROM THE .UFC FILE                                      X
+       8 - PACKED TURN DATA                                                  >>
+       9 - PACKED LINK DATA                                                  >>
+      10 - TOLL MATRIX DATA (FOR A SINGLE ORIGIN)                            >>
+      11 - BUS FLOWS (INCLUDING BUS LANES)                                   >>
+      12 - COBA NETWORK LINK NUMBERS                                         >>
+
+      14 - UNDER OPTIONS 1 TO 5, 12 AND 13                                    L
+           AUTOMATICALLY SELECT POSITIVE VALUES ONLY;
+           UNDER 8/9 SELECT TURNS/LINKS ONLY.
+      16 - USER CLASS  1 UNDER OPTIONS 3 AND 7                                ?
+
+ ?
+
+ KEY FILE INTEGER VALUED INPUT WAS:     0
+
+
+         P1X-SATDB MAIN MENU:
+
+        0 - RETURN
+        2 - (SATDB) SELECT MENU
+        3 - CANCEL THE CURRENT LINK SELECTION (I.E., INCLUDE ALL LINKS)
+        4 - ADD LINK-BASED DATA
+        5 - READ NODE BASED DATA FROM THE UF FILE(S)
+        6 - MISCELLANEOUS DATA INPUT
+        7 - ASSIGNMENT/TREE-BUILDING OPTIONS
+        8 - CREATE NEW DATA COLUMNS FROM EXISTING COLUMNS
+       10 - STATISTICAL ANALYSES
+       11 - REMOVE ONE (OR ALL) DATA COLUMNS
+
+       12 - PRINT THE FULL DATA BASE ON THE LINE PRINTER FILE
+       13 - DUMP THE FULL DATA BASE TO AN ASCII FILE
+       14 - BASIC HOUSEKEEPING OF THE DATA BASE HEADER RECORDS
+       15 - DISPLAY/EDIT THE DATA BASE ON SCREEN
+       16 - CREATE A NEW SATURN UF FILE
+
+       17 - SATURN GENERAL PARAMETERS MENU
+       18 - NODE DATA BASE OPTIONS
+       19 - JUMP DIRECTLY TO SATLOOK OPTIONS
+
+ ?
+
+ KEY FILE INTEGER VALUED INPUT WAS:     0
