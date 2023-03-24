@@ -1,0 +1,240 @@
+Matrix Object
+vehicle_type: Highway
+value_type: Vehicle Trips
+time_period: Inter_peak
+purpose: HGV
+level: 7
+zone_count: 13
+matrix_sum: 5040.833333333333
+interzonal_sum: 4199.467489887597
+intrazonal_sum: 841.365843445736
+Comments:
+Created by aggregate_by_zone_field (sector) operation on the following matrix:
+[
+    Matrix Object
+    vehicle_type: HGV
+    value_type: Vehicle Trips
+    time_period: Inter_peak
+    purpose: HGV
+    level: 7
+    zone_count: 168
+    matrix_sum: 5040.833333333332
+    interzonal_sum: 4732.378879667248
+    intrazonal_sum: 308.45445366608396
+    Comments:
+    Created by operation <built-in function mul> (reverse: False) on
+    [
+        Matrix Object
+        vehicle_type: HGV
+        value_type: Vehicle Trips
+        time_period: Inter_peak
+        purpose: HGV
+        level: 1
+        zone_count: 168
+        matrix_sum: 2016.333333333333
+        interzonal_sum: 1892.9515518668995
+        intrazonal_sum: 123.3817814664336
+        Comments:
+        Created by operation <built-in function mul> (reverse: False) on
+        [
+            Matrix Object
+            vehicle_type: HGV
+            value_type: Person Trips
+            time_period: Inter_peak
+            purpose: HGV
+            level: 1
+            zone_count: 168
+            matrix_sum: 876.6666666666665
+            interzonal_sum: 823.0224138551737
+            intrazonal_sum: 53.64425281149286
+            Comments:
+            Created by operation <built-in function add> (reverse: False) on
+            [
+                Matrix Object
+                vehicle_type: HGV
+                value_type: Person Trips
+                time_period: Inter_peak
+                purpose: HGV
+                level: 1
+                zone_count: 168
+                matrix_sum: 203.0
+                interzonal_sum: 190.18779673698987
+                intrazonal_sum: 12.812203263010133
+                Comments:
+                Created by copy operation on the following matrix:
+                [
+                    Matrix Object
+                    vehicle_type: HGV
+                    value_type: Person Trips
+                    time_period: Inter_peak
+                    purpose: NHBW
+                    level: 1
+                    zone_count: 168
+                    matrix_sum: 203.0
+                    interzonal_sum: 190.18779673698987
+                    intrazonal_sum: 12.812203263010133
+                    Comments:
+                    Created by disaggregate_matrix operation on the following matrix:
+                    [
+                        Matrix Object
+                        vehicle_type: HGV
+                        value_type: Person Trips
+                        time_period: Inter_peak
+                        purpose: NHBW
+                        level: 1
+                        zone_count: 120
+                        matrix_sum: 202.99999999999997
+                        interzonal_sum: 199.99999999999997
+                        intrazonal_sum: 3.0
+                        Comments:
+                        Created by copy operation on the following matrix:
+                        [
+                            Matrix Object
+                            vehicle_type: HGV
+                            value_type: Person Trips
+                            time_period: Inter_peak
+                            purpose: NHBW
+                            level: 1
+                            zone_count: 120
+                            matrix_sum: 202.99999999999997
+                            interzonal_sum: 199.99999999999997
+                            intrazonal_sum: 3.0
+                            Comments:
+                            Created by operation <built-in function mul> (reverse: False) on
+                            [
+                                Matrix Object
+                                vehicle_type: HGV
+                                value_type: Person Trips
+                                time_period: Inter_peak
+                                purpose: NHBW
+                                level: 1
+                                zone_count: 120
+                                matrix_sum: 1218.0
+                                interzonal_sum: 1200.0
+                                intrazonal_sum: 18.0
+                                Comments:
+                                Imported matrix from C:\Users\UKTMB001\Documents\Python Scripts\MND\20200220 - Deliverable 1 Matrices\D1_Weekday_NHBW_HGV.csv
+                                MND Raw Data
+                                
+                            ]
+                            <built-in function mul>
+                            [
+                                0.16666666666666666
+                            ]
+                            
+                        ]
+                        
+                    ]
+                    
+                ]
+                
+            ]
+            <built-in function add>
+            [
+                Matrix Object
+                vehicle_type: HGV
+                value_type: Person Trips
+                time_period: Inter_peak
+                purpose: NHBO
+                level: 2
+                zone_count: 168
+                matrix_sum: 673.6666666666665
+                interzonal_sum: 632.8346171181838
+                intrazonal_sum: 40.83204954848274
+                Comments:
+                Created by copy operation on the following matrix:
+                [
+                    Matrix Object
+                    vehicle_type: HGV
+                    value_type: Person Trips
+                    time_period: Inter_peak
+                    purpose: NHBO
+                    level: 2
+                    zone_count: 168
+                    matrix_sum: 673.6666666666665
+                    interzonal_sum: 632.8346171181838
+                    intrazonal_sum: 40.83204954848274
+                    Comments:
+                    Created by disaggregate_matrix operation on the following matrix:
+                    [
+                        Matrix Object
+                        vehicle_type: HGV
+                        value_type: Person Trips
+                        time_period: Inter_peak
+                        purpose: NHBO
+                        level: 2
+                        zone_count: 120
+                        matrix_sum: 673.6666666666665
+                        interzonal_sum: 661.8333333333331
+                        intrazonal_sum: 11.833333333333332
+                        Comments:
+                        Created by copy operation on the following matrix:
+                        [
+                            Matrix Object
+                            vehicle_type: HGV
+                            value_type: Person Trips
+                            time_period: Inter_peak
+                            purpose: NHBO
+                            level: 2
+                            zone_count: 120
+                            matrix_sum: 673.6666666666665
+                            interzonal_sum: 661.8333333333331
+                            intrazonal_sum: 11.833333333333332
+                            Comments:
+                            Created by operation <built-in function mul> (reverse: False) on
+                            [
+                                Matrix Object
+                                vehicle_type: HGV
+                                value_type: Person Trips
+                                time_period: Inter_peak
+                                purpose: NHBO
+                                level: 2
+                                zone_count: 120
+                                matrix_sum: 4042.0
+                                interzonal_sum: 3971.0
+                                intrazonal_sum: 71.0
+                                Comments:
+                                Imported matrix from C:\Users\UKTMB001\Documents\Python Scripts\MND\20200220 - Deliverable 1 Matrices\D1_Weekday_NHBO_HGV.csv
+                                MND Raw Data
+                                
+                            ]
+                            <built-in function mul>
+                            [
+                                0.16666666666666666
+                            ]
+                            
+                        ]
+                        
+                    ]
+                    
+                ]
+                
+            ]
+            
+        ]
+        <built-in function mul>
+        [
+            2.3
+        ]
+        
+    ]
+    <built-in function mul>
+    [
+        2.5
+    ]
+    
+]
+sector,x_coord,y_coord,o_total,d_total,intrazonal
+1,369549.0,559105.25,63.25033910389974,70.91701350168361,4.146033426058255e-12
+2,465497.05555555556,314273.22222222225,342.12485260200435,360.3332110755682,3.8333604903265233
+3,548854.4761904762,269947.61904761905,1247.7370953383588,1267.8623077003876,199.32537641030308
+4,531331.0,179646.0,46.95871796806018,32.58377342543954,7.508691076969986e-07
+5,563376.6851851852,318633.44444444444,727.375,741.7500000000005,195.49999999999994
+6,620773.75,331003.0,372.79166666666663,340.20833333333326,124.58333333333331
+7,647802.0,311066.0,217.54166666666666,206.04166666666666,37.375
+8,583939.5,313142.5,83.37499999999999,80.50000000000001,3.833333333333333
+9,591385.0,296287.25,752.2916666666666,815.5416666666666,155.24999999999997
+11,620757.0,291687.0,283.4409911482901,290.0835392914175,28.769785844264643
+13,613759.0,320544.5,233.81720774917795,210.82211553566003,15.33263222097875
+14,637083.0,304676.0,246.52967050605358,237.0118216721699,21.97618216721699
+16,622251.0,308846.0,423.5994589174886,387.17788446433985,55.58683889510622

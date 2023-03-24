@@ -1,0 +1,170 @@
+
+
+           Atkins Ltd / RIS University of Leeds / FVVB Ltd - SATURN 11.4.07H 27/08/2018
+                     32-BIT FTN 95 VERSION  -  LEVEL N4
+
+           PROGRAM      MX  Matrix Database  11.04.05  07.03.17
+           RUNNING EXE: C:\Program Files (x86)\Atkins\SATURN\XEXES 11.4.07H MC N4\$MX.exe
+           DATE OF EXE: 27/ 8/18
+
+           MAXIMUM NUMBER OF SIMULATION NODES =     23000
+                             ASSIGNMENT NODES =     95000
+                             ASSIGNMENT LINKS =    200000
+                             ZONES            =      4000
+
+           DATE  2/12/22           TIME 15:53:11
+
+               THE MASTER FILE SAT10KEY.DAT READ FROM:
+
+               C:\Program Files (x86)\Atkins\SATURN\DAT\SAT10KEY.DAT
+
+           USER: WSP MANAGEMENT SERVICES LTD (SATURN TRAFFIC MODEL)
+
+           BASIC DATA EITHER SET AS DEFAULT OR AS READ FROM SAT10KEY.DAT:
+
+ (DEFAULT) HPREF  =
+ (DEFAULT) CPREF  =
+ (DEFAULT) KPREF  =
+ (DEFAULT) LEFTDR =     T
+ (DEFAULT) GO4IT  =     F
+ (DEFAULT) ADDAL  =     T
+ (DEFAULT) LPERP  =    60
+ (DEFAULT) LPERT  =    34
+ (DEFAULT) DRIVE  = C:
+ (DEFAULT) KPEXT  = KP
+
+
+     COMMAND LINE PARAMETERS:  "KLTS_AM_Rev20_post_WWto6208"
+
+ AN OUTPUT LOG FILE IS CREATED ON FILE:
+MX4.LOG
+
+
+               OPEN THE GRAPHICAL CONTROL FILE GRAF.DAT
+
+     INPUT FILE GRAF.DAT
+     NOT FOUND
+
+     INPUT FILE C:\Program Files (x86)\Atkins\SATURN\XEXES 11.4.07H MC N4\GRAF.DAT
+     NOT FOUND
+
+
+ GRAPHICS DEVICES ARE INITIALISED VIA FILE: C:\Program Files (x86)\Atkins\SATURN\DAT\GRAF.DAT
+ PATH: C:\Program Files (x86)\Atkins\SATURN\DAT\GRAF.DAT
+
+
+ CLOSE CHANNEL 12 FILE C:\Program Files (x86)\Atkins\SATURN\DAT\GRAF.DAT
+
+
+ P2OPDV: NEW GRAPHICAL DEVICE SET: SCREEN
+
+ 2 LINES OF DATA EXTRACTED FROM GRAF.DAT (OR EQUIVALENT):
+  250  360 1.35 0.62    5 F  1   16  SCREEN
+     0.0   639.0     0.0   479.0 F       0.70  1 2 3 4 5 6 7 8 910111213141516
+
+ CURRENT VALUES OF PARAMETERS:
+
+ XUMIN, XUMAX, YUMIN, YUMAX =        0.0     639.0       0.0     479.0
+ HEIGHT =     250.00 WIDTH =     360.00
+ CORRECTION FACTOR =      1.35
+ ROTATIONAL SHIFT  =      0.70
+
+ OPEN THE PREFERENCES/CONTROL FILE:
+
+     TRY: C:\Program Files (x86)\Atkins\SATURN\XEXES 11.4.07H MC N4\MX0.DAT
+
+     INPUT FILE C:\Program Files (x86)\Atkins\SATURN\XEXES 11.4.07H MC N4\MX0.DAT
+     NOT FOUND
+
+     TRY: \SATWIN\DAT\MX0.DAT
+
+     INPUT FILE \SATWIN\DAT\MX0.DAT
+     NOT FOUND
+
+
+ **** - NON-FATAL ERROR - **** CONTROL FILE MX0.DAT
+        CANNOT BE FOUND AND/OR OPENED
+
+
+
+     YOU HAVE REQUESTED  1 INPUT MATRICES:
+
+
+ HEADER DATA FROM THE UNFORMATTED FILE READ FROM CHANNEL  1
+
+      RUN NAME
+      CREATED BY PROGRAM MX
+      DATE AND TIME OF CREATION 12/ 9/19  13:21:47
+      FILE NAME: KLTS_AM_Rev20_post_WWto6208.UFM
+      PATHNAME:  F:\01 Analysis & Calcs\01 SATURN\03 OBC\01 Base\01 Models\00_Starting_point\221026_KLTM_WW_Rev28\2018\Base\AM\KLTS_AM_Rev20_post_WWto6208.UFM
+      SATURN VERSION  11.4. 7
+
+
+      MATRIX TITLE - TITLE UNSET
+      MATRIX SIZE -   1900 ROWS    190 COLUMNS
+      TYPE OF ELEMENTS - REALS
+      ELEMENT DIMENSIONS -
+      ELEMENT UNITS -
+      NUMBER OF LEVELS -    10
+      NUMBER OF BLOCKS -     1
+      BASE NUMBER OF ROWS -      190
+      BASE NUMBER OF COLUMNS -   190
+
+      FILENAME: KLTS_AM_Rev20_post_WWto6208.UFM
+
+
+ MATRIX ELEMENTS READ IN      0.01 SECONDS
+      CREATE AN OUTPUT ASCII DATA FILE WITH A SPREAD SHEET (CSV) FORMAT
+      - ONE RECORD PER ROW
+
+
+ SUMMARY OF ERRORS (IF ANY) IN OUTPUT CELLS DUE TO ROUNDING ERRORS:
+
+SUM OF ERRORS =           -0.143706E-02
+SUM OF ABSOLUTE ERRORS =   0.385420E+00
+TOTAL MATRIX OUTPUT =      0.221266E+05
+
+ TO REDUCE ROUNDING ERRORS INCREASE THE NUMBER OF DECIMALS
+
+
+ INTERNAL MATRIX NOW COMPLETELY DUMPED
+
+
+ CLOSE CHANNEL  7 FILE TEST.csv
+
+
+ LISTING OF THE .LOG FILE:
+ MX4.LOG
+
+          13                                                                2000
+           5                                                                2604
+           8                                                                2604
+           0                                                                2604
+           0                                                                2604
+           0                                                                2000
+
+
+                    **************************************
+
+                      NORMAL COMPLETION OF PROGRAM MX
+
+                     THERE HAVE BEEN    1 NON-FATAL ERRORS
+
+                     FILES CURRENTLY IN USE:
+                     CHANNEL   FILE NAME
+
+                        1     KLTS_AM_Rev20_post_WWto6208.UFM
+                        6     KLTS_AM_Rev20_post_WWto6208.LPX
+                       25     MX4.LOG
+
+                        CPU TIME =      42.52 SECONDS
+
+                            COMPLETION CODE -  0
+
+                    **************************************
+
+
+ CLOSE CHANNEL  1 FILE KLTS_AM_Rev20_post_WWto6208.UFM
+
+
+ CLOSE CHANNEL 25 FILE MX4.LOG

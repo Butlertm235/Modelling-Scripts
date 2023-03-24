@@ -1,0 +1,2470 @@
+Matrix Object
+vehicle_type: Highway
+value_type: Vehicle Trips
+time_period: Inter_peak
+purpose: HBO
+level: 3
+zone_count: 13
+matrix_sum: 50424.1513647843
+interzonal_sum: 18014.45866239048
+intrazonal_sum: 32409.692702393822
+Comments:
+Created by aggregate_by_zone_field (sector) operation on the following matrix:
+[
+    Matrix Object
+    vehicle_type: Highway
+    value_type: Vehicle Trips
+    time_period: Inter_peak
+    purpose: HBO
+    level: 3
+    zone_count: 168
+    matrix_sum: 50424.151364784295
+    interzonal_sum: 26115.285254784292
+    intrazonal_sum: 24308.866110000003
+    Comments:
+    Created by operation <built-in function add> (reverse: False) on
+    [
+        Matrix Object
+        vehicle_type: Highway
+        value_type: Vehicle Trips
+        time_period: Inter_peak
+        purpose: HBO
+        level: 3
+        zone_count: 168
+        matrix_sum: 50309.86658723278
+        interzonal_sum: 26001.000477232774
+        intrazonal_sum: 24308.866110000003
+        Comments:
+        Created by operation <built-in function add> (reverse: False) on
+        [
+            Matrix Object
+            vehicle_type: Highway
+            value_type: Vehicle Trips
+            time_period: Inter_peak
+            purpose: HBO
+            level: 3
+            zone_count: 168
+            matrix_sum: 6842.340782238513
+            interzonal_sum: 2251.8381822385136
+            intrazonal_sum: 4590.5026
+            Comments:
+            Created by operation <built-in function add> (reverse: False) on
+            [
+                Matrix Object
+                vehicle_type: Highway
+                value_type: Vehicle Trips
+                time_period: Inter_peak
+                purpose: HBO
+                level: 3
+                zone_count: 168
+                matrix_sum: 122.1023922385139
+                interzonal_sum: 122.1023922385139
+                intrazonal_sum: 0.0
+                Comments:
+                Created by operate_by_property (<built-in function mul>) operation on the following matrix:
+                [
+                    Matrix Object
+                    vehicle_type: Highway
+                    value_type: Vehicle Trips
+                    time_period: Inter_peak
+                    purpose: HBO
+                    level: 3
+                    zone_count: 168
+                    matrix_sum: 174.71145538601786
+                    interzonal_sum: 173.11644864856487
+                    intrazonal_sum: 1.5950067374529808
+                    Comments:
+                    Created by operation <built-in function mul> (reverse: False) on
+                    [
+                        Matrix Object
+                        vehicle_type: Highway
+                        value_type: Vehicle Trips
+                        time_period: Inter_peak
+                        purpose: HBO
+                        level: 3
+                        zone_count: 168
+                        matrix_sum: 24257.135373155215
+                        interzonal_sum: 20932.99238840115
+                        intrazonal_sum: 3324.142984754063
+                        Comments:
+                        Created by operation <built-in function mul> (reverse: False) on
+                        [
+                            Matrix Object
+                            vehicle_type: Highway
+                            value_type: Vehicle Trips
+                            time_period: Inter_peak
+                            purpose: HBO
+                            level: 3
+                            zone_count: 168
+                            matrix_sum: 19405.708298524172
+                            interzonal_sum: 16746.393910720923
+                            intrazonal_sum: 2659.31438780325
+                            Comments:
+                            Created by operation <built-in function mul> (reverse: False) on
+                            [
+                                Matrix Object
+                                vehicle_type: Highway
+                                value_type: Vehicle Trips
+                                time_period: Inter_peak
+                                purpose: HBO
+                                level: 3
+                                zone_count: 168
+                                matrix_sum: 19405.708298524172
+                                interzonal_sum: 16746.393910720923
+                                intrazonal_sum: 2659.31438780325
+                                Comments:
+                                Created by operation <built-in function add> (reverse: False) on
+                                [
+                                    Matrix Object
+                                    vehicle_type: Highway
+                                    value_type: Vehicle Trips
+                                    time_period: Inter_peak
+                                    purpose: HBO
+                                    level: 5
+                                    zone_count: 168
+                                    matrix_sum: 10069.288664340653
+                                    interzonal_sum: 8727.674495051084
+                                    intrazonal_sum: 1341.6141692895699
+                                    Comments:
+                                    Created by copy operation on the following matrix:
+                                    [
+                                        Matrix Object
+                                        vehicle_type: Highway
+                                        value_type: Vehicle Trips
+                                        time_period: Inter_peak
+                                        purpose: IB_HBO
+                                        level: 5
+                                        zone_count: 168
+                                        matrix_sum: 10069.288664340653
+                                        interzonal_sum: 8727.674495051084
+                                        intrazonal_sum: 1341.6141692895699
+                                        Comments:
+                                        Created by operation <built-in function mul> (reverse: False) on
+                                        [
+                                            Matrix Object
+                                            vehicle_type: car
+                                            value_type: Vehicle Trips
+                                            time_period: Inter_peak
+                                            purpose: IB_HBO
+                                            level: 5
+                                            zone_count: 168
+                                            matrix_sum: 10242.232149578638
+                                            interzonal_sum: 8877.575296936142
+                                            intrazonal_sum: 1364.6568526424956
+                                            Comments:
+                                            Created by operate_by_property (<built-in function mul>) operation on the following matrix:
+                                            [
+                                                Matrix Object
+                                                vehicle_type: car+lgv
+                                                value_type: Vehicle Trips
+                                                time_period: Inter_peak
+                                                purpose: IB_HBO
+                                                level: 5
+                                                zone_count: 168
+                                                matrix_sum: 10242.232149578638
+                                                interzonal_sum: 8877.575296936142
+                                                intrazonal_sum: 1364.6568526424956
+                                                Comments:
+                                                Created by copy operation on the following matrix:
+                                                [
+                                                    Matrix Object
+                                                    vehicle_type: car+lgv
+                                                    value_type: Vehicle Trips
+                                                    time_period: Inter_peak
+                                                    purpose: IB_HBO
+                                                    level: 5
+                                                    zone_count: 168
+                                                    matrix_sum: 10242.232149578638
+                                                    interzonal_sum: 8877.575296936142
+                                                    intrazonal_sum: 1364.6568526424956
+                                                    Comments:
+                                                    Created by furness_matrix operation on the following matrix:
+                                                    [
+                                                        Matrix Object
+                                                        vehicle_type: car+lgv
+                                                        value_type: Vehicle Trips
+                                                        time_period: Inter_peak
+                                                        purpose: IB_HBO
+                                                        level: 3
+                                                        zone_count: 168
+                                                        matrix_sum: 10736.370183347668
+                                                        interzonal_sum: 9313.561353652323
+                                                        intrazonal_sum: 1422.8088296953451
+                                                        Comments:
+                                                        Created by copy operation on the following matrix:
+                                                        [
+                                                            Matrix Object
+                                                            vehicle_type: car+lgv
+                                                            value_type: Vehicle Trips
+                                                            time_period: Inter_peak
+                                                            purpose: IB_HBO
+                                                            level: 3
+                                                            zone_count: 168
+                                                            matrix_sum: 10736.370183347668
+                                                            interzonal_sum: 9313.561353652323
+                                                            intrazonal_sum: 1422.8088296953451
+                                                            Comments:
+                                                            Created by operation <built-in function mul> (reverse: False) on
+                                                            [
+                                                                Matrix Object
+                                                                vehicle_type: car+lgv
+                                                                value_type: Vehicle Trips
+                                                                time_period: Inter_peak
+                                                                purpose: IB_HBO
+                                                                level: 3
+                                                                zone_count: 168
+                                                                matrix_sum: 10736.370183347668
+                                                                interzonal_sum: 9313.561353652323
+                                                                intrazonal_sum: 1422.8088296953451
+                                                                Comments:
+                                                                Created by operation <built-in function mul> (reverse: False) on
+                                                                [
+                                                                    Matrix Object
+                                                                    vehicle_type: car+lgv
+                                                                    value_type: Person Trips
+                                                                    time_period: Inter_peak
+                                                                    purpose: IB_HBO
+                                                                    level: 3
+                                                                    zone_count: 168
+                                                                    matrix_sum: 17146.197852233498
+                                                                    interzonal_sum: 14873.943702716606
+                                                                    intrazonal_sum: 2272.2541495168925
+                                                                    Comments:
+                                                                    Created by operation <built-in function mul> (reverse: False) on
+                                                                    [
+                                                                        Matrix Object
+                                                                        vehicle_type: Road
+                                                                        value_type: Person Trips
+                                                                        time_period: Inter_peak
+                                                                        purpose: IB_HBO
+                                                                        level: 3
+                                                                        zone_count: 168
+                                                                        matrix_sum: 18644.166666666664
+                                                                        interzonal_sum: 15586.982047541609
+                                                                        intrazonal_sum: 3057.1846191250543
+                                                                        Comments:
+                                                                        Created by disaggregate_matrix operation on the following matrix:
+                                                                        [
+                                                                            Matrix Object
+                                                                            vehicle_type: Road
+                                                                            value_type: Person Trips
+                                                                            time_period: Inter_peak
+                                                                            purpose: IB_HBO
+                                                                            level: 3
+                                                                            zone_count: 120
+                                                                            matrix_sum: 18644.166666666664
+                                                                            interzonal_sum: 18218.333333333332
+                                                                            intrazonal_sum: 425.83333333333337
+                                                                            Comments:
+                                                                            Created by copy operation on the following matrix:
+                                                                            [
+                                                                                Matrix Object
+                                                                                vehicle_type: Road
+                                                                                value_type: Person Trips
+                                                                                time_period: Inter_peak
+                                                                                purpose: IB_HBO
+                                                                                level: 3
+                                                                                zone_count: 120
+                                                                                matrix_sum: 18644.166666666664
+                                                                                interzonal_sum: 18218.333333333332
+                                                                                intrazonal_sum: 425.83333333333337
+                                                                                Comments:
+                                                                                Created by operation <built-in function mul> (reverse: False) on
+                                                                                [
+                                                                                    Matrix Object
+                                                                                    vehicle_type: Road
+                                                                                    value_type: Person Trips
+                                                                                    time_period: Inter_peak
+                                                                                    purpose: IB_HBO
+                                                                                    level: 3
+                                                                                    zone_count: 120
+                                                                                    matrix_sum: 111865.0
+                                                                                    interzonal_sum: 109310.0
+                                                                                    intrazonal_sum: 2555.0
+                                                                                    Comments:
+                                                                                    Imported matrix from C:\Users\UKTMB001\Documents\Python Scripts\MND\20200220 - Deliverable 1 Matrices\D1_Weekday_IB_HBO_Road.csv
+                                                                                    MND Raw Data
+                                                                                    
+                                                                                ]
+                                                                                <built-in function mul>
+                                                                                [
+                                                                                    0.16666666666666666
+                                                                                ]
+                                                                                
+                                                                            ]
+                                                                            
+                                                                        ]
+                                                                        
+                                                                    ]
+                                                                    <built-in function mul>
+                                                                    [
+                                                                        Matrix Object
+                                                                        vehicle_type: Bus
+                                                                        value_type: proportions
+                                                                        time_period: Inter_peak
+                                                                        purpose: IB_HBO
+                                                                        level: 3
+                                                                        zone_count: 168
+                                                                        matrix_sum: 19905.914423117276
+                                                                        interzonal_sum: 19769.841921683088
+                                                                        intrazonal_sum: 136.07250143418923
+                                                                        Comments:
+                                                                        Created by copy operation on the following matrix:
+                                                                        [
+                                                                            Matrix Object
+                                                                            vehicle_type: Bus
+                                                                            value_type: proportions
+                                                                            time_period: Inter_peak
+                                                                            purpose: IB_HBO
+                                                                            level: 3
+                                                                            zone_count: 168
+                                                                            matrix_sum: 19905.914423117276
+                                                                            interzonal_sum: 19769.841921683088
+                                                                            intrazonal_sum: 136.07250143418923
+                                                                            Comments:
+                                                                            Created by operation <built-in function sub> (reverse: True) on
+                                                                            [
+                                                                                Matrix Object
+                                                                                vehicle_type: Bus
+                                                                                value_type: proportions
+                                                                                time_period: Inter_peak
+                                                                                purpose: IB_HBO
+                                                                                level: 3
+                                                                                zone_count: 168
+                                                                                matrix_sum: 8318.085576882724
+                                                                                interzonal_sum: 8286.158078316914
+                                                                                intrazonal_sum: 31.927498565810748
+                                                                                Comments:
+                                                                                Created by generate_proportion_matrix operation on the following matrices:
+                                                                                [
+                                                                                    Matrix Object
+                                                                                    vehicle_type: Bus
+                                                                                    value_type: Person Trips
+                                                                                    time_period: Inter_peak
+                                                                                    purpose: IB_HBO
+                                                                                    level: 3
+                                                                                    zone_count: 168
+                                                                                    matrix_sum: 4798.478509209596
+                                                                                    interzonal_sum: 2233.4337989913206
+                                                                                    intrazonal_sum: 2565.0447102182757
+                                                                                    Comments:
+                                                                                    Created by copy operation on the following matrix:
+                                                                                    [
+                                                                                        Matrix Object
+                                                                                        vehicle_type: Bus
+                                                                                        value_type: Person Trips
+                                                                                        time_period: Inter_peak
+                                                                                        purpose: IB_HBO
+                                                                                        level: 3
+                                                                                        zone_count: 168
+                                                                                        matrix_sum: 4798.478509209596
+                                                                                        interzonal_sum: 2233.4337989913206
+                                                                                        intrazonal_sum: 2565.0447102182757
+                                                                                        Comments:
+                                                                                        Created by operation <built-in function mul> (reverse: False) on
+                                                                                        [
+                                                                                            Matrix Object
+                                                                                            vehicle_type: Bus
+                                                                                            value_type: Person Trips
+                                                                                            time_period: Inter_peak
+                                                                                            purpose: HBO
+                                                                                            level: 3
+                                                                                            zone_count: 168
+                                                                                            matrix_sum: 9232.433079999999
+                                                                                            interzonal_sum: 4297.201299999999
+                                                                                            intrazonal_sum: 4935.23178
+                                                                                            Comments:
+                                                                                            Created by copy operation on the following matrix:
+                                                                                            [
+                                                                                                Matrix Object
+                                                                                                vehicle_type: Bus
+                                                                                                value_type: Person Trips
+                                                                                                time_period: Inter_peak
+                                                                                                purpose: HBO
+                                                                                                level: 3
+                                                                                                zone_count: 168
+                                                                                                matrix_sum: 9232.433079999999
+                                                                                                interzonal_sum: 4297.201299999999
+                                                                                                intrazonal_sum: 4935.23178
+                                                                                                Comments:
+                                                                                                Imported matrix from C:\Users\UKTMB001\Documents\Python Scripts\MND\Test\synth_bus_Inter_peak.csv
+                                                                                                Matrix Object
+                                                                                                vehicle_type: Bus
+                                                                                                value_type: Person Trips
+                                                                                                time_period: Inter_peak
+                                                                                                purpose: HBO
+                                                                                                level: 3
+                                                                                                zone_count: 168
+                                                                                                matrix_sum: 9232.433079999999
+                                                                                                interzonal_sum: 4297.201299999999
+                                                                                                intrazonal_sum: 4935.23178
+                                                                                                
+                                                                                            ]
+                                                                                            
+                                                                                        ]
+                                                                                        <built-in function mul>
+                                                                                        [
+                                                                                            0.5197414882545346
+                                                                                        ]
+                                                                                        
+                                                                                    ]
+                                                                                    
+                                                                                ]
+                                                                                [
+                                                                                    Matrix Object
+                                                                                    vehicle_type: Road
+                                                                                    value_type: Person Trips
+                                                                                    time_period: Inter_peak
+                                                                                    purpose: IB_HBO
+                                                                                    level: 3
+                                                                                    zone_count: 168
+                                                                                    matrix_sum: 18644.166666666664
+                                                                                    interzonal_sum: 15586.982047541609
+                                                                                    intrazonal_sum: 3057.1846191250543
+                                                                                    Comments:
+                                                                                    Created by copy operation on the following matrix:
+                                                                                    [
+                                                                                        Matrix Object
+                                                                                        vehicle_type: Road
+                                                                                        value_type: Person Trips
+                                                                                        time_period: Inter_peak
+                                                                                        purpose: IB_HBO
+                                                                                        level: 3
+                                                                                        zone_count: 168
+                                                                                        matrix_sum: 18644.166666666664
+                                                                                        interzonal_sum: 15586.982047541609
+                                                                                        intrazonal_sum: 3057.1846191250543
+                                                                                        Comments:
+                                                                                        Created by disaggregate_matrix operation on the following matrix:
+                                                                                        [
+                                                                                            Matrix Object
+                                                                                            vehicle_type: Road
+                                                                                            value_type: Person Trips
+                                                                                            time_period: Inter_peak
+                                                                                            purpose: IB_HBO
+                                                                                            level: 3
+                                                                                            zone_count: 120
+                                                                                            matrix_sum: 18644.166666666664
+                                                                                            interzonal_sum: 18218.333333333332
+                                                                                            intrazonal_sum: 425.83333333333337
+                                                                                            Comments:
+                                                                                            Created by copy operation on the following matrix:
+                                                                                            [
+                                                                                                Matrix Object
+                                                                                                vehicle_type: Road
+                                                                                                value_type: Person Trips
+                                                                                                time_period: Inter_peak
+                                                                                                purpose: IB_HBO
+                                                                                                level: 3
+                                                                                                zone_count: 120
+                                                                                                matrix_sum: 18644.166666666664
+                                                                                                interzonal_sum: 18218.333333333332
+                                                                                                intrazonal_sum: 425.83333333333337
+                                                                                                Comments:
+                                                                                                Created by operation <built-in function mul> (reverse: False) on
+                                                                                                [
+                                                                                                    Matrix Object
+                                                                                                    vehicle_type: Road
+                                                                                                    value_type: Person Trips
+                                                                                                    time_period: Inter_peak
+                                                                                                    purpose: IB_HBO
+                                                                                                    level: 3
+                                                                                                    zone_count: 120
+                                                                                                    matrix_sum: 111865.0
+                                                                                                    interzonal_sum: 109310.0
+                                                                                                    intrazonal_sum: 2555.0
+                                                                                                    Comments:
+                                                                                                    Imported matrix from C:\Users\UKTMB001\Documents\Python Scripts\MND\20200220 - Deliverable 1 Matrices\D1_Weekday_IB_HBO_Road.csv
+                                                                                                    MND Raw Data
+                                                                                                    
+                                                                                                ]
+                                                                                                <built-in function mul>
+                                                                                                [
+                                                                                                    0.16666666666666666
+                                                                                                ]
+                                                                                                
+                                                                                            ]
+                                                                                            
+                                                                                        ]
+                                                                                        
+                                                                                    ]
+                                                                                    
+                                                                                ]
+                                                                                
+                                                                            ]
+                                                                            <built-in function sub>
+                                                                            [
+                                                                                [[1. 1. 1. ... 1. 1. 1.]
+                                                                                [1. 1. 1. ... 1. 1. 1.]
+                                                                                [1. 1. 1. ... 1. 1. 1.]
+                                                                                ...
+                                                                                [1. 1. 1. ... 1. 1. 1.]
+                                                                                [1. 1. 1. ... 1. 1. 1.]
+                                                                                [1. 1. 1. ... 1. 1. 1.]]
+                                                                            ]
+                                                                            
+                                                                        ]
+                                                                        
+                                                                    ]
+                                                                    
+                                                                ]
+                                                                <built-in function mul>
+                                                                [
+                                                                    0.6261662367292192
+                                                                ]
+                                                                
+                                                            ]
+                                                            <built-in function mul>
+                                                            [
+                                                                1.0
+                                                            ]
+                                                            
+                                                        ]
+                                                        
+                                                    ]
+                                                    Convergence Information:
+                                                    1: count: 168, col_pass: 135, row_pass: 168
+                                                    
+                                                ]
+                                                
+                                            ]
+                                            
+                                        ]
+                                        <built-in function mul>
+                                        [
+                                            0.9831146684909792
+                                        ]
+                                        
+                                    ]
+                                    
+                                ]
+                                <built-in function add>
+                                [
+                                    Matrix Object
+                                    vehicle_type: Highway
+                                    value_type: Vehicle Trips
+                                    time_period: Inter_peak
+                                    purpose: OB_HBO
+                                    level: 6
+                                    zone_count: 168
+                                    matrix_sum: 9336.41963418352
+                                    interzonal_sum: 8018.719415669839
+                                    intrazonal_sum: 1317.7002185136803
+                                    Comments:
+                                    Created by copy operation on the following matrix:
+                                    [
+                                        Matrix Object
+                                        vehicle_type: Highway
+                                        value_type: Vehicle Trips
+                                        time_period: Inter_peak
+                                        purpose: OB_HBO
+                                        level: 6
+                                        zone_count: 168
+                                        matrix_sum: 9336.41963418352
+                                        interzonal_sum: 8018.719415669839
+                                        intrazonal_sum: 1317.7002185136803
+                                        Comments:
+                                        Created by operation <built-in function mul> (reverse: False) on
+                                        [
+                                            Matrix Object
+                                            vehicle_type: car
+                                            value_type: Vehicle Trips
+                                            time_period: Inter_peak
+                                            purpose: OB_HBO
+                                            level: 6
+                                            zone_count: 168
+                                            matrix_sum: 9496.775842551866
+                                            interzonal_sum: 8156.443670989143
+                                            intrazonal_sum: 1340.3321715627226
+                                            Comments:
+                                            Created by operate_by_property (<built-in function mul>) operation on the following matrix:
+                                            [
+                                                Matrix Object
+                                                vehicle_type: car+lgv
+                                                value_type: Vehicle Trips
+                                                time_period: Inter_peak
+                                                purpose: OB_HBO
+                                                level: 6
+                                                zone_count: 168
+                                                matrix_sum: 9496.775842551866
+                                                interzonal_sum: 8156.443670989143
+                                                intrazonal_sum: 1340.3321715627226
+                                                Comments:
+                                                Created by copy operation on the following matrix:
+                                                [
+                                                    Matrix Object
+                                                    vehicle_type: car+lgv
+                                                    value_type: Vehicle Trips
+                                                    time_period: Inter_peak
+                                                    purpose: OB_HBO
+                                                    level: 6
+                                                    zone_count: 168
+                                                    matrix_sum: 9496.775842551866
+                                                    interzonal_sum: 8156.443670989143
+                                                    intrazonal_sum: 1340.3321715627226
+                                                    Comments:
+                                                    Created by furness_matrix operation on the following matrix:
+                                                    [
+                                                        Matrix Object
+                                                        vehicle_type: car+lgv
+                                                        value_type: Vehicle Trips
+                                                        time_period: Inter_peak
+                                                        purpose: OB_HBO
+                                                        level: 4
+                                                        zone_count: 168
+                                                        matrix_sum: 9952.580488478656
+                                                        interzonal_sum: 8557.152615828738
+                                                        intrazonal_sum: 1395.427872649917
+                                                        Comments:
+                                                        Created by copy operation on the following matrix:
+                                                        [
+                                                            Matrix Object
+                                                            vehicle_type: car+lgv
+                                                            value_type: Vehicle Trips
+                                                            time_period: Inter_peak
+                                                            purpose: OB_HBO
+                                                            level: 4
+                                                            zone_count: 168
+                                                            matrix_sum: 9952.580488478656
+                                                            interzonal_sum: 8557.152615828738
+                                                            intrazonal_sum: 1395.427872649917
+                                                            Comments:
+                                                            Created by operation <built-in function mul> (reverse: False) on
+                                                            [
+                                                                Matrix Object
+                                                                vehicle_type: car+lgv
+                                                                value_type: Vehicle Trips
+                                                                time_period: Inter_peak
+                                                                purpose: OB_HBO
+                                                                level: 4
+                                                                zone_count: 168
+                                                                matrix_sum: 9952.580488478656
+                                                                interzonal_sum: 8557.152615828738
+                                                                intrazonal_sum: 1395.427872649917
+                                                                Comments:
+                                                                Created by operation <built-in function mul> (reverse: False) on
+                                                                [
+                                                                    Matrix Object
+                                                                    vehicle_type: car+lgv
+                                                                    value_type: Person Trips
+                                                                    time_period: Inter_peak
+                                                                    purpose: OB_HBO
+                                                                    level: 4
+                                                                    zone_count: 168
+                                                                    matrix_sum: 15894.47003796625
+                                                                    interzonal_sum: 13665.94382432219
+                                                                    intrazonal_sum: 2228.5262136440597
+                                                                    Comments:
+                                                                    Created by operation <built-in function mul> (reverse: False) on
+                                                                    [
+                                                                        Matrix Object
+                                                                        vehicle_type: Road
+                                                                        value_type: Person Trips
+                                                                        time_period: Inter_peak
+                                                                        purpose: OB_HBO
+                                                                        level: 4
+                                                                        zone_count: 168
+                                                                        matrix_sum: 17227.833333333332
+                                                                        interzonal_sum: 14274.684396516754
+                                                                        intrazonal_sum: 2953.1489368165776
+                                                                        Comments:
+                                                                        Created by disaggregate_matrix operation on the following matrix:
+                                                                        [
+                                                                            Matrix Object
+                                                                            vehicle_type: Road
+                                                                            value_type: Person Trips
+                                                                            time_period: Inter_peak
+                                                                            purpose: OB_HBO
+                                                                            level: 4
+                                                                            zone_count: 120
+                                                                            matrix_sum: 17227.833333333332
+                                                                            interzonal_sum: 16815.0
+                                                                            intrazonal_sum: 412.8333333333333
+                                                                            Comments:
+                                                                            Created by copy operation on the following matrix:
+                                                                            [
+                                                                                Matrix Object
+                                                                                vehicle_type: Road
+                                                                                value_type: Person Trips
+                                                                                time_period: Inter_peak
+                                                                                purpose: OB_HBO
+                                                                                level: 4
+                                                                                zone_count: 120
+                                                                                matrix_sum: 17227.833333333332
+                                                                                interzonal_sum: 16815.0
+                                                                                intrazonal_sum: 412.8333333333333
+                                                                                Comments:
+                                                                                Created by operation <built-in function mul> (reverse: False) on
+                                                                                [
+                                                                                    Matrix Object
+                                                                                    vehicle_type: Road
+                                                                                    value_type: Person Trips
+                                                                                    time_period: Inter_peak
+                                                                                    purpose: OB_HBO
+                                                                                    level: 4
+                                                                                    zone_count: 120
+                                                                                    matrix_sum: 103367.0
+                                                                                    interzonal_sum: 100890.0
+                                                                                    intrazonal_sum: 2477.0
+                                                                                    Comments:
+                                                                                    Imported matrix from C:\Users\UKTMB001\Documents\Python Scripts\MND\20200220 - Deliverable 1 Matrices\D1_Weekday_OB_HBO_Road.csv
+                                                                                    MND Raw Data
+                                                                                    
+                                                                                ]
+                                                                                <built-in function mul>
+                                                                                [
+                                                                                    0.16666666666666666
+                                                                                ]
+                                                                                
+                                                                            ]
+                                                                            
+                                                                        ]
+                                                                        
+                                                                    ]
+                                                                    <built-in function mul>
+                                                                    [
+                                                                        Matrix Object
+                                                                        vehicle_type: Bus
+                                                                        value_type: proportions
+                                                                        time_period: Inter_peak
+                                                                        purpose: OB_HBO
+                                                                        level: 4
+                                                                        zone_count: 168
+                                                                        matrix_sum: 19921.737968770776
+                                                                        interzonal_sum: 19789.43480495916
+                                                                        intrazonal_sum: 132.30316381161484
+                                                                        Comments:
+                                                                        Created by copy operation on the following matrix:
+                                                                        [
+                                                                            Matrix Object
+                                                                            vehicle_type: Bus
+                                                                            value_type: proportions
+                                                                            time_period: Inter_peak
+                                                                            purpose: OB_HBO
+                                                                            level: 4
+                                                                            zone_count: 168
+                                                                            matrix_sum: 19921.737968770776
+                                                                            interzonal_sum: 19789.43480495916
+                                                                            intrazonal_sum: 132.30316381161484
+                                                                            Comments:
+                                                                            Created by operation <built-in function sub> (reverse: True) on
+                                                                            [
+                                                                                Matrix Object
+                                                                                vehicle_type: Bus
+                                                                                value_type: proportions
+                                                                                time_period: Inter_peak
+                                                                                purpose: OB_HBO
+                                                                                level: 4
+                                                                                zone_count: 168
+                                                                                matrix_sum: 8302.262031229224
+                                                                                interzonal_sum: 8266.56519504084
+                                                                                intrazonal_sum: 35.69683618838515
+                                                                                Comments:
+                                                                                Created by generate_proportion_matrix operation on the following matrices:
+                                                                                [
+                                                                                    Matrix Object
+                                                                                    vehicle_type: Bus
+                                                                                    value_type: Person Trips
+                                                                                    time_period: Inter_peak
+                                                                                    purpose: OB_HBO
+                                                                                    level: 4
+                                                                                    zone_count: 168
+                                                                                    matrix_sum: 4433.9545707904035
+                                                                                    interzonal_sum: 2063.7675010086796
+                                                                                    intrazonal_sum: 2370.187069781724
+                                                                                    Comments:
+                                                                                    Created by copy operation on the following matrix:
+                                                                                    [
+                                                                                        Matrix Object
+                                                                                        vehicle_type: Bus
+                                                                                        value_type: Person Trips
+                                                                                        time_period: Inter_peak
+                                                                                        purpose: OB_HBO
+                                                                                        level: 4
+                                                                                        zone_count: 168
+                                                                                        matrix_sum: 4433.9545707904035
+                                                                                        interzonal_sum: 2063.7675010086796
+                                                                                        intrazonal_sum: 2370.187069781724
+                                                                                        Comments:
+                                                                                        Created by operation <built-in function mul> (reverse: False) on
+                                                                                        [
+                                                                                            Matrix Object
+                                                                                            vehicle_type: Bus
+                                                                                            value_type: Person Trips
+                                                                                            time_period: Inter_peak
+                                                                                            purpose: HBO
+                                                                                            level: 3
+                                                                                            zone_count: 168
+                                                                                            matrix_sum: 9232.433079999999
+                                                                                            interzonal_sum: 4297.201299999999
+                                                                                            intrazonal_sum: 4935.23178
+                                                                                            Comments:
+                                                                                            Created by copy operation on the following matrix:
+                                                                                            [
+                                                                                                Matrix Object
+                                                                                                vehicle_type: Bus
+                                                                                                value_type: Person Trips
+                                                                                                time_period: Inter_peak
+                                                                                                purpose: HBO
+                                                                                                level: 3
+                                                                                                zone_count: 168
+                                                                                                matrix_sum: 9232.433079999999
+                                                                                                interzonal_sum: 4297.201299999999
+                                                                                                intrazonal_sum: 4935.23178
+                                                                                                Comments:
+                                                                                                Imported matrix from C:\Users\UKTMB001\Documents\Python Scripts\MND\Test\synth_bus_Inter_peak.csv
+                                                                                                Matrix Object
+                                                                                                vehicle_type: Bus
+                                                                                                value_type: Person Trips
+                                                                                                time_period: Inter_peak
+                                                                                                purpose: HBO
+                                                                                                level: 3
+                                                                                                zone_count: 168
+                                                                                                matrix_sum: 9232.433079999999
+                                                                                                interzonal_sum: 4297.201299999999
+                                                                                                intrazonal_sum: 4935.23178
+                                                                                                
+                                                                                            ]
+                                                                                            
+                                                                                        ]
+                                                                                        <built-in function mul>
+                                                                                        [
+                                                                                            0.4802585117454654
+                                                                                        ]
+                                                                                        
+                                                                                    ]
+                                                                                    
+                                                                                ]
+                                                                                [
+                                                                                    Matrix Object
+                                                                                    vehicle_type: Road
+                                                                                    value_type: Person Trips
+                                                                                    time_period: Inter_peak
+                                                                                    purpose: OB_HBO
+                                                                                    level: 4
+                                                                                    zone_count: 168
+                                                                                    matrix_sum: 17227.833333333332
+                                                                                    interzonal_sum: 14274.684396516754
+                                                                                    intrazonal_sum: 2953.1489368165776
+                                                                                    Comments:
+                                                                                    Created by copy operation on the following matrix:
+                                                                                    [
+                                                                                        Matrix Object
+                                                                                        vehicle_type: Road
+                                                                                        value_type: Person Trips
+                                                                                        time_period: Inter_peak
+                                                                                        purpose: OB_HBO
+                                                                                        level: 4
+                                                                                        zone_count: 168
+                                                                                        matrix_sum: 17227.833333333332
+                                                                                        interzonal_sum: 14274.684396516754
+                                                                                        intrazonal_sum: 2953.1489368165776
+                                                                                        Comments:
+                                                                                        Created by disaggregate_matrix operation on the following matrix:
+                                                                                        [
+                                                                                            Matrix Object
+                                                                                            vehicle_type: Road
+                                                                                            value_type: Person Trips
+                                                                                            time_period: Inter_peak
+                                                                                            purpose: OB_HBO
+                                                                                            level: 4
+                                                                                            zone_count: 120
+                                                                                            matrix_sum: 17227.833333333332
+                                                                                            interzonal_sum: 16815.0
+                                                                                            intrazonal_sum: 412.8333333333333
+                                                                                            Comments:
+                                                                                            Created by copy operation on the following matrix:
+                                                                                            [
+                                                                                                Matrix Object
+                                                                                                vehicle_type: Road
+                                                                                                value_type: Person Trips
+                                                                                                time_period: Inter_peak
+                                                                                                purpose: OB_HBO
+                                                                                                level: 4
+                                                                                                zone_count: 120
+                                                                                                matrix_sum: 17227.833333333332
+                                                                                                interzonal_sum: 16815.0
+                                                                                                intrazonal_sum: 412.8333333333333
+                                                                                                Comments:
+                                                                                                Created by operation <built-in function mul> (reverse: False) on
+                                                                                                [
+                                                                                                    Matrix Object
+                                                                                                    vehicle_type: Road
+                                                                                                    value_type: Person Trips
+                                                                                                    time_period: Inter_peak
+                                                                                                    purpose: OB_HBO
+                                                                                                    level: 4
+                                                                                                    zone_count: 120
+                                                                                                    matrix_sum: 103367.0
+                                                                                                    interzonal_sum: 100890.0
+                                                                                                    intrazonal_sum: 2477.0
+                                                                                                    Comments:
+                                                                                                    Imported matrix from C:\Users\UKTMB001\Documents\Python Scripts\MND\20200220 - Deliverable 1 Matrices\D1_Weekday_OB_HBO_Road.csv
+                                                                                                    MND Raw Data
+                                                                                                    
+                                                                                                ]
+                                                                                                <built-in function mul>
+                                                                                                [
+                                                                                                    0.16666666666666666
+                                                                                                ]
+                                                                                                
+                                                                                            ]
+                                                                                            
+                                                                                        ]
+                                                                                        
+                                                                                    ]
+                                                                                    
+                                                                                ]
+                                                                                
+                                                                            ]
+                                                                            <built-in function sub>
+                                                                            [
+                                                                                [[1. 1. 1. ... 1. 1. 1.]
+                                                                                [1. 1. 1. ... 1. 1. 1.]
+                                                                                [1. 1. 1. ... 1. 1. 1.]
+                                                                                ...
+                                                                                [1. 1. 1. ... 1. 1. 1.]
+                                                                                [1. 1. 1. ... 1. 1. 1.]
+                                                                                [1. 1. 1. ... 1. 1. 1.]]
+                                                                            ]
+                                                                            
+                                                                        ]
+                                                                        
+                                                                    ]
+                                                                    
+                                                                ]
+                                                                <built-in function mul>
+                                                                [
+                                                                    0.6261662367292192
+                                                                ]
+                                                                
+                                                            ]
+                                                            <built-in function mul>
+                                                            [
+                                                                1.0
+                                                            ]
+                                                            
+                                                        ]
+                                                        
+                                                    ]
+                                                    Convergence Information:
+                                                    1: count: 168, col_pass: 129, row_pass: 166
+                                                    2: count: 168, col_pass: 168, row_pass: 168
+                                                    
+                                                ]
+                                                
+                                            ]
+                                            
+                                        ]
+                                        <built-in function mul>
+                                        [
+                                            0.9831146684909792
+                                        ]
+                                        
+                                    ]
+                                    
+                                ]
+                                
+                            ]
+                            <built-in function mul>
+                            [
+                                1.0
+                            ]
+                            
+                        ]
+                        <built-in function mul>
+                        [
+                            1.25
+                        ]
+                        
+                    ]
+                    <built-in function mul>
+                    [
+                        [[ True  True  True ... False False False]
+                        [ True  True  True ... False False False]
+                        [ True  True  True ... False False False]
+                        ...
+                        [False False False ... False False False]
+                        [False False False ... False False False]
+                        [False False False ... False False False]]
+                    ]
+                    
+                ]
+                
+            ]
+            <built-in function add>
+            [
+                Matrix Object
+                vehicle_type: Car
+                value_type: Person Trips
+                time_period: Inter_peak
+                purpose: HBO
+                level: 3
+                zone_count: 168
+                matrix_sum: 6720.23839
+                interzonal_sum: 2129.7357900000006
+                intrazonal_sum: 4590.5026
+                Comments:
+                Created by copy operation on the following matrix:
+                [
+                    Matrix Object
+                    vehicle_type: Car
+                    value_type: Person Trips
+                    time_period: Inter_peak
+                    purpose: HBO
+                    level: 3
+                    zone_count: 168
+                    matrix_sum: 6720.23839
+                    interzonal_sum: 2129.7357900000006
+                    intrazonal_sum: 4590.5026
+                    Comments:
+                    Created by operate_by_property (<built-in function mul>) operation on the following matrix:
+                    [
+                        Matrix Object
+                        vehicle_type: Car
+                        value_type: Person Trips
+                        time_period: Inter_peak
+                        purpose: HBO
+                        level: 3
+                        zone_count: 168
+                        matrix_sum: 7398.408649999999
+                        interzonal_sum: 2807.9060499999996
+                        intrazonal_sum: 4590.5026
+                        Comments:
+                        Created by operation <built-in function mul> (reverse: False) on
+                        [
+                            Matrix Object
+                            vehicle_type: Car
+                            value_type: Person Trips
+                            time_period: Inter_peak
+                            purpose: HBO
+                            level: 3
+                            zone_count: 168
+                            matrix_sum: 34791.12469
+                            interzonal_sum: 10482.258579999994
+                            intrazonal_sum: 24308.866110000003
+                            Comments:
+                            Imported matrix from C:\Users\UKTMB001\Documents\Python Scripts\MND\Test\synth_car_Inter_peak_v2.csv
+                            Matrix Object
+                            vehicle_type: Car
+                            value_type: Person Trips
+                            time_period: Inter_peak
+                            purpose: HBO
+                            level: 3
+                            zone_count: 168
+                            matrix_sum: 34791.12469
+                            interzonal_sum: 10482.258579999994
+                            intrazonal_sum: 24308.866110000003
+                            
+                        ]
+                        <built-in function mul>
+                        [
+                            [[ True  True  True ... False False False]
+                            [ True  True  True ... False False False]
+                            [ True  True  True ... False False False]
+                            ...
+                            [False False False ... False False False]
+                            [False False False ... False False False]
+                            [False False False ... False False False]]
+                        ]
+                        
+                    ]
+                    
+                ]
+                
+            ]
+            
+        ]
+        <built-in function add>
+        [
+            Matrix Object
+            vehicle_type: Highway
+            value_type: Vehicle Trips
+            time_period: Inter_peak
+            purpose: HBO
+            level: 3
+            zone_count: 168
+            matrix_sum: 43467.525804994264
+            interzonal_sum: 23749.16229499426
+            intrazonal_sum: 19718.363510000003
+            Comments:
+            Created by copy operation on the following matrix:
+            [
+                Matrix Object
+                vehicle_type: Highway
+                value_type: Vehicle Trips
+                time_period: Inter_peak
+                purpose: HBO
+                level: 3
+                zone_count: 168
+                matrix_sum: 43467.525804994264
+                interzonal_sum: 23749.16229499426
+                intrazonal_sum: 19718.363510000003
+                Comments:
+                Created by operation <built-in function add> (reverse: False) on
+                [
+                    Matrix Object
+                    vehicle_type: Highway
+                    value_type: Vehicle Trips
+                    time_period: Inter_peak
+                    purpose: HBO
+                    level: 3
+                    zone_count: 168
+                    matrix_sum: 20408.345874994266
+                    interzonal_sum: 20408.345874994266
+                    intrazonal_sum: 0.0
+                    Comments:
+                    Created by operate_by_property (<built-in function mul>) operation on the following matrix:
+                    [
+                        Matrix Object
+                        vehicle_type: Highway
+                        value_type: Vehicle Trips
+                        time_period: Inter_peak
+                        purpose: HBO
+                        level: 3
+                        zone_count: 168
+                        matrix_sum: 24082.423917769196
+                        interzonal_sum: 20759.875939752586
+                        intrazonal_sum: 3322.5479780166097
+                        Comments:
+                        Created by operation <built-in function mul> (reverse: False) on
+                        [
+                            Matrix Object
+                            vehicle_type: Highway
+                            value_type: Vehicle Trips
+                            time_period: Inter_peak
+                            purpose: HBO
+                            level: 3
+                            zone_count: 168
+                            matrix_sum: 24257.135373155215
+                            interzonal_sum: 20932.99238840115
+                            intrazonal_sum: 3324.142984754063
+                            Comments:
+                            Created by operation <built-in function mul> (reverse: False) on
+                            [
+                                Matrix Object
+                                vehicle_type: Highway
+                                value_type: Vehicle Trips
+                                time_period: Inter_peak
+                                purpose: HBO
+                                level: 3
+                                zone_count: 168
+                                matrix_sum: 19405.708298524172
+                                interzonal_sum: 16746.393910720923
+                                intrazonal_sum: 2659.31438780325
+                                Comments:
+                                Created by operation <built-in function mul> (reverse: False) on
+                                [
+                                    Matrix Object
+                                    vehicle_type: Highway
+                                    value_type: Vehicle Trips
+                                    time_period: Inter_peak
+                                    purpose: HBO
+                                    level: 3
+                                    zone_count: 168
+                                    matrix_sum: 19405.708298524172
+                                    interzonal_sum: 16746.393910720923
+                                    intrazonal_sum: 2659.31438780325
+                                    Comments:
+                                    Created by operation <built-in function add> (reverse: False) on
+                                    [
+                                        Matrix Object
+                                        vehicle_type: Highway
+                                        value_type: Vehicle Trips
+                                        time_period: Inter_peak
+                                        purpose: HBO
+                                        level: 5
+                                        zone_count: 168
+                                        matrix_sum: 10069.288664340653
+                                        interzonal_sum: 8727.674495051084
+                                        intrazonal_sum: 1341.6141692895699
+                                        Comments:
+                                        Created by copy operation on the following matrix:
+                                        [
+                                            Matrix Object
+                                            vehicle_type: Highway
+                                            value_type: Vehicle Trips
+                                            time_period: Inter_peak
+                                            purpose: IB_HBO
+                                            level: 5
+                                            zone_count: 168
+                                            matrix_sum: 10069.288664340653
+                                            interzonal_sum: 8727.674495051084
+                                            intrazonal_sum: 1341.6141692895699
+                                            Comments:
+                                            Created by operation <built-in function mul> (reverse: False) on
+                                            [
+                                                Matrix Object
+                                                vehicle_type: car
+                                                value_type: Vehicle Trips
+                                                time_period: Inter_peak
+                                                purpose: IB_HBO
+                                                level: 5
+                                                zone_count: 168
+                                                matrix_sum: 10242.232149578638
+                                                interzonal_sum: 8877.575296936142
+                                                intrazonal_sum: 1364.6568526424956
+                                                Comments:
+                                                Created by operate_by_property (<built-in function mul>) operation on the following matrix:
+                                                [
+                                                    Matrix Object
+                                                    vehicle_type: car+lgv
+                                                    value_type: Vehicle Trips
+                                                    time_period: Inter_peak
+                                                    purpose: IB_HBO
+                                                    level: 5
+                                                    zone_count: 168
+                                                    matrix_sum: 10242.232149578638
+                                                    interzonal_sum: 8877.575296936142
+                                                    intrazonal_sum: 1364.6568526424956
+                                                    Comments:
+                                                    Created by copy operation on the following matrix:
+                                                    [
+                                                        Matrix Object
+                                                        vehicle_type: car+lgv
+                                                        value_type: Vehicle Trips
+                                                        time_period: Inter_peak
+                                                        purpose: IB_HBO
+                                                        level: 5
+                                                        zone_count: 168
+                                                        matrix_sum: 10242.232149578638
+                                                        interzonal_sum: 8877.575296936142
+                                                        intrazonal_sum: 1364.6568526424956
+                                                        Comments:
+                                                        Created by furness_matrix operation on the following matrix:
+                                                        [
+                                                            Matrix Object
+                                                            vehicle_type: car+lgv
+                                                            value_type: Vehicle Trips
+                                                            time_period: Inter_peak
+                                                            purpose: IB_HBO
+                                                            level: 3
+                                                            zone_count: 168
+                                                            matrix_sum: 10736.370183347668
+                                                            interzonal_sum: 9313.561353652323
+                                                            intrazonal_sum: 1422.8088296953451
+                                                            Comments:
+                                                            Created by copy operation on the following matrix:
+                                                            [
+                                                                Matrix Object
+                                                                vehicle_type: car+lgv
+                                                                value_type: Vehicle Trips
+                                                                time_period: Inter_peak
+                                                                purpose: IB_HBO
+                                                                level: 3
+                                                                zone_count: 168
+                                                                matrix_sum: 10736.370183347668
+                                                                interzonal_sum: 9313.561353652323
+                                                                intrazonal_sum: 1422.8088296953451
+                                                                Comments:
+                                                                Created by operation <built-in function mul> (reverse: False) on
+                                                                [
+                                                                    Matrix Object
+                                                                    vehicle_type: car+lgv
+                                                                    value_type: Vehicle Trips
+                                                                    time_period: Inter_peak
+                                                                    purpose: IB_HBO
+                                                                    level: 3
+                                                                    zone_count: 168
+                                                                    matrix_sum: 10736.370183347668
+                                                                    interzonal_sum: 9313.561353652323
+                                                                    intrazonal_sum: 1422.8088296953451
+                                                                    Comments:
+                                                                    Created by operation <built-in function mul> (reverse: False) on
+                                                                    [
+                                                                        Matrix Object
+                                                                        vehicle_type: car+lgv
+                                                                        value_type: Person Trips
+                                                                        time_period: Inter_peak
+                                                                        purpose: IB_HBO
+                                                                        level: 3
+                                                                        zone_count: 168
+                                                                        matrix_sum: 17146.197852233498
+                                                                        interzonal_sum: 14873.943702716606
+                                                                        intrazonal_sum: 2272.2541495168925
+                                                                        Comments:
+                                                                        Created by operation <built-in function mul> (reverse: False) on
+                                                                        [
+                                                                            Matrix Object
+                                                                            vehicle_type: Road
+                                                                            value_type: Person Trips
+                                                                            time_period: Inter_peak
+                                                                            purpose: IB_HBO
+                                                                            level: 3
+                                                                            zone_count: 168
+                                                                            matrix_sum: 18644.166666666664
+                                                                            interzonal_sum: 15586.982047541609
+                                                                            intrazonal_sum: 3057.1846191250543
+                                                                            Comments:
+                                                                            Created by disaggregate_matrix operation on the following matrix:
+                                                                            [
+                                                                                Matrix Object
+                                                                                vehicle_type: Road
+                                                                                value_type: Person Trips
+                                                                                time_period: Inter_peak
+                                                                                purpose: IB_HBO
+                                                                                level: 3
+                                                                                zone_count: 120
+                                                                                matrix_sum: 18644.166666666664
+                                                                                interzonal_sum: 18218.333333333332
+                                                                                intrazonal_sum: 425.83333333333337
+                                                                                Comments:
+                                                                                Created by copy operation on the following matrix:
+                                                                                [
+                                                                                    Matrix Object
+                                                                                    vehicle_type: Road
+                                                                                    value_type: Person Trips
+                                                                                    time_period: Inter_peak
+                                                                                    purpose: IB_HBO
+                                                                                    level: 3
+                                                                                    zone_count: 120
+                                                                                    matrix_sum: 18644.166666666664
+                                                                                    interzonal_sum: 18218.333333333332
+                                                                                    intrazonal_sum: 425.83333333333337
+                                                                                    Comments:
+                                                                                    Created by operation <built-in function mul> (reverse: False) on
+                                                                                    [
+                                                                                        Matrix Object
+                                                                                        vehicle_type: Road
+                                                                                        value_type: Person Trips
+                                                                                        time_period: Inter_peak
+                                                                                        purpose: IB_HBO
+                                                                                        level: 3
+                                                                                        zone_count: 120
+                                                                                        matrix_sum: 111865.0
+                                                                                        interzonal_sum: 109310.0
+                                                                                        intrazonal_sum: 2555.0
+                                                                                        Comments:
+                                                                                        Imported matrix from C:\Users\UKTMB001\Documents\Python Scripts\MND\20200220 - Deliverable 1 Matrices\D1_Weekday_IB_HBO_Road.csv
+                                                                                        MND Raw Data
+                                                                                        
+                                                                                    ]
+                                                                                    <built-in function mul>
+                                                                                    [
+                                                                                        0.16666666666666666
+                                                                                    ]
+                                                                                    
+                                                                                ]
+                                                                                
+                                                                            ]
+                                                                            
+                                                                        ]
+                                                                        <built-in function mul>
+                                                                        [
+                                                                            Matrix Object
+                                                                            vehicle_type: Bus
+                                                                            value_type: proportions
+                                                                            time_period: Inter_peak
+                                                                            purpose: IB_HBO
+                                                                            level: 3
+                                                                            zone_count: 168
+                                                                            matrix_sum: 19905.914423117276
+                                                                            interzonal_sum: 19769.841921683088
+                                                                            intrazonal_sum: 136.07250143418923
+                                                                            Comments:
+                                                                            Created by copy operation on the following matrix:
+                                                                            [
+                                                                                Matrix Object
+                                                                                vehicle_type: Bus
+                                                                                value_type: proportions
+                                                                                time_period: Inter_peak
+                                                                                purpose: IB_HBO
+                                                                                level: 3
+                                                                                zone_count: 168
+                                                                                matrix_sum: 19905.914423117276
+                                                                                interzonal_sum: 19769.841921683088
+                                                                                intrazonal_sum: 136.07250143418923
+                                                                                Comments:
+                                                                                Created by operation <built-in function sub> (reverse: True) on
+                                                                                [
+                                                                                    Matrix Object
+                                                                                    vehicle_type: Bus
+                                                                                    value_type: proportions
+                                                                                    time_period: Inter_peak
+                                                                                    purpose: IB_HBO
+                                                                                    level: 3
+                                                                                    zone_count: 168
+                                                                                    matrix_sum: 8318.085576882724
+                                                                                    interzonal_sum: 8286.158078316914
+                                                                                    intrazonal_sum: 31.927498565810748
+                                                                                    Comments:
+                                                                                    Created by generate_proportion_matrix operation on the following matrices:
+                                                                                    [
+                                                                                        Matrix Object
+                                                                                        vehicle_type: Bus
+                                                                                        value_type: Person Trips
+                                                                                        time_period: Inter_peak
+                                                                                        purpose: IB_HBO
+                                                                                        level: 3
+                                                                                        zone_count: 168
+                                                                                        matrix_sum: 4798.478509209596
+                                                                                        interzonal_sum: 2233.4337989913206
+                                                                                        intrazonal_sum: 2565.0447102182757
+                                                                                        Comments:
+                                                                                        Created by copy operation on the following matrix:
+                                                                                        [
+                                                                                            Matrix Object
+                                                                                            vehicle_type: Bus
+                                                                                            value_type: Person Trips
+                                                                                            time_period: Inter_peak
+                                                                                            purpose: IB_HBO
+                                                                                            level: 3
+                                                                                            zone_count: 168
+                                                                                            matrix_sum: 4798.478509209596
+                                                                                            interzonal_sum: 2233.4337989913206
+                                                                                            intrazonal_sum: 2565.0447102182757
+                                                                                            Comments:
+                                                                                            Created by operation <built-in function mul> (reverse: False) on
+                                                                                            [
+                                                                                                Matrix Object
+                                                                                                vehicle_type: Bus
+                                                                                                value_type: Person Trips
+                                                                                                time_period: Inter_peak
+                                                                                                purpose: HBO
+                                                                                                level: 3
+                                                                                                zone_count: 168
+                                                                                                matrix_sum: 9232.433079999999
+                                                                                                interzonal_sum: 4297.201299999999
+                                                                                                intrazonal_sum: 4935.23178
+                                                                                                Comments:
+                                                                                                Created by copy operation on the following matrix:
+                                                                                                [
+                                                                                                    Matrix Object
+                                                                                                    vehicle_type: Bus
+                                                                                                    value_type: Person Trips
+                                                                                                    time_period: Inter_peak
+                                                                                                    purpose: HBO
+                                                                                                    level: 3
+                                                                                                    zone_count: 168
+                                                                                                    matrix_sum: 9232.433079999999
+                                                                                                    interzonal_sum: 4297.201299999999
+                                                                                                    intrazonal_sum: 4935.23178
+                                                                                                    Comments:
+                                                                                                    Imported matrix from C:\Users\UKTMB001\Documents\Python Scripts\MND\Test\synth_bus_Inter_peak.csv
+                                                                                                    Matrix Object
+                                                                                                    vehicle_type: Bus
+                                                                                                    value_type: Person Trips
+                                                                                                    time_period: Inter_peak
+                                                                                                    purpose: HBO
+                                                                                                    level: 3
+                                                                                                    zone_count: 168
+                                                                                                    matrix_sum: 9232.433079999999
+                                                                                                    interzonal_sum: 4297.201299999999
+                                                                                                    intrazonal_sum: 4935.23178
+                                                                                                    
+                                                                                                ]
+                                                                                                
+                                                                                            ]
+                                                                                            <built-in function mul>
+                                                                                            [
+                                                                                                0.5197414882545346
+                                                                                            ]
+                                                                                            
+                                                                                        ]
+                                                                                        
+                                                                                    ]
+                                                                                    [
+                                                                                        Matrix Object
+                                                                                        vehicle_type: Road
+                                                                                        value_type: Person Trips
+                                                                                        time_period: Inter_peak
+                                                                                        purpose: IB_HBO
+                                                                                        level: 3
+                                                                                        zone_count: 168
+                                                                                        matrix_sum: 18644.166666666664
+                                                                                        interzonal_sum: 15586.982047541609
+                                                                                        intrazonal_sum: 3057.1846191250543
+                                                                                        Comments:
+                                                                                        Created by copy operation on the following matrix:
+                                                                                        [
+                                                                                            Matrix Object
+                                                                                            vehicle_type: Road
+                                                                                            value_type: Person Trips
+                                                                                            time_period: Inter_peak
+                                                                                            purpose: IB_HBO
+                                                                                            level: 3
+                                                                                            zone_count: 168
+                                                                                            matrix_sum: 18644.166666666664
+                                                                                            interzonal_sum: 15586.982047541609
+                                                                                            intrazonal_sum: 3057.1846191250543
+                                                                                            Comments:
+                                                                                            Created by disaggregate_matrix operation on the following matrix:
+                                                                                            [
+                                                                                                Matrix Object
+                                                                                                vehicle_type: Road
+                                                                                                value_type: Person Trips
+                                                                                                time_period: Inter_peak
+                                                                                                purpose: IB_HBO
+                                                                                                level: 3
+                                                                                                zone_count: 120
+                                                                                                matrix_sum: 18644.166666666664
+                                                                                                interzonal_sum: 18218.333333333332
+                                                                                                intrazonal_sum: 425.83333333333337
+                                                                                                Comments:
+                                                                                                Created by copy operation on the following matrix:
+                                                                                                [
+                                                                                                    Matrix Object
+                                                                                                    vehicle_type: Road
+                                                                                                    value_type: Person Trips
+                                                                                                    time_period: Inter_peak
+                                                                                                    purpose: IB_HBO
+                                                                                                    level: 3
+                                                                                                    zone_count: 120
+                                                                                                    matrix_sum: 18644.166666666664
+                                                                                                    interzonal_sum: 18218.333333333332
+                                                                                                    intrazonal_sum: 425.83333333333337
+                                                                                                    Comments:
+                                                                                                    Created by operation <built-in function mul> (reverse: False) on
+                                                                                                    [
+                                                                                                        Matrix Object
+                                                                                                        vehicle_type: Road
+                                                                                                        value_type: Person Trips
+                                                                                                        time_period: Inter_peak
+                                                                                                        purpose: IB_HBO
+                                                                                                        level: 3
+                                                                                                        zone_count: 120
+                                                                                                        matrix_sum: 111865.0
+                                                                                                        interzonal_sum: 109310.0
+                                                                                                        intrazonal_sum: 2555.0
+                                                                                                        Comments:
+                                                                                                        Imported matrix from C:\Users\UKTMB001\Documents\Python Scripts\MND\20200220 - Deliverable 1 Matrices\D1_Weekday_IB_HBO_Road.csv
+                                                                                                        MND Raw Data
+                                                                                                        
+                                                                                                    ]
+                                                                                                    <built-in function mul>
+                                                                                                    [
+                                                                                                        0.16666666666666666
+                                                                                                    ]
+                                                                                                    
+                                                                                                ]
+                                                                                                
+                                                                                            ]
+                                                                                            
+                                                                                        ]
+                                                                                        
+                                                                                    ]
+                                                                                    
+                                                                                ]
+                                                                                <built-in function sub>
+                                                                                [
+                                                                                    [[1. 1. 1. ... 1. 1. 1.]
+                                                                                    [1. 1. 1. ... 1. 1. 1.]
+                                                                                    [1. 1. 1. ... 1. 1. 1.]
+                                                                                    ...
+                                                                                    [1. 1. 1. ... 1. 1. 1.]
+                                                                                    [1. 1. 1. ... 1. 1. 1.]
+                                                                                    [1. 1. 1. ... 1. 1. 1.]]
+                                                                                ]
+                                                                                
+                                                                            ]
+                                                                            
+                                                                        ]
+                                                                        
+                                                                    ]
+                                                                    <built-in function mul>
+                                                                    [
+                                                                        0.6261662367292192
+                                                                    ]
+                                                                    
+                                                                ]
+                                                                <built-in function mul>
+                                                                [
+                                                                    1.0
+                                                                ]
+                                                                
+                                                            ]
+                                                            
+                                                        ]
+                                                        Convergence Information:
+                                                        1: count: 168, col_pass: 135, row_pass: 168
+                                                        
+                                                    ]
+                                                    
+                                                ]
+                                                
+                                            ]
+                                            <built-in function mul>
+                                            [
+                                                0.9831146684909792
+                                            ]
+                                            
+                                        ]
+                                        
+                                    ]
+                                    <built-in function add>
+                                    [
+                                        Matrix Object
+                                        vehicle_type: Highway
+                                        value_type: Vehicle Trips
+                                        time_period: Inter_peak
+                                        purpose: OB_HBO
+                                        level: 6
+                                        zone_count: 168
+                                        matrix_sum: 9336.41963418352
+                                        interzonal_sum: 8018.719415669839
+                                        intrazonal_sum: 1317.7002185136803
+                                        Comments:
+                                        Created by copy operation on the following matrix:
+                                        [
+                                            Matrix Object
+                                            vehicle_type: Highway
+                                            value_type: Vehicle Trips
+                                            time_period: Inter_peak
+                                            purpose: OB_HBO
+                                            level: 6
+                                            zone_count: 168
+                                            matrix_sum: 9336.41963418352
+                                            interzonal_sum: 8018.719415669839
+                                            intrazonal_sum: 1317.7002185136803
+                                            Comments:
+                                            Created by operation <built-in function mul> (reverse: False) on
+                                            [
+                                                Matrix Object
+                                                vehicle_type: car
+                                                value_type: Vehicle Trips
+                                                time_period: Inter_peak
+                                                purpose: OB_HBO
+                                                level: 6
+                                                zone_count: 168
+                                                matrix_sum: 9496.775842551866
+                                                interzonal_sum: 8156.443670989143
+                                                intrazonal_sum: 1340.3321715627226
+                                                Comments:
+                                                Created by operate_by_property (<built-in function mul>) operation on the following matrix:
+                                                [
+                                                    Matrix Object
+                                                    vehicle_type: car+lgv
+                                                    value_type: Vehicle Trips
+                                                    time_period: Inter_peak
+                                                    purpose: OB_HBO
+                                                    level: 6
+                                                    zone_count: 168
+                                                    matrix_sum: 9496.775842551866
+                                                    interzonal_sum: 8156.443670989143
+                                                    intrazonal_sum: 1340.3321715627226
+                                                    Comments:
+                                                    Created by copy operation on the following matrix:
+                                                    [
+                                                        Matrix Object
+                                                        vehicle_type: car+lgv
+                                                        value_type: Vehicle Trips
+                                                        time_period: Inter_peak
+                                                        purpose: OB_HBO
+                                                        level: 6
+                                                        zone_count: 168
+                                                        matrix_sum: 9496.775842551866
+                                                        interzonal_sum: 8156.443670989143
+                                                        intrazonal_sum: 1340.3321715627226
+                                                        Comments:
+                                                        Created by furness_matrix operation on the following matrix:
+                                                        [
+                                                            Matrix Object
+                                                            vehicle_type: car+lgv
+                                                            value_type: Vehicle Trips
+                                                            time_period: Inter_peak
+                                                            purpose: OB_HBO
+                                                            level: 4
+                                                            zone_count: 168
+                                                            matrix_sum: 9952.580488478656
+                                                            interzonal_sum: 8557.152615828738
+                                                            intrazonal_sum: 1395.427872649917
+                                                            Comments:
+                                                            Created by copy operation on the following matrix:
+                                                            [
+                                                                Matrix Object
+                                                                vehicle_type: car+lgv
+                                                                value_type: Vehicle Trips
+                                                                time_period: Inter_peak
+                                                                purpose: OB_HBO
+                                                                level: 4
+                                                                zone_count: 168
+                                                                matrix_sum: 9952.580488478656
+                                                                interzonal_sum: 8557.152615828738
+                                                                intrazonal_sum: 1395.427872649917
+                                                                Comments:
+                                                                Created by operation <built-in function mul> (reverse: False) on
+                                                                [
+                                                                    Matrix Object
+                                                                    vehicle_type: car+lgv
+                                                                    value_type: Vehicle Trips
+                                                                    time_period: Inter_peak
+                                                                    purpose: OB_HBO
+                                                                    level: 4
+                                                                    zone_count: 168
+                                                                    matrix_sum: 9952.580488478656
+                                                                    interzonal_sum: 8557.152615828738
+                                                                    intrazonal_sum: 1395.427872649917
+                                                                    Comments:
+                                                                    Created by operation <built-in function mul> (reverse: False) on
+                                                                    [
+                                                                        Matrix Object
+                                                                        vehicle_type: car+lgv
+                                                                        value_type: Person Trips
+                                                                        time_period: Inter_peak
+                                                                        purpose: OB_HBO
+                                                                        level: 4
+                                                                        zone_count: 168
+                                                                        matrix_sum: 15894.47003796625
+                                                                        interzonal_sum: 13665.94382432219
+                                                                        intrazonal_sum: 2228.5262136440597
+                                                                        Comments:
+                                                                        Created by operation <built-in function mul> (reverse: False) on
+                                                                        [
+                                                                            Matrix Object
+                                                                            vehicle_type: Road
+                                                                            value_type: Person Trips
+                                                                            time_period: Inter_peak
+                                                                            purpose: OB_HBO
+                                                                            level: 4
+                                                                            zone_count: 168
+                                                                            matrix_sum: 17227.833333333332
+                                                                            interzonal_sum: 14274.684396516754
+                                                                            intrazonal_sum: 2953.1489368165776
+                                                                            Comments:
+                                                                            Created by disaggregate_matrix operation on the following matrix:
+                                                                            [
+                                                                                Matrix Object
+                                                                                vehicle_type: Road
+                                                                                value_type: Person Trips
+                                                                                time_period: Inter_peak
+                                                                                purpose: OB_HBO
+                                                                                level: 4
+                                                                                zone_count: 120
+                                                                                matrix_sum: 17227.833333333332
+                                                                                interzonal_sum: 16815.0
+                                                                                intrazonal_sum: 412.8333333333333
+                                                                                Comments:
+                                                                                Created by copy operation on the following matrix:
+                                                                                [
+                                                                                    Matrix Object
+                                                                                    vehicle_type: Road
+                                                                                    value_type: Person Trips
+                                                                                    time_period: Inter_peak
+                                                                                    purpose: OB_HBO
+                                                                                    level: 4
+                                                                                    zone_count: 120
+                                                                                    matrix_sum: 17227.833333333332
+                                                                                    interzonal_sum: 16815.0
+                                                                                    intrazonal_sum: 412.8333333333333
+                                                                                    Comments:
+                                                                                    Created by operation <built-in function mul> (reverse: False) on
+                                                                                    [
+                                                                                        Matrix Object
+                                                                                        vehicle_type: Road
+                                                                                        value_type: Person Trips
+                                                                                        time_period: Inter_peak
+                                                                                        purpose: OB_HBO
+                                                                                        level: 4
+                                                                                        zone_count: 120
+                                                                                        matrix_sum: 103367.0
+                                                                                        interzonal_sum: 100890.0
+                                                                                        intrazonal_sum: 2477.0
+                                                                                        Comments:
+                                                                                        Imported matrix from C:\Users\UKTMB001\Documents\Python Scripts\MND\20200220 - Deliverable 1 Matrices\D1_Weekday_OB_HBO_Road.csv
+                                                                                        MND Raw Data
+                                                                                        
+                                                                                    ]
+                                                                                    <built-in function mul>
+                                                                                    [
+                                                                                        0.16666666666666666
+                                                                                    ]
+                                                                                    
+                                                                                ]
+                                                                                
+                                                                            ]
+                                                                            
+                                                                        ]
+                                                                        <built-in function mul>
+                                                                        [
+                                                                            Matrix Object
+                                                                            vehicle_type: Bus
+                                                                            value_type: proportions
+                                                                            time_period: Inter_peak
+                                                                            purpose: OB_HBO
+                                                                            level: 4
+                                                                            zone_count: 168
+                                                                            matrix_sum: 19921.737968770776
+                                                                            interzonal_sum: 19789.43480495916
+                                                                            intrazonal_sum: 132.30316381161484
+                                                                            Comments:
+                                                                            Created by copy operation on the following matrix:
+                                                                            [
+                                                                                Matrix Object
+                                                                                vehicle_type: Bus
+                                                                                value_type: proportions
+                                                                                time_period: Inter_peak
+                                                                                purpose: OB_HBO
+                                                                                level: 4
+                                                                                zone_count: 168
+                                                                                matrix_sum: 19921.737968770776
+                                                                                interzonal_sum: 19789.43480495916
+                                                                                intrazonal_sum: 132.30316381161484
+                                                                                Comments:
+                                                                                Created by operation <built-in function sub> (reverse: True) on
+                                                                                [
+                                                                                    Matrix Object
+                                                                                    vehicle_type: Bus
+                                                                                    value_type: proportions
+                                                                                    time_period: Inter_peak
+                                                                                    purpose: OB_HBO
+                                                                                    level: 4
+                                                                                    zone_count: 168
+                                                                                    matrix_sum: 8302.262031229224
+                                                                                    interzonal_sum: 8266.56519504084
+                                                                                    intrazonal_sum: 35.69683618838515
+                                                                                    Comments:
+                                                                                    Created by generate_proportion_matrix operation on the following matrices:
+                                                                                    [
+                                                                                        Matrix Object
+                                                                                        vehicle_type: Bus
+                                                                                        value_type: Person Trips
+                                                                                        time_period: Inter_peak
+                                                                                        purpose: OB_HBO
+                                                                                        level: 4
+                                                                                        zone_count: 168
+                                                                                        matrix_sum: 4433.9545707904035
+                                                                                        interzonal_sum: 2063.7675010086796
+                                                                                        intrazonal_sum: 2370.187069781724
+                                                                                        Comments:
+                                                                                        Created by copy operation on the following matrix:
+                                                                                        [
+                                                                                            Matrix Object
+                                                                                            vehicle_type: Bus
+                                                                                            value_type: Person Trips
+                                                                                            time_period: Inter_peak
+                                                                                            purpose: OB_HBO
+                                                                                            level: 4
+                                                                                            zone_count: 168
+                                                                                            matrix_sum: 4433.9545707904035
+                                                                                            interzonal_sum: 2063.7675010086796
+                                                                                            intrazonal_sum: 2370.187069781724
+                                                                                            Comments:
+                                                                                            Created by operation <built-in function mul> (reverse: False) on
+                                                                                            [
+                                                                                                Matrix Object
+                                                                                                vehicle_type: Bus
+                                                                                                value_type: Person Trips
+                                                                                                time_period: Inter_peak
+                                                                                                purpose: HBO
+                                                                                                level: 3
+                                                                                                zone_count: 168
+                                                                                                matrix_sum: 9232.433079999999
+                                                                                                interzonal_sum: 4297.201299999999
+                                                                                                intrazonal_sum: 4935.23178
+                                                                                                Comments:
+                                                                                                Created by copy operation on the following matrix:
+                                                                                                [
+                                                                                                    Matrix Object
+                                                                                                    vehicle_type: Bus
+                                                                                                    value_type: Person Trips
+                                                                                                    time_period: Inter_peak
+                                                                                                    purpose: HBO
+                                                                                                    level: 3
+                                                                                                    zone_count: 168
+                                                                                                    matrix_sum: 9232.433079999999
+                                                                                                    interzonal_sum: 4297.201299999999
+                                                                                                    intrazonal_sum: 4935.23178
+                                                                                                    Comments:
+                                                                                                    Imported matrix from C:\Users\UKTMB001\Documents\Python Scripts\MND\Test\synth_bus_Inter_peak.csv
+                                                                                                    Matrix Object
+                                                                                                    vehicle_type: Bus
+                                                                                                    value_type: Person Trips
+                                                                                                    time_period: Inter_peak
+                                                                                                    purpose: HBO
+                                                                                                    level: 3
+                                                                                                    zone_count: 168
+                                                                                                    matrix_sum: 9232.433079999999
+                                                                                                    interzonal_sum: 4297.201299999999
+                                                                                                    intrazonal_sum: 4935.23178
+                                                                                                    
+                                                                                                ]
+                                                                                                
+                                                                                            ]
+                                                                                            <built-in function mul>
+                                                                                            [
+                                                                                                0.4802585117454654
+                                                                                            ]
+                                                                                            
+                                                                                        ]
+                                                                                        
+                                                                                    ]
+                                                                                    [
+                                                                                        Matrix Object
+                                                                                        vehicle_type: Road
+                                                                                        value_type: Person Trips
+                                                                                        time_period: Inter_peak
+                                                                                        purpose: OB_HBO
+                                                                                        level: 4
+                                                                                        zone_count: 168
+                                                                                        matrix_sum: 17227.833333333332
+                                                                                        interzonal_sum: 14274.684396516754
+                                                                                        intrazonal_sum: 2953.1489368165776
+                                                                                        Comments:
+                                                                                        Created by copy operation on the following matrix:
+                                                                                        [
+                                                                                            Matrix Object
+                                                                                            vehicle_type: Road
+                                                                                            value_type: Person Trips
+                                                                                            time_period: Inter_peak
+                                                                                            purpose: OB_HBO
+                                                                                            level: 4
+                                                                                            zone_count: 168
+                                                                                            matrix_sum: 17227.833333333332
+                                                                                            interzonal_sum: 14274.684396516754
+                                                                                            intrazonal_sum: 2953.1489368165776
+                                                                                            Comments:
+                                                                                            Created by disaggregate_matrix operation on the following matrix:
+                                                                                            [
+                                                                                                Matrix Object
+                                                                                                vehicle_type: Road
+                                                                                                value_type: Person Trips
+                                                                                                time_period: Inter_peak
+                                                                                                purpose: OB_HBO
+                                                                                                level: 4
+                                                                                                zone_count: 120
+                                                                                                matrix_sum: 17227.833333333332
+                                                                                                interzonal_sum: 16815.0
+                                                                                                intrazonal_sum: 412.8333333333333
+                                                                                                Comments:
+                                                                                                Created by copy operation on the following matrix:
+                                                                                                [
+                                                                                                    Matrix Object
+                                                                                                    vehicle_type: Road
+                                                                                                    value_type: Person Trips
+                                                                                                    time_period: Inter_peak
+                                                                                                    purpose: OB_HBO
+                                                                                                    level: 4
+                                                                                                    zone_count: 120
+                                                                                                    matrix_sum: 17227.833333333332
+                                                                                                    interzonal_sum: 16815.0
+                                                                                                    intrazonal_sum: 412.8333333333333
+                                                                                                    Comments:
+                                                                                                    Created by operation <built-in function mul> (reverse: False) on
+                                                                                                    [
+                                                                                                        Matrix Object
+                                                                                                        vehicle_type: Road
+                                                                                                        value_type: Person Trips
+                                                                                                        time_period: Inter_peak
+                                                                                                        purpose: OB_HBO
+                                                                                                        level: 4
+                                                                                                        zone_count: 120
+                                                                                                        matrix_sum: 103367.0
+                                                                                                        interzonal_sum: 100890.0
+                                                                                                        intrazonal_sum: 2477.0
+                                                                                                        Comments:
+                                                                                                        Imported matrix from C:\Users\UKTMB001\Documents\Python Scripts\MND\20200220 - Deliverable 1 Matrices\D1_Weekday_OB_HBO_Road.csv
+                                                                                                        MND Raw Data
+                                                                                                        
+                                                                                                    ]
+                                                                                                    <built-in function mul>
+                                                                                                    [
+                                                                                                        0.16666666666666666
+                                                                                                    ]
+                                                                                                    
+                                                                                                ]
+                                                                                                
+                                                                                            ]
+                                                                                            
+                                                                                        ]
+                                                                                        
+                                                                                    ]
+                                                                                    
+                                                                                ]
+                                                                                <built-in function sub>
+                                                                                [
+                                                                                    [[1. 1. 1. ... 1. 1. 1.]
+                                                                                    [1. 1. 1. ... 1. 1. 1.]
+                                                                                    [1. 1. 1. ... 1. 1. 1.]
+                                                                                    ...
+                                                                                    [1. 1. 1. ... 1. 1. 1.]
+                                                                                    [1. 1. 1. ... 1. 1. 1.]
+                                                                                    [1. 1. 1. ... 1. 1. 1.]]
+                                                                                ]
+                                                                                
+                                                                            ]
+                                                                            
+                                                                        ]
+                                                                        
+                                                                    ]
+                                                                    <built-in function mul>
+                                                                    [
+                                                                        0.6261662367292192
+                                                                    ]
+                                                                    
+                                                                ]
+                                                                <built-in function mul>
+                                                                [
+                                                                    1.0
+                                                                ]
+                                                                
+                                                            ]
+                                                            
+                                                        ]
+                                                        Convergence Information:
+                                                        1: count: 168, col_pass: 129, row_pass: 166
+                                                        2: count: 168, col_pass: 168, row_pass: 168
+                                                        
+                                                    ]
+                                                    
+                                                ]
+                                                
+                                            ]
+                                            <built-in function mul>
+                                            [
+                                                0.9831146684909792
+                                            ]
+                                            
+                                        ]
+                                        
+                                    ]
+                                    
+                                ]
+                                <built-in function mul>
+                                [
+                                    1.0
+                                ]
+                                
+                            ]
+                            <built-in function mul>
+                            [
+                                1.25
+                            ]
+                            
+                        ]
+                        <built-in function mul>
+                        [
+                            [[False False False ...  True  True  True]
+                            [False False False ...  True  True  True]
+                            [False False False ...  True  True  True]
+                            ...
+                            [ True  True  True ...  True  True  True]
+                            [ True  True  True ...  True  True  True]
+                            [ True  True  True ...  True  True  True]]
+                        ]
+                        
+                    ]
+                    
+                ]
+                <built-in function add>
+                [
+                    Matrix Object
+                    vehicle_type: Car
+                    value_type: Person Trips
+                    time_period: Inter_peak
+                    purpose: HBO
+                    level: 3
+                    zone_count: 168
+                    matrix_sum: 23059.179930000002
+                    interzonal_sum: 3340.816419999999
+                    intrazonal_sum: 19718.363510000003
+                    Comments:
+                    Created by copy operation on the following matrix:
+                    [
+                        Matrix Object
+                        vehicle_type: Car
+                        value_type: Person Trips
+                        time_period: Inter_peak
+                        purpose: HBO
+                        level: 3
+                        zone_count: 168
+                        matrix_sum: 23059.179930000002
+                        interzonal_sum: 3340.816419999999
+                        intrazonal_sum: 19718.363510000003
+                        Comments:
+                        Created by operate_by_property (<built-in function mul>) operation on the following matrix:
+                        [
+                            Matrix Object
+                            vehicle_type: Car
+                            value_type: Person Trips
+                            time_period: Inter_peak
+                            purpose: HBO
+                            level: 3
+                            zone_count: 168
+                            matrix_sum: 27392.716040000003
+                            interzonal_sum: 7674.35253
+                            intrazonal_sum: 19718.363510000003
+                            Comments:
+                            Created by operation <built-in function mul> (reverse: False) on
+                            [
+                                Matrix Object
+                                vehicle_type: Car
+                                value_type: Person Trips
+                                time_period: Inter_peak
+                                purpose: HBO
+                                level: 3
+                                zone_count: 168
+                                matrix_sum: 34791.12469
+                                interzonal_sum: 10482.258579999994
+                                intrazonal_sum: 24308.866110000003
+                                Comments:
+                                Imported matrix from C:\Users\UKTMB001\Documents\Python Scripts\MND\Test\synth_car_Inter_peak_v2.csv
+                                Matrix Object
+                                vehicle_type: Car
+                                value_type: Person Trips
+                                time_period: Inter_peak
+                                purpose: HBO
+                                level: 3
+                                zone_count: 168
+                                matrix_sum: 34791.12469
+                                interzonal_sum: 10482.258579999994
+                                intrazonal_sum: 24308.866110000003
+                                
+                            ]
+                            <built-in function mul>
+                            [
+                                [[False False False ...  True  True  True]
+                                [False False False ...  True  True  True]
+                                [False False False ...  True  True  True]
+                                ...
+                                [ True  True  True ...  True  True  True]
+                                [ True  True  True ...  True  True  True]
+                                [ True  True  True ...  True  True  True]]
+                            ]
+                            
+                        ]
+                        
+                    ]
+                    
+                ]
+                
+            ]
+            
+        ]
+        
+    ]
+    <built-in function add>
+    [
+        Matrix Object
+        vehicle_type: Car
+        value_type: Vehicle Trips
+        time_period: Inter_peak
+        purpose: HBO
+        level: 3
+        zone_count: 168
+        matrix_sum: 114.28477755151505
+        interzonal_sum: 114.28477755151505
+        intrazonal_sum: 0.0
+        Comments:
+        Created by copy operation on the following matrix:
+        [
+            Matrix Object
+            vehicle_type: Car
+            value_type: Vehicle Trips
+            time_period: Inter_peak
+            purpose: HBO
+            level: 3
+            zone_count: 168
+            matrix_sum: 114.28477755151505
+            interzonal_sum: 114.28477755151505
+            intrazonal_sum: 0.0
+            Comments:
+            Created by operation <built-in function add> (reverse: False) on
+            [
+                Matrix Object
+                vehicle_type: Car
+                value_type: Vehicle Trips
+                time_period: Inter_peak
+                purpose: HBO
+                level: 5
+                zone_count: 168
+                matrix_sum: 60.37572341727738
+                interzonal_sum: 60.37572341727738
+                intrazonal_sum: 0.0
+                Comments:
+                Created by copy operation on the following matrix:
+                [
+                    Matrix Object
+                    vehicle_type: Car
+                    value_type: Vehicle Trips
+                    time_period: Inter_peak
+                    purpose: IB_HBO
+                    level: 5
+                    zone_count: 168
+                    matrix_sum: 60.37572341727738
+                    interzonal_sum: 60.37572341727738
+                    intrazonal_sum: 0.0
+                    Comments:
+                    Created by redistribute_matrix (remaining matrix) operation on the following matrix:
+                    [
+                        Matrix Object
+                        vehicle_type: Rail
+                        value_type: Person Trips
+                        time_period: Inter_peak
+                        purpose: IB_HBO
+                        level: 5
+                        zone_count: 168
+                        matrix_sum: 135.61337046677883
+                        interzonal_sum: 134.47348881028233
+                        intrazonal_sum: 1.1398816564965029
+                        Comments:
+                        Created by copy operation on the following matrix:
+                        [
+                            Matrix Object
+                            vehicle_type: Rail
+                            value_type: Person Trips
+                            time_period: Inter_peak
+                            purpose: IB_HBO
+                            level: 5
+                            zone_count: 168
+                            matrix_sum: 135.61337046677883
+                            interzonal_sum: 134.47348881028233
+                            intrazonal_sum: 1.1398816564965029
+                            Comments:
+                            Created by furness_matrix operation on the following matrix:
+                            [
+                                Matrix Object
+                                vehicle_type: Rail
+                                value_type: Person Trips
+                                time_period: Inter_peak
+                                purpose: IB_HBO
+                                level: 3
+                                zone_count: 168
+                                matrix_sum: 157.16666666666666
+                                interzonal_sum: 155.75512940409635
+                                intrazonal_sum: 1.411537262570307
+                                Comments:
+                                Created by copy operation on the following matrix:
+                                [
+                                    Matrix Object
+                                    vehicle_type: Rail
+                                    value_type: Person Trips
+                                    time_period: Inter_peak
+                                    purpose: IB_HBO
+                                    level: 3
+                                    zone_count: 168
+                                    matrix_sum: 157.16666666666666
+                                    interzonal_sum: 155.75512940409635
+                                    intrazonal_sum: 1.411537262570307
+                                    Comments:
+                                    Created by disaggregate_matrix operation on the following matrix:
+                                    [
+                                        Matrix Object
+                                        vehicle_type: Rail
+                                        value_type: Person Trips
+                                        time_period: Inter_peak
+                                        purpose: IB_HBO
+                                        level: 3
+                                        zone_count: 120
+                                        matrix_sum: 157.16666666666663
+                                        interzonal_sum: 156.3333333333333
+                                        intrazonal_sum: 0.8333333333333333
+                                        Comments:
+                                        Created by copy operation on the following matrix:
+                                        [
+                                            Matrix Object
+                                            vehicle_type: Rail
+                                            value_type: Person Trips
+                                            time_period: Inter_peak
+                                            purpose: IB_HBO
+                                            level: 3
+                                            zone_count: 120
+                                            matrix_sum: 157.16666666666663
+                                            interzonal_sum: 156.3333333333333
+                                            intrazonal_sum: 0.8333333333333333
+                                            Comments:
+                                            Created by operation <built-in function mul> (reverse: False) on
+                                            [
+                                                Matrix Object
+                                                vehicle_type: Rail
+                                                value_type: Person Trips
+                                                time_period: Inter_peak
+                                                purpose: IB_HBO
+                                                level: 3
+                                                zone_count: 120
+                                                matrix_sum: 943.0
+                                                interzonal_sum: 938.0
+                                                intrazonal_sum: 5.0
+                                                Comments:
+                                                Imported matrix from C:\Users\UKTMB001\Documents\Python Scripts\MND\20200220 - Deliverable 1 Matrices\D1_Weekday_IB_HBO_Rail.csv
+                                                MND Raw Data
+                                                
+                                            ]
+                                            <built-in function mul>
+                                            [
+                                                0.16666666666666666
+                                            ]
+                                            
+                                        ]
+                                        
+                                    ]
+                                    
+                                ]
+                                
+                            ]
+                            Convergence Information:
+                            1: count: 168, col_pass: 28, row_pass: 34
+                            2: count: 168, col_pass: 46, row_pass: 109
+                            3: count: 168, col_pass: 168, row_pass: 168
+                            
+                        ]
+                        
+                    ]
+                    
+                ]
+                
+            ]
+            <built-in function add>
+            [
+                Matrix Object
+                vehicle_type: Car
+                value_type: Vehicle Trips
+                time_period: Inter_peak
+                purpose: OB_HBO
+                level: 6
+                zone_count: 168
+                matrix_sum: 53.90905413423769
+                interzonal_sum: 53.90905413423769
+                intrazonal_sum: 0.0
+                Comments:
+                Created by copy operation on the following matrix:
+                [
+                    Matrix Object
+                    vehicle_type: Car
+                    value_type: Vehicle Trips
+                    time_period: Inter_peak
+                    purpose: OB_HBO
+                    level: 6
+                    zone_count: 168
+                    matrix_sum: 53.90905413423769
+                    interzonal_sum: 53.90905413423769
+                    intrazonal_sum: 0.0
+                    Comments:
+                    Created by redistribute_matrix (remaining matrix) operation on the following matrix:
+                    [
+                        Matrix Object
+                        vehicle_type: Rail
+                        value_type: Person Trips
+                        time_period: Inter_peak
+                        purpose: OB_HBO
+                        level: 6
+                        zone_count: 168
+                        matrix_sum: 133.11784874251214
+                        interzonal_sum: 132.05695191396674
+                        intrazonal_sum: 1.060896828545399
+                        Comments:
+                        Created by copy operation on the following matrix:
+                        [
+                            Matrix Object
+                            vehicle_type: Rail
+                            value_type: Person Trips
+                            time_period: Inter_peak
+                            purpose: OB_HBO
+                            level: 6
+                            zone_count: 168
+                            matrix_sum: 133.11784874251214
+                            interzonal_sum: 132.05695191396674
+                            intrazonal_sum: 1.060896828545399
+                            Comments:
+                            Created by furness_matrix operation on the following matrix:
+                            [
+                                Matrix Object
+                                vehicle_type: Rail
+                                value_type: Person Trips
+                                time_period: Inter_peak
+                                purpose: OB_HBO
+                                level: 4
+                                zone_count: 168
+                                matrix_sum: 155.33333333333334
+                                interzonal_sum: 154.010461458477
+                                intrazonal_sum: 1.3228718748563326
+                                Comments:
+                                Created by copy operation on the following matrix:
+                                [
+                                    Matrix Object
+                                    vehicle_type: Rail
+                                    value_type: Person Trips
+                                    time_period: Inter_peak
+                                    purpose: OB_HBO
+                                    level: 4
+                                    zone_count: 168
+                                    matrix_sum: 155.33333333333334
+                                    interzonal_sum: 154.010461458477
+                                    intrazonal_sum: 1.3228718748563326
+                                    Comments:
+                                    Created by disaggregate_matrix operation on the following matrix:
+                                    [
+                                        Matrix Object
+                                        vehicle_type: Rail
+                                        value_type: Person Trips
+                                        time_period: Inter_peak
+                                        purpose: OB_HBO
+                                        level: 4
+                                        zone_count: 120
+                                        matrix_sum: 155.33333333333331
+                                        interzonal_sum: 154.66666666666666
+                                        intrazonal_sum: 0.6666666666666666
+                                        Comments:
+                                        Created by copy operation on the following matrix:
+                                        [
+                                            Matrix Object
+                                            vehicle_type: Rail
+                                            value_type: Person Trips
+                                            time_period: Inter_peak
+                                            purpose: OB_HBO
+                                            level: 4
+                                            zone_count: 120
+                                            matrix_sum: 155.33333333333331
+                                            interzonal_sum: 154.66666666666666
+                                            intrazonal_sum: 0.6666666666666666
+                                            Comments:
+                                            Created by operation <built-in function mul> (reverse: False) on
+                                            [
+                                                Matrix Object
+                                                vehicle_type: Rail
+                                                value_type: Person Trips
+                                                time_period: Inter_peak
+                                                purpose: OB_HBO
+                                                level: 4
+                                                zone_count: 120
+                                                matrix_sum: 932.0
+                                                interzonal_sum: 928.0
+                                                intrazonal_sum: 4.0
+                                                Comments:
+                                                Imported matrix from C:\Users\UKTMB001\Documents\Python Scripts\MND\20200220 - Deliverable 1 Matrices\D1_Weekday_OB_HBO_Rail.csv
+                                                MND Raw Data
+                                                
+                                            ]
+                                            <built-in function mul>
+                                            [
+                                                0.16666666666666666
+                                            ]
+                                            
+                                        ]
+                                        
+                                    ]
+                                    
+                                ]
+                                
+                            ]
+                            Convergence Information:
+                            1: count: 168, col_pass: 37, row_pass: 30
+                            2: count: 168, col_pass: 64, row_pass: 60
+                            3: count: 168, col_pass: 110, row_pass: 168
+                            
+                        ]
+                        
+                    ]
+                    
+                ]
+                
+            ]
+            
+        ]
+        
+    ]
+    
+]
+sector,x_coord,y_coord,o_total,d_total,intrazonal
+1,369549.0,559105.25,63.490617012147624,76.29289879207693,8.229508736694442e-08
+2,465497.05555555556,314273.22222222225,5120.262862210289,5138.8995326754675,4623.1394341882215
+3,548854.4761904762,269947.61904761905,12743.30783086057,12728.13122224048,9614.179885360218
+4,531331.0,179646.0,101.0704324866647,105.35858850009956,0.0
+5,563376.6851851852,318633.44444444444,9118.400053063628,9114.621643154327,7578.731317144717
+6,620773.75,331003.0,3755.990429105368,3772.4398067236452,2399.252638805138
+7,647802.0,311066.0,1257.8884907214501,1267.3110313607158,0.0
+8,583939.5,313142.5,872.2223868442953,858.2452688995605,524.0797394559777
+9,591385.0,296287.25,9123.720662177464,9074.64452693264,7041.184834050212
+11,620757.0,291687.0,1261.545435733588,1274.555659746804,0.0
+13,613759.0,320544.5,2261.0378686724043,2315.8850513194316,629.1248533070464
+14,637083.0,304676.0,1600.516149063963,1601.9833128152407,0.0
+16,622251.0,308846.0,3144.6981468324675,3095.782821623816,0.0

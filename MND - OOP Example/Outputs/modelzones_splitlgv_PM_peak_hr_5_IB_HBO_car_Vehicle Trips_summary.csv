@@ -1,0 +1,556 @@
+Matrix Object
+vehicle_type: car
+value_type: Vehicle Trips
+time_period: PM_peak_hr
+purpose: IB_HBO
+level: 5
+zone_count: 168
+matrix_sum: 11332.757279071919
+interzonal_sum: 9512.671103853909
+intrazonal_sum: 1820.0861752180099
+Comments:
+Created by operate_by_property (<built-in function mul>) operation on the following matrix:
+[
+    Matrix Object
+    vehicle_type: car+lgv
+    value_type: Vehicle Trips
+    time_period: PM_peak_hr
+    purpose: IB_HBO
+    level: 5
+    zone_count: 168
+    matrix_sum: 11332.757279071919
+    interzonal_sum: 9512.671103853909
+    intrazonal_sum: 1820.0861752180099
+    Comments:
+    Created by copy operation on the following matrix:
+    [
+        Matrix Object
+        vehicle_type: car+lgv
+        value_type: Vehicle Trips
+        time_period: PM_peak_hr
+        purpose: IB_HBO
+        level: 5
+        zone_count: 168
+        matrix_sum: 11332.757279071919
+        interzonal_sum: 9512.671103853909
+        intrazonal_sum: 1820.0861752180099
+        Comments:
+        Created by furness_matrix operation on the following matrix:
+        [
+            Matrix Object
+            vehicle_type: car+lgv
+            value_type: Vehicle Trips
+            time_period: PM_peak_hr
+            purpose: IB_HBO
+            level: 3
+            zone_count: 168
+            matrix_sum: 12524.530641767957
+            interzonal_sum: 10539.965303590105
+            intrazonal_sum: 1984.5653381778516
+            Comments:
+            Created by copy operation on the following matrix:
+            [
+                Matrix Object
+                vehicle_type: car+lgv
+                value_type: Vehicle Trips
+                time_period: PM_peak_hr
+                purpose: IB_HBO
+                level: 3
+                zone_count: 168
+                matrix_sum: 12524.530641767957
+                interzonal_sum: 10539.965303590105
+                intrazonal_sum: 1984.5653381778516
+                Comments:
+                Created by operation <built-in function mul> (reverse: False) on
+                [
+                    Matrix Object
+                    vehicle_type: car+lgv
+                    value_type: Vehicle Trips
+                    time_period: PM_peak_hr
+                    purpose: IB_HBO
+                    level: 3
+                    zone_count: 168
+                    matrix_sum: 12524.530641767957
+                    interzonal_sum: 10539.965303590105
+                    intrazonal_sum: 1984.5653381778516
+                    Comments:
+                    Created by operation <built-in function mul> (reverse: False) on
+                    [
+                        Matrix Object
+                        vehicle_type: car+lgv
+                        value_type: Person Trips
+                        time_period: PM_peak_hr
+                        purpose: IB_HBO
+                        level: 3
+                        zone_count: 168
+                        matrix_sum: 20825.48300673154
+                        interzonal_sum: 17525.596335678034
+                        intrazonal_sum: 3299.886671053506
+                        Comments:
+                        Created by operation <built-in function mul> (reverse: False) on
+                        [
+                            Matrix Object
+                            vehicle_type: Road
+                            value_type: Person Trips
+                            time_period: PM_peak_hr
+                            purpose: IB_HBO
+                            level: 3
+                            zone_count: 168
+                            matrix_sum: 20867.0
+                            interzonal_sum: 17557.178005315614
+                            intrazonal_sum: 3309.8219946843856
+                            Comments:
+                            Created by disaggregate_matrix operation on the following matrix:
+                            [
+                                Matrix Object
+                                vehicle_type: Road
+                                value_type: Person Trips
+                                time_period: PM_peak_hr
+                                purpose: IB_HBO
+                                level: 3
+                                zone_count: 120
+                                matrix_sum: 20867.0
+                                interzonal_sum: 20325.0
+                                intrazonal_sum: 542.0
+                                Comments:
+                                Created by copy operation on the following matrix:
+                                [
+                                    Matrix Object
+                                    vehicle_type: Road
+                                    value_type: Person Trips
+                                    time_period: PM_peak_hr
+                                    purpose: IB_HBO
+                                    level: 3
+                                    zone_count: 120
+                                    matrix_sum: 20867.0
+                                    interzonal_sum: 20325.0
+                                    intrazonal_sum: 542.0
+                                    Comments:
+                                    Created by operation <built-in function mul> (reverse: False) on
+                                    [
+                                        Matrix Object
+                                        vehicle_type: Road
+                                        value_type: Person Trips
+                                        time_period: PM_peak_hr
+                                        purpose: IB_HBO
+                                        level: 3
+                                        zone_count: 120
+                                        matrix_sum: 20867.0
+                                        interzonal_sum: 20325.0
+                                        intrazonal_sum: 542.0
+                                        Comments:
+                                        Imported matrix from C:\Users\UKTMB001\Documents\Python Scripts\MND\20200220 - Deliverable 1 Matrices\D1_Weekday_IB_HBO_Road.csv
+                                        MND Raw Data
+                                        
+                                    ]
+                                    <built-in function mul>
+                                    [
+                                        1.0
+                                    ]
+                                    
+                                ]
+                                
+                            ]
+                            
+                        ]
+                        <built-in function mul>
+                        [
+                            Matrix Object
+                            vehicle_type: Bus
+                            value_type: proportions
+                            time_period: PM_peak_hr
+                            purpose: IB_HBO
+                            level: 3
+                            zone_count: 168
+                            matrix_sum: 25826.441146405505
+                            interzonal_sum: 25668.11103175875
+                            intrazonal_sum: 158.330114646752
+                            Comments:
+                            Created by copy operation on the following matrix:
+                            [
+                                Matrix Object
+                                vehicle_type: Bus
+                                value_type: proportions
+                                time_period: PM_peak_hr
+                                purpose: IB_HBO
+                                level: 3
+                                zone_count: 168
+                                matrix_sum: 25826.441146405505
+                                interzonal_sum: 25668.11103175875
+                                intrazonal_sum: 158.330114646752
+                                Comments:
+                                Created by operation <built-in function sub> (reverse: True) on
+                                [
+                                    Matrix Object
+                                    vehicle_type: Bus
+                                    value_type: proportions
+                                    time_period: PM_peak_hr
+                                    purpose: IB_HBO
+                                    level: 3
+                                    zone_count: 168
+                                    matrix_sum: 2397.558853594493
+                                    interzonal_sum: 2387.888968241245
+                                    intrazonal_sum: 9.669885353248006
+                                    Comments:
+                                    Created by generate_proportion_matrix operation on the following matrices:
+                                    [
+                                        Matrix Object
+                                        vehicle_type: Bus
+                                        value_type: Person Trips
+                                        time_period: PM_peak_hr
+                                        purpose: IB_HBO
+                                        level: 3
+                                        zone_count: 168
+                                        matrix_sum: 59.727558035724826
+                                        interzonal_sum: 42.07281921021553
+                                        intrazonal_sum: 17.6547388255093
+                                        Comments:
+                                        Created by copy operation on the following matrix:
+                                        [
+                                            Matrix Object
+                                            vehicle_type: Bus
+                                            value_type: Person Trips
+                                            time_period: PM_peak_hr
+                                            purpose: IB_HBO
+                                            level: 3
+                                            zone_count: 168
+                                            matrix_sum: 59.727558035724826
+                                            interzonal_sum: 42.07281921021553
+                                            intrazonal_sum: 17.6547388255093
+                                            Comments:
+                                            Created by operation <built-in function mul> (reverse: False) on
+                                            [
+                                                Matrix Object
+                                                vehicle_type: Bus
+                                                value_type: Person Trips
+                                                time_period: PM_peak_hr
+                                                purpose: HBO
+                                                level: 3
+                                                zone_count: 168
+                                                matrix_sum: 96.94601
+                                                interzonal_sum: 68.28995
+                                                intrazonal_sum: 28.656059999999997
+                                                Comments:
+                                                Created by copy operation on the following matrix:
+                                                [
+                                                    Matrix Object
+                                                    vehicle_type: Bus
+                                                    value_type: Person Trips
+                                                    time_period: PM_peak_hr
+                                                    purpose: HBO
+                                                    level: 3
+                                                    zone_count: 168
+                                                    matrix_sum: 96.94601
+                                                    interzonal_sum: 68.28995
+                                                    intrazonal_sum: 28.656059999999997
+                                                    Comments:
+                                                    Imported matrix from C:\Users\UKTMB001\Documents\Python Scripts\MND\Test\synth_bus_PM_peak_hr.csv
+                                                    Matrix Object
+                                                    vehicle_type: Bus
+                                                    value_type: Person Trips
+                                                    time_period: PM_peak_hr
+                                                    purpose: HBO
+                                                    level: 3
+                                                    zone_count: 168
+                                                    matrix_sum: 96.94601
+                                                    interzonal_sum: 68.28995
+                                                    intrazonal_sum: 28.656059999999997
+                                                    
+                                                ]
+                                                
+                                            ]
+                                            <built-in function mul>
+                                            [
+                                                0.6160909359315028
+                                            ]
+                                            
+                                        ]
+                                        
+                                    ]
+                                    [
+                                        Matrix Object
+                                        vehicle_type: Road
+                                        value_type: Person Trips
+                                        time_period: PM_peak_hr
+                                        purpose: IB_HBO
+                                        level: 3
+                                        zone_count: 168
+                                        matrix_sum: 20867.0
+                                        interzonal_sum: 17557.178005315614
+                                        intrazonal_sum: 3309.8219946843856
+                                        Comments:
+                                        Created by copy operation on the following matrix:
+                                        [
+                                            Matrix Object
+                                            vehicle_type: Road
+                                            value_type: Person Trips
+                                            time_period: PM_peak_hr
+                                            purpose: IB_HBO
+                                            level: 3
+                                            zone_count: 168
+                                            matrix_sum: 20867.0
+                                            interzonal_sum: 17557.178005315614
+                                            intrazonal_sum: 3309.8219946843856
+                                            Comments:
+                                            Created by disaggregate_matrix operation on the following matrix:
+                                            [
+                                                Matrix Object
+                                                vehicle_type: Road
+                                                value_type: Person Trips
+                                                time_period: PM_peak_hr
+                                                purpose: IB_HBO
+                                                level: 3
+                                                zone_count: 120
+                                                matrix_sum: 20867.0
+                                                interzonal_sum: 20325.0
+                                                intrazonal_sum: 542.0
+                                                Comments:
+                                                Created by copy operation on the following matrix:
+                                                [
+                                                    Matrix Object
+                                                    vehicle_type: Road
+                                                    value_type: Person Trips
+                                                    time_period: PM_peak_hr
+                                                    purpose: IB_HBO
+                                                    level: 3
+                                                    zone_count: 120
+                                                    matrix_sum: 20867.0
+                                                    interzonal_sum: 20325.0
+                                                    intrazonal_sum: 542.0
+                                                    Comments:
+                                                    Created by operation <built-in function mul> (reverse: False) on
+                                                    [
+                                                        Matrix Object
+                                                        vehicle_type: Road
+                                                        value_type: Person Trips
+                                                        time_period: PM_peak_hr
+                                                        purpose: IB_HBO
+                                                        level: 3
+                                                        zone_count: 120
+                                                        matrix_sum: 20867.0
+                                                        interzonal_sum: 20325.0
+                                                        intrazonal_sum: 542.0
+                                                        Comments:
+                                                        Imported matrix from C:\Users\UKTMB001\Documents\Python Scripts\MND\20200220 - Deliverable 1 Matrices\D1_Weekday_IB_HBO_Road.csv
+                                                        MND Raw Data
+                                                        
+                                                    ]
+                                                    <built-in function mul>
+                                                    [
+                                                        1.0
+                                                    ]
+                                                    
+                                                ]
+                                                
+                                            ]
+                                            
+                                        ]
+                                        
+                                    ]
+                                    
+                                ]
+                                <built-in function sub>
+                                [
+                                    [[1. 1. 1. ... 1. 1. 1.]
+                                    [1. 1. 1. ... 1. 1. 1.]
+                                    [1. 1. 1. ... 1. 1. 1.]
+                                    ...
+                                    [1. 1. 1. ... 1. 1. 1.]
+                                    [1. 1. 1. ... 1. 1. 1.]
+                                    [1. 1. 1. ... 1. 1. 1.]]
+                                ]
+                                
+                            ]
+                            
+                        ]
+                        
+                    ]
+                    <built-in function mul>
+                    [
+                        0.6014040892938511
+                    ]
+                    
+                ]
+                <built-in function mul>
+                [
+                    1.0
+                ]
+                
+            ]
+            
+        ]
+        Convergence Information:
+        1: count: 168, col_pass: 60, row_pass: 168
+        
+    ]
+    
+]
+reference,index,mnd_zone,x_coord,y_coord,area_ref,sector,msoa,district,Urban city and town,Rural village,Rural hamlets and isolated dwellings,Rural town and fringe,Rural village in a sparse setting,Rural hamlets and isolated dwellings in a sparse setting,Rural town and fringe in a sparse setting,urbanrural,cordon_inner,cordon_outer,Internal,o_total,d_total,intrazonal
+501,0,1059,561750,319643,E02005561,5,King's Lynn and West Norfolk 011,Broadland ,1,0,0,0,0,0,0,urban,inside,inside,True,6.748270040639063,2.150729069650547,0.003212714276941056
+502,1,1059,561690,320428,E02005561,5,King's Lynn and West Norfolk 011,Broadland ,2,0,0,0,0,0,0,urban,inside,inside,True,12.989710742962934,3.325644483675185,0.009299894965225366
+504,2,1059,562039,320210,E02005561,5,King's Lynn and West Norfolk 011,Broadland ,1,0,0,0,0,0,0,urban,inside,inside,True,13.313600709106645,1.965224480328842,0.0065462195212759545
+505,3,1059,561794,320290,E02005561,5,King's Lynn and West Norfolk 011,Broadland ,0,0,0,0,0,0,0,rural,inside,inside,True,33.27872997925951,1.0424014669044566,0.007987068426013913
+506,4,1059,562225,320448,E02005561,5,King's Lynn and West Norfolk 011,Broadland ,1,0,0,0,0,0,0,urban,inside,inside,True,8.567613065693216,3.111247865112643,0.005724518432288747
+509,5,1059,562487,320281,E02005561,5,King's Lynn and West Norfolk 011,Broadland ,1,0,0,0,0,0,0,urban,inside,inside,True,2.331633934189547,1.0370103376402493,0.0005401806103872054
+511,6,1059,562300,319813,E02005561,5,King's Lynn and West Norfolk 011,Broadland ,0,0,0,0,0,0,0,rural,inside,inside,True,6.919399701106265,1.3818948616157976,0.0020456146792149485
+512,7,1059,562463,319621,E02005561,5,King's Lynn and West Norfolk 011,Broadland ,4,0,0,0,0,0,0,urban,inside,inside,True,12.273592742141687,8.090889247337689,0.011355164238532332
+513,8,1057,562448,319249,E02005559,5,King's Lynn and West Norfolk 009,Broadland ,1,0,0,0,0,0,0,urban,inside,inside,True,2.800825271491824,2.3384763147787058,0.0005581580178714298
+514,9,1059,562067,319405,E02005561,5,King's Lynn and West Norfolk 011,Broadland ,4,0,0,0,0,0,0,urban,inside,inside,True,3.8908557920898765,10.843799733401463,0.009181287040931673
+515,10,1059,561955,319738,E02005561,5,King's Lynn and West Norfolk 011,Broadland ,3,0,0,0,0,0,0,urban,inside,inside,True,3.9838595378687427,5.130621859864077,0.004611345135391309
+516,11,1059,561777,320012,E02005561,5,King's Lynn and West Norfolk 011,Broadland ,1,0,0,0,0,0,0,urban,inside,inside,True,22.143744654267675,1.3165559888322704,0.0078034061311428975
+517,12,1059,562050,319953,E02005561,5,King's Lynn and West Norfolk 011,Broadland ,0,0,0,0,0,0,0,rural,inside,inside,True,4.322711200970374,0.8881326204766847,0.000853666103937794
+519,13,1057,562872,320497,E02005559,5,King's Lynn and West Norfolk 009,Broadland ,1,0,0,0,0,0,0,urban,inside,inside,True,2.5750741418008456,2.145506724976966,0.0004703660099412849
+520,14,1057,562703,320245,E02005559,5,King's Lynn and West Norfolk 009,Broadland ,2,0,0,0,0,0,0,urban,inside,inside,True,25.005708934434544,4.673480429856782,0.009970294523123126
+521,15,1057,562903,319527,E02005559,5,King's Lynn and West Norfolk 009,Broadland ,3,0,0,0,0,0,0,urban,inside,inside,True,15.217844017195533,7.32587963191734,0.00943393126456078
+523,16,1059,561895,319114,E02005561,5,King's Lynn and West Norfolk 011,Norwich ,1,0,0,0,0,0,0,urban,inside,inside,True,1.4313972053882291,2.3647176802753007,0.0007311077506496092
+524,17,1059,561891,318178,E02005561,5,King's Lynn and West Norfolk 011,Norwich ,0,0,0,0,0,0,0,rural,inside,inside,True,0.045332223752369505,0.020533510740292093,2.0513686868669135e-07
+525,18,1059,561501,318455,E02005561,5,King's Lynn and West Norfolk 011,Broadland ,1,0,0,0,0,0,0,urban,inside,inside,True,3.1715767912047617,2.574903937418261,0.001768265868220141
+526,19,1059,560758,319501,E02005561,5,King's Lynn and West Norfolk 011,Broadland ,2,0,0,0,0,0,0,urban,inside,inside,True,3.5603644061512396,7.6731146885385355,0.005912829475562909
+527,20,1059,561195,320163,E02005561,5,King's Lynn and West Norfolk 011,Broadland ,1,0,0,0,0,0,0,urban,inside,inside,True,0.26933065254640515,1.4977904986272896,8.894488911296372e-05
+528,21,1059,560588,321266,E02005561,5,King's Lynn and West Norfolk 011,Broadland ,1,0,0,0,0,0,0,urban,inside,inside,True,2.4096124352301524,2.4035086260634784,0.0012342040586134052
+531,22,1055,562109,320824,E02005557,5,King's Lynn and West Norfolk 007,Broadland ,1,0,0,0,0,0,0,urban,inside,inside,True,0.7946972668974764,4.5632465379474105,0.0
+532,23,1055,562381,320867,E02005557,5,King's Lynn and West Norfolk 007,Broadland ,4,0,0,0,0,0,0,urban,inside,inside,True,2.725848974743633,6.505742545680782,0.0
+533,24,1055,562783,320957,E02005557,5,King's Lynn and West Norfolk 007,Broadland ,2,0,0,0,0,0,0,urban,inside,inside,True,4.9548857143101275,3.997041311642052,0.0
+534,25,1055,562026,320627,E02005557,5,King's Lynn and West Norfolk 007,Broadland ,1,0,0,0,0,0,0,urban,inside,inside,True,0.20697010289266424,1.8486292814865142,0.0
+535,26,1055,562307,320609,E02005557,5,King's Lynn and West Norfolk 007,Broadland ,1,0,0,0,0,0,0,urban,inside,inside,True,0.5357833023766894,2.030240057165048,0.0
+536,27,1055,562514,321469,E02005557,5,King's Lynn and West Norfolk 007,Broadland ,4,0,0,0,0,0,0,urban,inside,inside,True,2.6620668920815183,8.662479849921635,0.0
+537,28,1055,563004,321388,E02005557,5,King's Lynn and West Norfolk 007,Broadland ,4,0,0,0,0,0,0,urban,inside,inside,True,4.269062237177236,7.599749556231712,0.0
+538,29,1055,563026,321938,E02005557,5,King's Lynn and West Norfolk 007,Broadland ,1,0,0,0,0,0,0,urban,inside,inside,True,15.218316706664357,2.002030514388512,0.0
+539,30,1054,563809,321975,E02005556,5,King's Lynn and West Norfolk 006,Broadland ,8,0,0,0,0,0,0,urban,inside,inside,True,9.571155590278924,20.037588624976948,0.07187101895994757
+540,31,1054,563547,321511,E02005556,5,King's Lynn and West Norfolk 006,Broadland ,3,0,0,0,0,0,0,urban,inside,inside,True,3.671496084055896,6.347326209204837,0.008825105677731494
+541,32,1054,564518,321944,E02005556,5,King's Lynn and West Norfolk 006,Broadland ,9,0,0,0,0,0,0,urban,inside,inside,True,7.044998617569405,18.871488335014526,0.04984032900780616
+542,33,1054,565364,321630,E02005556,5,King's Lynn and West Norfolk 006,Broadland ,3,0,0,0,0,0,0,urban,inside,inside,True,3.952011459389123,6.526612910632834,0.009584945866228085
+543,34,1054,565696,322074,E02005556,5,King's Lynn and West Norfolk 006,Norwich ,1,0,0,0,0,0,0,urban,inside,inside,True,2.2157852819938455,4.408678740354021,0.0036280624267280557
+544,35,1057,563404,320958,E02005559,5,King's Lynn and West Norfolk 009,Norwich ,1,0,0,0,0,0,0,urban,inside,inside,True,13.329329039976548,2.1985519258770405,0.0025081393757398806
+545,36,1058,564262,320997,E02005560,5,King's Lynn and West Norfolk 010,Norwich ,7,0,0,0,0,0,0,urban,inside,inside,True,20.202662389155456,15.321732296938587,0.020847757318752214
+546,37,1058,565235,320792,E02005560,5,King's Lynn and West Norfolk 010,Broadland ,1,0,0,0,0,0,0,urban,inside,inside,True,69.7832327003612,2.932624997527664,0.017836985966966024
+547,38,1058,564232,319919,E02005560,5,King's Lynn and West Norfolk 010,Breckland ,10,0,0,0,0,0,0,urban,inside,inside,True,9.829114219748645,22.770931288125823,0.01902573483044631
+548,39,1057,563500,319974,E02005559,5,King's Lynn and West Norfolk 009,Broadland ,8,0,0,0,0,0,0,urban,inside,inside,True,54.01617551169111,16.289380071596266,0.07461415248539624
+551,40,1059,561696,318478,E02005561,5,King's Lynn and West Norfolk 011,Broadland ,2,0,0,0,0,0,0,urban,inside,inside,True,1.6694590682020185,5.14307296314432,0.00184030633443802
+562,41,1059,561884,318584,E02005561,5,King's Lynn and West Norfolk 011,Broadland ,1,0,0,0,0,0,0,urban,inside,inside,True,1.521267521864659,5.432533476329691,0.0017830136026075933
+566,42,1059,561976,318810,E02005561,5,King's Lynn and West Norfolk 011,Broadland ,1,0,0,0,0,0,0,urban,inside,inside,True,0.5788567290672679,2.504108614430711,0.0003148567164861341
+567,43,1059,562241,318615,E02005561,5,King's Lynn and West Norfolk 011,Broadland ,1,0,0,0,0,0,0,urban,inside,inside,True,4.399199045647345,3.3810014636794437,0.0032210918698700464
+570,44,1059,562195,320018,E02005561,5,King's Lynn and West Norfolk 011,Broadland ,2,0,0,0,0,0,0,urban,inside,inside,True,1.8015070123527792,3.525961170209154,0.0015593539733344919
+571,45,1057,563644,320898,E02005559,5,King's Lynn and West Norfolk 009,Broadland ,1,0,0,0,0,0,0,urban,inside,inside,True,2.6976433356791754,2.230233937462261,0.000525839741360061
+572,46,1058,564718,320634,E02005560,5,King's Lynn and West Norfolk 010,Broadland ,2,0,0,0,0,0,0,urban,inside,inside,True,1.9867998563452356,5.266768013562472,0.0008830600786889608
+573,47,1059,562437,320075,E02005561,5,King's Lynn and West Norfolk 011,Broadland ,0,0,0,0,0,0,0,rural,inside,inside,True,4.54229830690999,2.0435607243789624,0.002162773504261847
+601,48,1059,561588,316981,E02005561,5,King's Lynn and West Norfolk 011,Broadland ,1,0,0,0,0,0,0,urban,outside,inside,True,11.593394077433507,1.0494271248428455,0.002587325867548054
+602,49,1059,563363,319135,E02005561,5,King's Lynn and West Norfolk 011,Breckland ,1,0,0,0,0,0,0,urban,inside,inside,True,29.355736047076373,2.775082110004002,0.017321570160370166
+603,50,1059,562969,318752,E02005561,5,King's Lynn and West Norfolk 011,Broadland ,0,0,0,0,0,0,0,rural,inside,inside,True,9.426728744041343,0.3598036875843651,0.0007445339590569319
+604,51,1059,562755,318421,E02005561,5,King's Lynn and West Norfolk 011,Broadland ,0,0,0,0,0,0,0,rural,inside,inside,True,13.12856454717477,0.09908575436100214,0.0003031672786110262
+605,52,1059,562611,317762,E02005561,5,King's Lynn and West Norfolk 011,Norwich ,0,0,0,0,0,0,0,rural,inside,inside,True,26.471794582291526,0.17774516204622418,0.001044972410618619
+606,53,1062,564032,315687,E02005564,5,King's Lynn and West Norfolk 014,Norwich ,0,0,0,0,0,0,0,rural,inside,inside,True,1.468337165227517,1.1194445660734151,0.0010784195197146894
+607,54,1055,561465,322123,E02005557,5,King's Lynn and West Norfolk 007,Broadland ,1,0,0,0,0,0,0,urban,inside,inside,True,14.64635437296737,2.0629826468511725,0.0
+608,55,1055,561734,320962,E02005557,5,King's Lynn and West Norfolk 007,Norwich ,0,0,0,0,0,0,0,rural,inside,inside,True,3.603599454896229,0.3129718037515272,0.0
+609,56,1062,564115,318071,E02005564,5,King's Lynn and West Norfolk 014,Broadland ,0,0,0,0,0,0,0,rural,inside,inside,True,1.8891626121646035,1.4775660100288837,0.001899354818025326
+610,57,1062,563386,316289,E02005564,5,King's Lynn and West Norfolk 014,Breckland ,0,1,0,0,0,0,0,rural,inside,inside,True,0.14256460229242895,2.195076216811973,0.0002113134900028579
+5001,58,1,522937,216063,0,3,,Broadland ,0,0,0,0,0,0,0,rural,outside,outside,False,66.8868152763435,41.47237298906718,0.17349150242977282
+5002,59,5,556423,274127,0,3,,Norwich ,70,49,24,122,0,0,0,rural,outside,outside,False,25.942910237234297,18.146056098624637,0.0
+5003,60,1088,622251,308846,E02005590,16,Norwich 007,Broadland ,0,0,0,0,0,0,0,rural,outside,outside,True,2407.701296294855,1153.2512647819058,445.3276683622129
+5004,61,5,547582,305393,0,3,,Broadland ,9,0,0,0,0,0,0,urban,outside,outside,False,0.551118964318077,0.7355172218580595,0.00014809575385858463
+5005,62,1064,550817,306372,E02005566,5,King's Lynn and West Norfolk 016,Breckland ,3,0,0,0,0,0,0,urban,outside,outside,True,8.520284171601972,15.952221844085665,0.05706054667209967
+5006,63,1064,552362,297261,E02005566,5,King's Lynn and West Norfolk 016,Broadland ,0,4,5,1,0,0,0,rural,outside,outside,True,17.935815003458202,49.66419144648185,0.3745940795185026
+5007,64,5,539942,296939,0,3,,Broadland ,66,1,2,0,0,0,0,urban,outside,outside,False,8.115024423999419,4.980108174642235,0.0
+5008,65,5,541228,291077,0,3,,Broadland ,0,1,2,10,0,0,0,rural,outside,outside,False,1.2110027158291123,1.0126051156397162,0.0
+5009,66,5,541166,285454,0,3,,Broadland ,0,0,0,0,0,0,0,rural,outside,outside,False,3.1403301103537076,2.4889738630081766,0.0025855614360241375
+5010,67,1065,561218,303260,E02005567,5,King's Lynn and West Norfolk 017,Broadland ,34,0,0,0,0,0,0,urban,outside,outside,True,83.85451925274474,103.006008104055,0.5707094685701362
+5011,68,1049,570279,341683,E02005551,5,King's Lynn and West Norfolk 001,Broadland ,0,0,0,0,4,1,17,rural,outside,outside,True,50.176968020494,49.31586458223948,0.0
+5012,69,1056,555055,323853,E02005558,5,King's Lynn and West Norfolk 008,Broadland ,0,6,6,3,0,0,0,rural,outside,inside,True,30.876062486801036,56.652761243056176,0.8366625617488281
+5013,70,1052,569799,330530,E02005554,5,King's Lynn and West Norfolk 004,Broadland ,0,0,0,17,0,0,0,rural,outside,outside,True,25.585663784261286,63.80554319521204,0.3954264040344696
+5014,71,1051,567621,337577,E02005553,5,King's Lynn and West Norfolk 003,Broadland ,0,0,0,0,0,0,18,rural,outside,outside,True,30.289418545134893,47.15391736353989,0.5366391098629335
+5015,72,1,577674,212658,0,3,,Broadland ,0,0,0,0,0,0,0,rural,outside,outside,False,92.51159686043722,64.25626956687132,0.3717836440549932
+5016,73,9,573248,276805,0,3,,Broadland ,43,16,6,65,0,0,0,rural,outside,outside,False,114.32368124703888,84.43358577921325,0.946284668788057
+5017,74,5,506222,242766,0,3,,Broadland ,0,0,0,0,0,0,0,rural,outside,outside,False,226.02485788544934,142.71261457706922,10.670328495368578
+5018,75,5,521220,276552,0,3,,Broadland ,0,0,0,0,0,0,0,rural,outside,outside,False,66.53721171928848,40.2080357865369,0.8849865645917706
+5019,76,1012,581681,297063,E02005514,9,Breckland 012,Broadland ,1,8,3,10,0,0,0,rural,outside,outside,True,38.55136967938639,114.95966655951581,2.727563376179706
+5020,77,1037,647802,311066,E02005539,7,Great Yarmouth 002,Broadland ,0,0,0,0,0,0,0,rural,outside,outside,True,722.2148818108386,711.0992592581305,248.74744889800482
+5021,78,1056,558559,320992,E02005558,5,King's Lynn and West Norfolk 008,Broadland ,0,2,1,5,0,0,0,rural,outside,inside,True,9.889043420449138,27.923668044423973,0.1337942582768841
+5022,79,5,536620,299805,0,3,,Broadland ,40,18,8,4,0,0,0,urban,outside,outside,False,5.926630450256399,5.453370537745349,0.006285848046448795
+5023,80,1063,555128,314037,E02005565,5,King's Lynn and West Norfolk 015,Breckland ,0,5,2,2,0,0,0,rural,outside,outside,True,10.645846827037762,38.04573868392778,0.06687334666492083
+5024,81,5,548278,290274,0,3,,Broadland ,0,2,0,3,0,0,0,rural,outside,outside,False,0.3503651357281161,0.4568112239847521,0.0
+5025,82,1062,565262,308888,E02005564,5,King's Lynn and West Norfolk 014,Breckland ,0,5,0,0,0,0,0,rural,outside,outside,True,7.480431891498283,15.59826194707391,0.07719412317505546
+5026,83,1062,566187,316097,E02005564,5,King's Lynn and West Norfolk 014,Broadland ,0,4,1,0,0,0,0,rural,outside,inside,True,4.959561216602687,16.196577859542625,0.05287555355950131
+5027,84,1060,568375,319204,E02005562,5,King's Lynn and West Norfolk 012,Broadland ,0,2,1,0,0,0,0,rural,outside,inside,True,6.557821651813835,8.886436493097342,0.04074043440714771
+5028,85,5,545131,308826,0,3,,Broadland ,69,0,2,0,0,0,0,urban,outside,outside,False,11.283939933613013,4.631997345476387,0.008774636771931656
+5029,86,1064,548637,307820,E02005566,5,King's Lynn and West Norfolk 016,Broadland ,5,0,0,0,0,0,0,urban,outside,outside,True,8.78635331400638,24.84536194014157,0.0919980175165003
+5030,87,5,542435,313617,0,3,,Broadland ,10,7,4,0,0,0,0,rural,outside,outside,False,0.9724039177127173,1.4547221923426548,0.0005119213963419851
+5031,88,1067,569159,292551,E02005569,5,King's Lynn and West Norfolk 019,Broadland ,0,16,2,8,0,0,0,rural,outside,outside,True,64.36258182863622,132.69289969938552,4.142676873531846
+5032,89,1050,582833,330663,E02005552,5,King's Lynn and West Norfolk 002,Broadland ,0,1,1,0,4,2,0,rural,outside,outside,True,13.85596297118163,30.730089753529,0.7481356780081343
+5033,90,1061,550154,317384,E02005563,5,King's Lynn and West Norfolk 013,Broadland ,0,5,1,0,0,0,0,rural,outside,outside,True,12.190228125146028,26.719631117487904,0.3719918293346654
+5034,91,1062,564770,315583,E02005564,5,King's Lynn and West Norfolk 014,Broadland ,0,1,0,0,0,0,0,rural,inside,inside,True,0.8716498745391269,2.0471531293255842,0.001186502728817072
+5035,92,1052,573080,325711,E02005554,5,King's Lynn and West Norfolk 004,Breckland ,0,4,3,0,0,0,0,rural,outside,outside,True,24.13884105354574,28.482064004607196,0.16661445421846993
+5036,93,1053,566815,324212,E02005555,5,King's Lynn and West Norfolk 005,Broadland ,0,1,0,0,0,0,0,rural,outside,inside,True,5.563652227250104,2.233915916813331,0.009412899315653627
+5037,94,1053,561828,326912,E02005555,5,King's Lynn and West Norfolk 005,Broadland ,7,0,0,0,0,0,0,urban,outside,inside,True,9.319588709484552,21.316448313119327,0.15036483064678655
+5038,95,1064,552224,303617,E02005566,5,King's Lynn and West Norfolk 016,Broadland ,0,2,3,2,0,0,0,rural,outside,outside,True,10.890621656706587,29.453471766346276,0.1348360347819887
+5039,96,1053,562262,323341,E02005555,5,King's Lynn and West Norfolk 005,Broadland ,1,0,0,0,0,0,0,urban,inside,inside,True,6.08077616461026,3.46947154627726,0.015893427208472546
+5040,97,1053,564937,323326,E02005555,5,King's Lynn and West Norfolk 005,Broadland ,3,0,0,0,0,0,0,urban,inside,inside,True,5.734715037611677,9.629791782388944,0.041864022626016614
+5041,98,1053,565644,322675,E02005555,5,King's Lynn and West Norfolk 005,Broadland ,3,0,0,0,0,0,0,urban,inside,inside,True,6.181302854853256,9.531921569807832,0.0446529101266289
+5042,99,1053,564286,322766,E02005555,5,King's Lynn and West Norfolk 005,Broadland ,4,0,0,0,0,0,0,urban,inside,inside,True,0.6633347131223555,10.779096991136221,0.005447269865810154
+5043,100,1053,564833,322635,E02005555,5,King's Lynn and West Norfolk 005,Broadland ,2,0,0,0,0,0,0,urban,inside,inside,True,1.4466214309492909,6.617143018847972,0.007284540258080994
+5045,101,4,544068,322065,0,2,,Broadland ,0,4,4,16,0,0,0,rural,outside,outside,False,0.1462443948557611,0.18335933865895052,0.0
+5046,102,4,549050,323238,0,2,,Broadland ,0,0,3,13,0,0,0,rural,outside,outside,False,0.1453585410100045,0.0902496926725056,0.0
+5047,103,4,425855,360558,0,2,,Broadland ,0,0,0,0,0,0,0,rural,outside,outside,False,27.29679751615215,27.63973015437126,0.05658702872334664
+5048,104,4,435850,335145,0,2,,Broadland ,0,0,0,0,0,0,0,rural,outside,outside,False,10.678154578950615,8.649154752748961,0.006926948075641905
+5049,105,4,466549,360014,0,2,,Broadland ,0,0,0,0,0,0,0,rural,outside,outside,False,27.464550546376195,28.087611047516123,0.057857459459657
+5050,106,4,455413,340674,0,2,,Broadland ,0,0,0,0,0,0,0,rural,outside,outside,False,15.018480727183594,10.91619137352949,0.012296151440201504
+5051,107,4,459074,304819,0,2,,Broadland ,0,0,0,0,0,0,0,rural,outside,outside,False,14.088028078923514,11.359736392924248,0.012003019815959574
+5052,108,4,477428,268312,0,2,,Broadland ,0,0,0,0,0,0,0,rural,outside,outside,False,28.491834837076496,24.18999621856462,0.05169258845995403
+5053,109,4,525169,311557,0,2,,Broadland ,0,0,0,0,0,0,0,rural,outside,outside,False,0.098509583635202,0.14745563633130793,1.089461586798285e-06
+5054,110,4,460028,308131,0,2,,Broadland ,0,0,0,0,0,0,0,rural,outside,outside,False,26.003740029717086,23.283813449940695,0.04541109640503848
+5055,111,4,502520,374102,0,2,,Breckland ,0,0,0,0,0,0,0,rural,outside,outside,False,11.370567932938759,10.487038440949144,0.008943491079751745
+5056,112,4,531312,325260,0,2,,Broadland ,97,60,30,40,0,0,0,rural,outside,outside,False,2.3661924806899988,2.0966940998701906,0.0
+5065,113,1062,563045,316225,E02005564,5,King's Lynn and West Norfolk 014,Broadland ,0,1,0,1,0,0,0,rural,inside,inside,True,2.0402683419217764,7.418949337088584,0.010170043210968394
+5067,114,1062,561890,314984,E02005564,5,King's Lynn and West Norfolk 014,Broadland ,0,0,0,1,0,0,0,rural,outside,inside,True,2.9686686310836454,3.0395593316541536,0.005923842231372087
+5068,115,5,545868,257826,0,3,,Broadland ,0,0,0,0,0,0,0,rural,outside,outside,False,81.10599430516913,31.038033097520696,0.8327341340629703
+5069,116,5,518388,302630,0,3,,Broadland ,0,0,0,0,0,0,0,rural,outside,outside,False,87.02835251079776,42.36158246534795,1.2195280561944617
+5070,117,1062,564429,316574,E02005564,5,King's Lynn and West Norfolk 014,Breckland ,0,0,0,0,0,0,0,rural,inside,inside,True,0.3843912208757758,0.888593764731267,0.00022433132576338773
+5100,118,4,535540,374450,0,2,,Broadland ,0,0,0,0,0,0,0,rural,outside,outside,False,4.457793928699482,4.905269347600916,0.0016400417686415949
+5101,119,4,532895,343702,0,2,,Breckland ,0,0,0,0,0,0,0,rural,outside,outside,False,2.6877024911532663,2.2829437330992826,0.0004602019584919239
+5102,120,4,497303,323164,0,2,,Breckland ,0,0,0,0,0,0,0,rural,outside,outside,False,6.511217612402648,6.101827926034966,0.0029798487948443017
+5103,121,1050,579657,339392,E02005552,5,King's Lynn and West Norfolk 002,Broadland ,0,1,0,0,15,2,3,rural,outside,outside,True,67.39844313320961,68.75071495517822,8.190901048467257
+5104,122,1051,568604,333976,E02005553,5,King's Lynn and West Norfolk 003,Breckland ,0,4,1,0,0,1,8,rural,outside,outside,True,20.700495790771427,41.38134572430602,0.3301835747846922
+5105,123,1060,574479,320107,E02005562,5,King's Lynn and West Norfolk 012,Breckland ,0,3,1,3,0,0,0,rural,outside,outside,True,10.623007600307691,19.427315592890842,0.14483580483206418
+5106,124,1060,569109,321977,E02005562,5,King's Lynn and West Norfolk 012,Breckland ,0,7,0,0,0,0,0,rural,outside,inside,True,10.982859807570975,21.65797379154967,0.16612511978458094
+5107,125,1062,565704,312035,E02005564,5,King's Lynn and West Norfolk 014,Breckland ,0,2,0,0,0,0,0,rural,outside,outside,True,6.773480862087705,6.200065123320778,0.02760619300672278
+5108,126,1060,570942,314765,E02005562,5,King's Lynn and West Norfolk 012,Breckland ,0,2,2,0,0,0,0,rural,outside,outside,True,24.72528865997363,14.24417310739146,0.24588636278165651
+5109,127,1060,581400,316907,E02005562,5,King's Lynn and West Norfolk 012,Breckland ,0,3,0,0,0,0,0,rural,outside,outside,True,2.7220748112053315,9.44542467017428,0.0179828003611436
+5110,128,1063,558141,308897,E02005565,5,King's Lynn and West Norfolk 015,Broadland ,0,0,1,0,0,0,0,rural,outside,outside,True,4.973934273754974,6.082218437805165,0.0049537837910660805
+5111,129,1063,558705,313687,E02005565,5,King's Lynn and West Norfolk 015,Breckland ,0,2,1,0,0,0,0,rural,outside,outside,True,4.985781758920282,17.500415878232797,0.014354319254260539
+5112,130,1062,563454,317435,E02005564,5,King's Lynn and West Norfolk 014,Breckland ,1,0,0,0,0,0,0,urban,inside,inside,True,0.9213668785013531,0.7062797183016952,0.0004323873727532953
+5115,131,1062,571735,309729,E02005564,5,King's Lynn and West Norfolk 014,Breckland ,0,3,0,5,0,0,0,rural,outside,outside,True,67.3584864646503,36.33325782219219,1.6049490440933443
+5116,132,7,643837,286197,0,3,,Breckland ,0,0,0,0,0,0,0,rural,outside,outside,False,447.10973197670603,608.6751820938237,82.35214731442167
+5117,133,1,562561,265052,0,3,,Broadland ,0,0,0,0,0,0,0,rural,outside,outside,False,37.41784480986802,19.596736339800575,0.12551196118035243
+5118,134,1,609631,257744,0,3,,Broadland ,0,0,0,0,0,0,0,rural,outside,outside,False,33.454041503345415,20.845149914733355,0.043614652675575495
+5119,135,1058,564749,319765,E02005560,5,King's Lynn and West Norfolk 010,Broadland ,10,0,0,0,0,0,0,urban,inside,inside,True,17.05660631121103,23.439176709666825,0.03389499534189373
+5120,136,1069,597328,336049,E02005571,6,North Norfolk 002,Broadland ,0,9,6,19,32,10,41,rural,outside,outside,True,314.1370250917157,362.576878838352,95.10778313905631
+5121,137,1073,617494,336187,E02005575,6,North Norfolk 006,Broadland ,0,0,0,0,0,0,0,rural,outside,outside,True,239.0717151019644,298.05390356247335,63.63553928426495
+5122,138,1077,629794,329385,E02005579,6,North Norfolk 010,Broadland ,0,0,0,0,0,0,0,rural,outside,outside,True,189.00991594924744,351.72563294584603,37.83915782859231
+5124,139,1080,638479,322391,E02005582,6,North Norfolk 013,Broadland ,0,0,0,0,0,0,0,rural,outside,outside,True,130.76754433400293,198.27405978843709,14.747256979154399
+5125,140,1021,620481,319969,E02005523,13,Broadland 004,Broadland ,0,0,0,0,0,0,0,rural,outside,outside,True,562.9089479620309,838.6984497616702,115.39394925021823
+5126,141,1008,596631,309308,E02005510,9,Breckland 008,Broadland ,68,26,18,18,0,0,0,urban,outside,outside,True,389.2519358798608,464.3490806073516,101.59108688841583
+5127,142,1002,586690,317550,E02005504,8,Breckland 002,Broadland ,0,21,9,0,3,1,0,rural,outside,outside,True,69.72845250454543,127.77937957082621,5.95108374932751
+5128,143,1019,607037,321120,E02005521,13,Broadland 002,Broadland ,0,28,14,11,0,0,0,rural,outside,outside,True,175.75067672241,245.29788849316162,9.134817990665173
+5129,144,1007,581189,308735,E02005509,8,Breckland 007,Broadland ,0,0,1,24,0,0,0,rural,outside,outside,True,78.14687966544948,95.75417635220853,0.5530070538892977
+5130,145,1104,620757,291687,E02005607,11,South Norfolk 011,Broadland ,0,0,0,0,0,0,0,rural,outside,outside,True,638.27688430798,929.9547968757768,171.32202233549316
+5131,146,1034,637083,304676,E02005536,14,Broadland 017,Broadland ,0,0,0,0,0,0,0,rural,outside,outside,True,653.1364068168966,984.0225290065447,123.84559363800372
+5132,147,1011,602052,294911,E02005513,9,Breckland 011,Broadland ,93,41,43,60,0,0,0,rural,outside,outside,True,920.1803994976364,930.7416933763093,247.42999649861358
+5133,148,1015,585176,283867,E02005517,9,Breckland 015,Broadland ,0,0,0,0,0,0,0,rural,outside,outside,True,229.01619574355783,198.25865544813382,2.000525578055338
+5134,149,1061,551179,310721,E02005563,5,King's Lynn and West Norfolk 013,Broadland ,4,7,5,0,0,0,0,rural,outside,outside,True,51.69725109997808,60.7153605139114,3.570368771866685
+5135,150,1063,560312,314944,E02005565,5,King's Lynn and West Norfolk 015,Broadland ,0,2,0,0,0,0,0,rural,outside,inside,True,2.097822074225426,7.584067160788128,0.002618463790307043
+5136,151,1063,561697,311266,E02005565,5,King's Lynn and West Norfolk 015,Broadland ,0,0,1,6,0,0,0,rural,outside,outside,True,8.56681982041656,36.520243663485985,0.05155277675004152
+5137,152,1066,564769,301121,E02005568,5,King's Lynn and West Norfolk 018,Broadland ,3,18,2,0,0,0,0,rural,outside,outside,True,46.62502517728871,91.63513594959203,1.6228461429696586
+5138,153,1064,556326,302262,E02005566,5,King's Lynn and West Norfolk 016,Broadland ,0,1,3,0,0,0,0,rural,outside,outside,True,8.346731117515155,22.292847665573195,0.078224322275225
+5139,154,5,542425,254769,0,3,,Broadland ,0,0,0,0,0,0,0,rural,outside,outside,False,64.03949306603596,34.9865413722807,0.7411534244758722
+5140,155,1060,576782,316476,E02005562,5,King's Lynn and West Norfolk 012,Broadland ,0,1,0,0,0,0,0,rural,outside,outside,True,5.235999258869926,2.881135287909151,0.010547611731711643
+5141,156,1062,563113,313613,E02005564,5,King's Lynn and West Norfolk 014,Broadland ,0,1,0,0,0,0,0,rural,outside,inside,True,2.109338017426704,2.1902725734273645,0.0030161484991428292
+5142,157,1062,563058,315140,E02005564,5,King's Lynn and West Norfolk 014,Breckland ,0,0,0,4,0,0,0,rural,inside,inside,True,0.34576752859279863,12.411935589061478,0.0028993958863447866
+5143,158,1062,563402,314679,E02005564,5,King's Lynn and West Norfolk 014,Breckland ,0,0,0,1,0,0,0,rural,inside,inside,True,0.3155424927334287,3.3856919704543462,0.0007083545101443521
+9001,159,3,268502,753561,0,1,,Broadland ,0,0,0,0,0,0,0,rural,outside,outside,False,0.0,0.0,0.0
+9002,160,3,406479,569476,0,1,,Broadland ,0,0,0,0,0,0,0,rural,outside,outside,False,5.120787835391432,3.222774190521224,0.0
+9003,161,3,351884,461276,0,1,,Broadland ,0,0,0,0,0,0,0,rural,outside,outside,False,14.69711340723287,8.65591318469441,1.5739836962566386e-07
+9004,162,3,451331,452108,0,1,,Broadland ,0,0,0,0,0,0,0,rural,outside,outside,False,11.01533981389145,6.500541983733694,1.0258038855496028e-07
+9005,163,2,279740,271716,0,2,,Broadland ,0,0,0,0,0,0,0,rural,outside,outside,False,8.098277970102734,4.137777281254144,0.0
+9006,164,2,381687,286831,0,2,,Broadland ,0,0,0,0,0,0,0,rural,outside,outside,False,15.358526442840438,7.549205069633609,3.78351778670004e-12
+9007,165,2,319466,123180,0,2,,Broadland ,0,0,0,0,0,0,0,rural,outside,outside,False,15.46917353613288,7.233069204423313,2.7868902479597034e-08
+9008,166,1,503128,154326,0,3,,Broadland ,0,0,0,0,0,0,0,rural,outside,outside,False,519.1583253260791,322.2533250949415,10.463475749383491
+9009,167,6,531331,179646,0,4,,Broadland ,0,0,0,0,0,0,0,rural,outside,outside,False,65.25992232945822,23.785650222740525,1.4961623201219078e-06

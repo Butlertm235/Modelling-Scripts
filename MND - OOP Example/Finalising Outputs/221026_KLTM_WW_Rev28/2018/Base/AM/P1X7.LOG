@@ -1,0 +1,24 @@
+ Menu bar:  &Nav-Box                          6018                          6001
+      1024       681         0 54695.9 33432.2 (Mouse pixels/status/X,Y)    6363
+      1115       752         1 59131.0 29258.1 (Mouse pixels/status/X,Y)    6361
+ Menu bar:  &Nav-Box                          6018                          6001
+       653       443         0 56298.5 31679.5 (Mouse pixels/status/X,Y)    6363
+       731       494         1 56554.3 31477.8 (Mouse pixels/status/X,Y)    6361
+      1722       168   68    0  Display menu   (Pixels/key/status/Line)     6001
+      1728       110   67    0  Choice of      (Pixels/key/status/Line)     6029
+      1759       169   48    0  0-Full set     (Pixels/key/status/Line)     6380
+          19 - Actual flow (pcu/hr)
+      1804       452   81    0  Q - Return     (Pixels/key/status/Line)
+      1782       600   81    0  Q - Return     (Pixels/key/status/Line)     6380
+      1733       280   78    0  Nodes          (Pixels/key/status/Line)     6029
+      1737       173   78    0  Node data:     (Pixels/key/status/Line)     6022
+      1727       110   76    0  List           (Pixels/key/status/Line)     6024
+           2 - Node numbers
+      1760       482   77    0  Magnify by:    (Pixels/key/status/Line)     6022
+     1.00000
+      1781       942   81    0  Q - Return     (Pixels/key/status/Line)     6022
+      1761       105   67    0  Choice of      (Pixels/key/status/Line)     6029
+      1734       166   48    0  0-Full set     (Pixels/key/status/Line)     6380
+          19 - Actual flow (pcu/hr)
+ Menu bar:  &Exit                             1700
+Yes OK to quit the program?

@@ -1,0 +1,32 @@
+ Menu bar:  &Nav-Box                          6018                          6001
+      1014       680         0 54208.5 33491.0 (Mouse pixels/status/X,Y)    6363
+      1086       753         1 57717.6 29199.3 (Mouse pixels/status/X,Y)    6361
+ Menu bar:  &Nav-Box                          6018                          6001
+       818       332         0 55888.2 32100.2 (Mouse pixels/status/X,Y)    6363
+      1044       580         1 56639.9 31105.2 (Mouse pixels/status/X,Y)    6361
+      1764       171   68    0  Display menu   (Pixels/key/status/Line)     6001
+      1723       103   67    0  Choice of      (Pixels/key/status/Line)     6029
+      1736        85   78    0  2 Networks -   (Pixels/key/status/Line)     6380
+          11 - Change 2-1 to 1-2 above
+           3 -   3 - Differences (1-2)
+      1764       283   48    0  0-Full set     (Pixels/key/status/Line)     6380
+          19 - Actual flow (pcu/hr)
+      1791       129   68    0  Display of     (Pixels/key/status/Line)
+      1789       129   77    0  Display Mode   (Pixels/key/status/Line)     6014
+           3 - Bandwidths
+      1780       729   81    0  Q - Return     (Pixels/key/status/Line)     6014
+      1780       470   81    0  Q - Return     (Pixels/key/status/Line)
+      1763        86   78    0  2 Networks -   (Pixels/key/status/Line)     6380
+          11 - Change 1-2 to 2-1 above
+           3 -   3 - Differences (2-1)
+      1752       281   48    0  0-Full set     (Pixels/key/status/Line)     6380
+          19 - Actual flow (pcu/hr)
+ Menu bar:  &Nav-Box                          6018
+       594       297         0 56073.8 31817.2 (Mouse pixels/status/X,Y)    6363
+      1210       784         1 56553.5 31359.8 (Mouse pixels/status/X,Y)    6361
+ Menu bar:  &Nav-Out                          6016
+ Menu bar:  &Nav-Out                          6016
+ Menu bar:  &Nav-Out                          6016
+ Menu bar:  &Nav-Out                          6016
+ Menu bar:  &Exit                             1700
+Yes OK to quit the program?

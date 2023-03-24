@@ -1,0 +1,1574 @@
+Matrix Object
+vehicle_type: PublicTransport
+value_type: Person Trips
+time_period: Inter_peak
+purpose: Other
+level: 3
+zone_count: 168
+matrix_sum: 3547.8912177322863
+interzonal_sum: 1995.9601127925494
+intrazonal_sum: 1551.931104939737
+Comments:
+Created by operation <built-in function add> (reverse: False) on
+[
+    Matrix Object
+    vehicle_type: Rail
+    value_type: Person Trips
+    time_period: Inter_peak
+    purpose: Other
+    level: 3
+    zone_count: 168
+    matrix_sum: 453.5645525426243
+    interzonal_sum: 446.0273942302385
+    intrazonal_sum: 7.537158312385808
+    Comments:
+    Created by operation <built-in function add> (reverse: False) on
+    [
+        Matrix Object
+        vehicle_type: Rail
+        value_type: Person Trips
+        time_period: Inter_peak
+        purpose: Other
+        level: 5
+        zone_count: 168
+        matrix_sum: 268.73121920929094
+        interzonal_sum: 263.2633474555544
+        intrazonal_sum: 5.467871753736505
+        Comments:
+        Created by operation <built-in function add> (reverse: False) on
+        [
+            Matrix Object
+            vehicle_type: Rail
+            value_type: Person Trips
+            time_period: Inter_peak
+            purpose: Other
+            level: 5
+            zone_count: 168
+            matrix_sum: 135.61337046677883
+            interzonal_sum: 132.9014476158065
+            intrazonal_sum: 2.7119228509723334
+            Comments:
+            Created by copy operation on the following matrix:
+            [
+                Matrix Object
+                vehicle_type: Rail
+                value_type: Person Trips
+                time_period: Inter_peak
+                purpose: IB_HBO
+                level: 5
+                zone_count: 168
+                matrix_sum: 135.61337046677883
+                interzonal_sum: 132.9014476158065
+                intrazonal_sum: 2.7119228509723334
+                Comments:
+                Created by redistribute_matrix (redistributed matrix) operation on the following matrix:
+                [
+                    Matrix Object
+                    vehicle_type: Rail
+                    value_type: Person Trips
+                    time_period: Inter_peak
+                    purpose: IB_HBO
+                    level: 5
+                    zone_count: 168
+                    matrix_sum: 135.61337046677883
+                    interzonal_sum: 134.47348881028233
+                    intrazonal_sum: 1.1398816564965029
+                    Comments:
+                    Created by copy operation on the following matrix:
+                    [
+                        Matrix Object
+                        vehicle_type: Rail
+                        value_type: Person Trips
+                        time_period: Inter_peak
+                        purpose: IB_HBO
+                        level: 5
+                        zone_count: 168
+                        matrix_sum: 135.61337046677883
+                        interzonal_sum: 134.47348881028233
+                        intrazonal_sum: 1.1398816564965029
+                        Comments:
+                        Created by furness_matrix operation on the following matrix:
+                        [
+                            Matrix Object
+                            vehicle_type: Rail
+                            value_type: Person Trips
+                            time_period: Inter_peak
+                            purpose: IB_HBO
+                            level: 3
+                            zone_count: 168
+                            matrix_sum: 157.16666666666666
+                            interzonal_sum: 155.75512940409635
+                            intrazonal_sum: 1.411537262570307
+                            Comments:
+                            Created by copy operation on the following matrix:
+                            [
+                                Matrix Object
+                                vehicle_type: Rail
+                                value_type: Person Trips
+                                time_period: Inter_peak
+                                purpose: IB_HBO
+                                level: 3
+                                zone_count: 168
+                                matrix_sum: 157.16666666666666
+                                interzonal_sum: 155.75512940409635
+                                intrazonal_sum: 1.411537262570307
+                                Comments:
+                                Created by disaggregate_matrix operation on the following matrix:
+                                [
+                                    Matrix Object
+                                    vehicle_type: Rail
+                                    value_type: Person Trips
+                                    time_period: Inter_peak
+                                    purpose: IB_HBO
+                                    level: 3
+                                    zone_count: 120
+                                    matrix_sum: 157.16666666666663
+                                    interzonal_sum: 156.3333333333333
+                                    intrazonal_sum: 0.8333333333333333
+                                    Comments:
+                                    Created by copy operation on the following matrix:
+                                    [
+                                        Matrix Object
+                                        vehicle_type: Rail
+                                        value_type: Person Trips
+                                        time_period: Inter_peak
+                                        purpose: IB_HBO
+                                        level: 3
+                                        zone_count: 120
+                                        matrix_sum: 157.16666666666663
+                                        interzonal_sum: 156.3333333333333
+                                        intrazonal_sum: 0.8333333333333333
+                                        Comments:
+                                        Created by operation <built-in function mul> (reverse: False) on
+                                        [
+                                            Matrix Object
+                                            vehicle_type: Rail
+                                            value_type: Person Trips
+                                            time_period: Inter_peak
+                                            purpose: IB_HBO
+                                            level: 3
+                                            zone_count: 120
+                                            matrix_sum: 943.0
+                                            interzonal_sum: 938.0
+                                            intrazonal_sum: 5.0
+                                            Comments:
+                                            Imported matrix from C:\Users\UKTMB001\Documents\Python Scripts\MND\20200220 - Deliverable 1 Matrices\D1_Weekday_IB_HBO_Rail.csv
+                                            MND Raw Data
+                                            
+                                        ]
+                                        <built-in function mul>
+                                        [
+                                            0.16666666666666666
+                                        ]
+                                        
+                                    ]
+                                    
+                                ]
+                                
+                            ]
+                            
+                        ]
+                        Convergence Information:
+                        1: count: 168, col_pass: 28, row_pass: 34
+                        2: count: 168, col_pass: 46, row_pass: 109
+                        3: count: 168, col_pass: 168, row_pass: 168
+                        
+                    ]
+                    
+                ]
+                
+            ]
+            
+        ]
+        <built-in function add>
+        [
+            Matrix Object
+            vehicle_type: Rail
+            value_type: Person Trips
+            time_period: Inter_peak
+            purpose: OB_HBO
+            level: 6
+            zone_count: 168
+            matrix_sum: 133.11784874251214
+            interzonal_sum: 130.36189983974796
+            intrazonal_sum: 2.75594890276417
+            Comments:
+            Created by copy operation on the following matrix:
+            [
+                Matrix Object
+                vehicle_type: Rail
+                value_type: Person Trips
+                time_period: Inter_peak
+                purpose: OB_HBO
+                level: 6
+                zone_count: 168
+                matrix_sum: 133.11784874251214
+                interzonal_sum: 130.36189983974796
+                intrazonal_sum: 2.75594890276417
+                Comments:
+                Created by redistribute_matrix (redistributed matrix) operation on the following matrix:
+                [
+                    Matrix Object
+                    vehicle_type: Rail
+                    value_type: Person Trips
+                    time_period: Inter_peak
+                    purpose: OB_HBO
+                    level: 6
+                    zone_count: 168
+                    matrix_sum: 133.11784874251214
+                    interzonal_sum: 132.05695191396674
+                    intrazonal_sum: 1.060896828545399
+                    Comments:
+                    Created by copy operation on the following matrix:
+                    [
+                        Matrix Object
+                        vehicle_type: Rail
+                        value_type: Person Trips
+                        time_period: Inter_peak
+                        purpose: OB_HBO
+                        level: 6
+                        zone_count: 168
+                        matrix_sum: 133.11784874251214
+                        interzonal_sum: 132.05695191396674
+                        intrazonal_sum: 1.060896828545399
+                        Comments:
+                        Created by furness_matrix operation on the following matrix:
+                        [
+                            Matrix Object
+                            vehicle_type: Rail
+                            value_type: Person Trips
+                            time_period: Inter_peak
+                            purpose: OB_HBO
+                            level: 4
+                            zone_count: 168
+                            matrix_sum: 155.33333333333334
+                            interzonal_sum: 154.010461458477
+                            intrazonal_sum: 1.3228718748563326
+                            Comments:
+                            Created by copy operation on the following matrix:
+                            [
+                                Matrix Object
+                                vehicle_type: Rail
+                                value_type: Person Trips
+                                time_period: Inter_peak
+                                purpose: OB_HBO
+                                level: 4
+                                zone_count: 168
+                                matrix_sum: 155.33333333333334
+                                interzonal_sum: 154.010461458477
+                                intrazonal_sum: 1.3228718748563326
+                                Comments:
+                                Created by disaggregate_matrix operation on the following matrix:
+                                [
+                                    Matrix Object
+                                    vehicle_type: Rail
+                                    value_type: Person Trips
+                                    time_period: Inter_peak
+                                    purpose: OB_HBO
+                                    level: 4
+                                    zone_count: 120
+                                    matrix_sum: 155.33333333333331
+                                    interzonal_sum: 154.66666666666666
+                                    intrazonal_sum: 0.6666666666666666
+                                    Comments:
+                                    Created by copy operation on the following matrix:
+                                    [
+                                        Matrix Object
+                                        vehicle_type: Rail
+                                        value_type: Person Trips
+                                        time_period: Inter_peak
+                                        purpose: OB_HBO
+                                        level: 4
+                                        zone_count: 120
+                                        matrix_sum: 155.33333333333331
+                                        interzonal_sum: 154.66666666666666
+                                        intrazonal_sum: 0.6666666666666666
+                                        Comments:
+                                        Created by operation <built-in function mul> (reverse: False) on
+                                        [
+                                            Matrix Object
+                                            vehicle_type: Rail
+                                            value_type: Person Trips
+                                            time_period: Inter_peak
+                                            purpose: OB_HBO
+                                            level: 4
+                                            zone_count: 120
+                                            matrix_sum: 932.0
+                                            interzonal_sum: 928.0
+                                            intrazonal_sum: 4.0
+                                            Comments:
+                                            Imported matrix from C:\Users\UKTMB001\Documents\Python Scripts\MND\20200220 - Deliverable 1 Matrices\D1_Weekday_OB_HBO_Rail.csv
+                                            MND Raw Data
+                                            
+                                        ]
+                                        <built-in function mul>
+                                        [
+                                            0.16666666666666666
+                                        ]
+                                        
+                                    ]
+                                    
+                                ]
+                                
+                            ]
+                            
+                        ]
+                        Convergence Information:
+                        1: count: 168, col_pass: 37, row_pass: 30
+                        2: count: 168, col_pass: 64, row_pass: 60
+                        3: count: 168, col_pass: 110, row_pass: 168
+                        
+                    ]
+                    
+                ]
+                
+            ]
+            
+        ]
+        
+    ]
+    <built-in function add>
+    [
+        Matrix Object
+        vehicle_type: Rail
+        value_type: Person Trips
+        time_period: Inter_peak
+        purpose: NHBO
+        level: 8
+        zone_count: 168
+        matrix_sum: 184.83333333333331
+        interzonal_sum: 182.764046774684
+        intrazonal_sum: 2.0692865586493046
+        Comments:
+        Created by copy operation on the following matrix:
+        [
+            Matrix Object
+            vehicle_type: Rail
+            value_type: Person Trips
+            time_period: Inter_peak
+            purpose: NHBO
+            level: 8
+            zone_count: 168
+            matrix_sum: 184.83333333333331
+            interzonal_sum: 182.764046774684
+            intrazonal_sum: 2.0692865586493046
+            Comments:
+            Created by redistribute_matrix (redistributed matrix) operation on the following matrix:
+            [
+                Matrix Object
+                vehicle_type: Rail
+                value_type: Person Trips
+                time_period: Inter_peak
+                purpose: NHBO
+                level: 8
+                zone_count: 168
+                matrix_sum: 184.83333333333331
+                interzonal_sum: 183.52128000091085
+                intrazonal_sum: 1.312053332422464
+                Comments:
+                Created by copy operation on the following matrix:
+                [
+                    Matrix Object
+                    vehicle_type: Rail
+                    value_type: Person Trips
+                    time_period: Inter_peak
+                    purpose: NHBO
+                    level: 8
+                    zone_count: 168
+                    matrix_sum: 184.83333333333331
+                    interzonal_sum: 183.52128000091085
+                    intrazonal_sum: 1.312053332422464
+                    Comments:
+                    Created by copy operation on the following matrix:
+                    [
+                        Matrix Object
+                        vehicle_type: Rail
+                        value_type: Person Trips
+                        time_period: Inter_peak
+                        purpose: NHBO
+                        level: 6
+                        zone_count: 168
+                        matrix_sum: 184.83333333333331
+                        interzonal_sum: 183.52128000091085
+                        intrazonal_sum: 1.312053332422464
+                        Comments:
+                        Created by disaggregate_matrix operation on the following matrix:
+                        [
+                            Matrix Object
+                            vehicle_type: Rail
+                            value_type: Person Trips
+                            time_period: Inter_peak
+                            purpose: NHBO
+                            level: 6
+                            zone_count: 120
+                            matrix_sum: 184.8333333333333
+                            interzonal_sum: 183.66666666666663
+                            intrazonal_sum: 1.1666666666666667
+                            Comments:
+                            Created by copy operation on the following matrix:
+                            [
+                                Matrix Object
+                                vehicle_type: Rail
+                                value_type: Person Trips
+                                time_period: Inter_peak
+                                purpose: NHBO
+                                level: 6
+                                zone_count: 120
+                                matrix_sum: 184.8333333333333
+                                interzonal_sum: 183.66666666666663
+                                intrazonal_sum: 1.1666666666666667
+                                Comments:
+                                Created by operation <built-in function mul> (reverse: False) on
+                                [
+                                    Matrix Object
+                                    vehicle_type: Rail
+                                    value_type: Person Trips
+                                    time_period: Inter_peak
+                                    purpose: NHBO
+                                    level: 6
+                                    zone_count: 120
+                                    matrix_sum: 1109.0
+                                    interzonal_sum: 1102.0
+                                    intrazonal_sum: 7.0
+                                    Comments:
+                                    Imported matrix from C:\Users\UKTMB001\Documents\Python Scripts\MND\20200220 - Deliverable 1 Matrices\D1_Weekday_NHBO_Rail.csv
+                                    MND Raw Data
+                                    
+                                ]
+                                <built-in function mul>
+                                [
+                                    0.16666666666666666
+                                ]
+                                
+                            ]
+                            
+                        ]
+                        
+                    ]
+                    
+                ]
+                
+            ]
+            
+        ]
+        
+    ]
+    
+]
+<built-in function add>
+[
+    Matrix Object
+    vehicle_type: Bus
+    value_type: Person Trips
+    time_period: Inter_peak
+    purpose: Other
+    level: 3
+    zone_count: 168
+    matrix_sum: 3094.326665189662
+    interzonal_sum: 1549.9327185623108
+    intrazonal_sum: 1544.3939466273512
+    Comments:
+    Created by copy operation on the following matrix:
+    [
+        Matrix Object
+        vehicle_type: Bus
+        value_type: Person Trips
+        time_period: Inter_peak
+        purpose: Other
+        level: 3
+        zone_count: 168
+        matrix_sum: 3094.326665189662
+        interzonal_sum: 1549.9327185623108
+        intrazonal_sum: 1544.3939466273512
+        Comments:
+        Created by operation <built-in function add> (reverse: False) on
+        [
+            Matrix Object
+            vehicle_type: Bus
+            value_type: Person Trips
+            time_period: Inter_peak
+            purpose: Other
+            level: 5
+            zone_count: 168
+            matrix_sum: 2807.9657851376674
+            interzonal_sum: 1310.2310860786465
+            intrazonal_sum: 1497.7346990590208
+            Comments:
+            Created by operation <built-in function add> (reverse: False) on
+            [
+                Matrix Object
+                vehicle_type: Bus
+                value_type: Person Trips
+                time_period: Inter_peak
+                purpose: Other
+                level: 5
+                zone_count: 168
+                matrix_sum: 1485.6237539527342
+                interzonal_sum: 706.8393850275731
+                intrazonal_sum: 778.7843689251611
+                Comments:
+                Created by copy operation on the following matrix:
+                [
+                    Matrix Object
+                    vehicle_type: Bus
+                    value_type: Person Trips
+                    time_period: Inter_peak
+                    purpose: IB_HBO
+                    level: 5
+                    zone_count: 168
+                    matrix_sum: 1485.6237539527342
+                    interzonal_sum: 706.8393850275731
+                    intrazonal_sum: 778.7843689251611
+                    Comments:
+                    Created by furness_matrix operation on the following matrix:
+                    [
+                        Matrix Object
+                        vehicle_type: Bus
+                        value_type: Person Trips
+                        time_period: Inter_peak
+                        purpose: IB_HBO
+                        level: 3
+                        zone_count: 168
+                        matrix_sum: 1497.96881443317
+                        interzonal_sum: 713.0383448250082
+                        intrazonal_sum: 784.930469608162
+                        Comments:
+                        Created by copy operation on the following matrix:
+                        [
+                            Matrix Object
+                            vehicle_type: Bus
+                            value_type: Person Trips
+                            time_period: Inter_peak
+                            purpose: IB_HBO
+                            level: 3
+                            zone_count: 168
+                            matrix_sum: 1497.96881443317
+                            interzonal_sum: 713.0383448250082
+                            intrazonal_sum: 784.930469608162
+                            Comments:
+                            Created by operation <built-in function mul> (reverse: False) on
+                            [
+                                Matrix Object
+                                vehicle_type: Road
+                                value_type: Person Trips
+                                time_period: Inter_peak
+                                purpose: IB_HBO
+                                level: 3
+                                zone_count: 168
+                                matrix_sum: 18644.166666666664
+                                interzonal_sum: 15586.982047541609
+                                intrazonal_sum: 3057.1846191250543
+                                Comments:
+                                Created by disaggregate_matrix operation on the following matrix:
+                                [
+                                    Matrix Object
+                                    vehicle_type: Road
+                                    value_type: Person Trips
+                                    time_period: Inter_peak
+                                    purpose: IB_HBO
+                                    level: 3
+                                    zone_count: 120
+                                    matrix_sum: 18644.166666666664
+                                    interzonal_sum: 18218.333333333332
+                                    intrazonal_sum: 425.83333333333337
+                                    Comments:
+                                    Created by copy operation on the following matrix:
+                                    [
+                                        Matrix Object
+                                        vehicle_type: Road
+                                        value_type: Person Trips
+                                        time_period: Inter_peak
+                                        purpose: IB_HBO
+                                        level: 3
+                                        zone_count: 120
+                                        matrix_sum: 18644.166666666664
+                                        interzonal_sum: 18218.333333333332
+                                        intrazonal_sum: 425.83333333333337
+                                        Comments:
+                                        Created by operation <built-in function mul> (reverse: False) on
+                                        [
+                                            Matrix Object
+                                            vehicle_type: Road
+                                            value_type: Person Trips
+                                            time_period: Inter_peak
+                                            purpose: IB_HBO
+                                            level: 3
+                                            zone_count: 120
+                                            matrix_sum: 111865.0
+                                            interzonal_sum: 109310.0
+                                            intrazonal_sum: 2555.0
+                                            Comments:
+                                            Imported matrix from C:\Users\UKTMB001\Documents\Python Scripts\MND\20200220 - Deliverable 1 Matrices\D1_Weekday_IB_HBO_Road.csv
+                                            MND Raw Data
+                                            
+                                        ]
+                                        <built-in function mul>
+                                        [
+                                            0.16666666666666666
+                                        ]
+                                        
+                                    ]
+                                    
+                                ]
+                                
+                            ]
+                            <built-in function mul>
+                            [
+                                Matrix Object
+                                vehicle_type: Bus
+                                value_type: proportions
+                                time_period: Inter_peak
+                                purpose: IB_HBO
+                                level: 3
+                                zone_count: 168
+                                matrix_sum: 8318.085576882724
+                                interzonal_sum: 8286.158078316914
+                                intrazonal_sum: 31.927498565810748
+                                Comments:
+                                Created by copy operation on the following matrix:
+                                [
+                                    Matrix Object
+                                    vehicle_type: Bus
+                                    value_type: proportions
+                                    time_period: Inter_peak
+                                    purpose: IB_HBO
+                                    level: 3
+                                    zone_count: 168
+                                    matrix_sum: 8318.085576882724
+                                    interzonal_sum: 8286.158078316914
+                                    intrazonal_sum: 31.927498565810748
+                                    Comments:
+                                    Created by generate_proportion_matrix operation on the following matrices:
+                                    [
+                                        Matrix Object
+                                        vehicle_type: Bus
+                                        value_type: Person Trips
+                                        time_period: Inter_peak
+                                        purpose: IB_HBO
+                                        level: 3
+                                        zone_count: 168
+                                        matrix_sum: 4798.478509209596
+                                        interzonal_sum: 2233.4337989913206
+                                        intrazonal_sum: 2565.0447102182757
+                                        Comments:
+                                        Created by copy operation on the following matrix:
+                                        [
+                                            Matrix Object
+                                            vehicle_type: Bus
+                                            value_type: Person Trips
+                                            time_period: Inter_peak
+                                            purpose: IB_HBO
+                                            level: 3
+                                            zone_count: 168
+                                            matrix_sum: 4798.478509209596
+                                            interzonal_sum: 2233.4337989913206
+                                            intrazonal_sum: 2565.0447102182757
+                                            Comments:
+                                            Created by operation <built-in function mul> (reverse: False) on
+                                            [
+                                                Matrix Object
+                                                vehicle_type: Bus
+                                                value_type: Person Trips
+                                                time_period: Inter_peak
+                                                purpose: HBO
+                                                level: 3
+                                                zone_count: 168
+                                                matrix_sum: 9232.433079999999
+                                                interzonal_sum: 4297.201299999999
+                                                intrazonal_sum: 4935.23178
+                                                Comments:
+                                                Created by copy operation on the following matrix:
+                                                [
+                                                    Matrix Object
+                                                    vehicle_type: Bus
+                                                    value_type: Person Trips
+                                                    time_period: Inter_peak
+                                                    purpose: HBO
+                                                    level: 3
+                                                    zone_count: 168
+                                                    matrix_sum: 9232.433079999999
+                                                    interzonal_sum: 4297.201299999999
+                                                    intrazonal_sum: 4935.23178
+                                                    Comments:
+                                                    Imported matrix from C:\Users\UKTMB001\Documents\Python Scripts\MND\Test\synth_bus_Inter_peak.csv
+                                                    Matrix Object
+                                                    vehicle_type: Bus
+                                                    value_type: Person Trips
+                                                    time_period: Inter_peak
+                                                    purpose: HBO
+                                                    level: 3
+                                                    zone_count: 168
+                                                    matrix_sum: 9232.433079999999
+                                                    interzonal_sum: 4297.201299999999
+                                                    intrazonal_sum: 4935.23178
+                                                    
+                                                ]
+                                                
+                                            ]
+                                            <built-in function mul>
+                                            [
+                                                0.5197414882545346
+                                            ]
+                                            
+                                        ]
+                                        
+                                    ]
+                                    [
+                                        Matrix Object
+                                        vehicle_type: Road
+                                        value_type: Person Trips
+                                        time_period: Inter_peak
+                                        purpose: IB_HBO
+                                        level: 3
+                                        zone_count: 168
+                                        matrix_sum: 18644.166666666664
+                                        interzonal_sum: 15586.982047541609
+                                        intrazonal_sum: 3057.1846191250543
+                                        Comments:
+                                        Created by copy operation on the following matrix:
+                                        [
+                                            Matrix Object
+                                            vehicle_type: Road
+                                            value_type: Person Trips
+                                            time_period: Inter_peak
+                                            purpose: IB_HBO
+                                            level: 3
+                                            zone_count: 168
+                                            matrix_sum: 18644.166666666664
+                                            interzonal_sum: 15586.982047541609
+                                            intrazonal_sum: 3057.1846191250543
+                                            Comments:
+                                            Created by disaggregate_matrix operation on the following matrix:
+                                            [
+                                                Matrix Object
+                                                vehicle_type: Road
+                                                value_type: Person Trips
+                                                time_period: Inter_peak
+                                                purpose: IB_HBO
+                                                level: 3
+                                                zone_count: 120
+                                                matrix_sum: 18644.166666666664
+                                                interzonal_sum: 18218.333333333332
+                                                intrazonal_sum: 425.83333333333337
+                                                Comments:
+                                                Created by copy operation on the following matrix:
+                                                [
+                                                    Matrix Object
+                                                    vehicle_type: Road
+                                                    value_type: Person Trips
+                                                    time_period: Inter_peak
+                                                    purpose: IB_HBO
+                                                    level: 3
+                                                    zone_count: 120
+                                                    matrix_sum: 18644.166666666664
+                                                    interzonal_sum: 18218.333333333332
+                                                    intrazonal_sum: 425.83333333333337
+                                                    Comments:
+                                                    Created by operation <built-in function mul> (reverse: False) on
+                                                    [
+                                                        Matrix Object
+                                                        vehicle_type: Road
+                                                        value_type: Person Trips
+                                                        time_period: Inter_peak
+                                                        purpose: IB_HBO
+                                                        level: 3
+                                                        zone_count: 120
+                                                        matrix_sum: 111865.0
+                                                        interzonal_sum: 109310.0
+                                                        intrazonal_sum: 2555.0
+                                                        Comments:
+                                                        Imported matrix from C:\Users\UKTMB001\Documents\Python Scripts\MND\20200220 - Deliverable 1 Matrices\D1_Weekday_IB_HBO_Road.csv
+                                                        MND Raw Data
+                                                        
+                                                    ]
+                                                    <built-in function mul>
+                                                    [
+                                                        0.16666666666666666
+                                                    ]
+                                                    
+                                                ]
+                                                
+                                            ]
+                                            
+                                        ]
+                                        
+                                    ]
+                                    
+                                ]
+                                
+                            ]
+                            
+                        ]
+                        
+                    ]
+                    Convergence Information:
+                    1: count: 168, col_pass: 168, row_pass: 168
+                    
+                ]
+                
+            ]
+            <built-in function add>
+            [
+                Matrix Object
+                vehicle_type: Bus
+                value_type: Person Trips
+                time_period: Inter_peak
+                purpose: OB_HBO
+                level: 6
+                zone_count: 168
+                matrix_sum: 1322.3420311849331
+                interzonal_sum: 603.3917010510734
+                intrazonal_sum: 718.9503301338598
+                Comments:
+                Created by copy operation on the following matrix:
+                [
+                    Matrix Object
+                    vehicle_type: Bus
+                    value_type: Person Trips
+                    time_period: Inter_peak
+                    purpose: OB_HBO
+                    level: 6
+                    zone_count: 168
+                    matrix_sum: 1322.3420311849331
+                    interzonal_sum: 603.3917010510734
+                    intrazonal_sum: 718.9503301338598
+                    Comments:
+                    Created by furness_matrix operation on the following matrix:
+                    [
+                        Matrix Object
+                        vehicle_type: Bus
+                        value_type: Person Trips
+                        time_period: Inter_peak
+                        purpose: OB_HBO
+                        level: 4
+                        zone_count: 168
+                        matrix_sum: 1333.363295367084
+                        interzonal_sum: 608.7405721945664
+                        intrazonal_sum: 724.6227231725176
+                        Comments:
+                        Created by copy operation on the following matrix:
+                        [
+                            Matrix Object
+                            vehicle_type: Bus
+                            value_type: Person Trips
+                            time_period: Inter_peak
+                            purpose: OB_HBO
+                            level: 4
+                            zone_count: 168
+                            matrix_sum: 1333.363295367084
+                            interzonal_sum: 608.7405721945664
+                            intrazonal_sum: 724.6227231725176
+                            Comments:
+                            Created by operation <built-in function mul> (reverse: False) on
+                            [
+                                Matrix Object
+                                vehicle_type: Road
+                                value_type: Person Trips
+                                time_period: Inter_peak
+                                purpose: OB_HBO
+                                level: 4
+                                zone_count: 168
+                                matrix_sum: 17227.833333333332
+                                interzonal_sum: 14274.684396516754
+                                intrazonal_sum: 2953.1489368165776
+                                Comments:
+                                Created by disaggregate_matrix operation on the following matrix:
+                                [
+                                    Matrix Object
+                                    vehicle_type: Road
+                                    value_type: Person Trips
+                                    time_period: Inter_peak
+                                    purpose: OB_HBO
+                                    level: 4
+                                    zone_count: 120
+                                    matrix_sum: 17227.833333333332
+                                    interzonal_sum: 16815.0
+                                    intrazonal_sum: 412.8333333333333
+                                    Comments:
+                                    Created by copy operation on the following matrix:
+                                    [
+                                        Matrix Object
+                                        vehicle_type: Road
+                                        value_type: Person Trips
+                                        time_period: Inter_peak
+                                        purpose: OB_HBO
+                                        level: 4
+                                        zone_count: 120
+                                        matrix_sum: 17227.833333333332
+                                        interzonal_sum: 16815.0
+                                        intrazonal_sum: 412.8333333333333
+                                        Comments:
+                                        Created by operation <built-in function mul> (reverse: False) on
+                                        [
+                                            Matrix Object
+                                            vehicle_type: Road
+                                            value_type: Person Trips
+                                            time_period: Inter_peak
+                                            purpose: OB_HBO
+                                            level: 4
+                                            zone_count: 120
+                                            matrix_sum: 103367.0
+                                            interzonal_sum: 100890.0
+                                            intrazonal_sum: 2477.0
+                                            Comments:
+                                            Imported matrix from C:\Users\UKTMB001\Documents\Python Scripts\MND\20200220 - Deliverable 1 Matrices\D1_Weekday_OB_HBO_Road.csv
+                                            MND Raw Data
+                                            
+                                        ]
+                                        <built-in function mul>
+                                        [
+                                            0.16666666666666666
+                                        ]
+                                        
+                                    ]
+                                    
+                                ]
+                                
+                            ]
+                            <built-in function mul>
+                            [
+                                Matrix Object
+                                vehicle_type: Bus
+                                value_type: proportions
+                                time_period: Inter_peak
+                                purpose: OB_HBO
+                                level: 4
+                                zone_count: 168
+                                matrix_sum: 8302.262031229224
+                                interzonal_sum: 8266.56519504084
+                                intrazonal_sum: 35.69683618838515
+                                Comments:
+                                Created by copy operation on the following matrix:
+                                [
+                                    Matrix Object
+                                    vehicle_type: Bus
+                                    value_type: proportions
+                                    time_period: Inter_peak
+                                    purpose: OB_HBO
+                                    level: 4
+                                    zone_count: 168
+                                    matrix_sum: 8302.262031229224
+                                    interzonal_sum: 8266.56519504084
+                                    intrazonal_sum: 35.69683618838515
+                                    Comments:
+                                    Created by generate_proportion_matrix operation on the following matrices:
+                                    [
+                                        Matrix Object
+                                        vehicle_type: Bus
+                                        value_type: Person Trips
+                                        time_period: Inter_peak
+                                        purpose: OB_HBO
+                                        level: 4
+                                        zone_count: 168
+                                        matrix_sum: 4433.9545707904035
+                                        interzonal_sum: 2063.7675010086796
+                                        intrazonal_sum: 2370.187069781724
+                                        Comments:
+                                        Created by copy operation on the following matrix:
+                                        [
+                                            Matrix Object
+                                            vehicle_type: Bus
+                                            value_type: Person Trips
+                                            time_period: Inter_peak
+                                            purpose: OB_HBO
+                                            level: 4
+                                            zone_count: 168
+                                            matrix_sum: 4433.9545707904035
+                                            interzonal_sum: 2063.7675010086796
+                                            intrazonal_sum: 2370.187069781724
+                                            Comments:
+                                            Created by operation <built-in function mul> (reverse: False) on
+                                            [
+                                                Matrix Object
+                                                vehicle_type: Bus
+                                                value_type: Person Trips
+                                                time_period: Inter_peak
+                                                purpose: HBO
+                                                level: 3
+                                                zone_count: 168
+                                                matrix_sum: 9232.433079999999
+                                                interzonal_sum: 4297.201299999999
+                                                intrazonal_sum: 4935.23178
+                                                Comments:
+                                                Created by copy operation on the following matrix:
+                                                [
+                                                    Matrix Object
+                                                    vehicle_type: Bus
+                                                    value_type: Person Trips
+                                                    time_period: Inter_peak
+                                                    purpose: HBO
+                                                    level: 3
+                                                    zone_count: 168
+                                                    matrix_sum: 9232.433079999999
+                                                    interzonal_sum: 4297.201299999999
+                                                    intrazonal_sum: 4935.23178
+                                                    Comments:
+                                                    Imported matrix from C:\Users\UKTMB001\Documents\Python Scripts\MND\Test\synth_bus_Inter_peak.csv
+                                                    Matrix Object
+                                                    vehicle_type: Bus
+                                                    value_type: Person Trips
+                                                    time_period: Inter_peak
+                                                    purpose: HBO
+                                                    level: 3
+                                                    zone_count: 168
+                                                    matrix_sum: 9232.433079999999
+                                                    interzonal_sum: 4297.201299999999
+                                                    intrazonal_sum: 4935.23178
+                                                    
+                                                ]
+                                                
+                                            ]
+                                            <built-in function mul>
+                                            [
+                                                0.4802585117454654
+                                            ]
+                                            
+                                        ]
+                                        
+                                    ]
+                                    [
+                                        Matrix Object
+                                        vehicle_type: Road
+                                        value_type: Person Trips
+                                        time_period: Inter_peak
+                                        purpose: OB_HBO
+                                        level: 4
+                                        zone_count: 168
+                                        matrix_sum: 17227.833333333332
+                                        interzonal_sum: 14274.684396516754
+                                        intrazonal_sum: 2953.1489368165776
+                                        Comments:
+                                        Created by copy operation on the following matrix:
+                                        [
+                                            Matrix Object
+                                            vehicle_type: Road
+                                            value_type: Person Trips
+                                            time_period: Inter_peak
+                                            purpose: OB_HBO
+                                            level: 4
+                                            zone_count: 168
+                                            matrix_sum: 17227.833333333332
+                                            interzonal_sum: 14274.684396516754
+                                            intrazonal_sum: 2953.1489368165776
+                                            Comments:
+                                            Created by disaggregate_matrix operation on the following matrix:
+                                            [
+                                                Matrix Object
+                                                vehicle_type: Road
+                                                value_type: Person Trips
+                                                time_period: Inter_peak
+                                                purpose: OB_HBO
+                                                level: 4
+                                                zone_count: 120
+                                                matrix_sum: 17227.833333333332
+                                                interzonal_sum: 16815.0
+                                                intrazonal_sum: 412.8333333333333
+                                                Comments:
+                                                Created by copy operation on the following matrix:
+                                                [
+                                                    Matrix Object
+                                                    vehicle_type: Road
+                                                    value_type: Person Trips
+                                                    time_period: Inter_peak
+                                                    purpose: OB_HBO
+                                                    level: 4
+                                                    zone_count: 120
+                                                    matrix_sum: 17227.833333333332
+                                                    interzonal_sum: 16815.0
+                                                    intrazonal_sum: 412.8333333333333
+                                                    Comments:
+                                                    Created by operation <built-in function mul> (reverse: False) on
+                                                    [
+                                                        Matrix Object
+                                                        vehicle_type: Road
+                                                        value_type: Person Trips
+                                                        time_period: Inter_peak
+                                                        purpose: OB_HBO
+                                                        level: 4
+                                                        zone_count: 120
+                                                        matrix_sum: 103367.0
+                                                        interzonal_sum: 100890.0
+                                                        intrazonal_sum: 2477.0
+                                                        Comments:
+                                                        Imported matrix from C:\Users\UKTMB001\Documents\Python Scripts\MND\20200220 - Deliverable 1 Matrices\D1_Weekday_OB_HBO_Road.csv
+                                                        MND Raw Data
+                                                        
+                                                    ]
+                                                    <built-in function mul>
+                                                    [
+                                                        0.16666666666666666
+                                                    ]
+                                                    
+                                                ]
+                                                
+                                            ]
+                                            
+                                        ]
+                                        
+                                    ]
+                                    
+                                ]
+                                
+                            ]
+                            
+                        ]
+                        
+                    ]
+                    Convergence Information:
+                    1: count: 168, col_pass: 168, row_pass: 168
+                    
+                ]
+                
+            ]
+            
+        ]
+        <built-in function add>
+        [
+            Matrix Object
+            vehicle_type: Bus
+            value_type: Person Trips
+            time_period: Inter_peak
+            purpose: NHBO
+            level: 8
+            zone_count: 168
+            matrix_sum: 286.3608800519948
+            interzonal_sum: 239.70163248366458
+            intrazonal_sum: 46.65924756833022
+            Comments:
+            Created by copy operation on the following matrix:
+            [
+                Matrix Object
+                vehicle_type: Bus
+                value_type: Person Trips
+                time_period: Inter_peak
+                purpose: NHBO
+                level: 8
+                zone_count: 168
+                matrix_sum: 286.3608800519948
+                interzonal_sum: 239.70163248366458
+                intrazonal_sum: 46.65924756833022
+                Comments:
+                Created by copy operation on the following matrix:
+                [
+                    Matrix Object
+                    vehicle_type: Bus
+                    value_type: Person Trips
+                    time_period: Inter_peak
+                    purpose: NHBO
+                    level: 6
+                    zone_count: 168
+                    matrix_sum: 286.3608800519948
+                    interzonal_sum: 239.70163248366458
+                    intrazonal_sum: 46.65924756833022
+                    Comments:
+                    Created by operation <built-in function mul> (reverse: False) on
+                    [
+                        Matrix Object
+                        vehicle_type: Road
+                        value_type: Person Trips
+                        time_period: Inter_peak
+                        purpose: NHBO
+                        level: 6
+                        zone_count: 168
+                        matrix_sum: 11222.166666666664
+                        interzonal_sum: 9592.506630616705
+                        intrazonal_sum: 1629.6600360499597
+                        Comments:
+                        Created by disaggregate_matrix operation on the following matrix:
+                        [
+                            Matrix Object
+                            vehicle_type: Road
+                            value_type: Person Trips
+                            time_period: Inter_peak
+                            purpose: NHBO
+                            level: 6
+                            zone_count: 120
+                            matrix_sum: 11222.166666666664
+                            interzonal_sum: 10988.999999999998
+                            intrazonal_sum: 233.16666666666663
+                            Comments:
+                            Created by copy operation on the following matrix:
+                            [
+                                Matrix Object
+                                vehicle_type: Road
+                                value_type: Person Trips
+                                time_period: Inter_peak
+                                purpose: NHBO
+                                level: 6
+                                zone_count: 120
+                                matrix_sum: 11222.166666666664
+                                interzonal_sum: 10988.999999999998
+                                intrazonal_sum: 233.16666666666663
+                                Comments:
+                                Created by operation <built-in function mul> (reverse: False) on
+                                [
+                                    Matrix Object
+                                    vehicle_type: Road
+                                    value_type: Person Trips
+                                    time_period: Inter_peak
+                                    purpose: NHBO
+                                    level: 6
+                                    zone_count: 120
+                                    matrix_sum: 67333.0
+                                    interzonal_sum: 65934.0
+                                    intrazonal_sum: 1399.0
+                                    Comments:
+                                    Imported matrix from C:\Users\UKTMB001\Documents\Python Scripts\MND\20200220 - Deliverable 1 Matrices\D1_Weekday_NHBO_Road.csv
+                                    MND Raw Data
+                                    
+                                ]
+                                <built-in function mul>
+                                [
+                                    0.16666666666666666
+                                ]
+                                
+                            ]
+                            
+                        ]
+                        
+                    ]
+                    <built-in function mul>
+                    [
+                        Matrix Object
+                        vehicle_type: Bus
+                        value_type: proportions
+                        time_period: Inter_peak
+                        purpose: NHBO
+                        level: 6
+                        zone_count: 168
+                        matrix_sum: 5002.085495119061
+                        interzonal_sum: 4984.892785835573
+                        intrazonal_sum: 17.19270928348882
+                        Comments:
+                        Created by copy operation on the following matrix:
+                        [
+                            Matrix Object
+                            vehicle_type: Bus
+                            value_type: proportions
+                            time_period: Inter_peak
+                            purpose: NHBO
+                            level: 6
+                            zone_count: 168
+                            matrix_sum: 5002.085495119061
+                            interzonal_sum: 4984.892785835573
+                            intrazonal_sum: 17.19270928348882
+                            Comments:
+                            Created by generate_proportion_matrix operation on the following matrices:
+                            [
+                                Matrix Object
+                                vehicle_type: Bus
+                                value_type: Person Trips
+                                time_period: Inter_peak
+                                purpose: NHBO
+                                level: 6
+                                zone_count: 168
+                                matrix_sum: 551.6708
+                                interzonal_sum: 476.33559
+                                intrazonal_sum: 75.33520999999999
+                                Comments:
+                                Created by copy operation on the following matrix:
+                                [
+                                    Matrix Object
+                                    vehicle_type: Bus
+                                    value_type: Person Trips
+                                    time_period: Inter_peak
+                                    purpose: NHBO
+                                    level: 6
+                                    zone_count: 168
+                                    matrix_sum: 551.6708
+                                    interzonal_sum: 476.33559
+                                    intrazonal_sum: 75.33520999999999
+                                    Comments:
+                                    Created by copy operation on the following matrix:
+                                    [
+                                        Matrix Object
+                                        vehicle_type: Bus
+                                        value_type: Person Trips
+                                        time_period: Inter_peak
+                                        purpose: NHBO
+                                        level: 5
+                                        zone_count: 168
+                                        matrix_sum: 551.6708
+                                        interzonal_sum: 476.33559
+                                        intrazonal_sum: 75.33520999999999
+                                        Comments:
+                                        Imported matrix from C:\Users\UKTMB001\Documents\Python Scripts\MND\Test\synth_bus_Inter_peak.csv
+                                        Matrix Object
+                                        vehicle_type: Bus
+                                        value_type: Person Trips
+                                        time_period: Inter_peak
+                                        purpose: NHBO
+                                        level: 5
+                                        zone_count: 168
+                                        matrix_sum: 551.6708
+                                        interzonal_sum: 476.33559
+                                        intrazonal_sum: 75.33520999999999
+                                        
+                                    ]
+                                    
+                                ]
+                                
+                            ]
+                            [
+                                Matrix Object
+                                vehicle_type: Road
+                                value_type: Person Trips
+                                time_period: Inter_peak
+                                purpose: NHBO
+                                level: 6
+                                zone_count: 168
+                                matrix_sum: 11222.166666666664
+                                interzonal_sum: 9592.506630616705
+                                intrazonal_sum: 1629.6600360499597
+                                Comments:
+                                Created by copy operation on the following matrix:
+                                [
+                                    Matrix Object
+                                    vehicle_type: Road
+                                    value_type: Person Trips
+                                    time_period: Inter_peak
+                                    purpose: NHBO
+                                    level: 6
+                                    zone_count: 168
+                                    matrix_sum: 11222.166666666664
+                                    interzonal_sum: 9592.506630616705
+                                    intrazonal_sum: 1629.6600360499597
+                                    Comments:
+                                    Created by disaggregate_matrix operation on the following matrix:
+                                    [
+                                        Matrix Object
+                                        vehicle_type: Road
+                                        value_type: Person Trips
+                                        time_period: Inter_peak
+                                        purpose: NHBO
+                                        level: 6
+                                        zone_count: 120
+                                        matrix_sum: 11222.166666666664
+                                        interzonal_sum: 10988.999999999998
+                                        intrazonal_sum: 233.16666666666663
+                                        Comments:
+                                        Created by copy operation on the following matrix:
+                                        [
+                                            Matrix Object
+                                            vehicle_type: Road
+                                            value_type: Person Trips
+                                            time_period: Inter_peak
+                                            purpose: NHBO
+                                            level: 6
+                                            zone_count: 120
+                                            matrix_sum: 11222.166666666664
+                                            interzonal_sum: 10988.999999999998
+                                            intrazonal_sum: 233.16666666666663
+                                            Comments:
+                                            Created by operation <built-in function mul> (reverse: False) on
+                                            [
+                                                Matrix Object
+                                                vehicle_type: Road
+                                                value_type: Person Trips
+                                                time_period: Inter_peak
+                                                purpose: NHBO
+                                                level: 6
+                                                zone_count: 120
+                                                matrix_sum: 67333.0
+                                                interzonal_sum: 65934.0
+                                                intrazonal_sum: 1399.0
+                                                Comments:
+                                                Imported matrix from C:\Users\UKTMB001\Documents\Python Scripts\MND\20200220 - Deliverable 1 Matrices\D1_Weekday_NHBO_Road.csv
+                                                MND Raw Data
+                                                
+                                            ]
+                                            <built-in function mul>
+                                            [
+                                                0.16666666666666666
+                                            ]
+                                            
+                                        ]
+                                        
+                                    ]
+                                    
+                                ]
+                                
+                            ]
+                            
+                        ]
+                        
+                    ]
+                    
+                ]
+                
+            ]
+            
+        ]
+        
+    ]
+    
+]
+reference,index,mnd_zone,x_coord,y_coord,area_ref,sector,msoa,district,Urban city and town,Rural village,Rural hamlets and isolated dwellings,Rural town and fringe,Rural village in a sparse setting,Rural hamlets and isolated dwellings in a sparse setting,Rural town and fringe in a sparse setting,urbanrural,cordon_inner,cordon_outer,Internal,o_total,d_total,intrazonal
+501,0,1059,561750,319643,E02005561,5,King's Lynn and West Norfolk 011,Broadland ,1,0,0,0,0,0,0,urban,inside,inside,True,3.981558658730537,3.037029983887944,0.0
+502,1,1059,561690,320428,E02005561,5,King's Lynn and West Norfolk 011,Broadland ,2,0,0,0,0,0,0,urban,inside,inside,True,3.9090412291104277,3.5195628095431415,0.0
+504,2,1059,562039,320210,E02005561,5,King's Lynn and West Norfolk 011,Broadland ,1,0,0,0,0,0,0,urban,inside,inside,True,21.239308494533603,21.928375299396322,4e-05
+505,3,1059,561794,320290,E02005561,5,King's Lynn and West Norfolk 011,Broadland ,0,0,0,0,0,0,0,rural,inside,inside,True,13.780156671598036,12.403546696094688,1e-05
+506,4,1059,562225,320448,E02005561,5,King's Lynn and West Norfolk 011,Broadland ,1,0,0,0,0,0,0,urban,inside,inside,True,4.916614211267116,3.5840633753693436,0.0
+509,5,1059,562487,320281,E02005561,5,King's Lynn and West Norfolk 011,Broadland ,1,0,0,0,0,0,0,urban,inside,inside,True,2.626248952183095,2.5357115375854096,9.886657257321122e-06
+511,6,1059,562300,319813,E02005561,5,King's Lynn and West Norfolk 011,Broadland ,0,0,0,0,0,0,0,rural,inside,inside,True,2.6463957493546646,1.5633827426788924,0.0
+512,7,1059,562463,319621,E02005561,5,King's Lynn and West Norfolk 011,Broadland ,4,0,0,0,0,0,0,urban,inside,inside,True,9.313867914400952,7.026333389553799,0.0
+513,8,1057,562448,319249,E02005559,5,King's Lynn and West Norfolk 009,Broadland ,1,0,0,0,0,0,0,urban,inside,inside,True,3.726299183886315,2.3913436191387896,0.0
+514,9,1059,562067,319405,E02005561,5,King's Lynn and West Norfolk 011,Broadland ,4,0,0,0,0,0,0,urban,inside,inside,True,10.025413473356963,6.237993100136093,9.886172621550857e-05
+515,10,1059,561955,319738,E02005561,5,King's Lynn and West Norfolk 011,Broadland ,3,0,0,0,0,0,0,urban,inside,inside,True,8.235277216462947,7.615574554357804,0.0
+516,11,1059,561777,320012,E02005561,5,King's Lynn and West Norfolk 011,Broadland ,1,0,0,0,0,0,0,urban,inside,inside,True,20.540157935578335,25.352727693014202,0.00013
+517,12,1059,562050,319953,E02005561,5,King's Lynn and West Norfolk 011,Broadland ,0,0,0,0,0,0,0,rural,inside,inside,True,2.4259405436462744,2.3217971591679682,0.0
+519,13,1057,562872,320497,E02005559,5,King's Lynn and West Norfolk 009,Broadland ,1,0,0,0,0,0,0,urban,inside,inside,True,4.59116270811219,2.3311192738905833,9.93210595293562e-06
+520,14,1057,562703,320245,E02005559,5,King's Lynn and West Norfolk 009,Broadland ,2,0,0,0,0,0,0,urban,inside,inside,True,26.005824682602107,9.185122969667546,3.9860438554977165e-05
+521,15,1057,562903,319527,E02005559,5,King's Lynn and West Norfolk 009,Broadland ,3,0,0,0,0,0,0,urban,inside,inside,True,11.041386417258366,9.105048604848388,9.929488090085855e-06
+523,16,1059,561895,319114,E02005561,5,King's Lynn and West Norfolk 011,Norwich ,1,0,0,0,0,0,0,urban,inside,inside,True,2.252653204321903,2.0595660232174198,0.0
+524,17,1059,561891,318178,E02005561,5,King's Lynn and West Norfolk 011,Norwich ,0,0,0,0,0,0,0,rural,inside,inside,True,0.04163364929614189,0.02905381805394837,0.0
+525,18,1059,561501,318455,E02005561,5,King's Lynn and West Norfolk 011,Broadland ,1,0,0,0,0,0,0,urban,inside,inside,True,1.7129448727950716,1.5691572603362682,0.0
+526,19,1059,560758,319501,E02005561,5,King's Lynn and West Norfolk 011,Broadland ,2,0,0,0,0,0,0,urban,inside,inside,True,4.772828345176508,4.690524432507005,0.0005840084697749254
+527,20,1059,561195,320163,E02005561,5,King's Lynn and West Norfolk 011,Broadland ,1,0,0,0,0,0,0,urban,inside,inside,True,0.9843949293695514,1.0637974375661094,9.89069415592438e-06
+528,21,1059,560588,321266,E02005561,5,King's Lynn and West Norfolk 011,Broadland ,1,0,0,0,0,0,0,urban,inside,inside,True,0.7873131097362474,0.7869380373327861,6.924401298580117e-05
+531,22,1055,562109,320824,E02005557,5,King's Lynn and West Norfolk 007,Broadland ,1,0,0,0,0,0,0,urban,inside,inside,True,4.02675345164774,3.9462751180778235,0.0
+532,23,1055,562381,320867,E02005557,5,King's Lynn and West Norfolk 007,Broadland ,4,0,0,0,0,0,0,urban,inside,inside,True,4.186650440827279,3.6577638319147296,0.0
+533,24,1055,562783,320957,E02005557,5,King's Lynn and West Norfolk 007,Broadland ,2,0,0,0,0,0,0,urban,inside,inside,True,5.243144470498885,3.5519046420018148,5.13549385719381e-06
+534,25,1055,562026,320627,E02005557,5,King's Lynn and West Norfolk 007,Broadland ,1,0,0,0,0,0,0,urban,inside,inside,True,1.2383633620351246,1.2158024507244158,0.0
+535,26,1055,562307,320609,E02005557,5,King's Lynn and West Norfolk 007,Broadland ,1,0,0,0,0,0,0,urban,inside,inside,True,0.85154017934777,0.8502046582591686,0.0
+536,27,1055,562514,321469,E02005557,5,King's Lynn and West Norfolk 007,Broadland ,4,0,0,0,0,0,0,urban,inside,inside,True,5.946298377579405,5.878945379417973,3.594256294630517e-05
+537,28,1055,563004,321388,E02005557,5,King's Lynn and West Norfolk 007,Broadland ,4,0,0,0,0,0,0,urban,inside,inside,True,5.746829774569894,5.629357976384532,0.0006456641996548953
+538,29,1055,563026,321938,E02005557,5,King's Lynn and West Norfolk 007,Broadland ,1,0,0,0,0,0,0,urban,inside,inside,True,2.0853954172461444,2.1273726225224325,0.0
+539,30,1054,563809,321975,E02005556,5,King's Lynn and West Norfolk 006,Broadland ,8,0,0,0,0,0,0,urban,inside,inside,True,12.134959616609333,12.82169839592365,0.0
+540,31,1054,563547,321511,E02005556,5,King's Lynn and West Norfolk 006,Broadland ,3,0,0,0,0,0,0,urban,inside,inside,True,6.076946793347686,4.036967031963643,3.960912115958479e-05
+541,32,1054,564518,321944,E02005556,5,King's Lynn and West Norfolk 006,Broadland ,9,0,0,0,0,0,0,urban,inside,inside,True,11.641101048699035,10.671278923050156,9.902006505205599e-06
+542,33,1054,565364,321630,E02005556,5,King's Lynn and West Norfolk 006,Broadland ,3,0,0,0,0,0,0,urban,inside,inside,True,1.924189296039273,2.6817400002281735,1.979662489794537e-05
+543,34,1054,565696,322074,E02005556,5,King's Lynn and West Norfolk 006,Norwich ,1,0,0,0,0,0,0,urban,inside,inside,True,1.5002327811826428,1.893718346025239,0.0
+544,35,1057,563404,320958,E02005559,5,King's Lynn and West Norfolk 009,Norwich ,1,0,0,0,0,0,0,urban,inside,inside,True,12.181422445146726,7.917472291215685,1.993321372995693e-05
+545,36,1058,564262,320997,E02005560,5,King's Lynn and West Norfolk 010,Norwich ,7,0,0,0,0,0,0,urban,inside,inside,True,22.745502545866515,7.836814040770814,1e-05
+546,37,1058,565235,320792,E02005560,5,King's Lynn and West Norfolk 010,Broadland ,1,0,0,0,0,0,0,urban,inside,inside,True,26.114094931344994,20.60868588202744,2e-05
+547,38,1058,564232,319919,E02005560,5,King's Lynn and West Norfolk 010,Breckland ,10,0,0,0,0,0,0,urban,inside,inside,True,6.921611787685227,7.635226453909498,0.0036597769680166464
+548,39,1057,563500,319974,E02005559,5,King's Lynn and West Norfolk 009,Broadland ,8,0,0,0,0,0,0,urban,inside,inside,True,62.01805525133875,23.925334322454916,0.0033508499544306677
+551,40,1059,561696,318478,E02005561,5,King's Lynn and West Norfolk 011,Broadland ,2,0,0,0,0,0,0,urban,inside,inside,True,2.4113959572764228,2.350577288601859,0.0
+562,41,1059,561884,318584,E02005561,5,King's Lynn and West Norfolk 011,Broadland ,1,0,0,0,0,0,0,urban,inside,inside,True,3.514980811243526,2.5552985582465118,0.0
+566,42,1059,561976,318810,E02005561,5,King's Lynn and West Norfolk 011,Broadland ,1,0,0,0,0,0,0,urban,inside,inside,True,1.9508288961988611,1.8893342678107223,0.0
+567,43,1059,562241,318615,E02005561,5,King's Lynn and West Norfolk 011,Broadland ,1,0,0,0,0,0,0,urban,inside,inside,True,5.9642522904872965,4.26984012864946,0.0
+570,44,1059,562195,320018,E02005561,5,King's Lynn and West Norfolk 011,Broadland ,2,0,0,0,0,0,0,urban,inside,inside,True,6.248455327355824,6.609975511330616,0.0
+571,45,1057,563644,320898,E02005559,5,King's Lynn and West Norfolk 009,Broadland ,1,0,0,0,0,0,0,urban,inside,inside,True,5.483819933660007,4.4322933150259765,1e-05
+572,46,1058,564718,320634,E02005560,5,King's Lynn and West Norfolk 010,Broadland ,2,0,0,0,0,0,0,urban,inside,inside,True,0.9681511053478623,1.3293139472081472,0.0
+573,47,1059,562437,320075,E02005561,5,King's Lynn and West Norfolk 011,Broadland ,0,0,0,0,0,0,0,rural,inside,inside,True,20.705013301850222,14.404297258069027,0.0031815516370933264
+601,48,1059,561588,316981,E02005561,5,King's Lynn and West Norfolk 011,Broadland ,1,0,0,0,0,0,0,urban,outside,inside,True,1.4728084000297637,1.2233569309718608,1.9784396149622538e-05
+602,49,1059,563363,319135,E02005561,5,King's Lynn and West Norfolk 011,Breckland ,1,0,0,0,0,0,0,urban,inside,inside,True,3.593628005488797,3.2846607847366776,5.934503070582418e-05
+603,50,1059,562969,318752,E02005561,5,King's Lynn and West Norfolk 011,Broadland ,0,0,0,0,0,0,0,rural,inside,inside,True,3.958026596019143,3.1330558919926492,0.0
+604,51,1059,562755,318421,E02005561,5,King's Lynn and West Norfolk 011,Broadland ,0,0,0,0,0,0,0,rural,inside,inside,True,6.121237958162331,4.717172689713154,0.0
+605,52,1059,562611,317762,E02005561,5,King's Lynn and West Norfolk 011,Norwich ,0,0,0,0,0,0,0,rural,inside,inside,True,4.093738057378075,2.7849816212153025,0.0
+606,53,1062,564032,315687,E02005564,5,King's Lynn and West Norfolk 014,Norwich ,0,0,0,0,0,0,0,rural,inside,inside,True,0.5032936270699699,0.6218484206369811,0.0
+607,54,1055,561465,322123,E02005557,5,King's Lynn and West Norfolk 007,Broadland ,1,0,0,0,0,0,0,urban,inside,inside,True,2.781495467534423,2.674350393976226,5.648013024570041e-05
+608,55,1055,561734,320962,E02005557,5,King's Lynn and West Norfolk 007,Norwich ,0,0,0,0,0,0,0,rural,inside,inside,True,0.6805151203551689,0.6513835106232898,0.0
+609,56,1062,564115,318071,E02005564,5,King's Lynn and West Norfolk 014,Broadland ,0,0,0,0,0,0,0,rural,inside,inside,True,1.7971999788442747,1.4651793531828041,0.0
+610,57,1062,563386,316289,E02005564,5,King's Lynn and West Norfolk 014,Breckland ,0,1,0,0,0,0,0,rural,inside,inside,True,0.6736089202187894,0.8067078497405269,0.0
+5001,58,1,522937,216063,0,3,,Broadland ,0,0,0,0,0,0,0,rural,outside,outside,False,1.5842608200879025,3.703053168979733,0.0
+5002,59,5,556423,274127,0,3,,Norwich ,70,49,24,122,0,0,0,rural,outside,outside,False,26.319399351030953,28.76311696722737,0.5330778965660066
+5003,60,1088,622251,308846,E02005590,16,Norwich 007,Broadland ,0,0,0,0,0,0,0,rural,outside,outside,True,124.51146002783611,113.37742651549627,5.310032119549076
+5004,61,5,547582,305393,0,3,,Broadland ,9,0,0,0,0,0,0,urban,outside,outside,False,1.0282643063975236,1.013661727821173,0.0003781967523212858
+5005,62,1064,550817,306372,E02005566,5,King's Lynn and West Norfolk 016,Breckland ,3,0,0,0,0,0,0,urban,outside,outside,True,1.765897903610021,2.431793348486655,9.959730397418658e-06
+5006,63,1064,552362,297261,E02005566,5,King's Lynn and West Norfolk 016,Broadland ,0,4,5,1,0,0,0,rural,outside,outside,True,6.825893153389346,7.4550772955497555,0.04859964006451874
+5007,64,5,539942,296939,0,3,,Broadland ,66,1,2,0,0,0,0,urban,outside,outside,False,9.764422406928162,8.4601874750578,0.049670482279143356
+5008,65,5,541228,291077,0,3,,Broadland ,0,1,2,10,0,0,0,rural,outside,outside,False,0.8436908310182327,0.7491024769693975,0.001291578781563635
+5009,66,5,541166,285454,0,3,,Broadland ,0,0,0,0,0,0,0,rural,outside,outside,False,0.06100676569528035,0.15315640466751385,-6.776263578034403e-21
+5010,67,1065,561218,303260,E02005567,5,King's Lynn and West Norfolk 017,Broadland ,34,0,0,0,0,0,0,urban,outside,outside,True,81.35039215422879,79.68494970204529,0.02864199576967192
+5011,68,1049,570279,341683,E02005551,5,King's Lynn and West Norfolk 001,Broadland ,0,0,0,0,4,1,17,rural,outside,outside,True,54.36938825248756,56.18123043775461,0.817226670686926
+5012,69,1056,555055,323853,E02005558,5,King's Lynn and West Norfolk 008,Broadland ,0,6,6,3,0,0,0,rural,outside,inside,True,19.97515261446373,30.338987604229654,0.23383496162143394
+5013,70,1052,569799,330530,E02005554,5,King's Lynn and West Norfolk 004,Broadland ,0,0,0,17,0,0,0,rural,outside,outside,True,30.786293869879387,29.274472495436676,1.300040990065704
+5014,71,1051,567621,337577,E02005553,5,King's Lynn and West Norfolk 003,Broadland ,0,0,0,0,0,0,18,rural,outside,outside,True,25.252547479421587,25.66422845206711,1.3337487403216337
+5015,72,1,577674,212658,0,3,,Broadland ,0,0,0,0,0,0,0,rural,outside,outside,False,8.255733145047234,8.574360061319272,0.00575996868633937
+5016,73,9,573248,276805,0,3,,Broadland ,43,16,6,65,0,0,0,rural,outside,outside,False,51.31162220834811,53.63468790410722,6.992999080504699
+5017,74,5,506222,242766,0,3,,Broadland ,0,0,0,0,0,0,0,rural,outside,outside,False,4.390954155062868,11.023412629483756,0.0
+5018,75,5,521220,276552,0,3,,Broadland ,0,0,0,0,0,0,0,rural,outside,outside,False,1.2926093572113944,3.2450728953395234,0.0
+5019,76,1012,581681,297063,E02005514,9,Breckland 012,Broadland ,1,8,3,10,0,0,0,rural,outside,outside,True,32.392897824125214,37.371244736169125,7.81298787449624
+5020,77,1037,647802,311066,E02005539,7,Great Yarmouth 002,Broadland ,0,0,0,0,0,0,0,rural,outside,outside,True,17.83700990948317,11.659332538127101,0.0
+5021,78,1056,558559,320992,E02005558,5,King's Lynn and West Norfolk 008,Broadland ,0,2,1,5,0,0,0,rural,outside,inside,True,15.384001902775548,14.070793400579753,0.005053515271473646
+5022,79,5,536620,299805,0,3,,Broadland ,40,18,8,4,0,0,0,urban,outside,outside,False,7.4353303856557735,7.20084768672881,0.03323369762145424
+5023,80,1063,555128,314037,E02005565,5,King's Lynn and West Norfolk 015,Breckland ,0,5,2,2,0,0,0,rural,outside,outside,True,9.368217428445009,14.354847142222496,0.1415903913561096
+5024,81,5,548278,290274,0,3,,Broadland ,0,2,0,3,0,0,0,rural,outside,outside,False,0.7408770191751379,0.7339453430081149,0.00016456631840709634
+5025,82,1062,565262,308888,E02005564,5,King's Lynn and West Norfolk 014,Breckland ,0,5,0,0,0,0,0,rural,outside,outside,True,8.786913505732414,9.133730711885281,0.017295077568259157
+5026,83,1062,566187,316097,E02005564,5,King's Lynn and West Norfolk 014,Broadland ,0,4,1,0,0,0,0,rural,outside,inside,True,5.802417927208735,7.0817585279209485,0.0126543322940294
+5027,84,1060,568375,319204,E02005562,5,King's Lynn and West Norfolk 012,Broadland ,0,2,1,0,0,0,0,rural,outside,inside,True,4.572496399390047,3.7354873106798023,0.001453667796713968
+5028,85,5,545131,308826,0,3,,Broadland ,69,0,2,0,0,0,0,urban,outside,outside,False,18.031677970113698,17.901811764513212,0.07246939996362825
+5029,86,1064,548637,307820,E02005566,5,King's Lynn and West Norfolk 016,Broadland ,5,0,0,0,0,0,0,urban,outside,outside,True,4.659368381172501,5.352029238965721,8.962724812945221e-05
+5030,87,5,542435,313617,0,3,,Broadland ,10,7,4,0,0,0,0,rural,outside,outside,False,2.3728764364850257,2.368627790151256,0.0014465130289636897
+5031,88,1067,569159,292551,E02005569,5,King's Lynn and West Norfolk 019,Broadland ,0,16,2,8,0,0,0,rural,outside,outside,True,30.62958524340618,51.10466840726705,14.066409239714433
+5032,89,1050,582833,330663,E02005552,5,King's Lynn and West Norfolk 002,Broadland ,0,1,1,0,4,2,0,rural,outside,outside,True,12.145109840380105,19.47810924594057,1.7570750891466995
+5033,90,1061,550154,317384,E02005563,5,King's Lynn and West Norfolk 013,Broadland ,0,5,1,0,0,0,0,rural,outside,outside,True,5.562849914275183,8.095869981137772,0.04321957061304982
+5034,91,1062,564770,315583,E02005564,5,King's Lynn and West Norfolk 014,Broadland ,0,1,0,0,0,0,0,rural,inside,inside,True,1.4777297315859754,1.1899074647802033,0.0
+5035,92,1052,573080,325711,E02005554,5,King's Lynn and West Norfolk 004,Breckland ,0,4,3,0,0,0,0,rural,outside,outside,True,21.64316243563921,20.9101478713057,0.5503455176467246
+5036,93,1053,566815,324212,E02005555,5,King's Lynn and West Norfolk 005,Broadland ,0,1,0,0,0,0,0,rural,outside,inside,True,3.2733425206603988,2.797612366108301,0.0010685784076697946
+5037,94,1053,561828,326912,E02005555,5,King's Lynn and West Norfolk 005,Broadland ,7,0,0,0,0,0,0,urban,outside,inside,True,10.31320028357113,9.577801719580117,0.034560840042388616
+5038,95,1064,552224,303617,E02005566,5,King's Lynn and West Norfolk 016,Broadland ,0,2,3,2,0,0,0,rural,outside,outside,True,4.7530463250224315,5.52352007306723,0.011042282702146584
+5039,96,1053,562262,323341,E02005555,5,King's Lynn and West Norfolk 005,Broadland ,1,0,0,0,0,0,0,urban,inside,inside,True,1.3201948586687533,2.0432050629395824,6.988605104919814e-05
+5040,97,1053,564937,323326,E02005555,5,King's Lynn and West Norfolk 005,Broadland ,3,0,0,0,0,0,0,urban,inside,inside,True,6.230592163397325,7.323949485982803,0.00019979375947139813
+5041,98,1053,565644,322675,E02005555,5,King's Lynn and West Norfolk 005,Broadland ,3,0,0,0,0,0,0,urban,inside,inside,True,6.3967193207322675,7.137645617151904,0.0
+5042,99,1053,564286,322766,E02005555,5,King's Lynn and West Norfolk 005,Broadland ,4,0,0,0,0,0,0,urban,inside,inside,True,2.8653568737391333,3.0757626442791857,0.0
+5043,100,1053,564833,322635,E02005555,5,King's Lynn and West Norfolk 005,Broadland ,2,0,0,0,0,0,0,urban,inside,inside,True,2.095978877865638,2.5106465015790502,0.0
+5045,101,4,544068,322065,0,2,,Broadland ,0,4,4,16,0,0,0,rural,outside,outside,False,0.6783138629646204,0.6953806677972969,1.4289643247868134e-05
+5046,102,4,549050,323238,0,2,,Broadland ,0,0,3,13,0,0,0,rural,outside,outside,False,0.48907941524668513,0.5055442346861392,7.76859565689742e-06
+5047,103,4,425855,360558,0,2,,Broadland ,0,0,0,0,0,0,0,rural,outside,outside,False,0.5387039574236105,1.4027133561703091,0.0
+5048,104,4,435850,335145,0,2,,Broadland ,0,0,0,0,0,0,0,rural,outside,outside,False,0.21073376550943534,0.5487226548961331,0.0
+5049,105,4,466549,360014,0,2,,Broadland ,0,0,0,0,0,0,0,rural,outside,outside,False,0.5420138949918496,1.4113319843715564,0.0
+5050,106,4,455413,340674,0,2,,Broadland ,0,0,0,0,0,0,0,rural,outside,outside,False,0.29639025849177303,0.7717607528712573,0.0
+5051,107,4,459074,304819,0,2,,Broadland ,0,0,0,0,0,0,0,rural,outside,outside,False,0.2780277419402152,0.7239472057238078,0.0
+5052,108,4,477428,268312,0,2,,Broadland ,0,0,0,0,0,0,0,rural,outside,outside,False,0.5622873874972594,1.4641214583540128,0.0
+5053,109,4,525169,311557,0,2,,Broadland ,0,0,0,0,0,0,0,rural,outside,outside,False,0.0019440901838164689,0.005062151878900115,0.0
+5054,110,4,460028,308131,0,2,,Broadland ,0,0,0,0,0,0,0,rural,outside,outside,False,0.5131847467906994,1.3362647226012974,0.0
+5055,111,4,502520,374102,0,2,,Breckland ,0,0,0,0,0,0,0,rural,outside,outside,False,0.2243985680084153,0.5843039804029649,0.0
+5056,112,4,531312,325260,0,2,,Broadland ,97,60,30,40,0,0,0,rural,outside,outside,False,5.537918411502448,5.851249343718884,0.0020164909034174794
+5065,113,1062,563045,316225,E02005564,5,King's Lynn and West Norfolk 014,Broadland ,0,1,0,1,0,0,0,rural,inside,inside,True,4.810555833920287,3.726234016626544,3.960258931210571e-05
+5067,114,1062,561890,314984,E02005564,5,King's Lynn and West Norfolk 014,Broadland ,0,0,0,1,0,0,0,rural,outside,inside,True,0.567718094614717,0.9522579117386576,0.0
+5068,115,5,545868,257826,0,3,,Broadland ,0,0,0,0,0,0,0,rural,outside,outside,False,12.951216733944419,7.589667482035907,0.194992020393003
+5069,116,5,518388,302630,0,3,,Broadland ,0,0,0,0,0,0,0,rural,outside,outside,False,25.632104640438012,17.458653120726765,0.5659298909597839
+5070,117,1062,564429,316574,E02005564,5,King's Lynn and West Norfolk 014,Breckland ,0,0,0,0,0,0,0,rural,inside,inside,True,0.20080660979408238,0.2809218296102139,0.0
+5100,118,4,535540,374450,0,2,,Broadland ,0,0,0,0,0,0,0,rural,outside,outside,False,0.08797472386396758,0.22907446239425297,0.0
+5101,119,4,532895,343702,0,2,,Breckland ,0,0,0,0,0,0,0,rural,outside,outside,False,0.053041905541086405,0.1381140566576726,0.0
+5102,120,4,497303,323164,0,2,,Breckland ,0,0,0,0,0,0,0,rural,outside,outside,False,0.1284991142774607,0.33459457703740797,0.0
+5103,121,1050,579657,339392,E02005552,5,King's Lynn and West Norfolk 002,Broadland ,0,1,0,0,15,2,3,rural,outside,outside,True,42.67199090265194,51.0756344496081,19.415444354078193
+5104,122,1051,568604,333976,E02005553,5,King's Lynn and West Norfolk 003,Breckland ,0,4,1,0,0,1,8,rural,outside,outside,True,20.29233856760267,19.149645526571778,0.7514526145418512
+5105,123,1060,574479,320107,E02005562,5,King's Lynn and West Norfolk 012,Breckland ,0,3,1,3,0,0,0,rural,outside,outside,True,10.396537501370808,12.188581990225574,0.06293140003598222
+5106,124,1060,569109,321977,E02005562,5,King's Lynn and West Norfolk 012,Breckland ,0,7,0,0,0,0,0,rural,outside,inside,True,8.99908271619433,9.4610297715398,0.03341582318584131
+5107,125,1062,565704,312035,E02005564,5,King's Lynn and West Norfolk 014,Breckland ,0,2,0,0,0,0,0,rural,outside,outside,True,5.357285783476906,5.876631165480052,0.00399777807463099
+5108,126,1060,570942,314765,E02005562,5,King's Lynn and West Norfolk 012,Breckland ,0,2,2,0,0,0,0,rural,outside,outside,True,9.132700293108922,9.502687890116857,0.1311027987092426
+5109,127,1060,581400,316907,E02005562,5,King's Lynn and West Norfolk 012,Breckland ,0,3,0,0,0,0,0,rural,outside,outside,True,2.6618009918165657,3.7749787338083625,0.0073366781549905336
+5110,128,1063,558141,308897,E02005565,5,King's Lynn and West Norfolk 015,Broadland ,0,0,1,0,0,0,0,rural,outside,outside,True,1.2042759755641226,2.430883789682144,0.00039502358197040545
+5111,129,1063,558705,313687,E02005565,5,King's Lynn and West Norfolk 015,Breckland ,0,2,1,0,0,0,0,rural,outside,outside,True,4.572218825195589,7.3433930882436975,1.975410141838767e-05
+5112,130,1062,563454,317435,E02005564,5,King's Lynn and West Norfolk 014,Breckland ,1,0,0,0,0,0,0,urban,inside,inside,True,1.399741506552529,1.3745202380802175,0.0
+5115,131,1062,571735,309729,E02005564,5,King's Lynn and West Norfolk 014,Breckland ,0,3,0,5,0,0,0,rural,outside,outside,True,16.654611161525924,17.57074771270898,4.874286233710941
+5116,132,7,643837,286197,0,3,,Breckland ,0,0,0,0,0,0,0,rural,outside,outside,False,8.390353681288863,6.0923289608257285,0.0
+5117,133,1,562561,265052,0,3,,Broadland ,0,0,0,0,0,0,0,rural,outside,outside,False,0.18954549253051242,0.6880249763173651,1.3234889800848443e-23
+5118,134,1,609631,257744,0,3,,Broadland ,0,0,0,0,0,0,0,rural,outside,outside,False,2.8636171837207662,2.9721545627908106,0.0007135190630666551
+5119,135,1058,564749,319765,E02005560,5,King's Lynn and West Norfolk 010,Broadland ,10,0,0,0,0,0,0,urban,inside,inside,True,7.059513875459924,7.061747483950593,0.003075783653107958
+5120,136,1069,597328,336049,E02005571,6,North Norfolk 002,Broadland ,0,9,6,19,32,10,41,rural,outside,outside,True,432.8379311220604,409.8255390926527,354.3353261228945
+5121,137,1073,617494,336187,E02005575,6,North Norfolk 006,Broadland ,0,0,0,0,0,0,0,rural,outside,outside,True,7.164341756994645,6.496166193428547,0.0
+5122,138,1077,629794,329385,E02005579,6,North Norfolk 010,Broadland ,0,0,0,0,0,0,0,rural,outside,outside,True,3.900627587851268,2.603422242548219,0.0
+5124,139,1080,638479,322391,E02005582,6,North Norfolk 013,Broadland ,0,0,0,0,0,0,0,rural,outside,outside,True,2.2891521348877144,1.6523661489762458,0.0
+5125,140,1021,620481,319969,E02005523,13,Broadland 004,Broadland ,0,0,0,0,0,0,0,rural,outside,outside,True,1.4882323249907072,3.115086604148862,0.0
+5126,141,1008,596631,309308,E02005510,9,Breckland 008,Broadland ,68,26,18,18,0,0,0,urban,outside,outside,True,403.3267580804277,501.3204991840154,338.2270629128418
+5127,142,1002,586690,317550,E02005504,8,Breckland 002,Broadland ,0,21,9,0,3,1,0,rural,outside,outside,True,68.46199200350229,69.8708067106181,4.561013919166513
+5128,143,1019,607037,321120,E02005521,13,Broadland 002,Broadland ,0,28,14,11,0,0,0,rural,outside,outside,True,87.02330382380848,63.82893229391241,32.910036709947
+5129,144,1007,581189,308735,E02005509,8,Breckland 007,Broadland ,0,0,1,24,0,0,0,rural,outside,outside,True,52.88734778370736,60.47004927199709,1.3415546990507519
+5130,145,1104,620757,291687,E02005607,11,South Norfolk 011,Broadland ,0,0,0,0,0,0,0,rural,outside,outside,True,4.709441343233087,11.899030737338178,-1.1102230246251565e-16
+5131,146,1034,637083,304676,E02005536,14,Broadland 017,Broadland ,0,0,0,0,0,0,0,rural,outside,outside,True,14.753954613944929,15.040235751647769,0.4703552424833124
+5132,147,1011,602052,294911,E02005513,9,Breckland 011,Broadland ,93,41,43,60,0,0,0,rural,outside,outside,True,937.5164155874152,880.0270970513119,747.3427606900601
+5133,148,1015,585176,283867,E02005517,9,Breckland 015,Broadland ,0,0,0,0,0,0,0,rural,outside,outside,True,11.1079342291062,9.41867692406068,0.3868276286609277
+5134,149,1061,551179,310721,E02005563,5,King's Lynn and West Norfolk 013,Broadland ,4,7,5,0,0,0,0,rural,outside,outside,True,14.307752350917823,24.87368830284715,0.29975456966792285
+5135,150,1063,560312,314944,E02005565,5,King's Lynn and West Norfolk 015,Broadland ,0,2,0,0,0,0,0,rural,outside,inside,True,1.7394096949786342,3.0533358936250568,0.0
+5136,151,1063,561697,311266,E02005565,5,King's Lynn and West Norfolk 015,Broadland ,0,0,1,6,0,0,0,rural,outside,outside,True,11.461321059207075,14.992582063908456,0.020048937409141876
+5137,152,1066,564769,301121,E02005568,5,King's Lynn and West Norfolk 018,Broadland ,3,18,2,0,0,0,0,rural,outside,outside,True,39.982925213492905,45.850024032898304,4.552845497778748
+5138,153,1064,556326,302262,E02005566,5,King's Lynn and West Norfolk 016,Broadland ,0,1,3,0,0,0,0,rural,outside,outside,True,5.30831077842095,5.249730378381324,0.012436651155448349
+5139,154,5,542425,254769,0,3,,Broadland ,0,0,0,0,0,0,0,rural,outside,outside,False,1.3928819791702953,3.1736128874566107,7.798188630682087e-06
+5140,155,1060,576782,316476,E02005562,5,King's Lynn and West Norfolk 012,Broadland ,0,1,0,0,0,0,0,rural,outside,outside,True,2.0821009902869676,2.522340929976707,0.0026407217034223793
+5141,156,1062,563113,313613,E02005564,5,King's Lynn and West Norfolk 014,Broadland ,0,1,0,0,0,0,0,rural,outside,inside,True,1.9121203999610659,1.9303347212934556,0.0
+5142,157,1062,563058,315140,E02005564,5,King's Lynn and West Norfolk 014,Breckland ,0,0,0,4,0,0,0,rural,inside,inside,True,2.401986888676528,3.657020051676103,0.0
+5143,158,1062,563402,314679,E02005564,5,King's Lynn and West Norfolk 014,Breckland ,0,0,0,1,0,0,0,rural,inside,inside,True,0.734482265180749,1.0413639033118216,0.0
+9001,159,3,268502,753561,0,1,,Broadland ,0,0,0,0,0,0,0,rural,outside,outside,False,0.0,0.0,0.0
+9002,160,3,406479,569476,0,1,,Broadland ,0,0,0,0,0,0,0,rural,outside,outside,False,0.3876779456758933,1.4588371361714827,0.0
+9003,161,3,351884,461276,0,1,,Broadland ,0,0,0,0,0,0,0,rural,outside,outside,False,1.112663371296485,4.186963726739638,0.0
+9004,162,3,451331,452108,0,1,,Broadland ,0,0,0,0,0,0,0,rural,outside,outside,False,0.8339296397877535,3.1380858479366127,0.0
+9005,163,2,279740,271716,0,2,,Broadland ,0,0,0,0,0,0,0,rural,outside,outside,False,0.24210110447003763,0.48472307665809344,0.0
+9006,164,2,381687,286831,0,2,,Broadland ,0,0,0,0,0,0,0,rural,outside,outside,False,0.4591470197686335,0.9192841818168581,0.0
+9007,165,2,319466,123180,0,2,,Broadland ,0,0,0,0,0,0,0,rural,outside,outside,False,0.4624530202731675,0.9259058616898096,0.0
+9008,166,1,503128,154326,0,3,,Broadland ,0,0,0,0,0,0,0,rural,outside,outside,False,12.296646125138688,28.742196218295334,0.0
+9009,167,6,531331,179646,0,4,,Broadland ,0,0,0,0,0,0,0,rural,outside,outside,False,116.31344111948711,111.66112990063937,0.19136388739417204

@@ -1,0 +1,34 @@
+ Menu bar:  &Nav-Box                          6018                          6001
+      1019       695         0 54452.2 32609.2 (Mouse pixels/status/X,Y)    6363
+      1110       743         1 58887.3 29787.2 (Mouse pixels/status/X,Y)    6361
+ Menu bar:  &Nav-Box                          6018                          6001
+       574       328         0 56062.9 31959.2 (Mouse pixels/status/X,Y)    6363
+       824       583         1 56700.8 31174.4 (Mouse pixels/status/X,Y)    6361
+      1732       168   68    0  Display menu   (Pixels/key/status/Line)     6001
+      1727       102   67    0  Choice of      (Pixels/key/status/Line)     6029
+      1727        82   78    0  2 Networks -   (Pixels/key/status/Line)     6380
+          11 - Change 2-1 to 1-2 above
+           3 -   3 - Differences (1-2)
+      1752       275   48    0  0-Full set     (Pixels/key/status/Line)     6380
+          19 - Actual flow (pcu/hr)
+      1756       121   68    0  Display of     (Pixels/key/status/Line)
+      1754       125   77    0  Display Mode   (Pixels/key/status/Line)     6014
+           3 - Bandwidths
+      1756       744   81    0  Q - Return     (Pixels/key/status/Line)     6014
+      1798       484   81    0  Q - Return     (Pixels/key/status/Line)
+      1744        88   78    0  2 Networks -   (Pixels/key/status/Line)     6380
+          11 - Change 1-2 to 2-1 above
+           3 -   3 - Differences (2-1)
+      1748       275   48    0  0-Full set     (Pixels/key/status/Line)     6380
+          19 - Actual flow (pcu/hr)
+ Menu bar:  &Nav-Out                          6016
+ Menu bar:  &Nav-Out                          6016
+ Menu bar:  &Nav-Out                          6016
+ Menu bar:  &Nav-In                           6015
+ Menu bar:  &Nav-In                           6015
+ Menu bar:  &Nav-In                           6015
+ Menu bar:  &Nav-In                           6015
+ Menu bar:  &Nav-In                           6015
+ Menu bar:  &Nav-In                           6015
+ Menu bar:  &Exit                             1700
+Yes OK to quit the program?
