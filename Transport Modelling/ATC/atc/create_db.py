@@ -54,8 +54,8 @@ def create_db_ca_month_volume(db_dir,db_name):
     ####################
     
     path=os.getcwd()
-
-    hour = pd.read_csv("hour.csv")
+    #df to convert from string time to an integer number  
+    hour = pd.DataFrame({"variable":["Bin 1\n0-5:00","Bin 2\n6:00","Bin 3\n7:00","Bin 4\n8:00","Bin 5\n9:00","Bin 6\n10:00","Bin 7\n11:00","Bin 8\n12:00","Bin 9\n13:00","Bin 10\n14:00","Bin 11\n15:00","Bin 12\n16:00","Bin 13\n17:00","Bin 14\n18:00","Bin 15\n19:00","Bin 16\n20:00","Bin 17\n21:00","Bin 18\n22:00","Bin 19\n23:00"],"hour":[0,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23]})
     
     os.chdir(db_dir)
     #read all excel files from the folder
