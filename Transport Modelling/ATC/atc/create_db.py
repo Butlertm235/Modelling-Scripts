@@ -93,15 +93,15 @@ def create_db_ca_month_volume(db_dir,db_name):
                 #Reformat the data to tabular format
                 df2 = tabular_flows(df2, key, hour)
                 #Append the tab data to the direction dataframe
-                df_direction = df_direction.append(df2)
+                df_direction = pd.concat([df_direction, df2])
             #Add a column with the direction
             df_direction["direction"] = j
             #Append the direction data to the site dataframe
-            site = site.append(df_direction)
+            site = pd.concat([site,df_direction])
         #Add a column with the site name
         site["site"] = name
         #Append the site data to the database 
-        survey_database = survey_database.append(site)
+        survey_database = pd.concat([survey_database, site])
     
     survey_database = survey_database.rename_axis('date').reset_index()
     os.chdir(path)
