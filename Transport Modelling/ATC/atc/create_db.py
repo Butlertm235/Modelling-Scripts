@@ -19,7 +19,7 @@ def tabular_flows(df2, key, hour):
     represent hour of the day
     :result: dataframe with flows in tabular format"""
     
-    df2 = pd.melt(df2.reset_index(),id_vars="index",value_vars=list(df2.columns),value_name="flow")
+    df2 = pd.melt(df2.reset_index(),id_vars="index",value_vars=list(df2.columns),value_name="flow_total")
     #Split day of the week + day number into two columns
     df2[["day_week","day"]] = df2["index"].str.split(" ",expand=True)
     df2 = df2.drop(columns=["index"])
@@ -37,7 +37,7 @@ def tabular_flows(df2, key, hour):
 
 
 def create_db_ca_month_volume(db_dir,db_name):
-    """Reads CA Traffic month volume spreadsheets spreadsheets and combines them into a single dataframe
+    """Reads CA Traffic / Tagmaster month volume spreadsheets spreadsheets and combines them into a single dataframe
     that is ready for processing.
     
     This function is intended to be used only with Suffolk ATC files provided in
@@ -104,6 +104,7 @@ def create_db_ca_month_volume(db_dir,db_name):
         survey_database = pd.concat([survey_database, site])
     
     survey_database = survey_database.rename_axis('date').reset_index()
+    survey_database["source"] = "Tagmaster"
     os.chdir(path)
 
 
@@ -157,6 +158,7 @@ def create_db_webtris (db_dir,db_name):
         survey_database = survey_database.append(df)
         
     survey_database = survey_database.rename_axis('date').reset_index()
+    survey_database["source"] = "WebTRIS"
     os.chdir(path)
     export_csv = survey_database.to_csv(db_name+".csv",index=False)
     
@@ -206,6 +208,51 @@ def create_db_dft (db_dir,db_name):
         survey_database = survey_database.append(df)
     survey_database["source"] = "DfT"    
     os.chdir(path)
+    export_csv = survey_database.to_csv(db_name+".csv",index=False)
+    
+    ####################
+    #End of the function
+    ####################
+    
+    return survey_database
+
+
+def create_db_vivacity(db_dir,db_name):
+    """Reads Vivacity hourly volume csv and combines them into a single dataframe
+    that is ready for processing.
+    
+    This function is intended to be used only with Vivacity ATC files provided in
+    hourly format.
+    
+    :param db_dir: path of Suffolk ATC files (include r before the path)
+    :param db_name: name of the output csv file
+    :result: dataframe with the combined data from all files. Dataframe will also be
+    exported as a .csv file with the name "db_name.csv" """
+    
+    ####################
+    #Start of the function
+    ####################
+    
+    path=os.getcwd()
+        
+    os.chdir(db_dir)
+    #read all excel files from the folder
+    files = glob.glob("*.csv")
+    
+    #Create empty database dataframe
+    survey_database = pd.DataFrame()
+    
+    #Iteration over the csvs
+    for i in files:
+        #name of the ATC site
+        df = pd.read_csv(i,parse_dates=["UTC Datetime","Local Datetime"])
+        survey_database = survey_database.append(df)
+    survey_database = survey_database.drop(columns=["UTC Datetime","countlineName"])
+    survey_database = survey_database.rename(columns={"Car":"flow_car","LGV":"flow_LGV","OGV1":"flow_OGV1","OGV2":"flow_OGV2","Bus":"flow_bus","Motorbike":"flow_motorbike","Cyclist":"flow_cyclist","Local Datetime":"date","countlineId":"site"})
+    survey_database["source"] = "Vivacity"
+    os.chdir(path)
+
+    #Export the dataframe to a .csv file
     export_csv = survey_database.to_csv(db_name+".csv",index=False)
     
     ####################
