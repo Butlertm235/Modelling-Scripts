@@ -152,7 +152,6 @@ def create_db_webtris (db_dir,db_name):
         df = pd.read_csv(i,parse_dates = [["Report Date","Time Period Ending"]])
         df = df.drop(columns=["0 - 10 mph","11 - 15 mph","16 - 20 mph","21 - 25 mph","26 - 30 mph","31 - 35 mph","36 - 40 mph","41 - 45 mph","46 - 50 mph","51 - 55 mph","56 - 60 mph","61 - 70 mph","71 - 80 mph","80+ mph","Time Interval"])
         df = df.rename(columns={"Report Date_Time Period Ending":"date","0 - 520 cm":"flow_car","521 - 660 cm":"flow_LGV","661 - 1160 cm":"flow_OGV1","1160+ cm":"flow_OGV2","Total Volume":"flow_total"})
-        df["flow_HGV"] = df["flow_OGV1"]+df["flow_OGV2"]
         np_sum = lambda x: x.values.sum()
         df = df.resample('H', on='date').agg({"flow_car":np_sum,"flow_LGV":np_sum,"flow_OGV1":np_sum,"flow_OGV2":np_sum,"flow_HGV":np_sum,"flow_total":np_sum,"Avg mph":np.average,"site":"first"})
         survey_database = survey_database.append(df)
@@ -248,7 +247,8 @@ def create_db_vivacity(db_dir,db_name):
         df = pd.read_csv(i,parse_dates=["UTC Datetime","Local Datetime"])
         survey_database = survey_database.append(df)
     survey_database = survey_database.drop(columns=["UTC Datetime","countlineName"])
-    survey_database = survey_database.rename(columns={"Car":"flow_car","LGV":"flow_LGV","OGV1":"flow_OGV1","OGV2":"flow_OGV2","Bus":"flow_bus","Motorbike":"flow_motorbike","Cyclist":"flow_cyclist","Local Datetime":"date","countlineId":"site"})
+    survey_database = survey_database.rename(columns={"Car":"flow_car","LGV":"flow_LGV","OGV1":"flow_OGV1","OGV2":"flow_OGV2","Bus":"flow_bus","Motorbike":"flow_motorbike","Cyclist":"flow_cyclist","Local Datetime":"date","countlineId":"site","Pedestrian":"flow_pedestrian"})
+    survey_database["flow_total"] = survey_database["flow_car"] + survey_database["flow_cyclist"] + survey_database["flow_motorbike"] + survey_database["flow_bus"] + survey_database["flow_OGV1"] + survey_database["flow_OGV2"] + survey_database["flow_LGV"]
     survey_database["source"] = "Vivacity"
     os.chdir(path)
 
