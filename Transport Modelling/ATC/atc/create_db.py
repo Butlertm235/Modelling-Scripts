@@ -19,7 +19,7 @@ def tabular_flows(df2, key, hour):
     represent hour of the day
     :result: dataframe with flows in tabular format"""
     
-    df2 = pd.melt(df2.reset_index(),id_vars="index",value_vars=list(df2.columns),value_name="flow")
+    df2 = pd.melt(df2.reset_index(),id_vars="index",value_vars=list(df2.columns),value_name="flow_total")
     #Split day of the week + day number into two columns
     df2[["day_week","day"]] = df2["index"].str.split(" ",expand=True)
     df2 = df2.drop(columns=["index"])
@@ -37,7 +37,7 @@ def tabular_flows(df2, key, hour):
 
 
 def create_db_ca_month_volume(db_dir,db_name):
-    """Reads CA Traffic month volume spreadsheets spreadsheets and combines them into a single dataframe
+    """Reads CA Traffic / Tagmaster month volume spreadsheets spreadsheets and combines them into a single dataframe
     that is ready for processing.
     
     This function is intended to be used only with Suffolk ATC files provided in
@@ -104,6 +104,7 @@ def create_db_ca_month_volume(db_dir,db_name):
         survey_database = pd.concat([survey_database, site])
     
     survey_database = survey_database.rename_axis('date').reset_index()
+    survey_database["source"] = "Tagmaster"
     os.chdir(path)
 
 
@@ -151,12 +152,12 @@ def create_db_webtris (db_dir,db_name):
         df = pd.read_csv(i,parse_dates = [["Report Date","Time Period Ending"]])
         df = df.drop(columns=["0 - 10 mph","11 - 15 mph","16 - 20 mph","21 - 25 mph","26 - 30 mph","31 - 35 mph","36 - 40 mph","41 - 45 mph","46 - 50 mph","51 - 55 mph","56 - 60 mph","61 - 70 mph","71 - 80 mph","80+ mph","Time Interval"])
         df = df.rename(columns={"Report Date_Time Period Ending":"date","0 - 520 cm":"flow_car","521 - 660 cm":"flow_LGV","661 - 1160 cm":"flow_OGV1","1160+ cm":"flow_OGV2","Total Volume":"flow_total"})
-        df["flow_HGV"] = df["flow_OGV1"]+df["flow_OGV2"]
         np_sum = lambda x: x.values.sum()
         df = df.resample('H', on='date').agg({"flow_car":np_sum,"flow_LGV":np_sum,"flow_OGV1":np_sum,"flow_OGV2":np_sum,"flow_HGV":np_sum,"flow_total":np_sum,"Avg mph":np.average,"site":"first"})
         survey_database = survey_database.append(df)
         
     survey_database = survey_database.rename_axis('date').reset_index()
+    survey_database["source"] = "WebTRIS"
     os.chdir(path)
     export_csv = survey_database.to_csv(db_name+".csv",index=False)
     
@@ -206,6 +207,52 @@ def create_db_dft (db_dir,db_name):
         survey_database = survey_database.append(df)
     survey_database["source"] = "DfT"    
     os.chdir(path)
+    export_csv = survey_database.to_csv(db_name+".csv",index=False)
+    
+    ####################
+    #End of the function
+    ####################
+    
+    return survey_database
+
+
+def create_db_vivacity(db_dir,db_name):
+    """Reads Vivacity hourly volume csv and combines them into a single dataframe
+    that is ready for processing.
+    
+    This function is intended to be used only with Vivacity ATC files provided in
+    hourly format.
+    
+    :param db_dir: path of Suffolk ATC files (include r before the path)
+    :param db_name: name of the output csv file
+    :result: dataframe with the combined data from all files. Dataframe will also be
+    exported as a .csv file with the name "db_name.csv" """
+    
+    ####################
+    #Start of the function
+    ####################
+    
+    path=os.getcwd()
+        
+    os.chdir(db_dir)
+    #read all excel files from the folder
+    files = glob.glob("*.csv")
+    
+    #Create empty database dataframe
+    survey_database = pd.DataFrame()
+    
+    #Iteration over the csvs
+    for i in files:
+        #name of the ATC site
+        df = pd.read_csv(i,parse_dates=["UTC Datetime","Local Datetime"])
+        survey_database = survey_database.append(df)
+    survey_database = survey_database.drop(columns=["UTC Datetime","countlineName"])
+    survey_database = survey_database.rename(columns={"Car":"flow_car","LGV":"flow_LGV","OGV1":"flow_OGV1","OGV2":"flow_OGV2","Bus":"flow_bus","Motorbike":"flow_motorbike","Cyclist":"flow_cyclist","Local Datetime":"date","countlineId":"site","Pedestrian":"flow_pedestrian"})
+    survey_database["flow_total"] = survey_database["flow_car"] + survey_database["flow_cyclist"] + survey_database["flow_motorbike"] + survey_database["flow_bus"] + survey_database["flow_OGV1"] + survey_database["flow_OGV2"] + survey_database["flow_LGV"]
+    survey_database["source"] = "Vivacity"
+    os.chdir(path)
+
+    #Export the dataframe to a .csv file
     export_csv = survey_database.to_csv(db_name+".csv",index=False)
     
     ####################
