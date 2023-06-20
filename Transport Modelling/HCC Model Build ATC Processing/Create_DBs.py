@@ -3,7 +3,7 @@ import os
 import glob
 import numpy as np
 import datetime
-
+import re
 
 
 
@@ -62,8 +62,8 @@ def format_ATC_2019_NC_1(input_dir: str, output_dir: str):
                 formatdf['source'] = 'ATC'
                 formatdf['flow_car'] = ''
                 formatdf['flow_LGV'] = ''
-                formatdf['flow_OGV1'] = ''
-                formatdf['flow_OGV2'] = ''
+                formatdf['flow_OGV_1'] = ''
+                formatdf['flow_OGV_2'] = ''
                 formatdf['flow_HGV'] = ''
 
                 survey_database = survey_database.append(formatdf)
@@ -123,8 +123,8 @@ def format_ATC_2019_NC_2(input_dir: str, output_dir: str):
                 formatdf['source'] = 'ATC'
                 formatdf['flow_car'] = ''
                 formatdf['flow_LGV'] = ''
-                formatdf['flow_OGV1'] = ''
-                formatdf['flow_OGV2'] = ''
+                formatdf['flow_OGV_1'] = ''
+                formatdf['flow_OGV_2'] = ''
                 formatdf['flow_HGV'] = ''
 
                 survey_database = survey_database.append(formatdf)
@@ -176,18 +176,18 @@ def format_ATC_2019_NC_3(input_dir: str, output_dir: str):
                 day_df = pd.DataFrame(columns = ['time','date','Total Flow','flow_total'])
                 day_df['date'] = survey_date + " " + df['Begin']
                 day_df['date']= pd.to_datetime(day_df['date'])
-                day_df['time']=day_df['date'].dt.time
+                #day_df['time']=day_df['date'].dt.time
                 print(df.columns.values[day+1])
-                day_df['Total Flow'] = df[df.columns.values[day+1]]
+                day_df['flow_total'] = df[df.columns.values[day+1]]
 
                 print("check 2:")
                 #print(day_df)
                 #print(df[df.columns.values[day+1]])
-                day_df['flow_total'] = day_df['Total Flow'].rolling(4).sum().shift(periods = -3)
+                #day_df['flow_total'] = day_df['Total Flow'].rolling(4).sum().shift(periods = -3)
                 print(day_df)
                 print(df[df.columns.values[day+1]])
                 nan_value = float("NaN")
-                day_df = pd.merge(Time_CSV,day_df,how="inner", left_on=['Begin'],right_on=['time']) 
+                #day_df = pd.merge(Time_CSV,day_df,how="inner", left_on=['Begin'],right_on=['time']) 
                 print(day_df)
                 day_df.replace("", nan_value, inplace=True)
 
@@ -201,14 +201,14 @@ def format_ATC_2019_NC_3(input_dir: str, output_dir: str):
                 formatdf['source'] = 'ATC'
                 formatdf['flow_car'] = ''
                 formatdf['flow_LGV'] = ''
-                formatdf['flow_OGV1'] = ''
-                formatdf['flow_OGV2'] = ''
+                formatdf['flow_OGV_1'] = ''
+                formatdf['flow_OGV_2'] = ''
                 formatdf['flow_HGV'] = ''
                 print("Check 3:")
                 print(formatdf)
 
             survey_database = survey_database.append(formatdf)
-            survey_database = survey_database.drop(columns = ['Begin', 'Total Flow'])
+            #survey_database = survey_database.drop(columns = ['Begin', 'Total Flow'])
 
     survey_database.to_csv(f"{output_dir}\\ATC_2019_NC_3.csv")
 
@@ -777,8 +777,8 @@ def format_ATC_2022_NC_1(input_dir: str, output_dir: str):
             formatdf['source'] = 'ATC'
             formatdf['flow_car'] = ''
             formatdf['flow_LGV'] = ''
-            formatdf['flow_OGV1'] = ''
-            formatdf['flow_OGV2'] = ''
+            formatdf['flow_OGV_1'] = ''
+            formatdf['flow_OGV_2'] = ''
             formatdf['flow_HGV'] = ''
 
             survey_database = survey_database.append(formatdf)
@@ -848,8 +848,8 @@ def format_ATC_2022_NC_2(input_dir: str, output_dir: str):
             formatdf['source'] = 'ATC'
             formatdf['flow_car'] = ''
             formatdf['flow_LGV'] = ''
-            formatdf['flow_OGV1'] = ''
-            formatdf['flow_OGV2'] = ''
+            formatdf['flow_OGV_1'] = ''
+            formatdf['flow_OGV_2'] = ''
             formatdf['flow_HGV'] = ''
 
 
@@ -937,8 +937,8 @@ def format_ATC_2022_NC_3(input_dir: str, output_dir: str):
                 formatdf['source'] = 'ATC'
                 formatdf['flow_car'] = ''
                 formatdf['flow_LGV'] = ''
-                formatdf['flow_OGV1'] = ''
-                formatdf['flow_OGV2'] = ''
+                formatdf['flow_OGV_1'] = ''
+                formatdf['flow_OGV_2'] = ''
                 formatdf['flow_HGV'] = ''
 
                 survey_database = survey_database.append(formatdf)
@@ -989,7 +989,7 @@ def format_ATC_2022_NC_4(input_dir: str, output_dir: str):
 
             for day in range(7):
                 survey_date = str(df.columns.values[day+1].date())
-                day_df = pd.DataFrame(columns = ['time','date','Total Flow','flow_total'])
+                day_df = pd.DataFrame(columns = ['time','date','flow_total'])
                 day_df['date'] = survey_date + " " + df['Begin']
                 day_df['date']= pd.to_datetime(day_df['date'])
                 day_df['flow_total'] = df[df.columns.values[day+1]]
@@ -1007,10 +1007,683 @@ def format_ATC_2022_NC_4(input_dir: str, output_dir: str):
                 formatdf['source'] = 'ATC'
                 formatdf['flow_car'] = ''
                 formatdf['flow_LGV'] = ''
-                formatdf['flow_OGV1'] = ''
-                formatdf['flow_OGV2'] = ''
+                formatdf['flow_OGV_1'] = ''
+                formatdf['flow_OGV_2'] = ''
                 formatdf['flow_HGV'] = ''
 
             survey_database = survey_database.append(formatdf)
 
     survey_database.to_csv(f"{output_dir}\\ATC_2022_NC_4.csv")
+
+def format_ATC_2023_SEVERNSIDE(input_dir: str, output_dir: str):
+
+    os.chdir(input_dir)
+
+    time_filter = pd.read_csv("Time_Filter.csv")
+    time_filter['TIME'] = time_filter['TIME'].astype(str)
+
+    
+    file_names = glob.glob("*.xlsm")
+
+    AM_PEAK_PERIOD = ["07:00", "08:00", "09:00"]
+    PM_PEAK_PERIOD = ["16:00", "17:00", "18:00"]
+
+    appended_data = pd.DataFrame(columns = ["date","site", "direction", 'flow_car', 'flow_LGV', 'flow_OGV_1', "flow_OGV_2", "flow_HGV",'flow_BUS', 'flow_total'])
+    discarded_data = pd.DataFrame()
+
+    print(file_names)
+
+    for file in file_names:
+        print("Adding ", file, " to the database")
+
+        site =  re.findall('\s[0-9]+', file)[0][1:]
+        print(site)
+        sheets = pd.ExcelFile(file)
+        sheet_names = sheets.sheet_names
+        sheets.close()
+
+        sheet_number = 1
+
+
+        for name in sheet_names:
+
+            print(f"Processing sheet {name}")
+
+            if(name[2] != " "):
+                continue
+            if(name[3] == "m"):
+                continue
+            
+            date = name
+            date = date.replace(" ",r"/")
+            print(date)
+            temp_df = pd.DataFrame(columns = ["date","site", "direction", 'flow_car', 'flow_LGV', 'flow_OGV_1', "flow_OGV_2",'flow_BUS', "flow_HGV", 'flow_total'])
+            
+
+            data = pd.read_excel(file, sheet_name = name)
+
+
+            dir1 = data.iloc[6,1][14:]
+            dir2 = data.iloc[6,13][14:]
+            data.columns = data.iloc[7]
+            data = data[8:294]
+
+            data["TIME"] = data["TIME"].astype(str)
+
+            data = pd.merge(data,time_filter, how = "inner", on = "TIME")
+
+            temp_df['date'] = date + " " + data["TIME"]
+            temp_df['date'] = pd.to_datetime(temp_df['date'], dayfirst = True)
+            temp_df["site"] = site
+            temp_df["direction"] = dir1
+            temp_df.iloc[:,[3,4,5,6,7]] = data.iloc[:,[1,2,3,4,5]]
+            temp_df["flow_HGV"] = temp_df['flow_OGV_1'] + temp_df['flow_OGV_2']
+            temp_df["flow_total"] = temp_df['flow_car'] + temp_df['flow_LGV'] + temp_df['flow_HGV']
+            
+            
+
+            appended_data = pd.concat([appended_data, temp_df])
+
+            temp_df["direction"] = dir2
+            temp_df.iloc[:,[3,4,5,6,7]] = data.iloc[:,[13,14,15,16,17]]
+            temp_df["flow_HGV"] = temp_df['flow_OGV_1'] + temp_df['flow_OGV_2']
+            temp_df["flow_total"] = temp_df['flow_car'] + temp_df['flow_LGV'] + temp_df['flow_HGV'] + temp_df['flow_BUS']
+
+            appended_data = pd.concat([appended_data, temp_df])
+            
+            temp_df
+
+            sheet_number +=1
+    appended_data.to_csv(f"{output_dir}\\ATC_2023_SEVERNSIDE.csv")
+
+def format_ATC_2023_HCC_NC_1(input_dir: str, output_dir: str, discarded_dir: str):
+    os.chdir(input_dir)
+
+    discarded_data = pd.DataFrame()
+
+    files = glob.glob("*.xlsx")
+    survey_database = pd.DataFrame()
+    AM_PEAK_PERIOD = ["07:00", "8:00", "9:00"]
+    PM_PEAK_PERIOD = ["16:00", "17:00", "18:00"]
+
+    for file in files:
+        print("Adding ",file," to the database")
+        file_path = os.path.join(input_dir,file)
+        
+        sitedf = pd.read_excel(file_path,skiprows=0,usecols="A",index_col=None,nrows=0)
+        site = str(sitedf.columns.values[0])
+        site = site[-3:]
+        
+        for table in range (100):
+                skipr = 6+table*45
+
+
+                dirdf = pd.read_excel(file_path,skiprows = skipr - 4,usecols="G",index_col=None,nrows=0)
+                if len(dirdf. columns) == 0:
+                    break
+                
+                dir = dirdf.columns.values[0]
+            
+                if dir == "Channel: Total Flow":
+                    continue
+
+                if dir == "Channel: Errors":
+                    continue
+
+                if "Cycles" in dir:
+                    continue
+                
+                if "Traffic" in dir:
+                    continue
+
+                df = pd.read_excel(file_path,skiprows = skipr -1,nrows=24,dtype={0:str})
+                tabledf = pd.read_excel(file_path,skiprows=6,usecols="A:H",index_col=None,nrows=24)
+                formatdf = pd.DataFrame(columns = ['flow_total'])
+
+                for day in range(7):
+                    survey_date = str(df.columns.values[day+1].date())
+
+                    day_df = pd.DataFrame(columns = ['date','flow_total'])
+                    day_df['date'] = survey_date + " " + df['Begin']
+                    day_df['date']= pd.to_datetime(day_df['date'])
+                    day_df['flow_total'] = df[df.columns.values[day+1]]
+
+                    day_df['site'] = site
+                    day_df['direction'] = dir
+
+                    day_df = day_df.set_index(["date"])
+
+                    am_peak_datetime_objects = []
+                    for peak_hour in AM_PEAK_PERIOD:
+                        peak_hour = survey_date + " " + peak_hour
+                        peak_hour = datetime.datetime.strptime(peak_hour, '%Y-%m-%d %H:%M')
+                    am_peak_datetime_objects.append(peak_hour)
+
+                    pm_peak_datetime_objects = []
+                    for peak_hour in PM_PEAK_PERIOD:
+                        peak_hour = survey_date + " " + peak_hour
+                        peak_hour = datetime.datetime.strptime(peak_hour, '%Y-%m-%d %H:%M')
+                        pm_peak_datetime_objects.append(peak_hour)
+
+                
+                    period_sum = 0
+
+                    for peak_hour in am_peak_datetime_objects:
+                        period_sum += day_df.loc[peak_hour, "flow_total"]
+        
+
+                
+                    if period_sum == 0:
+                        discard_record = day_df[["site", "direction"]].head(1)
+                        discarded_data = pd.concat([discarded_data, discard_record])
+                        continue
+
+                    period_sum = 0
+                    for peak_hour in pm_peak_datetime_objects:
+                        period_sum += day_df.loc[peak_hour, "flow_total"]
+                        print(f"Time period {peak_hour} sum is: {period_sum}")
+                    #print(peak_hour)
+
+                    if period_sum == 0:
+                        discard_record = day_df[["site", "direction"]].head(1)
+                        discarded_data = pd.concat([discarded_data, discard_record])
+                        continue
+                        
+                    formatdf = pd.concat([formatdf,day_df])
+
+                    formatdf['source'] = 'ATC'
+                    formatdf['flow_car'] = ''
+                    formatdf['flow_LGV'] = ''
+                    formatdf['flow_OGV1'] = ''
+                    formatdf['flow_OGV2'] = ''
+                    formatdf['flow_HGV'] = ''
+                
+                nan_value = float("NaN")
+
+                formatdf.replace("", nan_value, inplace=True)
+
+                formatdf.dropna(subset = ["flow_total"], inplace=True)
+
+                if "Northeast" in dir:
+                    formatdf["direction"] = "North East"
+
+                elif "Northwest" in dir:
+                    formatdf["direction"] = "North West"
+                
+                elif "Southeast" in dir:
+                    formatdf["direction"] = "South East"
+                
+                elif "Southwest" in dir:
+                    formatdf["direction"] = "South West"
+                
+                elif "East" in dir:
+                    formatdf["direction"] = "East"
+
+                elif "West" in dir:
+                    formatdf["direction"] = "West"
+                
+                elif "North" in dir:
+                    formatdf["direction"] = "North"
+                
+                elif "South" in dir:
+                    formatdf["direction"] = "South"
+
+                formatdf.index.name = 'date'
+
+                survey_database = pd.concat([survey_database,formatdf])
+
+    survey_database.to_csv(f"{output_dir}\\ATC_2023_HCC_NC_HOURLY_DBs.csv")
+    discarded_data.to_csv(f"{discarded_dir}\\Discarded_Data_ATC_2023_HCC_NC_HOURLY_DBs.csv", index=True)
+
+def format_ATC_2023_HCC_NC_2(input_dir: str, output_dir: str, discarded_dir: str):
+
+    os.chdir(input_dir)
+
+    AM_PEAK_PERIOD = ["07:00", "8:00", "9:00"]
+    PM_PEAK_PERIOD = ["16:00", "17:00", "18:00"]
+    files = glob.glob("*.xlsx")
+    survey_database = pd.DataFrame()
+    discarded_data = pd.DataFrame() 
+
+    for file in files:
+        print("Adding ",file," to the database")
+        file_path = os.path.join(input_dir,file)
+        
+        sitedf = pd.read_excel(file_path,skiprows=0,usecols="A",index_col=None,nrows=0)
+        site = str(sitedf.columns.values[0])
+        site = site[-3:]
+        
+        for table in range (100):
+            skipr = 5+table*117
+
+            dirdf = pd.read_excel(file_path,skiprows = skipr - 3,usecols="G",index_col=None,nrows=0)
+            if len(dirdf. columns) == 0:
+                break
+                  
+            dir = dirdf.columns.values[0]
+            
+            if dir == "Channel: Total Flow":
+                    continue
+
+            df = pd.read_excel(file_path,skiprows = skipr ,nrows=96,dtype={0:str})
+            formatdf = pd.DataFrame(columns = ['flow_total'])
+
+            for day in range(7):
+                    
+                    survey_date = str(df.columns.values[day+1].date())
+                    day_df = pd.DataFrame(columns = ['date','flow_total'])
+                    day_df['date'] = survey_date + " " + df['Begin']
+                    day_df['date']= pd.to_datetime(day_df['date'])
+                    day_df['flow_total'] = df[df.columns.values[day+1]]
+
+                    day_df['site'] = site
+                    day_df['direction'] = dir
+
+
+                    day_df = day_df.set_index("date")
+
+                    #day_df = day_df.set_index(["date"])
+
+                    #hourlydf = pd.concat([day_df,hourlydf])
+
+                    #np_sum = lambda x: x.values.sum()
+                    #hourlydf = hourlydf.resample('60min').agg({"site":"first","direction":"first","flow_total":np_sum})
+
+                    am_peak_datetime_objects = []
+                    for peak_hour in AM_PEAK_PERIOD:
+                        peak_hour = survey_date + " " + peak_hour
+                        peak_hour = datetime.datetime.strptime(peak_hour, '%Y-%m-%d %H:%M')
+                        am_peak_datetime_objects.append(peak_hour)
+
+                    pm_peak_datetime_objects = []
+                    for peak_hour in PM_PEAK_PERIOD:
+                        peak_hour = survey_date + " " + peak_hour
+                        peak_hour = datetime.datetime.strptime(peak_hour, '%Y-%m-%d %H:%M')
+                        pm_peak_datetime_objects.append(peak_hour)
+
+
+                    #hourlydf = pd.concat([day_df,hourlydf])
+
+                    np_sum = lambda x: x.values.sum()
+                    hourly_data_table = day_df.resample('60min').agg({"site":"first","direction":"first","flow_total":np_sum})
+
+                
+                    period_sum = 0
+
+                    for peak_hour in am_peak_datetime_objects:
+                        period_sum += hourly_data_table.loc[peak_hour, "flow_total"]
+                    
+                    if period_sum == 0:
+                        discard_record = hourly_data_table[["site", "direction"]].head(1)
+                        discarded_data = pd.concat([discarded_data, discard_record])
+                        #table_number += 1
+                        continue
+
+                    period_sum = 0
+                    for peak_hour in pm_peak_datetime_objects:
+                        period_sum += hourly_data_table.loc[peak_hour, "flow_total"]
+
+                    if period_sum == 0:
+                        discard_record = hourly_data_table[["site", "direction"]].head(1)
+                        discarded_data = pd.concat([discarded_data, discard_record])
+                        #table_number += 1
+                        continue
+                        
+                    formatdf = pd.concat([formatdf,day_df])
+
+                    formatdf['source'] = 'ATC'
+                    formatdf['flow_car'] = ''
+                    formatdf['flow_LGV'] = ''
+                    formatdf['flow_OGV_1'] = ''
+                    formatdf['flow_OGV_2'] = ''
+                    formatdf['flow_HGV'] = ''
+
+                    #print(hourlydf)
+                
+            nan_value = float("NaN")
+
+            formatdf.replace("", nan_value, inplace=True)
+
+            formatdf.dropna(subset = ["flow_total"], inplace=True)
+
+            if "Northeast" in dir:
+                    formatdf["direction"] = "North East"
+
+            elif "Northwest" in dir:
+                    formatdf["direction"] = "North West"
+                
+            elif "Southeast" in dir:
+                    formatdf["direction"] = "South East"
+                
+            elif "Southwest" in dir:
+                    formatdf["direction"] = "South West"
+                
+                
+            elif "East" in dir:
+                    formatdf["direction"] = "East"
+
+            elif "West" in dir:
+                    formatdf["direction"] = "West"
+                
+            elif "North" in dir:
+                    formatdf["direction"] = "North"
+                
+            elif "South" in dir:
+                    formatdf["direction"] = "South"
+
+            formatdf.index.name = 'date'
+
+            survey_database = pd.concat([survey_database,formatdf])
+
+    survey_database.to_csv(f"{output_dir}\\ATC_2023_HCC_NC_2.csv")
+    discarded_data.to_csv(f"{discarded_dir}\\Discarded_Data_ATC_2023_HCC_NC_2.csv", index=True)
+
+
+def format_ATC_2023_HCC_C_1(input_dir: str, output_dir: str, discarded_dir: str):
+    os.chdir(input_dir)
+
+    AM_PEAK_PERIOD = ["07:00", "8:00", "9:00"]
+    PM_PEAK_PERIOD = ["16:00", "17:00", "18:00"]
+
+    discarded_data = pd.DataFrame()
+
+    files = glob.glob("*.csv")
+    survey_database = pd.DataFrame()
+
+    for file in files:
+        print("Adding ",file," to the database")
+        file_path = os.path.join(input_dir,file)
+
+        table = 0
+        i = 1
+        
+        for data in pd.read_csv(file_path, chunksize = 117):
+            table = table + i
+            site = str(data.columns.values[0])[-8:]
+
+            if site == "78000001":
+                    site = "611"
+            else:
+                    site = site[-3:]
+
+            dir = data.iloc[1,6][9:]
+            
+            date = str(data.iloc[1,3])
+            
+            if dir == "Total Flow":
+                continue
+            
+            data = data.rename(columns = data.iloc[4])
+            data = data[5:101]
+            data[['Car/lVan', 'Cr/lV+Tr', 'H. Van','LGV', 'Rigid', 'Rg+Tr', 'ArticHGV', 'Minibus', 'Bus' ]] = data[['Car/lVan', 'Cr/lV+Tr', 'H. Van','LGV', 'Rigid', 'Rg+Tr', 'ArticHGV', 'Minibus', 'Bus' ]].apply(pd.to_numeric)
+            data['Date'] = date
+
+            data['date'] = data['Date'] + " " + data['Begin']
+            
+            data['date'] = pd.to_datetime(data['date'])
+            
+            data['direction'] = dir
+            data['site'] = site
+
+            am_peak_datetime_objects = []
+            for peak_hour in AM_PEAK_PERIOD:
+                    peak_hour = date + " " + peak_hour
+                    peak_hour = datetime.datetime.strptime(peak_hour, '%d-%b-%y %H:%M')
+                    am_peak_datetime_objects.append(peak_hour)
+
+            pm_peak_datetime_objects = []
+            for peak_hour in PM_PEAK_PERIOD:
+                    peak_hour = date + " " + peak_hour
+                    peak_hour = datetime.datetime.strptime(peak_hour, '%d-%b-%y %H:%M')
+                    pm_peak_datetime_objects.append(peak_hour)
+
+            data['flow_car'] = data['Car/lVan'] + data['Cr/lV+Tr']
+            data['flow_LGV'] = data['H. Van'] + data['LGV']
+            data['flow_OGV_1'] = data['Rigid'] 
+            data['flow_OGV_2'] = data['Rg+Tr'] + data['ArticHGV']
+            data['flow_HGV'] = data['flow_OGV_1'] + data['flow_OGV_2']
+            data['flow_BUS'] = data['Minibus'] + data['Bus']
+            data['flow_total'] = data['flow_car'] + data['flow_LGV'] +  data['flow_HGV'] + data['flow_BUS']
+            
+            data = data.drop(data.columns[[0,1,2,3,4,5,6,7,8,9,10,11,12,]],axis = 1)
+
+            data = data.set_index(["date"])
+
+            np_sum = lambda x: x.values.sum()
+            hourlydf = data.resample('60min').agg({"site":"first","direction":"first","flow_car":np_sum,"flow_LGV":np_sum,"flow_OGV_1":np_sum,"flow_OGV_2":np_sum,"flow_HGV":np_sum,"flow_BUS":np_sum,"flow_total":np_sum})
+
+            period_sum = 0
+                
+            for peak_hour in am_peak_datetime_objects:
+                    period_sum += hourlydf.loc[peak_hour, "flow_total"]
+                
+            if period_sum == 0:
+                    discard_record = hourlydf[["site", "direction"]].head(1)
+                    discarded_data = pd.concat([discarded_data, discard_record])
+                    table += 1
+                    continue
+
+            period_sum = 0
+            for peak_hour in pm_peak_datetime_objects:
+                    period_sum += hourlydf.loc[peak_hour, "flow_total"]
+
+            if period_sum == 0:
+                    discard_record = hourlydf[["site", "direction"]].head(1)
+                    discarded_data = pd.concat([discarded_data, discard_record])
+                    table += 1
+                    continue
+
+            nan_value = float("NaN")
+
+            data['source'] = 'ATC'
+
+            data.replace("", nan_value, inplace=True)
+
+            data.dropna(subset = ["flow_total"], inplace=True)
+
+            if "Northeast" in dir:
+                    data["direction"] = "North East"
+
+            elif "Northwest" in dir:
+                    data["direction"] = "North West"
+                
+            elif "Southeast" in dir:
+                    data["direction"] = "South East"
+                
+            elif "Southwest" in dir:
+                    data["direction"] = "South West"
+                
+            elif "East" in dir:
+                    data["direction"] = "East"
+
+            elif "West" in dir:
+                    data["direction"] = "West"
+                
+            elif "North" in dir:
+                data["direction"] = "North"
+                
+            elif "South" in dir:
+                    data["direction"] = "South"
+
+            survey_database = pd.concat([survey_database,data])
+
+    survey_database.to_csv(f"{output_dir}\\ATC_2023_HCC_C_1.csv")
+    discarded_data.to_csv(f"{discarded_dir}\\Discarded_Data_ATC_2023_HCC_C_1.csv", index=True)
+
+def format_ATC_2023_HCC_C_2(input_dir: str, output_dir: str, discarded_dir: str):
+    os.chdir(input_dir)
+
+    AM_PEAK_PERIOD = ["07:00", "8:00", "9:00"]
+    PM_PEAK_PERIOD = ["16:00", "17:00", "18:00"]
+
+    discarded_data = pd.DataFrame()
+
+    #Time_CSV = pd.read_csv("Time.csv")
+    files = glob.glob("*.csv")
+    survey_database = pd.DataFrame()
+
+    for file in files:
+        print("Adding ",file," to the database")
+        file_path = os.path.join(input_dir,file)
+
+        table = 0
+        i = 1
+        n = -1
+        
+        for data in pd.read_csv(file_path, chunksize = 117):
+            table = table + i
+            site = str(data.columns.values[0])[-3:]
+            print ("Table number : ", table, "   Site number :  ", site)
+            #print (sheet_names)
+            if site == "78000001":
+                    site = "611"
+            else:
+                    site = site[-3:]
+
+            dir = data.iloc[1,6][9:]
+            
+            date = str(data.iloc[1,3])
+            
+            #if len(date) == 0:
+                #break
+            if dir == "Total Flow":
+                continue
+            if "1" in dir:
+                continue
+            if "2" in dir:
+                continue
+            if "3" in dir:
+                continue
+            if  "Northbound" in dir:
+                continue
+            if  "Southbound" in dir:
+                continue
+            if  "Eastbound" in dir:
+                continue
+            if  "Westbound" in dir:
+                continue
+                
+                #"Southbound" "Eastbound" "Westbound" 
+                    #continue
+            #if dir == "Westbound OS" or dir == "Westbound NS" or dir == "Northbound 1" or dir == "Northbound 2" or dir == "Southbound 1" or dir == "Southbound 2" or dir == "Southbound 3":
+                #continue
+            #if dir == "Southwest 1" or dir == "Southwest 2" or dir == "Southeast 1" or dir == "Southeast 2" or dir == "Northwest 1" or dir == "Northwest 2" or dir == "Northeast 1" or dir == "Northeast 2" or dir == "Total Flow":
+                #continue
+            
+            data = data.rename(columns = data.iloc[4])
+            data = data[5:101]
+            data[['Car/lVan', 'Cr/lV+Tr', 'H. Van','LGV', 'Rigid', 'Rg+Tr', 'ArticHGV', 'Minibus', 'Bus' ]] = data[['Car/lVan', 'Cr/lV+Tr', 'H. Van','LGV', 'Rigid', 'Rg+Tr', 'ArticHGV', 'Minibus', 'Bus' ]].apply(pd.to_numeric)
+            data['Date'] = date
+
+            data['date'] = data['Date'] + " " + data['Begin']
+            
+            data['date'] = pd.to_datetime(data['date'])
+            
+            data['direction'] = dir
+            data['site'] = site
+
+            am_peak_datetime_objects = []
+            for peak_hour in AM_PEAK_PERIOD:
+                    peak_hour = date + " " + peak_hour
+                    peak_hour = datetime.datetime.strptime(peak_hour, '%d-%b-%y %H:%M')
+                    am_peak_datetime_objects.append(peak_hour)
+
+                    
+            pm_peak_datetime_objects = []
+            for peak_hour in PM_PEAK_PERIOD:
+                    peak_hour = date + " " + peak_hour
+                    peak_hour = datetime.datetime.strptime(peak_hour, '%d-%b-%y %H:%M')
+                    pm_peak_datetime_objects.append(peak_hour)
+
+            data['flow_car'] = data['Car/lVan'] + data['Cr/lV+Tr']
+            data['flow_LGV'] = data['H. Van'] + data['LGV']
+            data['flow_OGV_1'] = data['Rigid'] 
+            data['flow_OGV_2'] = data['Rg+Tr'] + data['ArticHGV']
+            data['flow_HGV'] = data['flow_OGV_1'] + data['flow_OGV_2']
+            data['flow_BUS'] = data['Minibus'] + data['Bus']
+            data['flow_total'] = data['flow_car'] + data['flow_LGV'] +  data['flow_HGV'] + data['flow_BUS']
+
+            data = data.drop(data.columns[[0,1,2,3,4,5,6,7,8,9,10,11,12,]],axis = 1)
+
+            data = data.set_index(["date"])
+
+            np_sum = lambda x: x.values.sum()
+            hourlydf = data.resample('60min').agg({"site":"first","direction":"first","flow_car":np_sum,"flow_LGV":np_sum,"flow_OGV_1":np_sum,"flow_OGV_2":np_sum,"flow_HGV":np_sum,"flow_BUS":np_sum,"flow_total":np_sum})
+
+            period_sum = 0
+                
+            for peak_hour in am_peak_datetime_objects:
+                    period_sum += hourlydf.loc[peak_hour, "flow_total"]
+                
+            if period_sum == 0:
+                    discard_record = hourlydf[["site", "direction"]].head(1)
+                    discarded_data = pd.concat([discarded_data, discard_record])
+                    table += 1
+                    continue
+
+            period_sum = 0
+            for peak_hour in pm_peak_datetime_objects:
+                    period_sum += hourlydf.loc[peak_hour, "flow_total"]
+
+                
+            if period_sum == 0:
+                    discard_record = hourlydf[["site", "direction"]].head(1)
+                    discarded_data = pd.concat([discarded_data, discard_record])
+                    table += 1
+                    continue
+
+            nan_value = float("NaN")
+
+            data['source'] = 'ATC'
+
+            data.replace("", nan_value, inplace=True)
+
+            data.dropna(subset = ["flow_total"], inplace=True)
+
+            if "Northeast" in dir:
+                    data["direction"] = "North East"
+
+            elif "Northwest" in dir:
+                    data["direction"] = "North West"
+                
+            elif "Southeast" in dir:
+                    data["direction"] = "South East"
+                
+            elif "Southwest" in dir:
+                    data["direction"] = "South West"
+                
+            elif "East" in dir:
+                    data["direction"] = "East"
+
+            elif "West" in dir:
+                    data["direction"] = "West"
+                
+            elif "North" in dir:
+                data["direction"] = "North"
+                
+            elif "South" in dir:
+                    data["direction"] = "South"
+
+            survey_database = pd.concat([survey_database,data])
+
+            #if site == "349":
+                #survey_database.drop(survey_database.columns['Date'])
+            
+                #rename first column to Total. Keep up to col N, and column U
+                    
+                #df = df.rename(columns={'Unnamed: 0':'tt'})
+
+            #df['flow_car'] = df['flow_car1'].rolling(4).sum().shift(periods = -3)
+            #df['flow_LGV'] = df['flow_LGV1'].rolling(4).sum().shift(periods = -3)
+            #df['flow_OGV1'] = df['flow_OGV'].rolling(4).sum().shift(periods = -3)
+            #df['flow_OGV2'] = df['flow_ogv3'].rolling(4).sum().shift(periods = -3)
+            #df['flow_HGV'] = df['flow_HGV1'].rolling(4).sum().shift(periods = -3)
+            #df['flow_PSV'] = df['flow_BUS'].rolling(4).sum().shift(periods = -3)
+            #df['flow_total'] = df['flow_total1'].rolling(4).sum().shift(periods = -3)
+            
+            #print(data)
+
+            #print(survey_database)
+
+    survey_database.to_csv(f"{output_dir}\\ATC_2023_HCC_C_2.csv")
+    discarded_data.to_csv(f"{discarded_dir}\\Discarded_Data_ATC_2023_HCC_C_2.csv", index=True)
