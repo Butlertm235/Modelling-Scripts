@@ -27,9 +27,11 @@ def format_ATC_2019_NC_1(input_dir: str, output_dir: str):
                 if len(dirdf. columns) == 0:
                     break
                 
-                dir = dirdf.columns.values[0]
+                dir = dirdf.columns.values[0][9:]
             
-                if dir == "Channel: Total Flow":
+                if dir == "Total Flow":
+                    continue
+                if dir == "Errors":
                     continue
         
                 
@@ -57,9 +59,33 @@ def format_ATC_2019_NC_1(input_dir: str, output_dir: str):
                     formatdf = formatdf.append(day_df)
                     
                 
+                if "Northeast" in dir:
+                    formatdf["direction"] = "North East"
+
+                elif "Northwest" in dir:
+                    formatdf["direction"] = "North West"
+                    
+                elif "Southeast" in dir:
+                    formatdf["direction"] = "South East"
+                    
+                elif "Southwest" in dir:
+                    formatdf["direction"] = "South West"
+                    
+                elif "East" in dir:
+                    formatdf["direction"] = "East"
+
+                elif "West" in dir:
+                    formatdf["direction"] = "West"
+                    
+                elif "North" in dir:
+                    formatdf["direction"] = "North"
+                    
+                elif "South" in dir:
+                    formatdf["direction"] = "South"
+
                 formatdf['site'] = site
-                formatdf['direction'] = dir
-                formatdf['source'] = 'ATC'
+                #formatdf['direction'] = dir
+                formatdf['Source'] = 'ATC'
                 formatdf['flow_car'] = ''
                 formatdf['flow_LGV'] = ''
                 formatdf['flow_OGV_1'] = ''
@@ -67,8 +93,8 @@ def format_ATC_2019_NC_1(input_dir: str, output_dir: str):
                 formatdf['flow_HGV'] = ''
 
                 survey_database = survey_database.append(formatdf)
-    
-    survey_database.to_csv(f"{output_dir}\\ATC_2019_NC_1.csv")
+    survey_database["Source"] = "HCC ATC"
+    survey_database.to_csv(f"{output_dir}\\ATC_2019_NC_1.csv", index = False)
 
 def format_ATC_2019_NC_2(input_dir: str, output_dir: str):
     os.chdir(input_dir)
@@ -95,13 +121,13 @@ def format_ATC_2019_NC_2(input_dir: str, output_dir: str):
                 
                 dir = dirdf.columns.values[0]
             
-                if dir == "Channel: Total Flow":
+                if dir == "Total Flow":
                     continue
 
                 df = pd.read_excel(file,sheet_name=date,skiprows = skipr ,nrows=24,dtype={0:str})
-                tabledf = pd.read_excel(file,sheet_name=date,skiprows=6,usecols="A:H",index_col=None,nrows=24)
+                
 
-                formatdf = pd.DataFrame(columns = ['date', 'flow_total'])
+                formatdf = pd.DataFrame(columns = ['date', 'flow_total', "direction"])
                 
                 for day in range(7):
                     survey_date = str(df.columns.values[day+1].date())
@@ -118,9 +144,33 @@ def format_ATC_2019_NC_2(input_dir: str, output_dir: str):
                 
                     formatdf = formatdf.append(day_df)
 
+                if "Northeast" in dir:
+                    formatdf["direction"] = "North East"
+
+                elif "Northwest" in dir:
+                    formatdf["direction"] = "North West"
+                    
+                elif "Southeast" in dir:
+                    formatdf["direction"] = "South East"
+                    
+                elif "Southwest" in dir:
+                    formatdf["direction"] = "South West"
+                    
+                elif "East" in dir:
+                    formatdf["direction"] = "East"
+
+                elif "West" in dir:
+                    formatdf["direction"] = "West"
+                    
+                elif "North" in dir:
+                    formatdf["direction"] = "North"
+                    
+                elif "South" in dir:
+                    formatdf["direction"] = "South"
+
                 formatdf['site'] = site
-                formatdf['direction'] = dir
-                formatdf['source'] = 'ATC'
+                #formatdf['direction'] = dir
+                formatdf['Source'] = 'ATC'
                 formatdf['flow_car'] = ''
                 formatdf['flow_LGV'] = ''
                 formatdf['flow_OGV_1'] = ''
@@ -128,8 +178,8 @@ def format_ATC_2019_NC_2(input_dir: str, output_dir: str):
                 formatdf['flow_HGV'] = ''
 
                 survey_database = survey_database.append(formatdf)
-
-    survey_database.to_csv(f"{output_dir}\\ATC_2019_NC_2.csv")
+    survey_database["Source"] = "HCC ATC"
+    survey_database.to_csv(f"{output_dir}\\ATC_2019_NC_2.csv", index = False)
 
 
 def format_ATC_2019_NC_3(input_dir: str, output_dir: str):
@@ -148,9 +198,6 @@ def format_ATC_2019_NC_3(input_dir: str, output_dir: str):
         site = str(sitedf.columns.values[0])
         site = site[-3:]
         
-        sitedf = pd.read_excel(file,skiprows=0,usecols="A",index_col=None,nrows=0)
-        site = str(sitedf.columns.values[0])
-        site = site[-3:]
         
         for table in range (6):
             skipr = 5+table*117
@@ -159,9 +206,9 @@ def format_ATC_2019_NC_3(input_dir: str, output_dir: str):
             if len(dirdf. columns) == 0:
                 break
                 
-            dir = dirdf.columns.values[0]
+            dir = dirdf.columns.values[0][9:]
             
-            if dir == "Channel: Total Flow":
+            if dir == "Total Flow":
                     continue
 
             df = pd.read_excel(file,skiprows = skipr ,nrows=96,dtype={0:str})
@@ -196,9 +243,33 @@ def format_ATC_2019_NC_3(input_dir: str, output_dir: str):
 
                 formatdf = formatdf.append(day_df)
                 
+                if "Northeast" in dir:
+                    formatdf["direction"] = "North East"
+
+                elif "Northwest" in dir:
+                    formatdf["direction"] = "North West"
+                    
+                elif "Southeast" in dir:
+                    formatdf["direction"] = "South East"
+                    
+                elif "Southwest" in dir:
+                    formatdf["direction"] = "South West"
+                    
+                elif "East" in dir:
+                    formatdf["direction"] = "East"
+
+                elif "West" in dir:
+                    formatdf["direction"] = "West"
+                    
+                elif "North" in dir:
+                    formatdf["direction"] = "North"
+                    
+                elif "South" in dir:
+                    formatdf["direction"] = "South"
+
                 formatdf['site'] = site
-                formatdf['direction'] = dir
-                formatdf['source'] = 'ATC'
+                #formatdf['direction'] = dir
+                formatdf['Source'] = 'ATC'
                 formatdf['flow_car'] = ''
                 formatdf['flow_LGV'] = ''
                 formatdf['flow_OGV_1'] = ''
@@ -208,15 +279,21 @@ def format_ATC_2019_NC_3(input_dir: str, output_dir: str):
                 print(formatdf)
 
             survey_database = survey_database.append(formatdf)
-            #survey_database = survey_database.drop(columns = ['Begin', 'Total Flow'])
+            
+    survey_database = survey_database.drop(columns = ['time', 'Total Flow'])
+    survey_database["Source"] = "HCC ATC"
+    survey_database.to_csv(f"{output_dir}\\ATC_2019_NC_3.csv", index = False)
 
-    survey_database.to_csv(f"{output_dir}\\ATC_2019_NC_3.csv")
-
-def format_ATC_C_1_1(input_dir: str, output_dir: str, year: int):
+def format_ATC_C_1_1(input_dir: str, output_dir: str, year: int, discarded_dir: str):
     
     os.chdir(input_dir)
     files = glob.glob("*.csv")
     survey_database = pd.DataFrame()
+    discarded_data = pd.DataFrame()
+
+    AM_PEAK_PERIOD = ["07:00", "08:00", "09:00"]
+    PM_PEAK_PERIOD = ["16:00", "17:00", "18:00"]
+
     for file in files:
         print("Adding ",file," to the database")
         
@@ -254,7 +331,21 @@ def format_ATC_C_1_1(input_dir: str, output_dir: str, year: int):
         
             data['date'] = pd.to_datetime(data['date'])
             
-            data['direction'] = dir
+            #Converts directions to uniform style
+            #if (("South" in dir) and (("West" in dir) or ("East" in dir))) or (("North" in dir) and (("West" in dir) or ("East" in dir))):
+                #print("Multi direction")
+            if "East" in dir:
+                data["direction"] = "East"
+
+            elif "West" in dir:
+                data["direction"] = "West"
+            
+            elif "North" in dir:
+                data["direction"] = "North"
+            
+            elif "South" in dir:
+                data["direction"] = "South"
+
             data['site'] = site
 
                 #rename first column to Total. Keep up to col N, and column U
@@ -266,12 +357,51 @@ def format_ATC_C_1_1(input_dir: str, output_dir: str, year: int):
             data['flow_HGV'] = data['flow_OGV_1'] + data['flow_OGV_2']
             data['flow_BUS'] = data['Minibus'] + data['Bus']
             data['flow_total'] = data['flow_car'] + data['flow_LGV'] +  data['flow_HGV'] + data['flow_BUS']
+            data[["flow_car", "flow_LGV", "flow_OGV_1", "flow_OGV_2", "flow_HGV", "flow_BUS", "flow_total"]] = data[["flow_car", "flow_LGV", "flow_OGV_1", "flow_OGV_2", "flow_HGV", "flow_BUS", "flow_total"]].fillna(0)
+            am_peak_datetime_objects = []
+            for peak_hour in AM_PEAK_PERIOD:
+                peak_hour = date + " " + peak_hour
+                peak_hour = datetime.datetime.strptime(peak_hour, '%d-%b-%y %H:%M')
+                am_peak_datetime_objects.append(peak_hour)
 
-            data = data.drop(data.columns[[0,1,2,3,4,5,6,7,8,9,10,11,12,]],axis = 1)
+            pm_peak_datetime_objects = []
+            for peak_hour in PM_PEAK_PERIOD:
+                peak_hour = date + " " + peak_hour
+                peak_hour = datetime.datetime.strptime(peak_hour, '%d-%b-%y %H:%M')
+                pm_peak_datetime_objects.append(peak_hour)
+            
+            data = data.set_index('date')
+            np_sum = lambda x: x.values.sum()
+            hourly_data_table = data.resample('60min').agg({"site":"first","direction":"first","flow_car":np_sum,"flow_LGV":np_sum,"flow_OGV_1":np_sum,"flow_OGV_2":np_sum,"flow_HGV":np_sum,"flow_BUS":np_sum,"flow_total":np_sum})
+            hourly_data_table["flow_total"] = hourly_data_table["flow_total"].fillna(0)
+            period_sum = 0
+            
+            for peak_hour in am_peak_datetime_objects:
+                period_sum += hourly_data_table.loc[peak_hour, "flow_total"]
+            
+            if period_sum == 0:
+                discard_record = hourly_data_table[["site", "direction"]].head(1)
+                discarded_data = pd.concat([discarded_data, discard_record])
+                continue
+
+            period_sum = 0
+            for peak_hour in pm_peak_datetime_objects:
+                period_sum += hourly_data_table.loc[peak_hour, "flow_total"]
+
+            if period_sum == 0:
+                discard_record = hourly_data_table[["site", "direction"]].head(1)
+                discarded_data = pd.concat([discarded_data, discard_record])
+                continue
+
+            data = data.reset_index()
+            data = data.rename(columns = {"index": "date"})
+
+            data = data.drop(data.columns[[1,2,3,4,5,6,7,8,9,10,11,12,13]],axis = 1)
 
             survey_database = survey_database.append(data)
-
-    survey_database.to_csv(f"{output_dir}\\ATC_{str(year)}_C_1_1.csv")
+    survey_database["Source"] = "HCC ATC"
+    survey_database.to_csv(f"{output_dir}\\ATC_{str(year)}_C_1_1.csv", index = False)
+    discarded_data.to_csv(f"{discarded_dir}\\ATC_{str(year)}_C_1_1_Discarded_Data.csv", index=False)
 
 
 def format_ATC_C_1_2(input_dir: str, output_dir: str, year: int):
@@ -325,7 +455,9 @@ def format_ATC_C_1_2(input_dir: str, output_dir: str, year: int):
                 survey_database = survey_database.append(data)
             #print(survey_database)
 
-    survey_database.to_csv(f"{output_dir}\\ATC_{str(year)}_C_1_2.csv")
+    survey_database = survey_database.drop(columns = ["Date"])
+    survey_database["Source"] = "HCC ATC"
+    survey_database.to_csv(f"{output_dir}\\ATC_{str(year)}_C_1_2.csv", index = False)
 
 
 def format_ATC_2022_C_2_1(input_dir: str, output_dir: str, discarded_dir: str):
@@ -469,7 +601,7 @@ def format_ATC_2022_C_2_1(input_dir: str, output_dir: str, discarded_dir: str):
                 data_table['flow_HGV'] = data_table['flow_OGV_1'] + data_table['flow_OGV_2']
                 data_table['flow_BUS'] = data_table['Bin 9\nMinibus'] + data_table['Bin 10\nBus']
                 data_table['flow_total'] = data_table['flow_car'] + data_table['flow_LGV'] + data_table['flow_HGV'] + data_table['flow_BUS']
-                
+                data_table[["flow_car", "flow_LGV", "flow_OGV_1", "flow_OGV_2", "flow_HGV", "flow_BUS", "flow_total"]] = data_table[["flow_car", "flow_LGV", "flow_OGV_1", "flow_OGV_2", "flow_HGV", "flow_BUS", "flow_total"]].fillna(0)
                 data_table = data_table.set_index("date")
 
                 data_table = data_table.drop(columns = ["Bin 2\nCar/lVan", "Bin 3\nCr/lV+Tr", "Bin 4\nH. Van", "Bin 5\nLGV", "Bin 6\nRigid", "Bin 7\nRg+Tr", "Bin 8\nArticHGV", "Bin 9\nMinibus", "Bin 10\nBus", "Bin 1\nM/Cycle", "Date", "time", "Total\nVolume"])
@@ -517,13 +649,17 @@ def format_ATC_2022_C_2_1(input_dir: str, output_dir: str, discarded_dir: str):
                     data_table["direction"] = "South"
                 
                 #Adds new data to the end of compiled data
+
+                data_table = data_table.reset_index()
+                data_table = data_table.rename(columns = {"index": "date"})
+
                 appended_data = pd.concat([appended_data, data_table])
                 table_number += 1
             sheet_number += 1
 
-
-    appended_data.to_csv(f"{output_dir}\\ATC_2022_C_2_1.csv")
-    discarded_data.to_csv(f"{discarded_dir}\\ATC_2022_C_2_1_Discarded_Data.csv", index=True)
+    appended_data["Source"] = "HCC ATC"
+    appended_data.to_csv(f"{output_dir}\\ATC_2022_C_2_1.csv", index = False)
+    discarded_data.to_csv(f"{discarded_dir}\\ATC_2022_C_2_1_Discarded_Data.csv", index=False)
 
 
 def format_ATC_2022_C_2_2(input_dir: str, output_dir: str, discarded_dir: str):
@@ -633,13 +769,25 @@ def format_ATC_2022_C_2_2(input_dir: str, output_dir: str, discarded_dir: str):
                     table_number += 1
                     continue
                 
-                data_table['direction'] = direction
+                #data_table['direction'] = direction
                 data_table['site'] = site
 
                 data_table['Date'] = date
                 data_table["time"] = data_table['time'].astype(str)
                 data_table["date"] = data_table["Date"] + " " + data_table["time"]
                 data_table['date'] = pd.to_datetime(data_table['date'])
+
+                if "East" in direction:
+                    data_table["direction"] = "East"
+
+                elif "West" in direction:
+                    data_table["direction"] = "West"
+                
+                elif "North" in direction:
+                    data_table["direction"] = "North"
+                
+                elif "South" in direction:
+                    data_table["direction"] = "South"
 
                 am_peak_datetime_objects = []
                 for peak_hour in AM_PEAK_PERIOD:
@@ -661,7 +809,7 @@ def format_ATC_2022_C_2_2(input_dir: str, output_dir: str, discarded_dir: str):
                 data_table['flow_HGV'] = data_table['flow_OGV_1'] + data_table['flow_OGV_2']
                 data_table['flow_BUS'] = data_table['Bin 9\nMinibus'] + data_table['Bin 10\nBus']
                 data_table['flow_total'] = data_table['flow_car'] + data_table['flow_LGV'] + data_table['flow_HGV'] + data_table['flow_BUS']
-
+                data_table[["flow_car", "flow_LGV", "flow_OGV_1", "flow_OGV_2", "flow_HGV", "flow_BUS", "flow_total"]] = data_table[["flow_car", "flow_LGV", "flow_OGV_1", "flow_OGV_2", "flow_HGV", "flow_BUS", "flow_total"]].fillna(0)
                 data_table = data_table.set_index("date")
 
                 data_table = data_table.drop(columns = ["Bin 2\nCar/lVan", "Bin 3\nCr/lV+Tr", "Bin 4\nH. Van", "Bin 5\nLGV", "Bin 6\nRigid", "Bin 7\nRg+Tr", "Bin 8\nArticHGV", "Bin 9\nMinibus", "Bin 10\nBus", "Bin 1\nM/Cycle", "Date", "time", "Total\nVolume"])
@@ -696,27 +844,20 @@ def format_ATC_2022_C_2_2(input_dir: str, output_dir: str, discarded_dir: str):
                     continue
 
                 #Converts directions to uniform style
-                if (("South" in direction) and (("West" in direction) or ("East" in direction))) or (("North" in direction) and (("West" in direction) or ("East" in direction))):
-                    print("Multi direction")
-                elif "East" in direction:
-                    data_table["direction"] = "East"
-
-                elif "West" in direction:
-                    data_table["direction"] = "West"
+                #if (("South" in direction) and (("West" in direction) or ("East" in direction))) or (("North" in direction) and (("West" in direction) or ("East" in direction))):
+                    #print("Multi direction")
                 
-                elif "North" in direction:
-                    data_table["direction"] = "North"
                 
-                elif "South" in direction:
-                    data_table["direction"] = "South"
-                
+                data_table = data_table.reset_index()
+                data_table = data_table.rename(columns = {"index": "date"})
+                data_table[["flow_car", "flow_LGV", "flow_OGV_1", "flow_OGV_2", "flow_HGV", "flow_BUS", "flow_total"]] = data_table[["flow_car", "flow_LGV", "flow_OGV_1", "flow_OGV_2", "flow_HGV", "flow_BUS", "flow_total"]].fillna(0)
                 #Adds new data to the end of compiled data
                 appended_data = pd.concat([appended_data, data_table])
                 table_number += 1
             sheet_number += 1
-
-    appended_data.to_csv(f"{output_dir}\\ATC_2022_C_2_2.csv")
-    discarded_data.to_csv(f"{discarded_dir}\\ATC_2022_C_2_2_Discarded_Data.csv", index=True)
+    appended_data["Source"] = "HCC ATC"
+    appended_data.to_csv(f"{output_dir}\\ATC_2022_C_2_2.csv", index = False)
+    discarded_data.to_csv(f"{discarded_dir}\\ATC_2022_C_2_2_Discarded_Data.csv", index=False)
 
 
 
@@ -746,11 +887,12 @@ def format_ATC_2022_NC_1(input_dir: str, output_dir: str):
             if len(dirdf. columns) == 0:
                 break
             
-            dir = dirdf.columns.values[0]
+            dir = dirdf.columns.values[0][9:]
         
-            if dir == "Channel: Total Flow":
+            if dir == "Total Flow":
                 continue
-
+            if dir == "Errors":
+                continue
             df = pd.read_excel(file,skiprows = skipr -1,nrows=24,dtype={0:str})
             tabledf = pd.read_excel(file,skiprows=6,usecols="A:H",index_col=None,nrows=24)
             formatdf = pd.DataFrame(columns = ['date', 'flow_total'])
@@ -772,9 +914,33 @@ def format_ATC_2022_NC_1(input_dir: str, output_dir: str):
 
                 formatdf = formatdf.append(day_df)
                 
+            if "Northeast" in dir:
+                formatdf["direction"] = "North East"
+
+            elif "Northwest" in dir:
+                formatdf["direction"] = "North West"
+                
+            elif "Southeast" in dir:
+                formatdf["direction"] = "South East"
+                
+            elif "Southwest" in dir:
+                formatdf["direction"] = "South West"
+                
+            elif "East" in dir:
+                formatdf["direction"] = "East"
+
+            elif "West" in dir:
+                formatdf["direction"] = "West"
+                
+            elif "North" in dir:
+                formatdf["direction"] = "North"
+                
+            elif "South" in dir:
+                formatdf["direction"] = "South"
+
             formatdf['site'] = site
-            formatdf['direction'] = dir
-            formatdf['source'] = 'ATC'
+            #formatdf['direction'] = dir
+            formatdf['Source'] = 'ATC'
             formatdf['flow_car'] = ''
             formatdf['flow_LGV'] = ''
             formatdf['flow_OGV_1'] = ''
@@ -782,13 +948,8 @@ def format_ATC_2022_NC_1(input_dir: str, output_dir: str):
             formatdf['flow_HGV'] = ''
 
             survey_database = survey_database.append(formatdf)
-    
-    survey_database.to_csv(f"{output_dir}\\ATC_2022_NC_1.csv")
-
-
-
-
-
+    survey_database["Source"] = "HCC ATC"
+    survey_database.to_csv(f"{output_dir}\\ATC_2022_NC_1.csv", index = False)
 
 
 #Output to hourly
@@ -814,9 +975,10 @@ def format_ATC_2022_NC_2(input_dir: str, output_dir: str):
             if len(dirdf. columns) == 0:
                 break
             
-            dir = dirdf.columns.values[0]
+            dir = dirdf.columns.values[0][9:]
+
         
-            if dir == "Channel: Total Flow":
+            if dir == "Total Flow":
                 continue
     
             df = pd.read_excel(file,skiprows = skipr -1,nrows=24,dtype={0:str})
@@ -842,10 +1004,33 @@ def format_ATC_2022_NC_2(input_dir: str, output_dir: str):
                 
                 formatdf = formatdf.append(day_df)
                 
-            
+            if "Northeast" in dir:
+                formatdf["direction"] = "North East"
+
+            elif "Northwest" in dir:
+                formatdf["direction"] = "North West"
+                
+            elif "Southeast" in dir:
+                formatdf["direction"] = "South East"
+                
+            elif "Southwest" in dir:
+                formatdf["direction"] = "South West"
+                
+            elif "East" in dir:
+                formatdf["direction"] = "East"
+
+            elif "West" in dir:
+                formatdf["direction"] = "West"
+                
+            elif "North" in dir:
+                formatdf["direction"] = "North"
+                
+            elif "South" in dir:
+                formatdf["direction"] = "South"
+
             formatdf['site'] = site
-            formatdf['direction'] = dir
-            formatdf['source'] = 'ATC'
+            #formatdf['direction'] = dir
+            formatdf['Source'] = 'ATC'
             formatdf['flow_car'] = ''
             formatdf['flow_LGV'] = ''
             formatdf['flow_OGV_1'] = ''
@@ -857,8 +1042,8 @@ def format_ATC_2022_NC_2(input_dir: str, output_dir: str):
             
             
             survey_database = survey_database.append(formatdf)
-
-    survey_database.to_csv(f"{output_dir}\\ATC_2022_NC_2.csv")
+    survey_database["Source"] = "HCC ATC"
+    survey_database.to_csv(f"{output_dir}\\ATC_2022_NC_2.csv", index = False)
 
 
 def format_ATC_2022_NC_3(input_dir: str, output_dir: str):
@@ -885,7 +1070,7 @@ def format_ATC_2022_NC_3(input_dir: str, output_dir: str):
             site = site[-3:] 
         
             #Loop through directions
-            for table in range (2):
+            for table in range (3):
                 skipr = 5+table*46
 
 
@@ -895,10 +1080,16 @@ def format_ATC_2022_NC_3(input_dir: str, output_dir: str):
                     break
                 dir = dirdf.columns.values[0]
 
-                #Skip 2-way flow
-                if dir == "Channel: Total Flow":
+                if dir == "":
                     continue
-                
+                #Skip 2-way flow
+                if dir == "Total Flow":
+                    continue
+                if dir == "Errors":
+                    continue
+                if site == "536":
+                    if "bound" in dir:
+                        continue
                 #Read raw data tab;e
                 df = pd.read_excel(file,sheet_name=date,skiprows = skipr ,nrows=24,dtype={0:str})
                 #tabledf = pd.read_excel(file,sheet_name=date,skiprows=6,usecols="A:H",index_col=None,nrows=24)
@@ -929,12 +1120,41 @@ def format_ATC_2022_NC_3(input_dir: str, output_dir: str):
 
                     #Append to main df for that table
                     formatdf = formatdf.append(day_df)
+                
+                         
 
+
+                if "Northeast" in dir:
+                    formatdf["direction"] = "North East"
+
+                elif "Northwest" in dir:
+                    formatdf["direction"] = "North West"
                     
+                elif "Southeast" in dir:
+                    formatdf["direction"] = "South East"
+                    
+                elif "Southwest" in dir:
+                    formatdf["direction"] = "South West"
+                    
+                elif "East" in dir:
+                    formatdf["direction"] = "East"
+
+                elif "West" in dir:
+                    formatdf["direction"] = "West"
+                    
+                elif "North" in dir:
+                    formatdf["direction"] = "North"
+                    
+                elif "South" in dir:
+                    formatdf["direction"] = "South"
+                elif "west" in dir:
+                    formatdf["direction"] = "West"
+                elif "east" in dir:
+                    formatdf["direction"] = "East"
                 
                 formatdf['site'] = site
-                formatdf['direction'] = dir
-                formatdf['source'] = 'ATC'
+                #formatdf['direction'] = dir
+                formatdf['Source'] = 'ATC'
                 formatdf['flow_car'] = ''
                 formatdf['flow_LGV'] = ''
                 formatdf['flow_OGV_1'] = ''
@@ -942,8 +1162,8 @@ def format_ATC_2022_NC_3(input_dir: str, output_dir: str):
                 formatdf['flow_HGV'] = ''
 
                 survey_database = survey_database.append(formatdf)
-
-    survey_database.to_csv(f"{output_dir}\\ATC_2022_NC_3.csv")
+    survey_database["Source"] = "HCC ATC"
+    survey_database.to_csv(f"{output_dir}\\ATC_2022_NC_3.csv", index = False)
 
 
 
@@ -977,10 +1197,14 @@ def format_ATC_2022_NC_4(input_dir: str, output_dir: str):
                 
             
                 
-            dir = dirdf.columns.values[0]
+            dir = dirdf.columns.values[0][9:]
             
-            if dir == "Channel: Total Flow":
-                    continue
+            if dir == "Total Flow":
+                continue
+            
+            
+
+
 
             df = pd.read_excel(file,skiprows = skipr ,nrows=96,dtype={0:str})
             
@@ -1003,8 +1227,32 @@ def format_ATC_2022_NC_4(input_dir: str, output_dir: str):
                 formatdf = formatdf.append(day_df)
                 
                 formatdf['site'] = site
-                formatdf['direction'] = dir
-                formatdf['source'] = 'ATC'
+
+                if "Northeast" in dir:
+                    formatdf["direction"] = "North East"
+
+                elif "Northwest" in dir:
+                    formatdf["direction"] = "North West"
+                    
+                elif "Southeast" in dir:
+                    formatdf["direction"] = "South East"
+                    
+                elif "Southwest" in dir:
+                    formatdf["direction"] = "South West"
+                    
+                elif "East" in dir:
+                    formatdf["direction"] = "East"
+
+                elif "West" in dir:
+                    formatdf["direction"] = "West"
+                    
+                elif "North" in dir:
+                    formatdf["direction"] = "North"
+                    
+                elif "South" in dir:
+                    formatdf["direction"] = "South"
+
+                formatdf['Source'] = 'ATC'
                 formatdf['flow_car'] = ''
                 formatdf['flow_LGV'] = ''
                 formatdf['flow_OGV_1'] = ''
@@ -1013,7 +1261,9 @@ def format_ATC_2022_NC_4(input_dir: str, output_dir: str):
 
             survey_database = survey_database.append(formatdf)
 
-    survey_database.to_csv(f"{output_dir}\\ATC_2022_NC_4.csv")
+    survey_database = survey_database.drop(columns = ["time"])
+    survey_database["Source"] = "HCC ATC"
+    survey_database.to_csv(f"{output_dir}\\ATC_2022_NC_4.csv", index = False)
 
 def format_ATC_2023_SEVERNSIDE(input_dir: str, output_dir: str):
 
@@ -1057,8 +1307,8 @@ def format_ATC_2023_SEVERNSIDE(input_dir: str, output_dir: str):
             date = name
             date = date.replace(" ",r"/")
             print(date)
-            temp_df = pd.DataFrame(columns = ["date","site", "direction", 'flow_car', 'flow_LGV', 'flow_OGV_1', "flow_OGV_2",'flow_BUS', "flow_HGV", 'flow_total'])
-            
+            temp_df = pd.DataFrame(columns = ["date","site", "direction", 'flow_car', 'flow_LGV', 'flow_OGV_1', "flow_OGV_2",'flow_BUS', "flow_HGV", "flow_bicycle", "flow_motorcycle", 'flow_total', "average_speed_mph"])
+            temp_df2 = pd.DataFrame(columns = ["date","site", "direction", 'flow_car', 'flow_LGV', 'flow_OGV_1', "flow_OGV_2",'flow_BUS', "flow_HGV", "flow_bicycle", "flow_motorcycle", 'flow_total', "average_speed_mph"])
 
             data = pd.read_excel(file, sheet_name = name)
 
@@ -1076,25 +1326,133 @@ def format_ATC_2023_SEVERNSIDE(input_dir: str, output_dir: str):
             temp_df['date'] = pd.to_datetime(temp_df['date'], dayfirst = True)
             temp_df["site"] = site
             temp_df["direction"] = dir1
-            temp_df.iloc[:,[3,4,5,6,7]] = data.iloc[:,[1,2,3,4,5]]
+            temp_df.iloc[:,[3,4,5,6,7,9,10,12]] = data.iloc[:,[1,2,3,4,5,7,6,8]]
             temp_df["flow_HGV"] = temp_df['flow_OGV_1'] + temp_df['flow_OGV_2']
-            temp_df["flow_total"] = temp_df['flow_car'] + temp_df['flow_LGV'] + temp_df['flow_HGV']
+            temp_df["flow_total"] = temp_df['flow_car'] + temp_df['flow_LGV'] + temp_df['flow_HGV'] + temp_df2['flow_BUS'] + temp_df["flow_bicycle"] + temp_df["flow_motorcycle"]
             
+            am_peak_datetime_objects = []
+            for peak_hour in AM_PEAK_PERIOD:
+                    peak_hour = date + " " + peak_hour
+                    peak_hour = datetime.datetime.strptime(peak_hour, '%d/%m/%Y %H:%M')
+                    am_peak_datetime_objects.append(peak_hour)
+
+                    
+            pm_peak_datetime_objects = []
+            for peak_hour in PM_PEAK_PERIOD:
+                    peak_hour = date + " " + peak_hour
+                    peak_hour = datetime.datetime.strptime(peak_hour, '%d/%m/%Y %H:%M')
+                    pm_peak_datetime_objects.append(peak_hour)
+
+            temp_df = temp_df.set_index(["date"])
+
+            np_sum = lambda x: x.values.sum()
+            np_avg = lambda x: x.values.mean()
+            hourlydf = temp_df.resample('60min').agg({"site":"first","direction":"first","flow_car":np_sum,"flow_LGV":np_sum,"flow_OGV_1":np_sum,"flow_OGV_2":np_sum,"flow_HGV":np_sum,"flow_BUS":np_sum,"flow_bicycle":np_sum,"flow_motorcycle": np_sum, "flow_total":np_sum, "average_speed_mph": "first"})
+
+            period_sum = 0
+            
+            delete_day = False
+            
+            for peak_hour in am_peak_datetime_objects:
+                    period_sum += hourlydf.loc[peak_hour, "flow_total"]
+                
+            if period_sum == 0:
+                    delete_day = True
+                    discard_record = hourlydf[["site", "direction"]].head(1)
+                    discarded_data = pd.concat([discarded_data, discard_record])
+                    
+
+            period_sum = 0
+            for peak_hour in pm_peak_datetime_objects:
+                    period_sum += hourlydf.loc[peak_hour, "flow_total"]
+
+                
+            if period_sum == 0:
+                    delete_day = True
+                    discard_record = hourlydf[["site", "direction"]].head(1)
+                    discarded_data = pd.concat([discarded_data, discard_record])
+                    
+            
+            nan_value = float("NaN")
+            if delete_day == False:
+                temp_df.replace("", nan_value, inplace=True)
+
+                temp_df.dropna(subset = ["flow_total"], inplace=True)
+
+                temp_df = temp_df.reset_index()
+                temp_df = temp_df.rename(columns = {"index": "date"})
+
+                appended_data = pd.concat([appended_data, temp_df])
             
 
-            appended_data = pd.concat([appended_data, temp_df])
+            temp_df2['date'] = date + " " + data["TIME"]
+            temp_df2['date'] = pd.to_datetime(temp_df2['date'], dayfirst = True)
+            temp_df2["site"] = site
+            temp_df2["direction"] = dir2
+            temp_df2.iloc[:,[3,4,5,6,7,9,10,12]] = data.iloc[:,[13,14,15,16,17,18,19,20]]
+            temp_df2["flow_HGV"] = temp_df2['flow_OGV_1'] + temp_df2['flow_OGV_2']
+            temp_df2["flow_total"] = temp_df2['flow_car'] + temp_df2['flow_LGV'] + temp_df2['flow_HGV'] + temp_df2['flow_BUS'] + temp_df2["flow_bicycle"] + temp_df2["flow_motorcycle"]
 
-            temp_df["direction"] = dir2
-            temp_df.iloc[:,[3,4,5,6,7]] = data.iloc[:,[13,14,15,16,17]]
-            temp_df["flow_HGV"] = temp_df['flow_OGV_1'] + temp_df['flow_OGV_2']
-            temp_df["flow_total"] = temp_df['flow_car'] + temp_df['flow_LGV'] + temp_df['flow_HGV'] + temp_df['flow_BUS']
 
-            appended_data = pd.concat([appended_data, temp_df])
+            am_peak_datetime_objects = []
+            for peak_hour in AM_PEAK_PERIOD:
+                    peak_hour = date + " " + peak_hour
+                    peak_hour = datetime.datetime.strptime(peak_hour, '%d/%m/%Y %H:%M')
+                    am_peak_datetime_objects.append(peak_hour)
+
+                    
+            pm_peak_datetime_objects = []
+            for peak_hour in PM_PEAK_PERIOD:
+                    peak_hour = date + " " + peak_hour
+                    peak_hour = datetime.datetime.strptime(peak_hour, '%d/%m/%Y %H:%M')
+                    pm_peak_datetime_objects.append(peak_hour)
+
+
+            temp_df2 = temp_df2.set_index(["date"])
+
+            np_sum2 = lambda x: x.values.sum()
+            np_avg2 = lambda x: x.values.mean()
+            hourlydf2 = temp_df2.resample('60min').agg({"site":"first","direction":"first","flow_car":np_sum2,"flow_LGV":np_sum2,"flow_OGV_1":np_sum2,"flow_OGV_2":np_sum2,"flow_HGV":np_sum2,"flow_BUS":np_sum2,"flow_bicycle":np_sum2,"flow_motorcycle": np_sum2, "flow_total":np_sum2, "average_speed_mph": "first"})
+
+            period_sum = 0
+                
+            delete_day = False
             
-            temp_df
+            for peak_hour in am_peak_datetime_objects:
+                    period_sum += hourlydf2.loc[peak_hour, "flow_total"]
+                
+            if period_sum == 0:
+                    delete_day = True
+                    discard_record = hourlydf2[["site", "direction"]].head(1)
+                    discarded_data = pd.concat([discarded_data, discard_record])
+                    
 
+            period_sum = 0
+            for peak_hour in pm_peak_datetime_objects:
+                    period_sum += hourlydf2.loc[peak_hour, "flow_total"]
+
+                
+            if period_sum == 0:
+                    delete_day = True
+                    discard_record = hourlydf2[["site", "direction"]].head(1)
+                    discarded_data = pd.concat([discarded_data, discard_record])
+                    
+
+            nan_value = float("NaN")
+            if delete_day == False:
+                temp_df2.replace("", nan_value, inplace=True)
+
+                temp_df2.dropna(subset = ["flow_total"], inplace=True)
+
+                temp_df2 = temp_df2.reset_index()
+                temp_df2 = temp_df2.rename(columns = {"index": "date"})
+
+                appended_data = pd.concat([appended_data, temp_df2])
+            
             sheet_number +=1
-    appended_data.to_csv(f"{output_dir}\\ATC_2023_SEVERNSIDE.csv")
+
+    appended_data["Source"] = "Severnside ATC"
+    appended_data.to_csv(f"{output_dir}\\ATC_2023_SEVERNSIDE.csv", index = False)
 
 def format_ATC_2023_HCC_NC_1(input_dir: str, output_dir: str, discarded_dir: str):
     os.chdir(input_dir)
@@ -1157,7 +1515,7 @@ def format_ATC_2023_HCC_NC_1(input_dir: str, output_dir: str, discarded_dir: str
                     for peak_hour in AM_PEAK_PERIOD:
                         peak_hour = survey_date + " " + peak_hour
                         peak_hour = datetime.datetime.strptime(peak_hour, '%Y-%m-%d %H:%M')
-                    am_peak_datetime_objects.append(peak_hour)
+                        am_peak_datetime_objects.append(peak_hour)
 
                     pm_peak_datetime_objects = []
                     for peak_hour in PM_PEAK_PERIOD:
@@ -1171,11 +1529,10 @@ def format_ATC_2023_HCC_NC_1(input_dir: str, output_dir: str, discarded_dir: str
                     for peak_hour in am_peak_datetime_objects:
                         period_sum += day_df.loc[peak_hour, "flow_total"]
         
-
                 
                     if period_sum == 0:
                         discard_record = day_df[["site", "direction"]].head(1)
-                        discarded_data = pd.concat([discarded_data, discard_record])
+                        discarded_data = pd.concat([discarded_data, discard_record], ignore_index = True)
                         continue
 
                     period_sum = 0
@@ -1191,7 +1548,7 @@ def format_ATC_2023_HCC_NC_1(input_dir: str, output_dir: str, discarded_dir: str
                         
                     formatdf = pd.concat([formatdf,day_df])
 
-                    formatdf['source'] = 'ATC'
+                    formatdf['Source'] = 'ATC'
                     formatdf['flow_car'] = ''
                     formatdf['flow_LGV'] = ''
                     formatdf['flow_OGV1'] = ''
@@ -1228,12 +1585,14 @@ def format_ATC_2023_HCC_NC_1(input_dir: str, output_dir: str, discarded_dir: str
                 elif "South" in dir:
                     formatdf["direction"] = "South"
 
-                formatdf.index.name = 'date'
+                formatdf = formatdf.reset_index()
+                formatdf = formatdf.rename(columns={"index":"date"})
 
-                survey_database = pd.concat([survey_database,formatdf])
-
-    survey_database.to_csv(f"{output_dir}\\ATC_2023_HCC_NC_HOURLY_DBs.csv")
-    discarded_data.to_csv(f"{discarded_dir}\\Discarded_Data_ATC_2023_HCC_NC_HOURLY_DBs.csv", index=True)
+                survey_database = pd.concat([survey_database,formatdf], ignore_index = True)
+    
+    survey_database["Source"] = "HCC ATC"
+    survey_database.to_csv(f"{output_dir}\\ATC_2023_HCC_NC_HOURLY_DBs.csv", index = False)
+    discarded_data.to_csv(f"{discarded_dir}\\Discarded_Data_ATC_2023_HCC_NC_HOURLY_DBs.csv", index = False)
 
 def format_ATC_2023_HCC_NC_2(input_dir: str, output_dir: str, discarded_dir: str):
 
@@ -1315,7 +1674,7 @@ def format_ATC_2023_HCC_NC_2(input_dir: str, output_dir: str, discarded_dir: str
                     
                     if period_sum == 0:
                         discard_record = hourly_data_table[["site", "direction"]].head(1)
-                        discarded_data = pd.concat([discarded_data, discard_record])
+                        discarded_data = pd.concat([discarded_data, discard_record], ignore_index = True)
                         #table_number += 1
                         continue
 
@@ -1325,13 +1684,16 @@ def format_ATC_2023_HCC_NC_2(input_dir: str, output_dir: str, discarded_dir: str
 
                     if period_sum == 0:
                         discard_record = hourly_data_table[["site", "direction"]].head(1)
-                        discarded_data = pd.concat([discarded_data, discard_record])
+                        discarded_data = pd.concat([discarded_data, discard_record], ignore_index = True)
                         #table_number += 1
                         continue
-                        
-                    formatdf = pd.concat([formatdf,day_df])
+                    
+                    day_df = day_df.reset_index()
+                    day_df = day_df.rename(columns={"index":"date"})
 
-                    formatdf['source'] = 'ATC'
+                    formatdf = pd.concat([formatdf,day_df], ignore_index = True)
+
+                    formatdf['Source'] = 'ATC'
                     formatdf['flow_car'] = ''
                     formatdf['flow_LGV'] = ''
                     formatdf['flow_OGV_1'] = ''
@@ -1371,12 +1733,12 @@ def format_ATC_2023_HCC_NC_2(input_dir: str, output_dir: str, discarded_dir: str
             elif "South" in dir:
                     formatdf["direction"] = "South"
 
-            formatdf.index.name = 'date'
 
-            survey_database = pd.concat([survey_database,formatdf])
+            survey_database = pd.concat([survey_database,formatdf], ignore_index = True)
 
-    survey_database.to_csv(f"{output_dir}\\ATC_2023_HCC_NC_2.csv")
-    discarded_data.to_csv(f"{discarded_dir}\\Discarded_Data_ATC_2023_HCC_NC_2.csv", index=True)
+    survey_database["Source"] = "HCC ATC"
+    survey_database.to_csv(f"{output_dir}\\ATC_2023_HCC_NC_2.csv", index = False)
+    discarded_data.to_csv(f"{discarded_dir}\\Discarded_Data_ATC_2023_HCC_NC_2.csv", index = False)
 
 
 def format_ATC_2023_HCC_C_1(input_dir: str, output_dir: str, discarded_dir: str):
@@ -1399,9 +1761,9 @@ def format_ATC_2023_HCC_C_1(input_dir: str, output_dir: str, discarded_dir: str)
         
         for data in pd.read_csv(file_path, chunksize = 117):
             table = table + i
-            site = str(data.columns.values[0])[-8:]
+            site = str(data.columns.values[0])[-3:]
 
-            if site == "78000001":
+            if site == "001":
                     site = "611"
             else:
                     site = site[-3:]
@@ -1459,7 +1821,7 @@ def format_ATC_2023_HCC_C_1(input_dir: str, output_dir: str, discarded_dir: str)
                 
             if period_sum == 0:
                     discard_record = hourlydf[["site", "direction"]].head(1)
-                    discarded_data = pd.concat([discarded_data, discard_record])
+                    discarded_data = pd.concat([discarded_data, discard_record], ignore_index = True)
                     table += 1
                     continue
 
@@ -1469,17 +1831,17 @@ def format_ATC_2023_HCC_C_1(input_dir: str, output_dir: str, discarded_dir: str)
 
             if period_sum == 0:
                     discard_record = hourlydf[["site", "direction"]].head(1)
-                    discarded_data = pd.concat([discarded_data, discard_record])
+                    discarded_data = pd.concat([discarded_data, discard_record], ignore_index = True)
                     table += 1
                     continue
 
             nan_value = float("NaN")
 
-            data['source'] = 'ATC'
+            data['Source'] = 'ATC'
 
-            data.replace("", nan_value, inplace=True)
+            data.replace("", nan_value, inplace = True)
 
-            data.dropna(subset = ["flow_total"], inplace=True)
+            data.dropna(subset = ["flow_total"], inplace = True)
 
             if "Northeast" in dir:
                     data["direction"] = "North East"
@@ -1505,10 +1867,15 @@ def format_ATC_2023_HCC_C_1(input_dir: str, output_dir: str, discarded_dir: str)
             elif "South" in dir:
                     data["direction"] = "South"
 
-            survey_database = pd.concat([survey_database,data])
+            data = data.reset_index()
+            data = data.rename(columns = {"index": "date"})
 
-    survey_database.to_csv(f"{output_dir}\\ATC_2023_HCC_C_1.csv")
-    discarded_data.to_csv(f"{discarded_dir}\\Discarded_Data_ATC_2023_HCC_C_1.csv", index=True)
+            survey_database = pd.concat([survey_database,data], ignore_index = True)
+
+    survey_database = survey_database.drop(columns = ['Date'])
+    survey_database["Source"] = "HCC ATC"
+    survey_database.to_csv(f"{output_dir}\\ATC_2023_HCC_C_1.csv", index = False)
+    discarded_data.to_csv(f"{discarded_dir}\\Discarded_Data_ATC_2023_HCC_C_1.csv", index=False)
 
 def format_ATC_2023_HCC_C_2(input_dir: str, output_dir: str, discarded_dir: str):
     os.chdir(input_dir)
@@ -1535,7 +1902,7 @@ def format_ATC_2023_HCC_C_2(input_dir: str, output_dir: str, discarded_dir: str)
             site = str(data.columns.values[0])[-3:]
             print ("Table number : ", table, "   Site number :  ", site)
             #print (sheet_names)
-            if site == "78000001":
+            if site == "001":
                     site = "611"
             else:
                     site = site[-3:]
@@ -1547,20 +1914,6 @@ def format_ATC_2023_HCC_C_2(input_dir: str, output_dir: str, discarded_dir: str)
             #if len(date) == 0:
                 #break
             if dir == "Total Flow":
-                continue
-            if "1" in dir:
-                continue
-            if "2" in dir:
-                continue
-            if "3" in dir:
-                continue
-            if  "Northbound" in dir:
-                continue
-            if  "Southbound" in dir:
-                continue
-            if  "Eastbound" in dir:
-                continue
-            if  "Westbound" in dir:
                 continue
                 
                 #"Southbound" "Eastbound" "Westbound" 
@@ -1617,7 +1970,7 @@ def format_ATC_2023_HCC_C_2(input_dir: str, output_dir: str, discarded_dir: str)
                 
             if period_sum == 0:
                     discard_record = hourlydf[["site", "direction"]].head(1)
-                    discarded_data = pd.concat([discarded_data, discard_record])
+                    discarded_data = pd.concat([discarded_data, discard_record], ignore_index = True)
                     table += 1
                     continue
 
@@ -1628,13 +1981,13 @@ def format_ATC_2023_HCC_C_2(input_dir: str, output_dir: str, discarded_dir: str)
                 
             if period_sum == 0:
                     discard_record = hourlydf[["site", "direction"]].head(1)
-                    discarded_data = pd.concat([discarded_data, discard_record])
+                    discarded_data = pd.concat([discarded_data, discard_record], ignore_index = True)
                     table += 1
                     continue
 
             nan_value = float("NaN")
 
-            data['source'] = 'ATC'
+            data['Source'] = 'HCC ATC'
 
             data.replace("", nan_value, inplace=True)
 
@@ -1664,7 +2017,10 @@ def format_ATC_2023_HCC_C_2(input_dir: str, output_dir: str, discarded_dir: str)
             elif "South" in dir:
                     data["direction"] = "South"
 
-            survey_database = pd.concat([survey_database,data])
+            data = data.reset_index()
+            data = data.rename(columns = {"index": "date"})
+
+            survey_database = pd.concat([survey_database,data], ignore_index = True)
 
             #if site == "349":
                 #survey_database.drop(survey_database.columns['Date'])
@@ -1685,5 +2041,146 @@ def format_ATC_2023_HCC_C_2(input_dir: str, output_dir: str, discarded_dir: str)
 
             #print(survey_database)
 
-    survey_database.to_csv(f"{output_dir}\\ATC_2023_HCC_C_2.csv")
-    discarded_data.to_csv(f"{discarded_dir}\\Discarded_Data_ATC_2023_HCC_C_2.csv", index=True)
+    
+
+    survey_database["Source"] = "HCC ATC"
+    survey_database.to_csv(f"{output_dir}\\ATC_2023_HCC_C_2.csv", index = False)
+    discarded_data.to_csv(f"{discarded_dir}\\Discarded_Data_ATC_2023_HCC_C_2.csv", index= False)
+
+def ATC_HCC_C_1_2(input_dir: str, output_dir: str, discarded_dir: str, year: int):
+    os.chdir(input_dir)
+
+    AM_PEAK_PERIOD = ["07:00", "8:00", "9:00"]
+    PM_PEAK_PERIOD = ["16:00", "17:00", "18:00"]
+
+    discarded_data = pd.DataFrame()
+
+    #Time_CSV = pd.read_csv("Time.csv")
+    files = glob.glob("*.csv")
+    survey_database = pd.DataFrame()
+
+    for file in files:
+        print("Adding ",file," to the database")
+        file_path = os.path.join(input_dir,file)
+
+        table = 0
+        i = 1
+        n = -1
+        
+        for data in pd.read_csv(file_path, chunksize = 117):
+            table = table + i
+            site = str(data.columns.values[0])[-3:]
+            print ("Table number : ", table, "   Site number :  ", site)
+            #print (sheet_names)
+            if site == "001":
+                    site = "611"
+            else:
+                    site = site[-3:]
+
+            dir = data.iloc[1,6][9:]
+            
+            date = str(data.iloc[1,3])
+            if dir == "North" or dir == "South" or dir == "East" or dir =="West" or dir == "Northbound " or dir == "Southbound " or dir == "Eastbound " or dir == "Westbound ":
+                data = data.rename(columns = data.iloc[4])
+                data = data[5:101]
+                data[['Car/lVan', 'Cr/lV+Tr', 'H. Van','LGV', 'Rigid', 'Rg+Tr', 'ArticHGV', 'Minibus', 'Bus' ]] = data[['Car/lVan', 'Cr/lV+Tr', 'H. Van','LGV', 'Rigid', 'Rg+Tr', 'ArticHGV', 'Minibus', 'Bus' ]].apply(pd.to_numeric)
+                data['Date'] = date
+
+                data['date'] = data['Date'] + " " + data['Begin']
+                
+                data['date'] = pd.to_datetime(data['date'])
+                
+                data['direction'] = dir
+                data['site'] = site
+
+                am_peak_datetime_objects = []
+                for peak_hour in AM_PEAK_PERIOD:
+                        peak_hour = date + " " + peak_hour
+                        peak_hour = datetime.datetime.strptime(peak_hour, '%d-%b-%y %H:%M')
+                        am_peak_datetime_objects.append(peak_hour)
+
+                        
+                pm_peak_datetime_objects = []
+                for peak_hour in PM_PEAK_PERIOD:
+                        peak_hour = date + " " + peak_hour
+                        peak_hour = datetime.datetime.strptime(peak_hour, '%d-%b-%y %H:%M')
+                        pm_peak_datetime_objects.append(peak_hour)
+
+                data['flow_car'] = data['Car/lVan'] + data['Cr/lV+Tr']
+                data['flow_LGV'] = data['H. Van'] + data['LGV']
+                data['flow_OGV_1'] = data['Rigid'] 
+                data['flow_OGV_2'] = data['Rg+Tr'] + data['ArticHGV']
+                data['flow_HGV'] = data['flow_OGV_1'] + data['flow_OGV_2']
+                data['flow_BUS'] = data['Minibus'] + data['Bus']
+                data['flow_total'] = data['flow_car'] + data['flow_LGV'] +  data['flow_HGV'] + data['flow_BUS']
+                
+                data = data.drop(data.columns[[0,1,2,3,4,5,6,7,8,9,10,11,12,]],axis = 1)
+
+                data = data.set_index(["date"])
+
+                np_sum = lambda x: x.values.sum()
+                hourlydf = data.resample('60min').agg({"site":"first","direction":"first","flow_car":np_sum,"flow_LGV":np_sum,"flow_OGV_1":np_sum,"flow_OGV_2":np_sum,"flow_HGV":np_sum,"flow_BUS":np_sum,"flow_total":np_sum})
+
+                period_sum = 0
+                    
+                for peak_hour in am_peak_datetime_objects:
+                        period_sum += hourlydf.loc[peak_hour, "flow_total"]
+                    
+                if period_sum == 0:
+                        discard_record = hourlydf[["site", "direction"]].head(1)
+                        discarded_data = pd.concat([discarded_data, discard_record], ignore_index = True)
+                        table += 1
+                        continue
+
+                period_sum = 0
+                for peak_hour in pm_peak_datetime_objects:
+                        period_sum += hourlydf.loc[peak_hour, "flow_total"]
+
+                    
+                if period_sum == 0:
+                        discard_record = hourlydf[["site", "direction"]].head(1)
+                        discarded_data = pd.concat([discarded_data, discard_record], ignore_index = True)
+                        table += 1
+                        continue
+
+                nan_value = float("NaN")
+
+                data['Source'] = 'HCC ATC'
+
+                data.replace("", nan_value, inplace=True)
+
+                data.dropna(subset = ["flow_total"], inplace=True)
+
+                if "Northeast" in dir:
+                        data["direction"] = "North East"
+
+                elif "Northwest" in dir:
+                        data["direction"] = "North West"
+                    
+                elif "Southeast" in dir:
+                        data["direction"] = "South East"
+                    
+                elif "Southwest" in dir:
+                        data["direction"] = "South West"
+                    
+                elif "East" in dir:
+                        data["direction"] = "East"
+
+                elif "West" in dir:
+                        data["direction"] = "West"
+                    
+                elif "North" in dir:
+                    data["direction"] = "North"
+                    
+                elif "South" in dir:
+                    data["direction"] = "South"
+
+                data = data.reset_index()
+                data = data.rename(columns = {"index": "date"})
+
+                survey_database = pd.concat([survey_database,data], ignore_index = True)
+    
+    #survey_database = survey_database.drop(columns = ["Date"])
+    survey_database["Source"] = "HCC ATC"
+    survey_database.to_csv(f"{output_dir}\\ATC_{str(year)}_C_1_2.csv", index = False)
+    discarded_data.to_csv(f"{discarded_dir}\\Discarded_Data_ATC_{str(year)}_HCC_C_1_2.csv", index= False)

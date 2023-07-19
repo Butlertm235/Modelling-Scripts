@@ -49,13 +49,28 @@ DISCARDED_DATA = f"{PROGRAM_DIRECTORY}\\Discarded_Data\\"
 ATC_FORMATTED_DBS = {"ATC_2019_15M_DB": {"year": 2019, "interval": "15m", "directory": ATC_2019_15M_DB},
                      "ATC_2019_HOURLY_DB": {"year": 2019, "interval": "Hourly", "directory": ATC_2019_HOURLY_DB},
                      "ATC_2022_15M_DB": {"year": 2022, "interval": "15m", "directory": ATC_2022_15M_DB},
-                     "ATC_2022_HOURLY_DB": {"year": 2022, "interval": "Hourly", "directory": ATC_2022_HOURLY_DB},}
+                     "ATC_2022_HOURLY_DB": {"year": 2022, "interval": "Hourly", "directory": ATC_2022_HOURLY_DB},
+                     "ATC_2023_15M_DB": {"year": 2023, "interval": "15m", "directory": ATC_2023_15M_DB},
+                     "ATC_2023_HOURLY_DB": {"year": 2023, "interval": "Hourly", "directory": ATC_2023_HOURLY_DB},}
 #Appended database directories
 
 ATC_APPENDED = f"{PROGRAM_DIRECTORY}\\3 - Appended_DBs"
 
-ATC_MON_THURS_NEUTRAL = f"{PROGRAM_DIRECTORY}\\4 - Filtered_DBs\\Neutral_Day_DBs"
-ATC_OUTLIER_FILTERED = f"{PROGRAM_DIRECTORY}\\4 - Filtered_DBs\\Outlier_Filtered_DBs"
+ATC_MON_THURS_NEUTRAL = f"{PROGRAM_DIRECTORY}\\4 - Filtered_DBs\\1 - Neutral_Day_DBs"
+
+DATE_FILTER_MON_THURS_NEUTRAL = f"{PROGRAM_DIRECTORY}\\Monday-Thursdays.csv"
+
+ATC_OUTLIER_FILTERED = f"{PROGRAM_DIRECTORY}\\4 - Filtered_DBs\\2 - Outlier_Filtered_DBs"
+
+#Sample size filters for peak hour
+SAMPLE_FILTER_8 = f"{PROGRAM_DIRECTORY}\\2023_Peak_Hour_Sites_8+_Days.csv"
+SAMPLE_FILTER_6 = f"{PROGRAM_DIRECTORY}\\2023_Peak_Hour_Sites_6+_Days.csv"
+
+PRE_PEAK_HOUR_DBS = f"{PROGRAM_DIRECTORY}\\4 - Filtered_DBs\\3 - Filtered_Peak_Hour_DBs_by_SampleSize"
+
+PEAK_HOUR_INPUT_2023_6DAYS = f"{PRE_PEAK_HOUR_DBS}\\2023\\ATC_2023_15m_appended_neutral_mon-thurs_filtered_outliers_database_6.csv"
+
+PEAK_HOUR_INPUT_2023_8DAYS = f"{PRE_PEAK_HOUR_DBS}\\2023\\ATC_2023_15m_appended_neutral_mon-thurs_filtered_outliers_database_8.csv"
 
 PEAK_HOUR_2022 = f"{PROGRAM_DIRECTORY}\\Peak Hour Analysis\\2022"
 
