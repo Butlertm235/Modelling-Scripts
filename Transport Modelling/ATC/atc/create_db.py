@@ -120,7 +120,97 @@ def create_db_ca_month_volume(db_dir,db_name):
     
     return survey_database
 
+def create_db_ca_15_min_classified(db_dir,db_name):
+    """Reads CA Traffic / Tagmaster classified 15 min spreadsheets and combines them into a single dataframe
+    that is ready for processing.
+    
+    This function is intended to be used only with CA/Tagmaster files provided in
+    their specific format. If raw data has not been recorded (blank cells in the 
+    spreadsheets) this will be loaded as NaN in the dataframe.
+    
+    :param db_dir: path of Suffolk ATC files (include r before the path)
+    :param db_name: name of the output csv file
+    :result: dataframe with the combined data from all files. Dataframe will also be
+    exported as a .csv file with the name "survey_database.csv" """
+    
+    ####################
+    #Start of the function
+    ####################
+    
+    path=os.getcwd()
+    #df to convert from string time to an integer number  
+    #hour = pd.DataFrame({"variable":["Bin 1\n0-5:00","Bin 2\n6:00","Bin 3\n7:00","Bin 4\n8:00","Bin 5\n9:00","Bin 6\n10:00","Bin 7\n11:00","Bin 8\n12:00","Bin 9\n13:00","Bin 10\n14:00","Bin 11\n15:00","Bin 12\n16:00","Bin 13\n17:00","Bin 14\n18:00","Bin 15\n19:00","Bin 16\n20:00","Bin 17\n21:00","Bin 18\n22:00","Bin 19\n23:00"],"hour":[0,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23]})
+    
+    os.chdir(db_dir)
+    #read all excel files from the folder
+    files = glob.glob("*.xlsx")
+    
+    #Create empty database dataframe
+    survey_database = pd.DataFrame()
+    
+    # Survey direction
+    direction = [1,2]
+    #Iteration over the spreadsheets
+    for i in files:
+        #name of the ATC site
+        name=i[15:23]
+        #empty site dataframe
+        site = pd.DataFrame()
+        file_path = os.path.join(db_dir,i)
+        
+        #Iteration over direction
+        for j in direction:
+            #empty direction dataframe
+            df_direction = pd.DataFrame()
+            if j == 1:
+                skipr = 5
+            else:
+                skipr = 123       
+            #Read each tab of the spreadsheet and save it in a dictionary
+            df = pd.read_excel(file_path, sheet_name=None,skiprows=skipr,index_col=0,nrows=96)
+     
+            #Iteration over the tabs
+            for key in df:
+                df2=df[key]
+                if df2.empty:
+                    break
+                #Reformat the data to tabular format
+                #df2 = tabular_flows(df2, key, hour)
+                df2 = df2.reset_index()
+                df2[["hour","minute","second"]] = df2["index"].astype(str).str.split(":",expand=True)
+                df2 = df2.reset_index()
+                df2["day"] = key[6:8]
+                df2["month"]=key[9:11]
+                df2["year"]=key[-4:]
+                df2["date"]=pd.to_datetime(df2[["year","month","day","hour","minute"]],format = '%yyyy/%mm/%dd %HH%MM')
+                #Append the tab data to the direction dataframe
+                df_direction = pd.concat([df_direction, df2])
+            #Add a column with the direction
+            df_direction["direction"] = j
+            #Append the direction data to the site dataframe
+            site = pd.concat([site,df_direction])
+        #Add a column with the site name
+        site["site"] = name
+        #Append the site data to the database 
+        survey_database = pd.concat([survey_database, site])
+    
+    #survey_database = survey_database.rename_axis('date').reset_index()
+    survey_database = survey_database.drop(columns=["year","month","day","hour","minute","second"])
+    survey_database["source"] = "Tagmaster"
+    os.chdir(path)
 
+
+    
+    #Export the dataframe to a .csv file
+    export_csv = survey_database.to_csv(db_name+".csv",index=False)
+    #survey_db_lite = survey_database.drop(columns=["day_week","day","hour","month","year"])
+    #export_csv = survey_db_lite.to_csv(db_name+"lite.csv",index=False)
+    
+    ####################
+    #End of the function
+    ####################
+    
+    return survey_database
 
 def create_db_webtris (db_dir,db_name):
     """Reads WebTRIS daily reports and combines them into a single dataframe
