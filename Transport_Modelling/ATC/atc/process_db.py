@@ -146,3 +146,42 @@ def outlier_filter(db,z_hour,z_month):
     export_csv = final_data_coverage.to_csv("Outlier_filter_percentage.csv")
 
     return df
+
+def data_coverage(database,output_directory="",output_name_suffix=""):
+    """
+    This function provides the data coverage for each month at each site.
+
+    Parameters
+        ----------       
+       database : dataframe 
+           Csv file containing the database to find the data converage of
+        output_directory : string
+            Directory to output the coverage statistics
+        output_name_suffix : string
+            Suffix to relate the output csvs to the input database
+    
+    """
+    df = pd.read_csv(database,index_col=0,parse_dates=["date"],dayfirst = True)
+
+    #Generate matrix with maximum number of possible sample records
+    full_sample_size = df.groupby(["site","month"]).count()
+    full_sample_size_pivot = full_sample_size.pivot_table(index=["site"],columns =["month"],values = "day")
+    col_list=list(full_sample_size_pivot)
+    full_sample_size_pivot["all_months"] = full_sample_size_pivot.sum(axis=1,numeric_only=True)
+
+    #Drop rows with no data
+    df = df.dropna(subset=["flow_total"])
+
+    #Generate matrix with sample records after removing blank data
+    not_null_sample_size = df.groupby(["site","month"]).count()
+    not_null_sample_size_pivot = not_null_sample_size.pivot_table(index=["site"],columns =["month"],values = "day")
+    not_null_sample_size_pivot["all_months"] = not_null_sample_size_pivot.sum(axis=1,numeric_only=True)
+
+    #Generate matrix with data coverage percentage
+    data_coverage = not_null_sample_size_pivot/full_sample_size_pivot
+    data_coverage = data_coverage.fillna(0)
+
+    #Export the dataframe to a .csv file
+    export_csv = full_sample_size_pivot.to_csv(output_directory+"full_sample_size_pivot_"+output_name_suffix+".csv")
+    export_csv = not_null_sample_size_pivot.to_csv(output_directory+"not_null_sample_size_pivot_"+output_name_suffix+".csv")
+    export_csv = data_coverage.to_csv(output_directory+"data_coverage_"+output_name_suffix+".csv")

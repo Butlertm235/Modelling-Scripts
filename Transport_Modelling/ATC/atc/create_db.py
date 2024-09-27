@@ -120,6 +120,186 @@ def create_db_ca_month_volume(db_dir,db_name):
     
     return survey_database
 
+def create_db_ca_month_volume_v2(db_dir,db_name):
+    """
+    Reads CA Traffic / Tagmaster month volume spreadsheets spreadsheets and combines them into a single dataframe
+    that is ready for processing.
+    
+    This function is intended to be used only with Suffolk ATC files provided in
+    their specific format. If raw data has not been recorded (blank cells in the 
+    spreadsheets) this will be loaded as NaN in the dataframe.
+
+    This _v2 function iterates over the directions directly given in the table and includes these in the output.
+    Where incomplete direction data is provided, this site is skipped.
+    These skipped sites can be viewed in the '..._direction_data.csv' output file where 'no_tables' != 'no_directions'
+    
+    :param db_dir: path of Suffolk ATC files (include r before the path)
+    :param db_name: name of the output csv file
+    :result: dataframe with the combined data from all files. Dataframe will also be
+    exported as a .csv file with the name "survey_database.csv" 
+    """
+    
+    ####################
+    #Start of the function
+    ####################
+    
+    path=os.getcwd()
+    #df to convert from string time to an integer number  
+    hour = pd.DataFrame({"variable":["Bin 1\n0-5:00","Bin 2\n6:00","Bin 3\n7:00","Bin 4\n8:00","Bin 5\n9:00","Bin 6\n10:00","Bin 7\n11:00","Bin 8\n12:00","Bin 9\n13:00","Bin 10\n14:00","Bin 11\n15:00","Bin 12\n16:00","Bin 13\n17:00","Bin 14\n18:00","Bin 15\n19:00","Bin 16\n20:00","Bin 17\n21:00","Bin 18\n22:00","Bin 19\n23:00"],"hour":[0,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23]})
+    
+    os.chdir(db_dir)
+    #read all excel files from the folder
+    files = glob.glob("*.xlsx")
+    
+    #Create empty database dataframe
+    survey_database = pd.DataFrame()
+    
+    # to get info on sites where direction not given
+    direction_data=pd.DataFrame(columns=["file","no_tables","no_directions"])    
+
+    #Iteration over the spreadsheets
+    for i in files:
+        print("site "+i+" starting...")
+        #name of the ATC site
+        name=i[13:21]
+        #empty site dataframe
+        site = pd.DataFrame()
+        file_path = os.path.join(db_dir,i)
+
+        # Get an array of channels for this spreadsheet
+        first_sheet = pd.read_excel(file_path,header=None)
+        channels = first_sheet[19][first_sheet[18]=="Channel:"]
+
+        # to get info on sites where direction not given
+        tables = first_sheet[0][first_sheet[0]=="CA Traffic"]        
+        direction_data = direction_data._append({"file":i,"no_tables":len(tables),"no_directions":len(channels)},ignore_index=True)
+        
+        # extract the latitude and longitude coordinates
+        # lats = first_sheet[19][first_sheet[18]=="Lat/Lng."]
+        # longs = first_sheet[20][first_sheet[18]=="Lat/Lng."]
+        # site_names = first_sheet[0][first_sheet[18]=="Channel:"]
+
+        # Survey direction (initial, arbitrary)
+        direction = 1
+        skipr = 5
+
+        if len(tables)==len(channels):
+        
+            #Iteration over channels
+            for channel in channels:
+                #empty direction dataframe
+                df_channel = pd.DataFrame()
+    
+                #Read each tab of the spreadsheet and save it in a dictionary
+                df = pd.read_excel(file_path, sheet_name=None,skiprows=skipr,index_col=0,nrows=31)
+        
+                #Iteration over the tabs
+                for key in df:
+                    df2=df[key]
+                    if df2.empty:
+                        break
+                    #Reformat the data to tabular format
+                    df2 = tabular_flows(df2, key, hour)
+                    #Append the tab data to the direction dataframe
+                    df_channel = pd.concat([df_channel, df2])
+                #Add a column with the direction
+                df_channel["direction"] = direction
+                
+
+                #Add columns with the channel
+                df_channel["channel"] = channel         
+
+                # df_channel["latitude"] = lats[41*(direction-1)]
+                # df_channel["longitude"] = longs[41*(direction-1)]            
+                # df_channel["site_name"] = site_names[41*(direction-1)+1]
+
+                #Append the direction data to the site dataframe
+                site = pd.concat([site,df_channel])
+
+                #indices for next iteration
+                direction+=1
+                skipr+=41
+
+            #Add a column with the site name
+            site["site"] = name
+            #Append the site data to the database 
+            survey_database = pd.concat([survey_database, site])
+        print("site "+i+" processed and appended")
+    
+    survey_database = survey_database.rename_axis('date').reset_index()
+    survey_database["source"] = "Tagmaster"
+    os.chdir(path)
+
+
+    
+    #Export the dataframe to a .csv file
+    export_csv = survey_database.to_csv(db_name+".csv",index=False)
+    survey_db_lite = survey_database.drop(columns=["day_week","day","hour","month","year"])
+    export_csv = survey_db_lite.to_csv(db_name+"lite.csv",index=False)
+
+    # to export info on sites where direction not given
+    direction_data["diff"]=direction_data["no_tables"]-direction_data["no_directions"]
+    direction_data.to_csv(db_name+"_direction_data.csv",index=False)
+    
+    ####################
+    #End of the function
+    ####################
+    
+    return survey_database
+
+def create_db_lat_long_tagmaster(db_dir,output_dir):
+
+    """
+    TEXT
+    
+    :param db_dir: path of Suffolk ATC files (include r before the path)
+    :param db_name: filepath of directory the output csv file
+    :result: dataframe with the combined data from all files. Dataframe will also be
+    exported as a .csv file with the name "survey_database.csv" 
+    """
+    
+    data_path= db_dir
+    os.chdir(data_path)
+
+    #read all excel files from the folder
+    files = glob.glob("*.xlsx")
+
+    #Create empty database dataframe
+    survey_database = pd.DataFrame()
+
+    #Iteration over the spreadsheets
+    for i in files:
+        name=i[13:21]
+        #empty site dataframe
+        site = pd.DataFrame()
+        #Add a column with the site name
+        site["site"] = name
+        file_path = os.path.join(data_path,i)
+        
+
+        #empty direction dataframe
+        df_direction = pd.DataFrame()
+
+        df = pd.read_excel(file_path, sheet_name=1,usecols="A,T:U",index_col=None,nrows=2,names=[1,2,3],header=None)
+        try:
+            site_dir = df.values  
+            #print(df.values)            
+            df_direction = pd.DataFrame({"latitude":[site_dir[0,1]],"longitude":[site_dir[0,2]],"site_name":[site_dir[1,0]]})
+
+            #Append the direction data to the site dataframe
+            site = site._append(df_direction)
+        except:
+            pass
+        #Add a column with the site name
+        site["site"] = name
+        
+        #Append the site data to the database 
+        survey_database = survey_database._append(site)
+
+    #Export the dataframe to a .csv file
+    export_csv = survey_database.to_csv(output_dir+"tagmaster_lat_long.csv",index=None)
+    return survey_database
+
 def create_db_ca_15_min_classified(db_dir,db_name):
     """Reads CA Traffic / Tagmaster classified 15 min spreadsheets and combines them into a single dataframe
     that is ready for processing.
