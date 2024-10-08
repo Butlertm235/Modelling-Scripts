@@ -8,7 +8,7 @@ import pandas as pd
 from pytris.models import Site
 from pytris import API
 
-def request_sites():
+def request_sites(export_dir=""):
     """
     Connects to the WebTRIS API and extracts the metadata for all the sites in their database
 
@@ -25,7 +25,7 @@ def request_sites():
     for site in sites.all():
         # Do something with each site
         site_list = site_list._append({"id":site.id,"name":site.name,"description":site.description,"longitude":site.longitude,"latitude":site.latitude,"status":site.status},ignore_index=True)
-    export_csv=site_list.to_csv("site_list.csv")
+    export_csv=site_list.to_csv(export_dir+"site_list.csv")
 
     return site_list
 
