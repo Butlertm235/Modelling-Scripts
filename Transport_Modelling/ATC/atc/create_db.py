@@ -486,7 +486,7 @@ def create_db_dft (db_dir,db_name):
     return survey_database
 
 
-def create_db_vivacity(db_dir,db_name):
+def create_db_vivacity(db_dir,db_name,output_directory=""):
     """Reads Vivacity hourly volume csv and combines them into a single dataframe
     that is ready for processing.
     
@@ -515,7 +515,7 @@ def create_db_vivacity(db_dir,db_name):
     for i in files:
         #name of the ATC site
         df = pd.read_csv(i,parse_dates=["UTC Datetime","Local Datetime"])
-        survey_database = survey_database.append(df)
+        survey_database = survey_database._append(df)
     survey_database = survey_database.drop(columns=["UTC Datetime","countlineName"])
     survey_database = survey_database.rename(columns={"Car":"flow_car","LGV":"flow_LGV","OGV1":"flow_OGV1","OGV2":"flow_OGV2","Bus":"flow_bus","Motorbike":"flow_motorbike","Cyclist":"flow_cyclist","Local Datetime":"date","countlineId":"site","Pedestrian":"flow_pedestrian"})
     survey_database["flow_total"] = survey_database["flow_car"] + survey_database["flow_cyclist"] + survey_database["flow_motorbike"] + survey_database["flow_bus"] + survey_database["flow_OGV1"] + survey_database["flow_OGV2"] + survey_database["flow_LGV"]
@@ -523,7 +523,7 @@ def create_db_vivacity(db_dir,db_name):
     os.chdir(path)
 
     #Export the dataframe to a .csv file
-    export_csv = survey_database.to_csv(db_name+".csv",index=False)
+    export_csv = survey_database.to_csv(output_directory+db_name+".csv",index=False)
     
     ####################
     #End of the function
