@@ -82,6 +82,7 @@ def distanceFilter(parameters_path):
     incompleteFlag = pm.incompleteFlag
     selectedColumnsUnfiltered = pm.selectedColumnsUnfiltered
     selectedColumnsFiltered = pm.selectedColumnsFiltered
+    TMJ_columns = pm.TMJ_columns
     incompleteJourneyFilter = pm.incompleteJourneyFilter
     distFilterAbs = pm.distFilterAbs
     distFilterRel = pm.distFilterRel
@@ -222,7 +223,7 @@ def distanceFilter(parameters_path):
 
     #output distance filtered data to csv
     distanceFilteredData = allCombinedData
-    distanceFilteredDataSelected = distanceFilteredData[selectedColumnsFiltered]
+    distanceFilteredDataSelected = distanceFilteredData[TMJ_columns]
     if outputdistanceFilteredData:        
         DR.makeNewDir(outputDirectory+'/distanceFilteredData')
         distanceFilteredDataSelected.to_csv(outputDirectory+'/distanceFilteredData/distanceFilteredData.csv',index=False)

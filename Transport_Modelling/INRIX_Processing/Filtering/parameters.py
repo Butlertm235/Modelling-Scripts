@@ -21,6 +21,7 @@ gisLinkId = 'link_id' #column header for link id in the GIS data (link ids corre
 gisDist = 'length' #column header for link length in the GIS data
 incompleteFlag = 'incomplete_flag'
 selectedColumnsUnfiltered = ['link_id','n','Dist_diff','Perc_Dist_diff',incompleteFlag] #selected columns to include in output of unfiltered combined GPS and GIS data
+TMJ_columns = ['link_id','network','date_1','time_per','veh_cls','data_source','n','avg_jt','sum_squ_jt'] #columns TMJ tool needs
 selectedColumnsFiltered = ['link_id','network','date_1','time_per','veh_cls','data_source','n','avg_jt','sum_squ_jt','avg_speed_kph',gpsDist,gisDist,'Dist_diff','Perc_Dist_diff',incompleteFlag,'roadClassi','routeHiera','formOfWay','roadName1_'] #selected columns to include in output of filtered combined GPS and GIS data
 
 

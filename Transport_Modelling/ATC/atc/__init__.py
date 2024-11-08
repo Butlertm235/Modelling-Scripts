@@ -14,9 +14,11 @@ from .create_db import create_db_dft
 from .create_db import create_db_vivacity
 from .process_db import outlier_filter
 from .process_db import date_filter
+from .process_db import date_filter_v2
 from .process_db import tp_filter
 from .process_db import site_filter
 from .process_db import data_coverage
+from .process_db import data_coverage_v2
 from .request_webtris import request_sites
 from .request_webtris import request_daily_report
 
