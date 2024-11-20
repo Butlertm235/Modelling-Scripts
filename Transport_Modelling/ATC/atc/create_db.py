@@ -269,6 +269,7 @@ def create_db_lat_long_tagmaster(db_dir,output_dir):
 
     #Iteration over the spreadsheets
     for i in files:
+        print("site "+i+" starting...")
         name=i[13:21]
         #empty site dataframe
         site = pd.DataFrame()
@@ -419,11 +420,13 @@ def create_db_webtris (db_dir,db_name,output_directory=""):
     
     #Iteration over the spreadsheets
     for i in files:
+        print(i)
         df = pd.read_csv(i,parse_dates = [["Report Date","Time Period Ending"]])
         df = df.drop(columns=["0 - 10 mph","11 - 15 mph","16 - 20 mph","21 - 25 mph","26 - 30 mph","31 - 35 mph","36 - 40 mph","41 - 45 mph","46 - 50 mph","51 - 55 mph","56 - 60 mph","61 - 70 mph","71 - 80 mph","80+ mph","Time Interval"])
         df = df.rename(columns={"Report Date_Time Period Ending":"date","0 - 520 cm":"flow_car","521 - 660 cm":"flow_LGV","661 - 1160 cm":"flow_OGV1","1160+ cm":"flow_OGV2","Total Volume":"flow_total"})
+        df["count"]=df["date"]
         np_sum = lambda x: x.values.sum()
-        df = df.resample('H', on='date').agg({"flow_car":np_sum,"flow_LGV":np_sum,"flow_OGV1":np_sum,"flow_OGV2":np_sum,"flow_total":np_sum,"Avg mph":np.average,"site":"first"})
+        df = df.resample('H', on='date').agg({"flow_car":np_sum,"flow_LGV":np_sum,"flow_OGV1":np_sum,"flow_OGV2":np_sum,"flow_total":np_sum,"Avg mph":np.average,"site":"first","count":np.count_nonzero})
         survey_database = survey_database._append(df)
         
     survey_database = survey_database.rename_axis('date').reset_index()

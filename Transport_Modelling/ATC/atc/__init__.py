@@ -19,6 +19,7 @@ from .process_db import tp_filter
 from .process_db import site_filter
 from .process_db import data_coverage
 from .process_db import data_coverage_v2
+from .process_db import data_coverage_v3
 from .request_webtris import request_sites
 from .request_webtris import request_daily_report
 

@@ -51,9 +51,9 @@ def date_filter_v2(db,date):
     df = db.copy()
     #df["date_only"] = pd.to_datetime(df[["year","month","day"]], format='%Y-%M-%D')    
     df["date_only"] = pd.to_datetime(df.date).dt.date
-    df["hour"] = pd.to_datetime(df.date).dt.hour
-    df["month"] = pd.to_datetime(df.date).dt.month
-    df["day"] = pd.to_datetime(df.date).dt.day
+    # df["hour"] = pd.to_datetime(df.date).dt.hour
+    # df["month"] = pd.to_datetime(df.date).dt.month
+    # df["day"] = pd.to_datetime(df.date).dt.day
     
     dates = pd.read_csv(date,parse_dates=["date"],dayfirst = True)
     dates["date_only"] = pd.to_datetime(dates.date).dt.date
@@ -257,3 +257,94 @@ def data_coverage_v2(database,output_directory="",output_name_suffix=""):
     export_csv = full_sample_size_pivot.to_csv(output_directory+"full_sample_size_pivot_"+output_name_suffix+".csv")
     export_csv = not_null_sample_size_pivot.to_csv(output_directory+"not_null_sample_size_pivot_"+output_name_suffix+".csv")
     export_csv = data_coverage.to_csv(output_directory+"data_coverage_"+output_name_suffix+".csv")
+
+def data_coverage_v3(database,output_directory="",output_name_suffix=""):
+    """
+    This function provides the data coverage for each month at each site.
+
+    Parameters
+        ----------       
+       database : dataframe 
+           Csv file containing the database to find the data converage of
+        output_directory : string
+            Directory to output the coverage statistics
+        output_name_suffix : string
+            Suffix to relate the output csvs to the input database
+    
+    """
+    df = pd.read_csv(database,parse_dates=["date"],dayfirst = True)
+
+    df["month"] = pd.to_datetime(df.date).dt.month
+
+    #Generate data frame with number of directions for each site
+    full_sample_size_dirn = df.groupby(["source","site","direction","month"]).count()    
+    full_sample_size_dirn_pivot = full_sample_size_dirn.pivot_table(index=["source","site","direction"],columns =["month"],values = "date")    
+    full_sample_size_dirn_df = full_sample_size_dirn_pivot.reset_index()
+    direction_count=full_sample_size_dirn_df.groupby(["source","site"]).count().reset_index()["direction"]
+
+    #Generate matrix with maximum number of possible sample records
+    full_sample_size = df.groupby(["source","site","month"]).count()    
+    full_sample_size_pivot = full_sample_size.pivot_table(index=["source","site"],columns =["month"],values = "date")    
+    full_sample_size_df = full_sample_size_pivot.reset_index()
+    full_sample_size_df["dirn_count"]=direction_count
+    
+    months = [3,4,5,6,7,9,10,11] #neutral months of year
+    days_in_months = [18,7,7,16,11,16,14,18] #neutral days in each of these months (2023)
+    
+    for i in range(len(months)):
+        full_sample_size_df.loc[full_sample_size_df["source"] == "Tagmaster", months[i]] = days_in_months[i]*full_sample_size_df["dirn_count"]*19 #19 'hours' in tagmaster
+        full_sample_size_df.loc[full_sample_size_df["source"] != "Tagmaster", months[i]] = days_in_months[i]*full_sample_size_df["dirn_count"]*24 #24 hours in a day
+   
+
+    full_sample_size_df["all_months"] = full_sample_size_df[months].sum(axis=1)
+    # full_sample_size_df["all_months"] = full_sample_size_df[3]+full_sample_size_df[4]+full_sample_size_df[5]+full_sample_size_df[6]+full_sample_size_df[7]+full_sample_size_df[9]+full_sample_size_df[10]+full_sample_size_df[11]
+
+    df_not_null = df.dropna(subset=["flow_total"])
+
+    #Generate matrix with maximum number of possible sample records
+    not_null_sample_size = df_not_null.groupby(["source","site","month"]).count()    
+    not_null_sample_size = not_null_sample_size.pivot_table(index=["source","site"],columns =["month"],values = "date")    
+    not_null_sample_size_df = not_null_sample_size.reset_index()
+    
+    not_null_sample_size_df["all_months"] = not_null_sample_size_df[months].sum(axis=1)
+
+       
+    #not_null_sample_size_df["all_months"] = not_null_sample_size_df[3]+not_null_sample_size_df[4]+not_null_sample_size_df[5]+not_null_sample_size_df[6]+not_null_sample_size_df[7]+not_null_sample_size_df[9]+not_null_sample_size_df[10]+not_null_sample_size_df[11]
+
+
+    # col_list=list(full_sample_size_pivot)
+    #print(full_sample_size_df.groupby(["source","site"]).count().reset_index()["direction"])
+    # #Drop rows with no data
+    # df = df.dropna(subset=["flow_total"])
+
+    # #Generate matrix with sample records after removing blank data
+    # not_null_sample_size = df.groupby(["source","site","month"]).count()
+    # not_null_sample_size_pivot = not_null_sample_size.pivot_table(index=["source","site"],columns =["month"],values = "date")
+    # not_null_sample_size_pivot["all_months"] = not_null_sample_size_pivot.sum(axis=1,numeric_only=True)
+
+    # #Generate matrix with data coverage percentage
+    data_coverage = pd.merge(full_sample_size_df,not_null_sample_size_df,how='left',on=['source','site'])
+
+    data_coverage['Mar'] = data_coverage['3_y']/data_coverage['3_x']
+    data_coverage['Apr'] = data_coverage['4_y']/data_coverage['4_x']
+    data_coverage['May'] = data_coverage['5_y']/data_coverage['5_x']
+    data_coverage['Jun'] = data_coverage['6_y']/data_coverage['6_x']
+    data_coverage['Jul'] = data_coverage['7_y']/data_coverage['7_x']
+    data_coverage['Sep'] = data_coverage['9_y']/data_coverage['9_x']
+    data_coverage['Oct'] = data_coverage['10_y']/data_coverage['10_x']
+    data_coverage['Nov'] = data_coverage['11_y']/data_coverage['11_x']
+    data_coverage['All_months'] = data_coverage['all_months_y']/data_coverage['all_months_x']
+
+    data_coverage = data_coverage[['source','site','Mar','Apr','May','Jun','Jul','Sep','Oct','Nov','All_months']]
+    
+    
+
+
+    # data_coverage = not_null_sample_size_df/full_sample_size_df
+    data_coverage = data_coverage.fillna(0)
+
+    #Export the dataframe to a .csv file
+    export_csv = full_sample_size_df.to_csv(output_directory+"full_sample_size_pivot_"+output_name_suffix+".csv",index=None)
+    
+    export_csv = not_null_sample_size.to_csv(output_directory+"not_null_sample_size_pivot_"+output_name_suffix+".csv",index=None)
+    export_csv = data_coverage.to_csv(output_directory+"data_coverage_"+output_name_suffix+".csv",index=None)
