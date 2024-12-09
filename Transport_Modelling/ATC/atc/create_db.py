@@ -9,6 +9,7 @@ import os
 import pandas as pd
 import numpy as np
 import glob
+import re
 
 def tabular_flows(df2, key, hour):
     """Reads the flows matrix and converts it to tabular format. It then creates columns for
@@ -557,7 +558,7 @@ def create_db_MCC_WSP(db_dir,db_name,output_directory=""):
     #define output dataframe with required column names, and discarded dataframe
     appended_data = pd.DataFrame(columns = ["date","time", "site","From_Arm", "To_Arm", "turn", "From_Road", "To_Road", 'flow_car', 'flow_LGV', 'flow_OGV_1', "flow_OGV_2", "flow_HGV",'flow_BUS', 'flow_total'])
     
-    for file in file_names:
+    for file in files:
         print("Adding ", file, " to the database")
 
         #read site number from file name
@@ -599,7 +600,7 @@ def create_db_MCC_WSP(db_dir,db_name,output_directory=""):
             #get turns
             turns = []
             for i in range(7):
-                turns.append(turning_counts.iloc[0,1+9*i])
+                turns.append(turning_counts.iloc[0,1+8*i])
             print(turns)
 
             turning_counts = turning_counts[2:]
@@ -618,7 +619,7 @@ def create_db_MCC_WSP(db_dir,db_name,output_directory=""):
 
                 print(turn_df)
 
-                turn_df[["flow_car", 'flow_LGV', 'flow_OGV_1', "flow_OGV_2","flow_BUS"]] = turning_counts.iloc[:,[1 +i * 9,2 + i * 9,3 + i * 9,4 + i * 9,5 + i * 9]]
+                turn_df[["flow_car", 'flow_LGV', 'flow_OGV_1', "flow_OGV_2","flow_BUS"]] = turning_counts.iloc[:,[1 +i * 8,2 + i * 8,3 + i * 8,4 + i * 8,5 + i * 8]]
                 turn_df["flow_HGV"] = turn_df["flow_OGV_1"] + turn_df["flow_OGV_2"]
                 turn_df["flow_total"] = turn_df["flow_car"] + turn_df["flow_LGV"] + turn_df["flow_HGV"] + turn_df["flow_BUS"]
 
