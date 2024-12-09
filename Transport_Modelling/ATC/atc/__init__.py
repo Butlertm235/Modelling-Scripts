@@ -12,6 +12,7 @@ from .create_db import create_db_lat_long_tagmaster
 from .create_db import create_db_webtris
 from .create_db import create_db_dft
 from .create_db import create_db_vivacity
+from .create_db import create_db_MCC_WSP
 from .process_db import outlier_filter
 from .process_db import date_filter
 from .process_db import date_filter_v2
