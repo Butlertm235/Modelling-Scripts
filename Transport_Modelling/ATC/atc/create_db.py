@@ -533,3 +533,138 @@ def create_db_vivacity(db_dir,db_name,output_directory=""):
     ####################
     
     return survey_database
+
+def create_db_MCC_WSP(db_dir,db_name,output_directory=""):
+    """Reads MCC files in WSP format and combines them into a single dataframe
+    that is ready for processing.
+    
+    :param db_dir: path of MCC files in WSP format (include r before the path)
+    :param db_name: name of the output csv file
+    :param output_directory: name of the output folder
+    :result: dataframe with the combined data from all files. Dataframe will also be
+    exported as a .csv file with the name "db_name.csv" """
+    
+    ####################
+    #Start of the function
+    ####################
+    
+    path=os.getcwd()
+        
+    os.chdir(db_dir)
+    #read all excel files from the folder
+    files = glob.glob("*.xlsm")
+
+    #define output dataframe with required column names, and discarded dataframe
+    appended_data = pd.DataFrame(columns = ["date","time", "site","From_Arm", "To_Arm", "turn", "From_Road", "To_Road", 'flow_car', 'flow_LGV', 'flow_OGV_1', "flow_OGV_2", "flow_HGV",'flow_BUS', 'flow_total'])
+    
+    for file in file_names:
+        print("Adding ", file, " to the database")
+
+        #read site number from file name
+        site =  re.findall(r'Site\s*([0-9A-Z]+)', file)[0]
+        print(site)
+
+        print(f"Reading site information and recording arm labels for site {site}")
+
+        arm_labels_df = pd.read_excel(file, "Site information")
+
+        survey_date = arm_labels_df.iloc[4,14]
+
+
+        #arm_labels_df.columns = ["Arm", "Road_Name"]
+
+        arm_labels_df = arm_labels_df[18:26]
+
+        arm_labels_df = arm_labels_df.rename(columns = {"Unnamed: 0" : "Arm", "Unnamed: 1": "Road_Name"})
+
+        arm_labels_df = arm_labels_df[["Arm", "Road_Name"]]
+
+
+
+        #print(arm_labels_df)
+        turning_count_data = pd.read_excel(file, "1hr totals by turn", skiprows = 3)
+        print(turning_count_data)
+        
+        site_data = pd.DataFrame(columns = ["date","time", "site","From_Arm", "To_Arm", "turn", "From_Road", "To_Road", 'flow_car', 'flow_LGV', 'flow_OGV_1', "flow_OGV_2", "flow_HGV",'flow_BUS', 'flow_total'])
+        count = 1
+        for table_row in range(7):
+            
+            
+            turning_counts = turning_count_data[3+30*table_row: 30*(table_row+1)-1]
+            turning_counts.columns = turning_counts.iloc[1]
+            print(turning_counts)
+            turning_counts.to_csv('turning_counts'+str(count)+'.csv')
+            count+=1
+
+            #get turns
+            turns = []
+            for i in range(7):
+                turns.append(turning_counts.iloc[0,1+9*i])
+            print(turns)
+
+            turning_counts = turning_counts[2:]
+
+            #print(turning_counts)
+            first_table = 0
+            print(turning_counts)
+
+            
+            for i in range(7):
+                
+
+                turn_df = pd.DataFrame(columns = ["date","time", "site","From_Arm", "To_Arm", "turn", "From_Road", "To_Road", 'flow_car', 'flow_LGV', 'flow_OGV_1', "flow_OGV_2", "flow_HGV",'flow_BUS', 'flow_total'])
+                
+                turn_df["time"] = turning_counts["TIME"]
+
+                print(turn_df)
+
+                turn_df[["flow_car", 'flow_LGV', 'flow_OGV_1', "flow_OGV_2","flow_BUS"]] = turning_counts.iloc[:,[1 +i * 9,2 + i * 9,3 + i * 9,4 + i * 9,5 + i * 9]]
+                turn_df["flow_HGV"] = turn_df["flow_OGV_1"] + turn_df["flow_OGV_2"]
+                turn_df["flow_total"] = turn_df["flow_car"] + turn_df["flow_LGV"] + turn_df["flow_HGV"] + turn_df["flow_BUS"]
+
+                if turn_df["flow_total"].sum() == 0:
+                    continue
+
+                turn_df["date"] = survey_date
+                turn_df["site"] = site
+                turn_df["turn"] = turns[i]
+
+                site_data = pd.concat([site_data, turn_df])
+        print ("This is test turn data")
+        print (site_data['turn'])
+        site_data.to_csv('site_data.csv')
+        
+        site_data[["From_Arm", "To_Arm"]] = site_data["turn"].str.split(pat = "-", expand = True)
+
+
+        site_data = pd.merge(site_data, arm_labels_df, how = "inner", left_on = "From_Arm", right_on = "Arm")
+
+        site_data["From_Road"] = site_data["Road_Name"]
+        site_data = site_data.drop(columns = ["Arm", "Road_Name"])
+
+        site_data = pd.merge(site_data, arm_labels_df, how = "inner", left_on = "To_Arm", right_on = "Arm")
+        site_data["To_Road"] = site_data["Road_Name"]
+        site_data = site_data.drop(columns = ["Arm", "Road_Name"])
+
+        #site_data.to_csv(f"Site{site}.csv")
+        appended_data = pd.concat([appended_data, site_data])
+
+
+    appended_data["Date"] = appended_data["date"]
+
+    appended_data["date"] = appended_data["Date"].astype(str)  + " " + appended_data['time'].astype(str)
+
+    appended_data["date"] = pd.to_datetime(appended_data["date"])
+
+    appended_data = appended_data.set_index("date")
+
+    survey_database = appended_data.between_time("07:00:00", "18:00:00")
+
+    #Export the dataframe to a .csv file
+    export_csv = survey_database.to_csv(output_directory+db_name+".csv",index=False)
+    
+    ####################
+    #End of the function
+    ####################
+    
+    return survey_database
